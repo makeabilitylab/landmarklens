@@ -24335,7 +24335,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.708535,
-      "lon_snapped": 139.651699
+      "lon_snapped": 139.651699,
+      "yaw": -53.3,
+      "pitch": -5.5
     },
     {
       "index": 1643,
@@ -24348,7 +24350,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7085294,
-      "lon_snapped": 139.6516542
+      "lon_snapped": 139.6516542,
+      "yaw": -53.3,
+      "pitch": -5.5
     },
     {
       "index": 1644,
@@ -24361,7 +24365,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7085239,
-      "lon_snapped": 139.6516095
+      "lon_snapped": 139.6516095,
+      "yaw": -53.3,
+      "pitch": -5.5
     },
     {
       "index": 1645,
@@ -24374,7 +24380,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7085183,
-      "lon_snapped": 139.6515647
+      "lon_snapped": 139.6515647,
+      "yaw": -53.3,
+      "pitch": -5.5
     },
     {
       "index": 1646,
@@ -24387,7 +24395,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7085128,
-      "lon_snapped": 139.6515199
+      "lon_snapped": 139.6515199,
+      "yaw": -53.3,
+      "pitch": -5.5
     },
     {
       "index": 1647,
@@ -24400,7 +24410,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7085072,
-      "lon_snapped": 139.6514752
+      "lon_snapped": 139.6514752,
+      "yaw": -53.3,
+      "pitch": -5.5
     },
     {
       "index": 1648,
@@ -24413,7 +24425,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7085016,
-      "lon_snapped": 139.6514304
+      "lon_snapped": 139.6514304,
+      "yaw": -53.3,
+      "pitch": -5.5
     },
     {
       "index": 1649,
@@ -24426,7 +24440,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7084961,
-      "lon_snapped": 139.6513856
+      "lon_snapped": 139.6513856,
+      "yaw": -53.3,
+      "pitch": -5.5
     },
     {
       "index": 1650,
@@ -24439,7 +24455,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7084905,
-      "lon_snapped": 139.6513409
+      "lon_snapped": 139.6513409,
+      "yaw": -53.3,
+      "pitch": -5.5
     },
     {
       "index": 1651,
@@ -24452,7 +24470,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.708485,
-      "lon_snapped": 139.6512961
+      "lon_snapped": 139.6512961,
+      "yaw": -53.3,
+      "pitch": -5.5
     },
     {
       "index": 1652,
@@ -24465,7 +24485,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7084794,
-      "lon_snapped": 139.6512513
+      "lon_snapped": 139.6512513,
+      "yaw": -53.3,
+      "pitch": -5.5
     },
     {
       "index": 1653,
@@ -24478,7 +24500,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7084741,
-      "lon_snapped": 139.6512065
+      "lon_snapped": 139.6512065,
+      "yaw": -53.3,
+      "pitch": -5.5
     },
     {
       "index": 1654,
@@ -24491,7 +24515,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7084689,
-      "lon_snapped": 139.6511617
+      "lon_snapped": 139.6511617,
+      "yaw": -53.3,
+      "pitch": -5.5
     },
     {
       "index": 1655,
@@ -24504,7 +24530,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.708464,
-      "lon_snapped": 139.6511168
+      "lon_snapped": 139.6511168,
+      "yaw": -49.2,
+      "pitch": -5.8
     },
     {
       "index": 1656,
@@ -24517,7 +24545,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7084592,
-      "lon_snapped": 139.6510719
+      "lon_snapped": 139.6510719,
+      "yaw": -49.2,
+      "pitch": -5.8
     },
     {
       "index": 1657,
@@ -24530,7 +24560,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7084544,
-      "lon_snapped": 139.651027
+      "lon_snapped": 139.651027,
+      "yaw": -49.2,
+      "pitch": -5.8
     },
     {
       "index": 1658,
@@ -24543,7 +24575,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7084496,
-      "lon_snapped": 139.6509821
+      "lon_snapped": 139.6509821,
+      "yaw": -49.2,
+      "pitch": -5.8
     },
     {
       "index": 1659,
@@ -24556,7 +24590,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7084447,
-      "lon_snapped": 139.6509372
+      "lon_snapped": 139.6509372,
+      "yaw": -49.2,
+      "pitch": -5.8
     },
     {
       "index": 1660,
@@ -24569,7 +24605,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7084399,
-      "lon_snapped": 139.6508923
+      "lon_snapped": 139.6508923,
+      "yaw": -49.2,
+      "pitch": -5.8
     },
     {
       "index": 1661,
@@ -24582,7 +24620,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7084344,
-      "lon_snapped": 139.6508476
+      "lon_snapped": 139.6508476,
+      "yaw": -49.2,
+      "pitch": -5.8
     },
     {
       "index": 1662,
@@ -24595,7 +24635,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7084287,
-      "lon_snapped": 139.6508028
+      "lon_snapped": 139.6508028,
+      "yaw": -49.2,
+      "pitch": -5.8
     },
     {
       "index": 1663,
@@ -24608,7 +24650,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7084227,
-      "lon_snapped": 139.6507581
+      "lon_snapped": 139.6507581,
+      "yaw": -49.2,
+      "pitch": -5.8
     },
     {
       "index": 1664,
@@ -24621,7 +24665,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7084167,
-      "lon_snapped": 139.6507135
+      "lon_snapped": 139.6507135,
+      "yaw": -49.2,
+      "pitch": -5.8
     },
     {
       "index": 1665,
@@ -24634,7 +24680,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7084108,
-      "lon_snapped": 139.6506688
+      "lon_snapped": 139.6506688,
+      "yaw": -49.2,
+      "pitch": -5.8
     },
     {
       "index": 1666,
@@ -24647,7 +24695,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7084048,
-      "lon_snapped": 139.6506241
+      "lon_snapped": 139.6506241,
+      "yaw": -49.2,
+      "pitch": -5.8
     },
     {
       "index": 1667,
@@ -24660,7 +24710,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7083988,
-      "lon_snapped": 139.6505794
+      "lon_snapped": 139.6505794,
+      "yaw": -49.2,
+      "pitch": -5.8
     },
     {
       "index": 1668,
@@ -24673,7 +24725,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7083928,
-      "lon_snapped": 139.6505347
+      "lon_snapped": 139.6505347,
+      "yaw": -49.2,
+      "pitch": -5.8
     },
     {
       "index": 1669,
@@ -24686,7 +24740,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7083868,
-      "lon_snapped": 139.6504901
+      "lon_snapped": 139.6504901,
+      "yaw": -49.2,
+      "pitch": -5.8
     },
     {
       "index": 1670,
@@ -24699,7 +24755,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7083808,
-      "lon_snapped": 139.6504454
+      "lon_snapped": 139.6504454,
+      "yaw": -49.2,
+      "pitch": -5.8
     },
     {
       "index": 1671,
@@ -24712,7 +24770,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7083748,
-      "lon_snapped": 139.6504007
+      "lon_snapped": 139.6504007,
+      "yaw": -49.2,
+      "pitch": -5.8
     },
     {
       "index": 1672,
@@ -24725,7 +24785,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7083688,
-      "lon_snapped": 139.650356
+      "lon_snapped": 139.650356,
+      "yaw": -49.2,
+      "pitch": -5.8
     },
     {
       "index": 1673,
@@ -24738,7 +24800,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7083631,
-      "lon_snapped": 139.6503113
+      "lon_snapped": 139.6503113,
+      "yaw": -49.2,
+      "pitch": -5.8
     },
     {
       "index": 1674,
@@ -24751,7 +24815,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7083574,
-      "lon_snapped": 139.6502665
+      "lon_snapped": 139.6502665,
+      "yaw": -49.2,
+      "pitch": -5.8
     },
     {
       "index": 1675,
@@ -24764,7 +24830,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7083533,
-      "lon_snapped": 139.6502216
+      "lon_snapped": 139.6502216,
+      "yaw": -43.1,
+      "pitch": -6.1
     },
     {
       "index": 1676,
@@ -24777,7 +24845,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7083504,
-      "lon_snapped": 139.6501764
+      "lon_snapped": 139.6501764,
+      "yaw": -43.1,
+      "pitch": -6.1
     },
     {
       "index": 1677,
@@ -24790,7 +24860,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7083475,
-      "lon_snapped": 139.6501313
+      "lon_snapped": 139.6501313,
+      "yaw": -43.1,
+      "pitch": -6.1
     },
     {
       "index": 1678,
@@ -24803,7 +24875,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7083447,
-      "lon_snapped": 139.6500861
+      "lon_snapped": 139.6500861,
+      "yaw": -43.1,
+      "pitch": -6.1
     },
     {
       "index": 1679,
@@ -24816,7 +24890,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7083418,
-      "lon_snapped": 139.650041
+      "lon_snapped": 139.650041,
+      "yaw": -43.1,
+      "pitch": -6.1
     },
     {
       "index": 1680,
@@ -24829,7 +24905,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.7083389,
-      "lon_snapped": 139.6499958
+      "lon_snapped": 139.6499958,
+      "yaw": -43.1,
+      "pitch": -6.1
     },
     {
       "index": 1681,
@@ -24842,7 +24920,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.708336,
-      "lon_snapped": 139.6499507
+      "lon_snapped": 139.6499507,
+      "yaw": -43.1,
+      "pitch": -6.1
     },
     {
       "index": 1682,
@@ -24855,7 +24935,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.708333,
-      "lon_snapped": 139.6499055
+      "lon_snapped": 139.6499055,
+      "yaw": -43.1,
+      "pitch": -6.1
     },
     {
       "index": 1683,
@@ -24868,7 +24950,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.70833,
-      "lon_snapped": 139.6498604
+      "lon_snapped": 139.6498604,
+      "yaw": -43.1,
+      "pitch": -6.1
     },
     {
       "index": 1684,
@@ -24881,7 +24965,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.708327,
-      "lon_snapped": 139.6498153
+      "lon_snapped": 139.6498153,
+      "yaw": -37.1,
+      "pitch": -6.1
     },
     {
       "index": 1685,
@@ -24894,7 +24980,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.708324,
-      "lon_snapped": 139.6497701
+      "lon_snapped": 139.6497701,
+      "yaw": -24.9,
+      "pitch": -6.1
     },
     {
       "index": 1686,
@@ -24907,7 +24995,9 @@
       "source": "GS010364",
       "neighborhood": "koenji",
       "lat_snapped": 35.708321,
-      "lon_snapped": 139.649725
+      "lon_snapped": 139.649725,
+      "yaw": -24.9,
+      "pitch": -6.1
     },
     {
       "index": 1687,
@@ -24920,7 +25010,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.708321,
-      "lon_snapped": 139.649725
+      "lon_snapped": 139.649725,
+      "yaw": -50,
+      "pitch": -2.7
     },
     {
       "index": 1688,
@@ -24933,7 +25025,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7082861,
-      "lon_snapped": 139.6497184
+      "lon_snapped": 139.6497184,
+      "yaw": -50,
+      "pitch": -2.7
     },
     {
       "index": 1689,
@@ -24946,7 +25040,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7082512,
-      "lon_snapped": 139.6497118
+      "lon_snapped": 139.6497118,
+      "yaw": -50,
+      "pitch": -2.7
     },
     {
       "index": 1690,
@@ -24959,7 +25055,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7082159,
-      "lon_snapped": 139.6497099
+      "lon_snapped": 139.6497099,
+      "yaw": -50,
+      "pitch": -2.7
     },
     {
       "index": 1691,
@@ -24972,7 +25070,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7081806,
-      "lon_snapped": 139.6497087
+      "lon_snapped": 139.6497087,
+      "yaw": -50,
+      "pitch": -2.7
     },
     {
       "index": 1692,
@@ -24985,7 +25085,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7081452,
-      "lon_snapped": 139.6497074
+      "lon_snapped": 139.6497074,
+      "yaw": -50,
+      "pitch": -2.7
     },
     {
       "index": 1693,
@@ -24998,7 +25100,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7081099,
-      "lon_snapped": 139.6497062
+      "lon_snapped": 139.6497062,
+      "yaw": -50,
+      "pitch": -2.7
     },
     {
       "index": 1694,
@@ -25011,7 +25115,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7080746,
-      "lon_snapped": 139.6497049
+      "lon_snapped": 139.6497049,
+      "yaw": -50,
+      "pitch": -2.7
     },
     {
       "index": 1695,
@@ -25024,7 +25130,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7080393,
-      "lon_snapped": 139.6497037
+      "lon_snapped": 139.6497037,
+      "yaw": -50,
+      "pitch": -2.7
     },
     {
       "index": 1696,
@@ -25037,7 +25145,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.708004,
-      "lon_snapped": 139.6497023
+      "lon_snapped": 139.6497023,
+      "yaw": -50,
+      "pitch": -2.7
     },
     {
       "index": 1697,
@@ -25050,7 +25160,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7079687,
-      "lon_snapped": 139.6497007
+      "lon_snapped": 139.6497007,
+      "yaw": -44.5,
+      "pitch": -2.8
     },
     {
       "index": 1698,
@@ -25063,7 +25175,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7079335,
-      "lon_snapped": 139.6496966
+      "lon_snapped": 139.6496966,
+      "yaw": -44.5,
+      "pitch": -2.8
     },
     {
       "index": 1699,
@@ -25076,7 +25190,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7078986,
-      "lon_snapped": 139.6496904
+      "lon_snapped": 139.6496904,
+      "yaw": -44.5,
+      "pitch": -2.8
     },
     {
       "index": 1700,
@@ -25089,7 +25205,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7078636,
-      "lon_snapped": 139.6496843
+      "lon_snapped": 139.6496843,
+      "yaw": -44.5,
+      "pitch": -2.8
     },
     {
       "index": 1701,
@@ -25102,7 +25220,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7078286,
-      "lon_snapped": 139.6496782
+      "lon_snapped": 139.6496782,
+      "yaw": -44.5,
+      "pitch": -2.8
     },
     {
       "index": 1702,
@@ -25115,7 +25235,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7077936,
-      "lon_snapped": 139.649672
+      "lon_snapped": 139.649672,
+      "yaw": -44.5,
+      "pitch": -2.8
     },
     {
       "index": 1703,
@@ -25128,7 +25250,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7077587,
-      "lon_snapped": 139.6496659
+      "lon_snapped": 139.6496659,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1704,
@@ -25141,7 +25265,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7077237,
-      "lon_snapped": 139.6496597
+      "lon_snapped": 139.6496597,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1705,
@@ -25154,7 +25280,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7076887,
-      "lon_snapped": 139.6496536
+      "lon_snapped": 139.6496536,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1706,
@@ -25167,7 +25295,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7076536,
-      "lon_snapped": 139.6496481
+      "lon_snapped": 139.6496481,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1707,
@@ -25180,7 +25310,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7076186,
-      "lon_snapped": 139.6496424
+      "lon_snapped": 139.6496424,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1708,
@@ -25193,7 +25325,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7075841,
-      "lon_snapped": 139.6496331
+      "lon_snapped": 139.6496331,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1709,
@@ -25206,7 +25340,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7075496,
-      "lon_snapped": 139.6496238
+      "lon_snapped": 139.6496238,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1710,
@@ -25219,7 +25355,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7075151,
-      "lon_snapped": 139.6496145
+      "lon_snapped": 139.6496145,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1711,
@@ -25232,7 +25370,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7074806,
-      "lon_snapped": 139.6496052
+      "lon_snapped": 139.6496052,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1712,
@@ -25245,7 +25385,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.707446,
-      "lon_snapped": 139.6495959
+      "lon_snapped": 139.6495959,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1713,
@@ -25258,7 +25400,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7074113,
-      "lon_snapped": 139.6495884
+      "lon_snapped": 139.6495884,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1714,
@@ -25271,7 +25415,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7073762,
-      "lon_snapped": 139.6495831
+      "lon_snapped": 139.6495831,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1715,
@@ -25284,7 +25430,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7073411,
-      "lon_snapped": 139.6495777
+      "lon_snapped": 139.6495777,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1716,
@@ -25297,7 +25445,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7073061,
-      "lon_snapped": 139.6495724
+      "lon_snapped": 139.6495724,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1717,
@@ -25310,7 +25460,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7072711,
-      "lon_snapped": 139.6495663
+      "lon_snapped": 139.6495663,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1718,
@@ -25323,7 +25475,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7072362,
-      "lon_snapped": 139.6495596
+      "lon_snapped": 139.6495596,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1719,
@@ -25336,7 +25490,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7072013,
-      "lon_snapped": 139.6495529
+      "lon_snapped": 139.6495529,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1720,
@@ -25349,7 +25505,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7071664,
-      "lon_snapped": 139.6495461
+      "lon_snapped": 139.6495461,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1721,
@@ -25362,7 +25520,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7071315,
-      "lon_snapped": 139.6495394
+      "lon_snapped": 139.6495394,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1722,
@@ -25375,7 +25535,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7070966,
-      "lon_snapped": 139.6495326
+      "lon_snapped": 139.6495326,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1723,
@@ -25388,7 +25550,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7070617,
-      "lon_snapped": 139.6495259
+      "lon_snapped": 139.6495259,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1724,
@@ -25401,7 +25565,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7070269,
-      "lon_snapped": 139.6495181
+      "lon_snapped": 139.6495181,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1725,
@@ -25414,7 +25580,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7069922,
-      "lon_snapped": 139.64951
+      "lon_snapped": 139.64951,
+      "yaw": -33.7,
+      "pitch": -2.3
     },
     {
       "index": 1726,
@@ -25427,7 +25595,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7069575,
-      "lon_snapped": 139.6495018
+      "lon_snapped": 139.6495018,
+      "yaw": -24,
+      "pitch": -2.8
     },
     {
       "index": 1727,
@@ -25440,7 +25610,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.706923,
-      "lon_snapped": 139.6494923
+      "lon_snapped": 139.6494923,
+      "yaw": -24,
+      "pitch": -2.8
     },
     {
       "index": 1728,
@@ -25453,7 +25625,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.706889,
-      "lon_snapped": 139.6494808
+      "lon_snapped": 139.6494808,
+      "yaw": -24,
+      "pitch": -2.8
     },
     {
       "index": 1729,
@@ -25466,7 +25640,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7068549,
-      "lon_snapped": 139.6494693
+      "lon_snapped": 139.6494693,
+      "yaw": -24,
+      "pitch": -2.8
     },
     {
       "index": 1730,
@@ -25479,7 +25655,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7068208,
-      "lon_snapped": 139.6494577
+      "lon_snapped": 139.6494577,
+      "yaw": -24,
+      "pitch": -2.8
     },
     {
       "index": 1731,
@@ -25492,7 +25670,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7067873,
-      "lon_snapped": 139.6494446
+      "lon_snapped": 139.6494446,
+      "yaw": -5.9,
+      "pitch": -3.3
     },
     {
       "index": 1732,
@@ -25505,7 +25685,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7067567,
-      "lon_snapped": 139.6494228
+      "lon_snapped": 139.6494228,
+      "yaw": -5.9,
+      "pitch": -3.3
     },
     {
       "index": 1733,
@@ -25518,7 +25700,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7067262,
-      "lon_snapped": 139.6494009
+      "lon_snapped": 139.6494009,
+      "yaw": -5.9,
+      "pitch": -3.3
     },
     {
       "index": 1734,
@@ -25531,7 +25715,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7066956,
-      "lon_snapped": 139.649379
+      "lon_snapped": 139.649379,
+      "yaw": -5.9,
+      "pitch": -3.3
     },
     {
       "index": 1735,
@@ -25544,7 +25730,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7066651,
-      "lon_snapped": 139.6493573
+      "lon_snapped": 139.6493573,
+      "yaw": -5.9,
+      "pitch": -3.3
     },
     {
       "index": 1736,
@@ -25557,7 +25745,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7066344,
-      "lon_snapped": 139.6493356
+      "lon_snapped": 139.6493356,
+      "yaw": -5.9,
+      "pitch": -3.3
     },
     {
       "index": 1737,
@@ -25570,7 +25760,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7066038,
-      "lon_snapped": 139.6493138
+      "lon_snapped": 139.6493138,
+      "yaw": -5.9,
+      "pitch": -3.3
     },
     {
       "index": 1738,
@@ -25583,7 +25775,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7065732,
-      "lon_snapped": 139.6492921
+      "lon_snapped": 139.6492921,
+      "yaw": -5.9,
+      "pitch": -3.3
     },
     {
       "index": 1739,
@@ -25596,7 +25790,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7065426,
-      "lon_snapped": 139.6492704
+      "lon_snapped": 139.6492704,
+      "yaw": -5.9,
+      "pitch": -3.3
     },
     {
       "index": 1740,
@@ -25609,7 +25805,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.706512,
-      "lon_snapped": 139.6492487
+      "lon_snapped": 139.6492487,
+      "yaw": -5.9,
+      "pitch": -3.3
     },
     {
       "index": 1741,
@@ -25622,7 +25820,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064813,
-      "lon_snapped": 139.649227
+      "lon_snapped": 139.649227,
+      "yaw": -5.9,
+      "pitch": -3.3
     },
     {
       "index": 1742,
@@ -25635,7 +25835,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064507,
-      "lon_snapped": 139.6492053
+      "lon_snapped": 139.6492053,
+      "yaw": -5.9,
+      "pitch": -3.3
     },
     {
       "index": 1743,
@@ -25648,7 +25850,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064201,
-      "lon_snapped": 139.6491836
+      "lon_snapped": 139.6491836,
+      "yaw": -5.9,
+      "pitch": -3.3
     },
     {
       "index": 1744,
@@ -25661,7 +25865,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7063895,
-      "lon_snapped": 139.6491618
+      "lon_snapped": 139.6491618,
+      "yaw": -5.9,
+      "pitch": -3.3
     },
     {
       "index": 1745,
@@ -25674,7 +25880,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7063589,
-      "lon_snapped": 139.6491401
+      "lon_snapped": 139.6491401,
+      "yaw": -5.9,
+      "pitch": -3.3
     },
     {
       "index": 1746,
@@ -25687,7 +25895,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7063308,
-      "lon_snapped": 139.649114
+      "lon_snapped": 139.649114,
+      "yaw": -5.9,
+      "pitch": -3.3
     },
     {
       "index": 1747,
@@ -25700,7 +25910,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7063047,
-      "lon_snapped": 139.6490848
+      "lon_snapped": 139.6490848,
+      "yaw": -5.9,
+      "pitch": -3.3
     },
     {
       "index": 1748,
@@ -25713,7 +25925,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7062762,
-      "lon_snapped": 139.6490591
+      "lon_snapped": 139.6490591,
+      "yaw": 9.2,
+      "pitch": -4.1
     },
     {
       "index": 1749,
@@ -25726,7 +25940,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7062476,
-      "lon_snapped": 139.6490335
+      "lon_snapped": 139.6490335,
+      "yaw": 9.2,
+      "pitch": -4.1
     },
     {
       "index": 1750,
@@ -25739,7 +25955,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.706219,
-      "lon_snapped": 139.6490079
+      "lon_snapped": 139.6490079,
+      "yaw": 9.2,
+      "pitch": -4.1
     },
     {
       "index": 1751,
@@ -25752,7 +25970,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7061905,
-      "lon_snapped": 139.6489823
+      "lon_snapped": 139.6489823,
+      "yaw": 9.2,
+      "pitch": -4.1
     },
     {
       "index": 1752,
@@ -25765,7 +25985,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7061619,
-      "lon_snapped": 139.6489567
+      "lon_snapped": 139.6489567,
+      "yaw": 9.2,
+      "pitch": -4.1
     },
     {
       "index": 1753,
@@ -25778,7 +26000,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7061333,
-      "lon_snapped": 139.6489311
+      "lon_snapped": 139.6489311,
+      "yaw": 9.2,
+      "pitch": -4.1
     },
     {
       "index": 1754,
@@ -25791,7 +26015,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7061048,
-      "lon_snapped": 139.6489055
+      "lon_snapped": 139.6489055,
+      "yaw": 9.2,
+      "pitch": -4.1
     },
     {
       "index": 1755,
@@ -25804,7 +26030,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060762,
-      "lon_snapped": 139.6488799
+      "lon_snapped": 139.6488799,
+      "yaw": 9.2,
+      "pitch": -4.1
     },
     {
       "index": 1756,
@@ -25817,7 +26045,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060477,
-      "lon_snapped": 139.6488542
+      "lon_snapped": 139.6488542,
+      "yaw": 9.2,
+      "pitch": -4.1
     },
     {
       "index": 1757,
@@ -25830,7 +26060,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060191,
-      "lon_snapped": 139.6488286
+      "lon_snapped": 139.6488286,
+      "yaw": 9.2,
+      "pitch": -4.1
     },
     {
       "index": 1758,
@@ -25843,7 +26075,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7059909,
-      "lon_snapped": 139.6488023
+      "lon_snapped": 139.6488023,
+      "yaw": 9.2,
+      "pitch": -4.1
     },
     {
       "index": 1759,
@@ -25856,7 +26090,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7059628,
-      "lon_snapped": 139.648776
+      "lon_snapped": 139.648776,
+      "yaw": 18.2,
+      "pitch": -4.2
     },
     {
       "index": 1760,
@@ -25869,7 +26105,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7059347,
-      "lon_snapped": 139.6487496
+      "lon_snapped": 139.6487496,
+      "yaw": 18.2,
+      "pitch": -4.2
     },
     {
       "index": 1761,
@@ -25882,7 +26120,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7059066,
-      "lon_snapped": 139.6487232
+      "lon_snapped": 139.6487232,
+      "yaw": 18.2,
+      "pitch": -4.2
     },
     {
       "index": 1762,
@@ -25895,7 +26135,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7058785,
-      "lon_snapped": 139.6486969
+      "lon_snapped": 139.6486969,
+      "yaw": 18.2,
+      "pitch": -4.2
     },
     {
       "index": 1763,
@@ -25908,7 +26150,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7058504,
-      "lon_snapped": 139.6486705
+      "lon_snapped": 139.6486705,
+      "yaw": 18.2,
+      "pitch": -4.2
     },
     {
       "index": 1764,
@@ -25921,7 +26165,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7058223,
-      "lon_snapped": 139.6486441
+      "lon_snapped": 139.6486441,
+      "yaw": 18.2,
+      "pitch": -4.2
     },
     {
       "index": 1765,
@@ -25934,7 +26180,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7057942,
-      "lon_snapped": 139.6486177
+      "lon_snapped": 139.6486177,
+      "yaw": 18.2,
+      "pitch": -4.2
     },
     {
       "index": 1766,
@@ -25947,7 +26195,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.7057661,
-      "lon_snapped": 139.6485914
+      "lon_snapped": 139.6485914,
+      "yaw": 18.2,
+      "pitch": -4.2
     },
     {
       "index": 1767,
@@ -25960,7 +26210,9 @@
       "source": "GS010365",
       "neighborhood": "koenji",
       "lat_snapped": 35.705738,
-      "lon_snapped": 139.648565
+      "lon_snapped": 139.648565,
+      "yaw": 18.2,
+      "pitch": -4.2
     },
     {
       "index": 1768,
@@ -25973,7 +26225,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.705738,
-      "lon_snapped": 139.648565
+      "lon_snapped": 139.648565,
+      "yaw": -24.1,
+      "pitch": -1.5
     },
     {
       "index": 1769,
@@ -25986,7 +26240,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7057164,
-      "lon_snapped": 139.6486026
+      "lon_snapped": 139.6486026,
+      "yaw": -24.1,
+      "pitch": -1.5
     },
     {
       "index": 1770,
@@ -25999,7 +26255,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7056948,
-      "lon_snapped": 139.6486401
+      "lon_snapped": 139.6486401,
+      "yaw": -24.1,
+      "pitch": -1.5
     },
     {
       "index": 1771,
@@ -26012,7 +26270,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7056732,
-      "lon_snapped": 139.6486777
+      "lon_snapped": 139.6486777,
+      "yaw": -24.1,
+      "pitch": -1.5
     },
     {
       "index": 1772,
@@ -26025,7 +26285,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7056516,
-      "lon_snapped": 139.6487153
+      "lon_snapped": 139.6487153,
+      "yaw": -24.1,
+      "pitch": -1.5
     },
     {
       "index": 1773,
@@ -26038,7 +26300,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7056304,
-      "lon_snapped": 139.6487531
+      "lon_snapped": 139.6487531,
+      "yaw": -24.1,
+      "pitch": -1.5
     },
     {
       "index": 1774,
@@ -26051,7 +26315,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7056097,
-      "lon_snapped": 139.6487915
+      "lon_snapped": 139.6487915,
+      "yaw": -24.1,
+      "pitch": -1.5
     },
     {
       "index": 1775,
@@ -26064,7 +26330,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055889,
-      "lon_snapped": 139.6488298
+      "lon_snapped": 139.6488298,
+      "yaw": -24.1,
+      "pitch": -1.5
     },
     {
       "index": 1776,
@@ -26077,7 +26345,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055682,
-      "lon_snapped": 139.6488681
+      "lon_snapped": 139.6488681,
+      "yaw": -24.1,
+      "pitch": -1.5
     },
     {
       "index": 1777,
@@ -26090,7 +26360,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055475,
-      "lon_snapped": 139.6489064
+      "lon_snapped": 139.6489064,
+      "yaw": -24.1,
+      "pitch": -1.5
     },
     {
       "index": 1778,
@@ -26103,7 +26375,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055267,
-      "lon_snapped": 139.6489446
+      "lon_snapped": 139.6489446,
+      "yaw": -24.1,
+      "pitch": -1.5
     },
     {
       "index": 1779,
@@ -26116,7 +26390,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055056,
-      "lon_snapped": 139.6489827
+      "lon_snapped": 139.6489827,
+      "yaw": -24.1,
+      "pitch": -1.5
     },
     {
       "index": 1780,
@@ -26129,7 +26405,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7054845,
-      "lon_snapped": 139.6490206
+      "lon_snapped": 139.6490206,
+      "yaw": -24.1,
+      "pitch": -1.5
     },
     {
       "index": 1781,
@@ -26142,7 +26420,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7054634,
-      "lon_snapped": 139.6490586
+      "lon_snapped": 139.6490586,
+      "yaw": -24.1,
+      "pitch": -1.5
     },
     {
       "index": 1782,
@@ -26155,7 +26435,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7054422,
-      "lon_snapped": 139.6490966
+      "lon_snapped": 139.6490966,
+      "yaw": -54.1,
+      "pitch": -2.9
     },
     {
       "index": 1783,
@@ -26168,7 +26450,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7054396,
-      "lon_snapped": 139.6491405
+      "lon_snapped": 139.6491405,
+      "yaw": -54.1,
+      "pitch": -2.9
     },
     {
       "index": 1784,
@@ -26181,7 +26465,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.705443,
-      "lon_snapped": 139.6491863
+      "lon_snapped": 139.6491863,
+      "yaw": -54.1,
+      "pitch": -2.9
     },
     {
       "index": 1785,
@@ -26194,7 +26480,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7054464,
-      "lon_snapped": 139.6492322
+      "lon_snapped": 139.6492322,
+      "yaw": -54.1,
+      "pitch": -2.9
     },
     {
       "index": 1786,
@@ -26207,7 +26495,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7054499,
-      "lon_snapped": 139.649278
+      "lon_snapped": 139.649278,
+      "yaw": -54.1,
+      "pitch": -2.9
     },
     {
       "index": 1787,
@@ -26220,7 +26510,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7054556,
-      "lon_snapped": 139.6493234
+      "lon_snapped": 139.6493234,
+      "yaw": -68,
+      "pitch": -3.8
     },
     {
       "index": 1788,
@@ -26233,7 +26525,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7054756,
-      "lon_snapped": 139.6493601
+      "lon_snapped": 139.6493601,
+      "yaw": -105.6,
+      "pitch": -6
     },
     {
       "index": 1789,
@@ -26246,7 +26540,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055023,
-      "lon_snapped": 139.6493922
+      "lon_snapped": 139.6493922,
+      "yaw": -105.6,
+      "pitch": -6
     },
     {
       "index": 1790,
@@ -26259,7 +26555,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055281,
-      "lon_snapped": 139.6494255
+      "lon_snapped": 139.6494255,
+      "yaw": -114,
+      "pitch": -6.4
     },
     {
       "index": 1791,
@@ -26272,7 +26570,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055547,
-      "lon_snapped": 139.6494578
+      "lon_snapped": 139.6494578,
+      "yaw": -114,
+      "pitch": -6.4
     },
     {
       "index": 1792,
@@ -26285,7 +26585,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055823,
-      "lon_snapped": 139.6494888
+      "lon_snapped": 139.6494888,
+      "yaw": -114,
+      "pitch": -6.4
     },
     {
       "index": 1793,
@@ -26298,7 +26600,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7056124,
-      "lon_snapped": 139.6495158
+      "lon_snapped": 139.6495158,
+      "yaw": -114,
+      "pitch": -6.4
     },
     {
       "index": 1794,
@@ -26311,7 +26615,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7056445,
-      "lon_snapped": 139.6495394
+      "lon_snapped": 139.6495394,
+      "yaw": -114,
+      "pitch": -6.4
     },
     {
       "index": 1795,
@@ -26324,7 +26630,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7056784,
-      "lon_snapped": 139.6495587
+      "lon_snapped": 139.6495587,
+      "yaw": -114,
+      "pitch": -6.4
     },
     {
       "index": 1796,
@@ -26337,7 +26645,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7057131,
-      "lon_snapped": 139.6495756
+      "lon_snapped": 139.6495756,
+      "yaw": -114,
+      "pitch": -6.4
     },
     {
       "index": 1797,
@@ -26350,7 +26660,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7057484,
-      "lon_snapped": 139.6495907
+      "lon_snapped": 139.6495907,
+      "yaw": -114,
+      "pitch": -6.4
     },
     {
       "index": 1798,
@@ -26363,7 +26675,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7057832,
-      "lon_snapped": 139.6496076
+      "lon_snapped": 139.6496076,
+      "yaw": -114,
+      "pitch": -6.4
     },
     {
       "index": 1799,
@@ -26376,7 +26690,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7058185,
-      "lon_snapped": 139.6496227
+      "lon_snapped": 139.6496227,
+      "yaw": -114,
+      "pitch": -6.4
     },
     {
       "index": 1800,
@@ -26389,7 +26705,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7058541,
-      "lon_snapped": 139.6496367
+      "lon_snapped": 139.6496367,
+      "yaw": -114,
+      "pitch": -6.4
     },
     {
       "index": 1801,
@@ -26402,7 +26720,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7058893,
-      "lon_snapped": 139.6496516
+      "lon_snapped": 139.6496516,
+      "yaw": -114,
+      "pitch": -6.4
     },
     {
       "index": 1802,
@@ -26415,7 +26735,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7059157,
-      "lon_snapped": 139.6496841
+      "lon_snapped": 139.6496841,
+      "yaw": -114,
+      "pitch": -6.4
     },
     {
       "index": 1803,
@@ -26428,7 +26750,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7059464,
-      "lon_snapped": 139.6497092
+      "lon_snapped": 139.6497092,
+      "yaw": -102.8,
+      "pitch": -6.4
     },
     {
       "index": 1804,
@@ -26441,7 +26765,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7059831,
-      "lon_snapped": 139.6497113
+      "lon_snapped": 139.6497113,
+      "yaw": -85.3,
+      "pitch": -6.1
     },
     {
       "index": 1805,
@@ -26454,7 +26780,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060122,
-      "lon_snapped": 139.6497103
+      "lon_snapped": 139.6497103,
+      "yaw": -60.8,
+      "pitch": -6.3
     },
     {
       "index": 1806,
@@ -26467,7 +26795,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060183,
-      "lon_snapped": 139.6497548
+      "lon_snapped": 139.6497548,
+      "yaw": -46,
+      "pitch": -5.8
     },
     {
       "index": 1807,
@@ -26480,7 +26810,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060187,
-      "lon_snapped": 139.6498008
+      "lon_snapped": 139.6498008,
+      "yaw": -46,
+      "pitch": -5.8
     },
     {
       "index": 1808,
@@ -26493,7 +26825,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060193,
-      "lon_snapped": 139.6498468
+      "lon_snapped": 139.6498468,
+      "yaw": -46,
+      "pitch": -5.8
     },
     {
       "index": 1809,
@@ -26506,7 +26840,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060199,
-      "lon_snapped": 139.6498928
+      "lon_snapped": 139.6498928,
+      "yaw": -46,
+      "pitch": -5.8
     },
     {
       "index": 1810,
@@ -26519,7 +26855,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060206,
-      "lon_snapped": 139.6499389
+      "lon_snapped": 139.6499389,
+      "yaw": -46,
+      "pitch": -5.8
     },
     {
       "index": 1811,
@@ -26532,7 +26870,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060212,
-      "lon_snapped": 139.6499849
+      "lon_snapped": 139.6499849,
+      "yaw": -46,
+      "pitch": -5.8
     },
     {
       "index": 1812,
@@ -26545,7 +26885,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060218,
-      "lon_snapped": 139.6500309
+      "lon_snapped": 139.6500309,
+      "yaw": -46,
+      "pitch": -5.8
     },
     {
       "index": 1813,
@@ -26558,7 +26900,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060225,
-      "lon_snapped": 139.6500769
+      "lon_snapped": 139.6500769,
+      "yaw": -46,
+      "pitch": -5.8
     },
     {
       "index": 1814,
@@ -26571,7 +26915,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060231,
-      "lon_snapped": 139.650123
+      "lon_snapped": 139.650123,
+      "yaw": -46,
+      "pitch": -5.8
     },
     {
       "index": 1815,
@@ -26584,7 +26930,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060238,
-      "lon_snapped": 139.650169
+      "lon_snapped": 139.650169,
+      "yaw": -46,
+      "pitch": -5.8
     },
     {
       "index": 1816,
@@ -26597,7 +26945,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.706019,
-      "lon_snapped": 139.6502097
+      "lon_snapped": 139.6502097,
+      "yaw": -46,
+      "pitch": -5.8
     },
     {
       "index": 1817,
@@ -26610,7 +26960,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7059816,
-      "lon_snapped": 139.650207
+      "lon_snapped": 139.650207,
+      "yaw": -46,
+      "pitch": -5.8
     },
     {
       "index": 1818,
@@ -26623,7 +26975,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7059514,
-      "lon_snapped": 139.6502174
+      "lon_snapped": 139.6502174,
+      "yaw": -46,
+      "pitch": -5.8
     },
     {
       "index": 1819,
@@ -26636,7 +26990,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7059388,
-      "lon_snapped": 139.6502607
+      "lon_snapped": 139.6502607,
+      "yaw": -19.1,
+      "pitch": -6.8
     },
     {
       "index": 1820,
@@ -26649,7 +27005,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7059238,
-      "lon_snapped": 139.6503018
+      "lon_snapped": 139.6503018,
+      "yaw": -19.1,
+      "pitch": -6.8
     },
     {
       "index": 1821,
@@ -26662,7 +27020,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7058936,
-      "lon_snapped": 139.650329
+      "lon_snapped": 139.650329,
+      "yaw": -19.1,
+      "pitch": -6.8
     },
     {
       "index": 1822,
@@ -26675,7 +27035,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7058635,
-      "lon_snapped": 139.6503562
+      "lon_snapped": 139.6503562,
+      "yaw": 62.9,
+      "pitch": -7.6
     },
     {
       "index": 1823,
@@ -26688,7 +27050,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7058323,
-      "lon_snapped": 139.6503814
+      "lon_snapped": 139.6503814,
+      "yaw": 62.9,
+      "pitch": -7.6
     },
     {
       "index": 1824,
@@ -26701,7 +27065,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7057996,
-      "lon_snapped": 139.6504039
+      "lon_snapped": 139.6504039,
+      "yaw": 62.9,
+      "pitch": -7.6
     },
     {
       "index": 1825,
@@ -26714,7 +27080,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.705767,
-      "lon_snapped": 139.6504263
+      "lon_snapped": 139.6504263,
+      "yaw": 62.9,
+      "pitch": -7.6
     },
     {
       "index": 1826,
@@ -26727,7 +27095,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7057382,
-      "lon_snapped": 139.6504555
+      "lon_snapped": 139.6504555,
+      "yaw": 47.9,
+      "pitch": -7.5
     },
     {
       "index": 1827,
@@ -26740,7 +27110,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7057035,
-      "lon_snapped": 139.6504711
+      "lon_snapped": 139.6504711,
+      "yaw": 28.7,
+      "pitch": -7.5
     },
     {
       "index": 1828,
@@ -26753,7 +27125,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7057078,
-      "lon_snapped": 139.6504945
+      "lon_snapped": 139.6504945,
+      "yaw": 28.7,
+      "pitch": -7.5
     },
     {
       "index": 1829,
@@ -26766,7 +27140,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7057363,
-      "lon_snapped": 139.6505243
+      "lon_snapped": 139.6505243,
+      "yaw": 28.7,
+      "pitch": -7.5
     },
     {
       "index": 1830,
@@ -26779,7 +27155,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7057126,
-      "lon_snapped": 139.650556
+      "lon_snapped": 139.650556,
+      "yaw": 28.7,
+      "pitch": -7.5
     },
     {
       "index": 1831,
@@ -26792,7 +27170,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7056857,
-      "lon_snapped": 139.6505879
+      "lon_snapped": 139.6505879,
+      "yaw": 28.7,
+      "pitch": -7.5
     },
     {
       "index": 1832,
@@ -26805,7 +27185,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7056587,
-      "lon_snapped": 139.6506198
+      "lon_snapped": 139.6506198,
+      "yaw": 28.7,
+      "pitch": -7.5
     },
     {
       "index": 1833,
@@ -26818,7 +27200,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7056318,
-      "lon_snapped": 139.6506517
+      "lon_snapped": 139.6506517,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1834,
@@ -26831,7 +27215,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7056111,
-      "lon_snapped": 139.6506888
+      "lon_snapped": 139.6506888,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1835,
@@ -26844,7 +27230,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055969,
-      "lon_snapped": 139.6507314
+      "lon_snapped": 139.6507314,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1836,
@@ -26857,7 +27245,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.705584,
-      "lon_snapped": 139.6507743
+      "lon_snapped": 139.6507743,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1837,
@@ -26870,7 +27260,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055836,
-      "lon_snapped": 139.6508204
+      "lon_snapped": 139.6508204,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1838,
@@ -26883,7 +27275,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055833,
-      "lon_snapped": 139.6508664
+      "lon_snapped": 139.6508664,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1839,
@@ -26896,7 +27290,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.705583,
-      "lon_snapped": 139.6509124
+      "lon_snapped": 139.6509124,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1840,
@@ -26909,7 +27305,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.705583,
-      "lon_snapped": 139.6509585
+      "lon_snapped": 139.6509585,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1841,
@@ -26922,7 +27320,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055828,
-      "lon_snapped": 139.6510045
+      "lon_snapped": 139.6510045,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1842,
@@ -26935,7 +27335,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055817,
-      "lon_snapped": 139.6510505
+      "lon_snapped": 139.6510505,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1843,
@@ -26948,7 +27350,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055806,
-      "lon_snapped": 139.6510965
+      "lon_snapped": 139.6510965,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1844,
@@ -26961,7 +27365,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055795,
-      "lon_snapped": 139.6511425
+      "lon_snapped": 139.6511425,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1845,
@@ -26974,7 +27380,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055785,
-      "lon_snapped": 139.6511885
+      "lon_snapped": 139.6511885,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1846,
@@ -26987,7 +27395,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055774,
-      "lon_snapped": 139.6512346
+      "lon_snapped": 139.6512346,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1847,
@@ -27000,7 +27410,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055763,
-      "lon_snapped": 139.6512806
+      "lon_snapped": 139.6512806,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1848,
@@ -27013,7 +27425,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055752,
-      "lon_snapped": 139.6513266
+      "lon_snapped": 139.6513266,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1849,
@@ -27026,7 +27440,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055744,
-      "lon_snapped": 139.6513726
+      "lon_snapped": 139.6513726,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1850,
@@ -27039,7 +27455,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055735,
-      "lon_snapped": 139.6514186
+      "lon_snapped": 139.6514186,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1851,
@@ -27052,7 +27470,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055731,
-      "lon_snapped": 139.6514646
+      "lon_snapped": 139.6514646,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1852,
@@ -27065,7 +27485,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055732,
-      "lon_snapped": 139.6515107
+      "lon_snapped": 139.6515107,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1853,
@@ -27078,7 +27500,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055733,
-      "lon_snapped": 139.6515567
+      "lon_snapped": 139.6515567,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1854,
@@ -27091,7 +27515,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055735,
-      "lon_snapped": 139.6516027
+      "lon_snapped": 139.6516027,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1855,
@@ -27104,7 +27530,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055736,
-      "lon_snapped": 139.6516488
+      "lon_snapped": 139.6516488,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1856,
@@ -27117,7 +27545,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055737,
-      "lon_snapped": 139.6516948
+      "lon_snapped": 139.6516948,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1857,
@@ -27130,7 +27560,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.7055739,
-      "lon_snapped": 139.6517408
+      "lon_snapped": 139.6517408,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1858,
@@ -27143,7 +27575,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.705574,
-      "lon_snapped": 139.6517869
+      "lon_snapped": 139.6517869,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1859,
@@ -27156,7 +27590,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.705574,
-      "lon_snapped": 139.6518329
+      "lon_snapped": 139.6518329,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1860,
@@ -27169,7 +27605,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.705574,
-      "lon_snapped": 139.6518789
+      "lon_snapped": 139.6518789,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1861,
@@ -27182,7 +27620,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.705574,
-      "lon_snapped": 139.651925
+      "lon_snapped": 139.651925,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1862,
@@ -27195,7 +27635,9 @@
       "source": "GS010366",
       "neighborhood": "koenji",
       "lat_snapped": 35.705574,
-      "lon_snapped": 139.651971
+      "lon_snapped": 139.651971,
+      "yaw": -14.6,
+      "pitch": -9.3
     },
     {
       "index": 1863,
@@ -27208,7 +27650,9 @@
       "source": "GS010367",
       "neighborhood": "koenji",
       "lat_snapped": 35.705878,
-      "lon_snapped": 139.651443
+      "lon_snapped": 139.651443,
+      "yaw": -11.2,
+      "pitch": 0.1
     },
     {
       "index": 1864,
@@ -27221,7 +27665,9 @@
       "source": "GS010367",
       "neighborhood": "koenji",
       "lat_snapped": 35.7058441,
-      "lon_snapped": 139.6514434
+      "lon_snapped": 139.6514434,
+      "yaw": -11.2,
+      "pitch": 0.1
     },
     {
       "index": 1865,
@@ -27234,7 +27680,9 @@
       "source": "GS010367",
       "neighborhood": "koenji",
       "lat_snapped": 35.7058102,
-      "lon_snapped": 139.6514439
+      "lon_snapped": 139.6514439,
+      "yaw": -11.2,
+      "pitch": 0.1
     },
     {
       "index": 1866,
@@ -27247,7 +27695,9 @@
       "source": "GS010367",
       "neighborhood": "koenji",
       "lat_snapped": 35.7057763,
-      "lon_snapped": 139.6514443
+      "lon_snapped": 139.6514443,
+      "yaw": -11.2,
+      "pitch": 0.1
     },
     {
       "index": 1867,
@@ -27260,7 +27710,9 @@
       "source": "GS010367",
       "neighborhood": "koenji",
       "lat_snapped": 35.7057424,
-      "lon_snapped": 139.6514448
+      "lon_snapped": 139.6514448,
+      "yaw": -11.2,
+      "pitch": 0.1
     },
     {
       "index": 1868,
@@ -27273,7 +27725,9 @@
       "source": "GS010367",
       "neighborhood": "koenji",
       "lat_snapped": 35.7057086,
-      "lon_snapped": 139.6514452
+      "lon_snapped": 139.6514452,
+      "yaw": -11.2,
+      "pitch": 0.1
     },
     {
       "index": 1869,
@@ -27286,7 +27740,9 @@
       "source": "GS010367",
       "neighborhood": "koenji",
       "lat_snapped": 35.7056747,
-      "lon_snapped": 139.6514457
+      "lon_snapped": 139.6514457,
+      "yaw": -11.2,
+      "pitch": 0.1
     },
     {
       "index": 1870,
@@ -27299,7 +27755,9 @@
       "source": "GS010367",
       "neighborhood": "koenji",
       "lat_snapped": 35.7056408,
-      "lon_snapped": 139.6514461
+      "lon_snapped": 139.6514461,
+      "yaw": -11.2,
+      "pitch": 0.1
     },
     {
       "index": 1871,
@@ -27312,7 +27770,9 @@
       "source": "GS010367",
       "neighborhood": "koenji",
       "lat_snapped": 35.7056069,
-      "lon_snapped": 139.6514466
+      "lon_snapped": 139.6514466,
+      "yaw": -11.2,
+      "pitch": 0.1
     },
     {
       "index": 1872,
@@ -27325,7 +27785,9 @@
       "source": "GS010367",
       "neighborhood": "koenji",
       "lat_snapped": 35.705573,
-      "lon_snapped": 139.651447
+      "lon_snapped": 139.651447,
+      "yaw": -11.2,
+      "pitch": 0.1
     },
     {
       "index": 1873,
@@ -27858,7 +28320,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.706469,
-      "lon_snapped": 139.650586
+      "lon_snapped": 139.650586,
+      "yaw": -18.5,
+      "pitch": 0.2
     },
     {
       "index": 1914,
@@ -27871,7 +28335,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064706,
-      "lon_snapped": 139.6506272
+      "lon_snapped": 139.6506272,
+      "yaw": -18.5,
+      "pitch": 0.2
     },
     {
       "index": 1915,
@@ -27884,7 +28350,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064708,
-      "lon_snapped": 139.6506684
+      "lon_snapped": 139.6506684,
+      "yaw": -18.5,
+      "pitch": 0.2
     },
     {
       "index": 1916,
@@ -27897,7 +28365,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064706,
-      "lon_snapped": 139.6507097
+      "lon_snapped": 139.6507097,
+      "yaw": -18.5,
+      "pitch": 0.2
     },
     {
       "index": 1917,
@@ -27910,7 +28380,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064703,
-      "lon_snapped": 139.6507509
+      "lon_snapped": 139.6507509,
+      "yaw": -18.5,
+      "pitch": 0.2
     },
     {
       "index": 1918,
@@ -27923,7 +28395,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.70647,
-      "lon_snapped": 139.6507921
+      "lon_snapped": 139.6507921,
+      "yaw": -18.5,
+      "pitch": 0.2
     },
     {
       "index": 1919,
@@ -27936,7 +28410,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064698,
-      "lon_snapped": 139.6508334
+      "lon_snapped": 139.6508334,
+      "yaw": -18.5,
+      "pitch": 0.2
     },
     {
       "index": 1920,
@@ -27949,7 +28425,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064695,
-      "lon_snapped": 139.6508746
+      "lon_snapped": 139.6508746,
+      "yaw": -18.5,
+      "pitch": 0.2
     },
     {
       "index": 1921,
@@ -27962,7 +28440,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064693,
-      "lon_snapped": 139.6509158
+      "lon_snapped": 139.6509158,
+      "yaw": -18.5,
+      "pitch": 0.2
     },
     {
       "index": 1922,
@@ -27975,7 +28455,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.706469,
-      "lon_snapped": 139.6509571
+      "lon_snapped": 139.6509571,
+      "yaw": -18.5,
+      "pitch": 0.2
     },
     {
       "index": 1923,
@@ -27988,7 +28470,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064688,
-      "lon_snapped": 139.6509983
+      "lon_snapped": 139.6509983,
+      "yaw": -18.5,
+      "pitch": 0.2
     },
     {
       "index": 1924,
@@ -28001,7 +28485,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064686,
-      "lon_snapped": 139.6510396
+      "lon_snapped": 139.6510396,
+      "yaw": -18.5,
+      "pitch": 0.2
     },
     {
       "index": 1925,
@@ -28014,7 +28500,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064684,
-      "lon_snapped": 139.6510808
+      "lon_snapped": 139.6510808,
+      "yaw": -18.5,
+      "pitch": 0.2
     },
     {
       "index": 1926,
@@ -28027,7 +28515,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064682,
-      "lon_snapped": 139.651122
+      "lon_snapped": 139.651122,
+      "yaw": -18.5,
+      "pitch": 0.2
     },
     {
       "index": 1927,
@@ -28040,7 +28530,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.706468,
-      "lon_snapped": 139.6511633
+      "lon_snapped": 139.6511633,
+      "yaw": -9.1,
+      "pitch": -0.5
     },
     {
       "index": 1928,
@@ -28053,7 +28545,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.706473,
-      "lon_snapped": 139.651204
+      "lon_snapped": 139.651204,
+      "yaw": -9.1,
+      "pitch": -0.5
     },
     {
       "index": 1929,
@@ -28066,7 +28560,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064786,
-      "lon_snapped": 139.6512446
+      "lon_snapped": 139.6512446,
+      "yaw": -9.1,
+      "pitch": -0.5
     },
     {
       "index": 1930,
@@ -28079,7 +28575,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064812,
-      "lon_snapped": 139.6512856
+      "lon_snapped": 139.6512856,
+      "yaw": -9.1,
+      "pitch": -0.5
     },
     {
       "index": 1931,
@@ -28092,7 +28590,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064815,
-      "lon_snapped": 139.6513269
+      "lon_snapped": 139.6513269,
+      "yaw": -9.1,
+      "pitch": -0.5
     },
     {
       "index": 1932,
@@ -28105,7 +28605,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064818,
-      "lon_snapped": 139.6513681
+      "lon_snapped": 139.6513681,
+      "yaw": -9.1,
+      "pitch": -0.5
     },
     {
       "index": 1933,
@@ -28118,7 +28620,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.706482,
-      "lon_snapped": 139.6514093
+      "lon_snapped": 139.6514093,
+      "yaw": -9.1,
+      "pitch": -0.5
     },
     {
       "index": 1934,
@@ -28131,7 +28635,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064822,
-      "lon_snapped": 139.6514506
+      "lon_snapped": 139.6514506,
+      "yaw": -9.1,
+      "pitch": -0.5
     },
     {
       "index": 1935,
@@ -28144,7 +28650,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064823,
-      "lon_snapped": 139.6514918
+      "lon_snapped": 139.6514918,
+      "yaw": -9.1,
+      "pitch": -0.5
     },
     {
       "index": 1936,
@@ -28157,7 +28665,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064825,
-      "lon_snapped": 139.651533
+      "lon_snapped": 139.651533,
+      "yaw": -9.1,
+      "pitch": -0.5
     },
     {
       "index": 1937,
@@ -28170,7 +28680,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064826,
-      "lon_snapped": 139.6515743
+      "lon_snapped": 139.6515743,
+      "yaw": -9.1,
+      "pitch": -0.5
     },
     {
       "index": 1938,
@@ -28183,7 +28695,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064827,
-      "lon_snapped": 139.6516155
+      "lon_snapped": 139.6516155,
+      "yaw": -9.1,
+      "pitch": -0.5
     },
     {
       "index": 1939,
@@ -28196,7 +28710,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064829,
-      "lon_snapped": 139.6516568
+      "lon_snapped": 139.6516568,
+      "yaw": -9.1,
+      "pitch": -0.5
     },
     {
       "index": 1940,
@@ -28209,7 +28725,9 @@
       "source": "GS010370",
       "neighborhood": "koenji",
       "lat_snapped": 35.706483,
-      "lon_snapped": 139.651698
+      "lon_snapped": 139.651698,
+      "yaw": -9.1,
+      "pitch": -0.5
     },
     {
       "index": 1941,
@@ -28222,7 +28740,9 @@
       "source": "GS010381",
       "neighborhood": "koenji",
       "lat_snapped": 35.706202,
-      "lon_snapped": 139.650719
+      "lon_snapped": 139.650719,
+      "yaw": -11.6,
+      "pitch": 1.5
     },
     {
       "index": 1942,
@@ -28235,7 +28755,9 @@
       "source": "GS010381",
       "neighborhood": "koenji",
       "lat_snapped": 35.7061653,
-      "lon_snapped": 139.6507128
+      "lon_snapped": 139.6507128,
+      "yaw": -11.6,
+      "pitch": 1.5
     },
     {
       "index": 1943,
@@ -28248,7 +28770,9 @@
       "source": "GS010381",
       "neighborhood": "koenji",
       "lat_snapped": 35.7061286,
-      "lon_snapped": 139.6507067
+      "lon_snapped": 139.6507067,
+      "yaw": -11.6,
+      "pitch": 1.5
     },
     {
       "index": 1944,
@@ -28261,7 +28785,9 @@
       "source": "GS010381",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060919,
-      "lon_snapped": 139.6507005
+      "lon_snapped": 139.6507005,
+      "yaw": -11.6,
+      "pitch": 1.5
     },
     {
       "index": 1945,
@@ -28274,7 +28800,9 @@
       "source": "GS010381",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060552,
-      "lon_snapped": 139.6506944
+      "lon_snapped": 139.6506944,
+      "yaw": -11.6,
+      "pitch": 1.5
     },
     {
       "index": 1946,
@@ -28287,7 +28815,9 @@
       "source": "GS010381",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060185,
-      "lon_snapped": 139.6506882
+      "lon_snapped": 139.6506882,
+      "yaw": -11.6,
+      "pitch": 1.5
     },
     {
       "index": 1947,
@@ -28300,7 +28830,9 @@
       "source": "GS010381",
       "neighborhood": "koenji",
       "lat_snapped": 35.7059818,
-      "lon_snapped": 139.6506821
+      "lon_snapped": 139.6506821,
+      "yaw": -11.6,
+      "pitch": 1.5
     },
     {
       "index": 1948,
@@ -28313,7 +28845,9 @@
       "source": "GS010381",
       "neighborhood": "koenji",
       "lat_snapped": 35.7059451,
-      "lon_snapped": 139.6506759
+      "lon_snapped": 139.6506759,
+      "yaw": -11.6,
+      "pitch": 1.5
     },
     {
       "index": 1949,
@@ -28326,7 +28860,9 @@
       "source": "GS010381",
       "neighborhood": "koenji",
       "lat_snapped": 35.7059084,
-      "lon_snapped": 139.6506698
+      "lon_snapped": 139.6506698,
+      "yaw": -11.6,
+      "pitch": 1.5
     },
     {
       "index": 1950,
@@ -28339,7 +28875,9 @@
       "source": "GS010381",
       "neighborhood": "koenji",
       "lat_snapped": 35.7058717,
-      "lon_snapped": 139.6506636
+      "lon_snapped": 139.6506636,
+      "yaw": -11.6,
+      "pitch": 1.5
     },
     {
       "index": 1951,
@@ -28352,7 +28890,9 @@
       "source": "GS010381",
       "neighborhood": "koenji",
       "lat_snapped": 35.705835,
-      "lon_snapped": 139.6506573
+      "lon_snapped": 139.6506573,
+      "yaw": -11.6,
+      "pitch": 1.5
     },
     {
       "index": 1952,
@@ -28365,7 +28905,9 @@
       "source": "GS010381",
       "neighborhood": "koenji",
       "lat_snapped": 35.7058032,
-      "lon_snapped": 139.6506368
+      "lon_snapped": 139.6506368,
+      "yaw": 19.8,
+      "pitch": 1.3
     },
     {
       "index": 1953,
@@ -28378,7 +28920,9 @@
       "source": "GS010381",
       "neighborhood": "koenji",
       "lat_snapped": 35.7057742,
-      "lon_snapped": 139.6506085
+      "lon_snapped": 139.6506085,
+      "yaw": 19.8,
+      "pitch": 1.3
     },
     {
       "index": 1954,
@@ -28391,7 +28935,9 @@
       "source": "GS010381",
       "neighborhood": "koenji",
       "lat_snapped": 35.7057451,
-      "lon_snapped": 139.6505803
+      "lon_snapped": 139.6505803,
+      "yaw": 19.8,
+      "pitch": 1.3
     },
     {
       "index": 1955,
@@ -28404,7 +28950,9 @@
       "source": "GS010381",
       "neighborhood": "koenji",
       "lat_snapped": 35.705716,
-      "lon_snapped": 139.650552
+      "lon_snapped": 139.650552,
+      "yaw": 19.8,
+      "pitch": 1.3
     },
     {
       "index": 1956,
@@ -28417,7 +28965,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.705955,
-      "lon_snapped": 139.650205
+      "lon_snapped": 139.650205,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1957,
@@ -28430,7 +28980,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7059917,
-      "lon_snapped": 139.6502077
+      "lon_snapped": 139.6502077,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1958,
@@ -28443,7 +28995,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060285,
-      "lon_snapped": 139.6502104
+      "lon_snapped": 139.6502104,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1959,
@@ -28456,7 +29010,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060652,
-      "lon_snapped": 139.6502132
+      "lon_snapped": 139.6502132,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1960,
@@ -28469,7 +29025,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.706102,
-      "lon_snapped": 139.650216
+      "lon_snapped": 139.650216,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1961,
@@ -28482,7 +29040,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7061387,
-      "lon_snapped": 139.6502188
+      "lon_snapped": 139.6502188,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1962,
@@ -28495,7 +29055,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7061754,
-      "lon_snapped": 139.6502216
+      "lon_snapped": 139.6502216,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1963,
@@ -28508,7 +29070,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7062122,
-      "lon_snapped": 139.6502244
+      "lon_snapped": 139.6502244,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1964,
@@ -28521,7 +29085,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7062489,
-      "lon_snapped": 139.6502272
+      "lon_snapped": 139.6502272,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1965,
@@ -28534,7 +29100,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7062856,
-      "lon_snapped": 139.65023
+      "lon_snapped": 139.65023,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1966,
@@ -28547,7 +29115,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7063224,
-      "lon_snapped": 139.6502329
+      "lon_snapped": 139.6502329,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1967,
@@ -28560,7 +29130,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7063591,
-      "lon_snapped": 139.6502358
+      "lon_snapped": 139.6502358,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1968,
@@ -28573,7 +29145,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7063958,
-      "lon_snapped": 139.6502387
+      "lon_snapped": 139.6502387,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1969,
@@ -28586,7 +29160,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064325,
-      "lon_snapped": 139.6502419
+      "lon_snapped": 139.6502419,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1970,
@@ -28599,7 +29175,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064693,
-      "lon_snapped": 139.6502452
+      "lon_snapped": 139.6502452,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1971,
@@ -28612,7 +29190,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.706506,
-      "lon_snapped": 139.6502485
+      "lon_snapped": 139.6502485,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1972,
@@ -28625,7 +29205,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7065427,
-      "lon_snapped": 139.6502518
+      "lon_snapped": 139.6502518,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1973,
@@ -28638,7 +29220,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7065794,
-      "lon_snapped": 139.6502551
+      "lon_snapped": 139.6502551,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1974,
@@ -28651,7 +29235,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7066161,
-      "lon_snapped": 139.6502583
+      "lon_snapped": 139.6502583,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1975,
@@ -28664,7 +29250,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7066528,
-      "lon_snapped": 139.6502615
+      "lon_snapped": 139.6502615,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1976,
@@ -28677,7 +29265,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7066895,
-      "lon_snapped": 139.6502647
+      "lon_snapped": 139.6502647,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1977,
@@ -28690,7 +29280,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7067262,
-      "lon_snapped": 139.6502678
+      "lon_snapped": 139.6502678,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1978,
@@ -28703,7 +29295,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.706763,
-      "lon_snapped": 139.650271
+      "lon_snapped": 139.650271,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1979,
@@ -28716,7 +29310,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7067997,
-      "lon_snapped": 139.6502741
+      "lon_snapped": 139.6502741,
+      "yaw": -8.3,
+      "pitch": 0.3
     },
     {
       "index": 1980,
@@ -28729,7 +29325,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7068365,
-      "lon_snapped": 139.6502757
+      "lon_snapped": 139.6502757,
+      "yaw": 8,
+      "pitch": -0.2
     },
     {
       "index": 1981,
@@ -28742,7 +29340,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7068732,
-      "lon_snapped": 139.6502773
+      "lon_snapped": 139.6502773,
+      "yaw": 8,
+      "pitch": -0.2
     },
     {
       "index": 1982,
@@ -28755,7 +29355,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.70691,
-      "lon_snapped": 139.6502789
+      "lon_snapped": 139.6502789,
+      "yaw": 8,
+      "pitch": -0.2
     },
     {
       "index": 1983,
@@ -28768,7 +29370,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7069468,
-      "lon_snapped": 139.6502805
+      "lon_snapped": 139.6502805,
+      "yaw": 8,
+      "pitch": -0.2
     },
     {
       "index": 1984,
@@ -28781,7 +29385,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7069836,
-      "lon_snapped": 139.6502821
+      "lon_snapped": 139.6502821,
+      "yaw": 8,
+      "pitch": -0.2
     },
     {
       "index": 1985,
@@ -28794,7 +29400,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7070204,
-      "lon_snapped": 139.6502836
+      "lon_snapped": 139.6502836,
+      "yaw": 8,
+      "pitch": -0.2
     },
     {
       "index": 1986,
@@ -28807,7 +29415,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7070572,
-      "lon_snapped": 139.6502851
+      "lon_snapped": 139.6502851,
+      "yaw": 8,
+      "pitch": -0.2
     },
     {
       "index": 1987,
@@ -28820,7 +29430,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7070939,
-      "lon_snapped": 139.6502887
+      "lon_snapped": 139.6502887,
+      "yaw": 8,
+      "pitch": -0.2
     },
     {
       "index": 1988,
@@ -28833,7 +29445,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7071306,
-      "lon_snapped": 139.6502923
+      "lon_snapped": 139.6502923,
+      "yaw": 8,
+      "pitch": -0.2
     },
     {
       "index": 1989,
@@ -28846,7 +29460,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7071672,
-      "lon_snapped": 139.6502959
+      "lon_snapped": 139.6502959,
+      "yaw": 8,
+      "pitch": -0.2
     },
     {
       "index": 1990,
@@ -28859,7 +29475,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7072039,
-      "lon_snapped": 139.6502995
+      "lon_snapped": 139.6502995,
+      "yaw": 8,
+      "pitch": -0.2
     },
     {
       "index": 1991,
@@ -28872,7 +29490,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7072406,
-      "lon_snapped": 139.6503031
+      "lon_snapped": 139.6503031,
+      "yaw": 8,
+      "pitch": -0.2
     },
     {
       "index": 1992,
@@ -28885,7 +29505,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7072773,
-      "lon_snapped": 139.6503067
+      "lon_snapped": 139.6503067,
+      "yaw": 8,
+      "pitch": -0.2
     },
     {
       "index": 1993,
@@ -28898,7 +29520,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.707314,
-      "lon_snapped": 139.6503103
+      "lon_snapped": 139.6503103,
+      "yaw": 8,
+      "pitch": -0.2
     },
     {
       "index": 1994,
@@ -28911,7 +29535,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7073507,
-      "lon_snapped": 139.650314
+      "lon_snapped": 139.650314,
+      "yaw": 8,
+      "pitch": -0.2
     },
     {
       "index": 1995,
@@ -28924,7 +29550,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7073874,
-      "lon_snapped": 139.650318
+      "lon_snapped": 139.650318,
+      "yaw": 8,
+      "pitch": -0.2
     },
     {
       "index": 1996,
@@ -28937,7 +29565,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.707424,
-      "lon_snapped": 139.650322
+      "lon_snapped": 139.650322,
+      "yaw": 8,
+      "pitch": -0.2
     },
     {
       "index": 1997,
@@ -28950,7 +29580,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7074607,
-      "lon_snapped": 139.650326
+      "lon_snapped": 139.650326,
+      "yaw": 8,
+      "pitch": -0.2
     },
     {
       "index": 1998,
@@ -28963,7 +29595,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.7074973,
-      "lon_snapped": 139.65033
+      "lon_snapped": 139.65033,
+      "yaw": 8,
+      "pitch": -0.2
     },
     {
       "index": 1999,
@@ -28976,7 +29610,9 @@
       "source": "GS010382",
       "neighborhood": "koenji",
       "lat_snapped": 35.707534,
-      "lon_snapped": 139.650334
+      "lon_snapped": 139.650334,
+      "yaw": 8,
+      "pitch": -0.2
     },
     {
       "index": 2000,
@@ -28989,7 +29625,9 @@
       "source": "GS010383",
       "neighborhood": "koenji",
       "lat_snapped": 35.707534,
-      "lon_snapped": 139.650334
+      "lon_snapped": 139.650334,
+      "yaw": -17.3,
+      "pitch": -0.9
     },
     {
       "index": 2001,
@@ -29002,7 +29640,9 @@
       "source": "GS010383",
       "neighborhood": "koenji",
       "lat_snapped": 35.7075398,
-      "lon_snapped": 139.6502879
+      "lon_snapped": 139.6502879,
+      "yaw": -17.3,
+      "pitch": -0.9
     },
     {
       "index": 2002,
@@ -29015,7 +29655,9 @@
       "source": "GS010383",
       "neighborhood": "koenji",
       "lat_snapped": 35.7075457,
-      "lon_snapped": 139.6502419
+      "lon_snapped": 139.6502419,
+      "yaw": -17.3,
+      "pitch": -0.9
     },
     {
       "index": 2003,
@@ -29028,7 +29670,9 @@
       "source": "GS010383",
       "neighborhood": "koenji",
       "lat_snapped": 35.7075515,
-      "lon_snapped": 139.6501958
+      "lon_snapped": 139.6501958,
+      "yaw": -17.3,
+      "pitch": -0.9
     },
     {
       "index": 2004,
@@ -29041,7 +29685,9 @@
       "source": "GS010383",
       "neighborhood": "koenji",
       "lat_snapped": 35.7075574,
-      "lon_snapped": 139.6501498
+      "lon_snapped": 139.6501498,
+      "yaw": -17.3,
+      "pitch": -0.9
     },
     {
       "index": 2005,
@@ -29054,7 +29700,9 @@
       "source": "GS010383",
       "neighborhood": "koenji",
       "lat_snapped": 35.7075632,
-      "lon_snapped": 139.6501037
+      "lon_snapped": 139.6501037,
+      "yaw": -17.3,
+      "pitch": -0.9
     },
     {
       "index": 2006,
@@ -29067,7 +29715,9 @@
       "source": "GS010383",
       "neighborhood": "koenji",
       "lat_snapped": 35.707569,
-      "lon_snapped": 139.6500576
+      "lon_snapped": 139.6500576,
+      "yaw": -17.3,
+      "pitch": -0.9
     },
     {
       "index": 2007,
@@ -29080,7 +29730,9 @@
       "source": "GS010383",
       "neighborhood": "koenji",
       "lat_snapped": 35.7075749,
-      "lon_snapped": 139.6500116
+      "lon_snapped": 139.6500116,
+      "yaw": -17.3,
+      "pitch": -0.9
     },
     {
       "index": 2008,
@@ -29093,7 +29745,9 @@
       "source": "GS010383",
       "neighborhood": "koenji",
       "lat_snapped": 35.7075807,
-      "lon_snapped": 139.6499655
+      "lon_snapped": 139.6499655,
+      "yaw": -17.3,
+      "pitch": -0.9
     },
     {
       "index": 2009,
@@ -29106,7 +29760,9 @@
       "source": "GS010383",
       "neighborhood": "koenji",
       "lat_snapped": 35.7075865,
-      "lon_snapped": 139.6499195
+      "lon_snapped": 139.6499195,
+      "yaw": -17.3,
+      "pitch": -0.9
     },
     {
       "index": 2010,
@@ -29119,7 +29775,9 @@
       "source": "GS010383",
       "neighborhood": "koenji",
       "lat_snapped": 35.7075923,
-      "lon_snapped": 139.6498734
+      "lon_snapped": 139.6498734,
+      "yaw": -17.3,
+      "pitch": -0.9
     },
     {
       "index": 2011,
@@ -29132,7 +29790,9 @@
       "source": "GS010383",
       "neighborhood": "koenji",
       "lat_snapped": 35.707598,
-      "lon_snapped": 139.6498273
+      "lon_snapped": 139.6498273,
+      "yaw": -17.3,
+      "pitch": -0.9
     },
     {
       "index": 2012,
@@ -29145,7 +29805,9 @@
       "source": "GS010383",
       "neighborhood": "koenji",
       "lat_snapped": 35.7076038,
-      "lon_snapped": 139.6497812
+      "lon_snapped": 139.6497812,
+      "yaw": -17.3,
+      "pitch": -0.9
     },
     {
       "index": 2013,
@@ -29158,7 +29820,9 @@
       "source": "GS010383",
       "neighborhood": "koenji",
       "lat_snapped": 35.7076095,
-      "lon_snapped": 139.6497352
+      "lon_snapped": 139.6497352,
+      "yaw": -17.3,
+      "pitch": -0.9
     },
     {
       "index": 2014,
@@ -29171,7 +29835,9 @@
       "source": "GS010383",
       "neighborhood": "koenji",
       "lat_snapped": 35.7076153,
-      "lon_snapped": 139.6496891
+      "lon_snapped": 139.6496891,
+      "yaw": -17.3,
+      "pitch": -0.9
     },
     {
       "index": 2015,
@@ -29184,7 +29850,9 @@
       "source": "GS010383",
       "neighborhood": "koenji",
       "lat_snapped": 35.707621,
-      "lon_snapped": 139.649643
+      "lon_snapped": 139.649643,
+      "yaw": -17.3,
+      "pitch": -0.9
     },
     {
       "index": 2016,
@@ -38310,7 +38978,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7056093,
-      "lon_snapped": 139.6519671
+      "lon_snapped": 139.6519671,
+      "yaw": 0,
+      "pitch": 0
     },
     {
       "index": 2718,
@@ -38323,7 +38993,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7056446,
-      "lon_snapped": 139.6519632
+      "lon_snapped": 139.6519632,
+      "yaw": 0,
+      "pitch": 0
     },
     {
       "index": 2719,
@@ -38336,7 +39008,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7056799,
-      "lon_snapped": 139.6519594
+      "lon_snapped": 139.6519594,
+      "yaw": 0,
+      "pitch": 0
     },
     {
       "index": 2720,
@@ -38349,7 +39023,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7057152,
-      "lon_snapped": 139.6519555
+      "lon_snapped": 139.6519555,
+      "yaw": 0,
+      "pitch": 0
     },
     {
       "index": 2721,
@@ -38362,7 +39038,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7057504,
-      "lon_snapped": 139.6519514
+      "lon_snapped": 139.6519514,
+      "yaw": 0,
+      "pitch": 0
     },
     {
       "index": 2722,
@@ -38375,7 +39053,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7057855,
-      "lon_snapped": 139.6519455
+      "lon_snapped": 139.6519455,
+      "yaw": 0,
+      "pitch": 0
     },
     {
       "index": 2723,
@@ -38388,7 +39068,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7058206,
-      "lon_snapped": 139.6519395
+      "lon_snapped": 139.6519395,
+      "yaw": 0,
+      "pitch": 0
     },
     {
       "index": 2724,
@@ -38401,7 +39083,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7058557,
-      "lon_snapped": 139.6519336
+      "lon_snapped": 139.6519336,
+      "yaw": 0,
+      "pitch": 0
     },
     {
       "index": 2725,
@@ -38414,7 +39098,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7058901,
-      "lon_snapped": 139.6519232
+      "lon_snapped": 139.6519232,
+      "yaw": -5.5,
+      "pitch": -0.9
     },
     {
       "index": 2726,
@@ -38427,7 +39113,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7059242,
-      "lon_snapped": 139.6519112
+      "lon_snapped": 139.6519112,
+      "yaw": -5.5,
+      "pitch": -0.9
     },
     {
       "index": 2727,
@@ -38440,7 +39128,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7059582,
-      "lon_snapped": 139.651899
+      "lon_snapped": 139.651899,
+      "yaw": -5.5,
+      "pitch": -0.9
     },
     {
       "index": 2728,
@@ -38453,7 +39143,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7059922,
-      "lon_snapped": 139.6518869
+      "lon_snapped": 139.6518869,
+      "yaw": -5.5,
+      "pitch": -0.9
     },
     {
       "index": 2729,
@@ -38466,7 +39158,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060262,
-      "lon_snapped": 139.6518747
+      "lon_snapped": 139.6518747,
+      "yaw": -5.5,
+      "pitch": -0.9
     },
     {
       "index": 2730,
@@ -38479,7 +39173,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060603,
-      "lon_snapped": 139.6518625
+      "lon_snapped": 139.6518625,
+      "yaw": -5.5,
+      "pitch": -0.9
     },
     {
       "index": 2731,
@@ -38492,7 +39188,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7060943,
-      "lon_snapped": 139.6518503
+      "lon_snapped": 139.6518503,
+      "yaw": -5.5,
+      "pitch": -0.9
     },
     {
       "index": 2732,
@@ -38505,7 +39203,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7061283,
-      "lon_snapped": 139.6518382
+      "lon_snapped": 139.6518382,
+      "yaw": -5.5,
+      "pitch": -0.9
     },
     {
       "index": 2733,
@@ -38518,7 +39218,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7061623,
-      "lon_snapped": 139.651826
+      "lon_snapped": 139.651826,
+      "yaw": -5.5,
+      "pitch": -0.9
     },
     {
       "index": 2734,
@@ -38531,7 +39233,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7061964,
-      "lon_snapped": 139.6518138
+      "lon_snapped": 139.6518138,
+      "yaw": -5.5,
+      "pitch": -0.9
     },
     {
       "index": 2735,
@@ -38544,7 +39248,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7062304,
-      "lon_snapped": 139.6518016
+      "lon_snapped": 139.6518016,
+      "yaw": -5.5,
+      "pitch": -0.9
     },
     {
       "index": 2736,
@@ -38557,7 +39263,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7062644,
-      "lon_snapped": 139.6517894
+      "lon_snapped": 139.6517894,
+      "yaw": -5.5,
+      "pitch": -0.9
     },
     {
       "index": 2737,
@@ -38570,7 +39278,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7062988,
-      "lon_snapped": 139.651779
+      "lon_snapped": 139.651779,
+      "yaw": -5.5,
+      "pitch": -0.9
     },
     {
       "index": 2738,
@@ -38583,7 +39293,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7063333,
-      "lon_snapped": 139.6517693
+      "lon_snapped": 139.6517693,
+      "yaw": -5.5,
+      "pitch": -0.9
     },
     {
       "index": 2739,
@@ -38596,7 +39308,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7063679,
-      "lon_snapped": 139.6517595
+      "lon_snapped": 139.6517595,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2740,
@@ -38609,7 +39323,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064024,
-      "lon_snapped": 139.6517498
+      "lon_snapped": 139.6517498,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2741,
@@ -38622,7 +39338,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064369,
-      "lon_snapped": 139.65174
+      "lon_snapped": 139.65174,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2742,
@@ -38635,7 +39353,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7064715,
-      "lon_snapped": 139.6517303
+      "lon_snapped": 139.6517303,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2743,
@@ -38648,7 +39368,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.706483,
-      "lon_snapped": 139.6516979
+      "lon_snapped": 139.6516979,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2744,
@@ -38661,7 +39383,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7065176,
-      "lon_snapped": 139.6516939
+      "lon_snapped": 139.6516939,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2745,
@@ -38674,7 +39398,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7065529,
-      "lon_snapped": 139.6516906
+      "lon_snapped": 139.6516906,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2746,
@@ -38687,7 +39413,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7065882,
-      "lon_snapped": 139.6516874
+      "lon_snapped": 139.6516874,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2747,
@@ -38700,7 +39428,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7066236,
-      "lon_snapped": 139.6516839
+      "lon_snapped": 139.6516839,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2748,
@@ -38713,7 +39443,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7066589,
-      "lon_snapped": 139.6516805
+      "lon_snapped": 139.6516805,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2749,
@@ -38726,7 +39458,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7066942,
-      "lon_snapped": 139.6516771
+      "lon_snapped": 139.6516771,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2750,
@@ -38739,7 +39473,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7067295,
-      "lon_snapped": 139.6516736
+      "lon_snapped": 139.6516736,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2751,
@@ -38752,7 +39488,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7067649,
-      "lon_snapped": 139.6516702
+      "lon_snapped": 139.6516702,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2752,
@@ -38765,7 +39503,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7068002,
-      "lon_snapped": 139.6516667
+      "lon_snapped": 139.6516667,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2753,
@@ -38778,7 +39518,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7068355,
-      "lon_snapped": 139.6516657
+      "lon_snapped": 139.6516657,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2754,
@@ -38791,7 +39533,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.706871,
-      "lon_snapped": 139.651667
+      "lon_snapped": 139.651667,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2755,
@@ -38804,7 +39548,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7069064,
-      "lon_snapped": 139.6516653
+      "lon_snapped": 139.6516653,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2756,
@@ -38817,7 +39563,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7069418,
-      "lon_snapped": 139.6516635
+      "lon_snapped": 139.6516635,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2757,
@@ -38830,7 +39578,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7069772,
-      "lon_snapped": 139.6516616
+      "lon_snapped": 139.6516616,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2758,
@@ -38843,7 +39593,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7070126,
-      "lon_snapped": 139.6516596
+      "lon_snapped": 139.6516596,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2759,
@@ -38856,7 +39608,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.707048,
-      "lon_snapped": 139.6516576
+      "lon_snapped": 139.6516576,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2760,
@@ -38869,7 +39623,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7070834,
-      "lon_snapped": 139.6516557
+      "lon_snapped": 139.6516557,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2761,
@@ -38882,7 +39638,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7071187,
-      "lon_snapped": 139.6516537
+      "lon_snapped": 139.6516537,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2762,
@@ -38895,7 +39653,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7071541,
-      "lon_snapped": 139.6516517
+      "lon_snapped": 139.6516517,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2763,
@@ -38908,7 +39668,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7071895,
-      "lon_snapped": 139.6516498
+      "lon_snapped": 139.6516498,
+      "yaw": 4.5,
+      "pitch": -1
     },
     {
       "index": 2764,
@@ -38921,7 +39683,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7072249,
-      "lon_snapped": 139.6516478
+      "lon_snapped": 139.6516478,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2765,
@@ -38934,7 +39698,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7072603,
-      "lon_snapped": 139.6516459
+      "lon_snapped": 139.6516459,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2766,
@@ -38947,7 +39713,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7072957,
-      "lon_snapped": 139.6516441
+      "lon_snapped": 139.6516441,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2767,
@@ -38960,7 +39728,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7073311,
-      "lon_snapped": 139.6516454
+      "lon_snapped": 139.6516454,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2768,
@@ -38973,7 +39743,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7073666,
-      "lon_snapped": 139.6516467
+      "lon_snapped": 139.6516467,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2769,
@@ -38986,7 +39758,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.707402,
-      "lon_snapped": 139.6516481
+      "lon_snapped": 139.6516481,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2770,
@@ -38999,7 +39773,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7074374,
-      "lon_snapped": 139.6516494
+      "lon_snapped": 139.6516494,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2771,
@@ -39012,7 +39788,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7074728,
-      "lon_snapped": 139.6516508
+      "lon_snapped": 139.6516508,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2772,
@@ -39025,7 +39803,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7075082,
-      "lon_snapped": 139.6516521
+      "lon_snapped": 139.6516521,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2773,
@@ -39038,7 +39818,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7075436,
-      "lon_snapped": 139.6516536
+      "lon_snapped": 139.6516536,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2774,
@@ -39051,7 +39833,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.707579,
-      "lon_snapped": 139.6516552
+      "lon_snapped": 139.6516552,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2775,
@@ -39064,7 +39848,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7076144,
-      "lon_snapped": 139.6516569
+      "lon_snapped": 139.6516569,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2776,
@@ -39077,7 +39863,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7076499,
-      "lon_snapped": 139.6516585
+      "lon_snapped": 139.6516585,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2777,
@@ -39090,7 +39878,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7076853,
-      "lon_snapped": 139.65166
+      "lon_snapped": 139.65166,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2778,
@@ -39103,7 +39893,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7077207,
-      "lon_snapped": 139.6516616
+      "lon_snapped": 139.6516616,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2779,
@@ -39116,7 +39908,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7077561,
-      "lon_snapped": 139.6516631
+      "lon_snapped": 139.6516631,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2780,
@@ -39129,7 +39923,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7077915,
-      "lon_snapped": 139.6516646
+      "lon_snapped": 139.6516646,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2781,
@@ -39142,7 +39938,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7078269,
-      "lon_snapped": 139.6516661
+      "lon_snapped": 139.6516661,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2782,
@@ -39155,7 +39953,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7078623,
-      "lon_snapped": 139.6516673
+      "lon_snapped": 139.6516673,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2783,
@@ -39168,7 +39968,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7078977,
-      "lon_snapped": 139.651668
+      "lon_snapped": 139.651668,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2784,
@@ -39181,7 +39983,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7079332,
-      "lon_snapped": 139.6516688
+      "lon_snapped": 139.6516688,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2785,
@@ -39194,7 +39998,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7079686,
-      "lon_snapped": 139.6516696
+      "lon_snapped": 139.6516696,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2786,
@@ -39207,7 +40013,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.708004,
-      "lon_snapped": 139.6516708
+      "lon_snapped": 139.6516708,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2787,
@@ -39220,7 +40028,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7080394,
-      "lon_snapped": 139.6516727
+      "lon_snapped": 139.6516727,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2788,
@@ -39233,7 +40043,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7080748,
-      "lon_snapped": 139.6516746
+      "lon_snapped": 139.6516746,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2789,
@@ -39246,7 +40058,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7081102,
-      "lon_snapped": 139.6516765
+      "lon_snapped": 139.6516765,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2790,
@@ -39259,7 +40073,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7081456,
-      "lon_snapped": 139.6516785
+      "lon_snapped": 139.6516785,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2791,
@@ -39272,7 +40088,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.708181,
-      "lon_snapped": 139.6516804
+      "lon_snapped": 139.6516804,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2792,
@@ -39285,7 +40103,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7082164,
-      "lon_snapped": 139.6516823
+      "lon_snapped": 139.6516823,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2793,
@@ -39298,7 +40118,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7082518,
-      "lon_snapped": 139.6516842
+      "lon_snapped": 139.6516842,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2794,
@@ -39311,7 +40133,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7082872,
-      "lon_snapped": 139.6516861
+      "lon_snapped": 139.6516861,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2795,
@@ -39324,7 +40148,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7083226,
-      "lon_snapped": 139.651688
+      "lon_snapped": 139.651688,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2796,
@@ -39337,7 +40163,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.708358,
-      "lon_snapped": 139.6516899
+      "lon_snapped": 139.6516899,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2797,
@@ -39350,7 +40178,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7083934,
-      "lon_snapped": 139.6516917
+      "lon_snapped": 139.6516917,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2798,
@@ -39363,7 +40193,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7084288,
-      "lon_snapped": 139.6516935
+      "lon_snapped": 139.6516935,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2799,
@@ -39376,7 +40208,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7084642,
-      "lon_snapped": 139.6516954
+      "lon_snapped": 139.6516954,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2800,
@@ -39389,7 +40223,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.7084996,
-      "lon_snapped": 139.6516972
+      "lon_snapped": 139.6516972,
+      "yaw": 13.1,
+      "pitch": -0.9
     },
     {
       "index": 2801,
@@ -39402,7 +40238,9 @@
       "source": "GS010360",
       "neighborhood": "koenji",
       "lat_snapped": 35.708535,
-      "lon_snapped": 139.651699
+      "lon_snapped": 139.651699,
+      "yaw": 13.1,
+      "pitch": -0.9
     }
   ]
 }

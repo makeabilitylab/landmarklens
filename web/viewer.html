@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>360° Viewer - Tokyo Walks</title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Crimson+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="viewer-container">
+    <!-- Loading overlay -->
+    <div class="loading-overlay" id="loading">
+      <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="viewer-header">
+      <a href="index.html" class="back-button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        <span>Back</span>
+      </a>
+
+      <div class="viewer-title">
+        <h1 id="neighborhood-name">Loading...</h1>
+        <span id="neighborhood-name-ja"></span>
+      </div>
+
+      <div class="viewer-info" id="photo-info"></div>
+    </header>
+
+    <!-- Panorama viewer (dual containers for smooth transitions) -->
+    <div class="panorama-container">
+      <div class="panorama-layer panorama-active" id="panorama-a"></div>
+      <div class="panorama-layer" id="panorama-b"></div>
+      <div class="transition-overlay" id="transition-overlay"></div>
+    </div>
+
+    <!-- Minimap -->
+    <div class="minimap-container" id="minimap-container">
+      <div id="minimap"></div>
+      <button class="minimap-toggle" id="minimap-toggle" title="Toggle map size">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+        </svg>
+      </button>
+      <button class="line-toggle" id="line-toggle" title="Hide route lines" aria-pressed="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 17l6-6 4 4 8-8"/>
+          <circle cx="5" cy="17" r="1.5" />
+          <circle cx="9" cy="11" r="1.5" />
+          <circle cx="13" cy="15" r="1.5" />
+          <circle cx="21" cy="7" r="1.5" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Navigation controls -->
+    <div class="nav-controls">
+      <button class="nav-button" id="prev-btn" title="Previous photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 18l-6-6 6-6"/>
+        </svg>
+      </button>
+
+      <span class="nav-counter" id="nav-counter">
+        <input type="number" class="nav-counter-input" id="nav-counter-input" min="1" value="1" aria-label="Current photo">
+        <span class="nav-counter-total" id="nav-counter-total">/ 1</span>
+      </span>
+
+      <button class="nav-button" id="next-btn" title="Next photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 18l6-6-6-6"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Resizable divider (only visible in split-screen mode) -->
+    <div class="split-divider" id="split-divider">
+      <div class="split-divider-handle"></div>
+    </div>
+
+    <!-- Debug info panel -->
+    <div class="debug-panel" id="debug-panel">
+      <div class="debug-header">
+        <div class="debug-title">Info</div>
+        <button class="debug-toggle" id="debug-toggle" title="Minimize/Expand debug info">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+          </svg>
+        </button>
+      </div>
+      <div class="debug-content" id="debug-content">
+        <div class="debug-row"><span>Source:</span> <span id="debug-source">-</span></div>
+        <div class="debug-row"><span>File:</span> <span id="debug-file">-</span></div>
+        <div class="debug-row"><span>Coords:</span> <span id="debug-coords">-</span></div>
+        <div class="debug-row"><span>Altitude:</span> <span id="debug-alt">-</span></div>
+        <div class="debug-row"><span>Route Color:</span> <span id="debug-color">-</span></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+  <script src="js/viewer.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tokyo 360° Street View</title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Crimson+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page-container">
+    <header class="header">
+      <div class="header-content">
+        <h1 class="title">
+          <span class="title-en">Tokyo Walks</span>
+          <span class="title-ja">東京散歩</span>
+        </h1>
+        <p class="subtitle">Explore Tokyo neighborhoods in immersive 360°</p>
+      </div>
+    </header>
+
+    <main class="neighborhoods-grid" id="neighborhoods-grid">
+      <!-- Cards will be dynamically inserted here -->
+    </main>
+
+    <footer class="footer">
+      <p>December 2025 · 2,000+ panoramic photos</p>
+    </footer>
+  </div>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+  <script src="js/app.js"></script>
+  <!-- Note: Data paths are relative to web/ directory, so ../data/ is used in JS -->
+</body>
+</html>
+
+

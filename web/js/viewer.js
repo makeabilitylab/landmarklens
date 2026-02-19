@@ -33,13 +33,17 @@ let editMode = false;
 let headingAdjustments = {};
 const STORAGE_KEY = 'tokyo-streetview-heading-adjustments';
 
+// Source-frame lookup for keyframe propagation
+let sourceFrameIndices = {};  // source -> [globalIndex, ...]
+let frameSourcePosition = {}; // globalIndex -> position within source array
+
 // Smooth transition state
 let viewers = { a: null, b: null };
 let activeViewer = 'a';
 let isTransitioning = false;
 let preloadCache = new Map();
 const PRELOAD_COUNT = 2;
-const CROSSFADE_DURATION = 400;
+const CROSSFADE_DURATION = 250;
 
 const FRAMES_BASE = 'frames/';
 
@@ -114,6 +118,7 @@ async function init() {
       return;
     }
 
+    buildSourceFrameIndices();
     calculateFrameBearings();
 
     document.title = `${neighborhoodMeta.name} - Tokyo Walks`;
@@ -132,7 +137,7 @@ async function init() {
 }
 
 // ========================================
-// Heading Adjustments
+// Heading Adjustments (Keyframe Propagation)
 // ========================================
 function loadHeadingAdjustments() {
   try {
@@ -151,11 +156,43 @@ function saveHeadingAdjustments() {
   }
 }
 
-function getFrameHeading(frame) {
-  const localSaved = headingAdjustments[frame.filename];
-  if (localSaved) {
-    return { yaw: localSaved.yaw, pitch: localSaved.pitch, roll: localSaved.roll || 0, source: 'local' };
+function buildSourceFrameIndices() {
+  sourceFrameIndices = {};
+  frameSourcePosition = {};
+  frames.forEach((frame, index) => {
+    if (!sourceFrameIndices[frame.source]) sourceFrameIndices[frame.source] = [];
+    frameSourcePosition[index] = sourceFrameIndices[frame.source].length;
+    sourceFrameIndices[frame.source].push(index);
+  });
+}
+
+function getFrameHeading(frame, index) {
+  // 1. This frame is an explicit keyframe in localStorage
+  if (headingAdjustments[frame.filename]) {
+    const adj = headingAdjustments[frame.filename];
+    return { yaw: adj.yaw, pitch: adj.pitch, roll: adj.roll || 0, source: 'keyframe', keyframeIndex: index };
   }
+
+  // 2. Walk backwards in same source to find nearest keyframe
+  const indices = sourceFrameIndices[frame.source];
+  if (indices) {
+    const pos = frameSourcePosition[index];
+    for (let i = pos - 1; i >= 0; i--) {
+      const ki = indices[i];
+      const kf = frames[ki];
+      if (headingAdjustments[kf.filename]) {
+        const adj = headingAdjustments[kf.filename];
+        return { yaw: adj.yaw, pitch: adj.pitch, roll: adj.roll || 0, source: 'inherited', keyframeIndex: ki };
+      }
+    }
+  }
+
+  // 3. Baked values from data.json
+  if (frame.yaw != null || frame.pitch != null || frame.roll != null) {
+    return { yaw: frame.yaw || 0, pitch: frame.pitch || 0, roll: frame.roll || 0, source: 'data' };
+  }
+
+  // 4. Default
   return { yaw: 0, pitch: 0, roll: 0, source: 'default' };
 }
 
@@ -451,7 +488,7 @@ function loadPhotoImmediate(index) {
     elements.loading.classList.remove('hidden');
   }
 
-  const heading = getFrameHeading(frame);
+  const heading = getFrameHeading(frame, index);
   const imagePath = FRAMES_BASE + frame.filename;
 
   const activeContainer = activeViewer === 'a' ? elements.panoramaA : elements.panoramaB;
@@ -493,21 +530,15 @@ function transitionToPhoto(index, isForward) {
   const frame = frames[index];
   currentIndex = index;
 
-  const heading = getFrameHeading(frame);
+  const heading = getFrameHeading(frame, index);
   const imagePath = FRAMES_BASE + frame.filename;
 
-  const currentViewerKey = activeViewer;
   const nextViewerKey = activeViewer === 'a' ? 'b' : 'a';
-  const currentContainer = currentViewerKey === 'a' ? elements.panoramaA : elements.panoramaB;
+  const currentContainer = activeViewer === 'a' ? elements.panoramaA : elements.panoramaB;
   const nextContainer = nextViewerKey === 'a' ? elements.panoramaA : elements.panoramaB;
-
-  if (isForward) {
-    elements.transitionOverlay.classList.add('active');
-  }
 
   prepareNextPanorama(nextViewerKey, nextContainer, imagePath, heading, () => {
     performCrossfade(currentContainer, nextContainer, nextViewerKey, () => {
-      elements.transitionOverlay.classList.remove('active');
       isTransitioning = false;
       preloadAdjacentPhotos(index);
     });
@@ -545,20 +576,16 @@ function prepareNextPanorama(viewerKey, container, imagePath, heading, callback)
   });
 
   viewers[viewerKey].on('load', safeCallback);
-  setTimeout(safeCallback, 2000);
+  setTimeout(safeCallback, 500);
 }
 
 function performCrossfade(outgoing, incoming, incomingKey, callback) {
-  outgoing.classList.add('panorama-outgoing');
-  outgoing.classList.remove('panorama-active');
   incoming.classList.add('panorama-active');
-
-  requestAnimationFrame(() => {
-    outgoing.classList.add('panorama-zoom-in');
-  });
+  outgoing.classList.add('panorama-fading');
+  outgoing.classList.remove('panorama-active');
 
   setTimeout(() => {
-    outgoing.classList.remove('panorama-outgoing', 'panorama-zoom-in');
+    outgoing.classList.remove('panorama-fading');
     activeViewer = incomingKey;
     viewer = viewers[activeViewer];
     callback();
@@ -792,7 +819,7 @@ function initEditMode() {
     <div class="edit-panel" id="edit-panel">
       <div class="edit-header">
         <div class="edit-title">Adjust Heading</div>
-        <div class="edit-hint">Press E to toggle</div>
+        <div class="edit-hint">Press E to toggle &middot; Keyframe mode</div>
       </div>
       <div class="edit-content">
         <div class="edit-row">
@@ -822,16 +849,17 @@ function initEditMode() {
         </div>
         <div class="edit-row edit-status" id="edit-status">
           <span class="status-dot"></span>
-          <span class="status-text">Using default (center)</span>
+          <span class="status-text">Default (no adjustment)</span>
         </div>
+        <div class="edit-propagation-info" id="edit-propagation-info"></div>
         <div class="edit-buttons">
-          <button class="edit-btn edit-btn-primary" id="edit-save-btn">Save (Cmd+S)</button>
+          <button class="edit-btn edit-btn-primary" id="edit-save-btn">Save as Keyframe (⌘S)</button>
           <button class="edit-btn edit-btn-secondary" id="edit-use-current-btn">Use Current View</button>
-          <button class="edit-btn edit-btn-secondary" id="edit-reset-btn">Reset to Default</button>
+          <button class="edit-btn edit-btn-secondary" id="edit-remove-keyframe-btn" style="display:none">Remove Keyframe</button>
         </div>
         <div class="edit-export">
-          <button class="edit-btn edit-btn-export" id="edit-export-btn">Export Local Edits</button>
-          <button class="edit-btn edit-btn-clear" id="edit-clear-btn">Clear Local Edits</button>
+          <button class="edit-btn edit-btn-export" id="edit-export-btn">Export Keyframes</button>
+          <button class="edit-btn edit-btn-clear" id="edit-clear-btn">Clear All Keyframes</button>
         </div>
         <div class="edit-export-count" id="edit-export-count"></div>
       </div>
@@ -846,11 +874,12 @@ function initEditMode() {
   elements.editRoll = document.getElementById('edit-roll');
   elements.editAutoBearing = document.getElementById('edit-auto-bearing');
   elements.editSaveBtn = document.getElementById('edit-save-btn');
-  elements.editResetBtn = document.getElementById('edit-reset-btn');
+  elements.editRemoveKeyframeBtn = document.getElementById('edit-remove-keyframe-btn');
   elements.editUseCurrentBtn = document.getElementById('edit-use-current-btn');
   elements.editExportBtn = document.getElementById('edit-export-btn');
   elements.editClearBtn = document.getElementById('edit-clear-btn');
   elements.editStatus = document.getElementById('edit-status');
+  elements.editPropagationInfo = document.getElementById('edit-propagation-info');
   elements.editExportCount = document.getElementById('edit-export-count');
 
   const gridOverlay = document.createElement('div');
@@ -867,7 +896,7 @@ function initEditMode() {
   elements.editGridCheckbox = document.getElementById('edit-grid-checkbox');
 
   elements.editSaveBtn.addEventListener('click', saveCurrentHeading);
-  elements.editResetBtn.addEventListener('click', resetCurrentHeading);
+  elements.editRemoveKeyframeBtn.addEventListener('click', removeKeyframe);
   elements.editUseCurrentBtn.addEventListener('click', useCurrentView);
   elements.editExportBtn.addEventListener('click', exportAdjustments);
   elements.editClearBtn.addEventListener('click', clearLocalEdits);
@@ -901,7 +930,7 @@ function updateEditPanel() {
 
   const frame = frames[currentIndex];
   const autoBearing = frameBearings[currentIndex] || 0;
-  const heading = getFrameHeading(frame);
+  const heading = getFrameHeading(frame, currentIndex);
 
   elements.editAutoBearing.textContent = `${autoBearing.toFixed(1)}°`;
   elements.editYaw.value = heading.yaw.toFixed(1);
@@ -909,15 +938,72 @@ function updateEditPanel() {
   elements.editRoll.value = heading.roll.toFixed(1);
 
   const statusText = elements.editStatus.querySelector('.status-text');
-  if (heading.source === 'local') {
-    elements.editStatus.classList.add('has-custom');
-    statusText.textContent = 'Local edit (not exported)';
+  elements.editStatus.className = 'edit-row edit-status';
+
+  if (heading.source === 'keyframe') {
+    elements.editStatus.classList.add('has-keyframe');
+    statusText.textContent = 'Keyframe (set on this frame)';
+    elements.editSaveBtn.textContent = 'Update Keyframe (⌘S)';
+    elements.editRemoveKeyframeBtn.style.display = '';
+  } else if (heading.source === 'inherited') {
+    elements.editStatus.classList.add('has-inherited');
+    statusText.textContent = `Inherited from frame #${heading.keyframeIndex + 1}`;
+    elements.editSaveBtn.textContent = 'Save as Keyframe (⌘S)';
+    elements.editRemoveKeyframeBtn.style.display = 'none';
+  } else if (heading.source === 'data') {
+    elements.editStatus.classList.add('has-data');
+    statusText.textContent = 'From data.json (baked)';
+    elements.editSaveBtn.textContent = 'Save as Keyframe (⌘S)';
+    elements.editRemoveKeyframeBtn.style.display = 'none';
   } else {
-    elements.editStatus.classList.remove('has-custom');
-    statusText.textContent = 'Using default (center)';
+    statusText.textContent = 'Default (no adjustment)';
+    elements.editSaveBtn.textContent = 'Save as Keyframe (⌘S)';
+    elements.editRemoveKeyframeBtn.style.display = 'none';
   }
 
+  updatePropagationInfo(heading);
   updateExportCount();
+}
+
+function updatePropagationInfo(heading) {
+  if (!elements.editPropagationInfo) return;
+
+  if (heading.source === 'keyframe') {
+    const count = countPropagatedFrames(currentIndex);
+    elements.editPropagationInfo.innerHTML = count > 0
+      ? `<span class="propagation-count">Applies to ${count} following frame${count !== 1 ? 's' : ''}</span>`
+      : `<span class="propagation-count">No following frames affected</span>`;
+    elements.editPropagationInfo.style.display = '';
+  } else if (heading.source === 'inherited') {
+    const kfFrame = frames[heading.keyframeIndex];
+    const kfParts = kfFrame.filename.split('/');
+    elements.editPropagationInfo.innerHTML =
+      `<span class="propagation-source">From: ${kfParts[kfParts.length - 1]}</span>` +
+      `<a class="propagation-jump" href="#" id="edit-jump-keyframe">Jump to keyframe</a>`;
+    elements.editPropagationInfo.style.display = '';
+    document.getElementById('edit-jump-keyframe').onclick = (e) => {
+      e.preventDefault();
+      loadPhoto(heading.keyframeIndex);
+    };
+  } else {
+    elements.editPropagationInfo.style.display = 'none';
+    elements.editPropagationInfo.innerHTML = '';
+  }
+}
+
+function countPropagatedFrames(keyframeIndex) {
+  const frame = frames[keyframeIndex];
+  const indices = sourceFrameIndices[frame.source];
+  if (!indices) return 0;
+
+  const pos = frameSourcePosition[keyframeIndex];
+  let count = 0;
+  for (let i = pos + 1; i < indices.length; i++) {
+    const fi = indices[i];
+    if (headingAdjustments[frames[fi].filename]) break;
+    count++;
+  }
+  return count;
 }
 
 function applyEditedHeading() {
@@ -971,16 +1057,18 @@ function saveCurrentHeading() {
   headingAdjustments[frame.filename] = { yaw, pitch, roll };
   saveHeadingAdjustments();
   updateEditPanel();
-  showEditFeedback('Saved!');
+  showEditFeedback('Keyframe saved!');
 }
 
-function resetCurrentHeading() {
+function removeKeyframe() {
   const frame = frames[currentIndex];
+  if (!headingAdjustments[frame.filename]) return;
+
   delete headingAdjustments[frame.filename];
   saveHeadingAdjustments();
-  loadPhoto(currentIndex);
+  loadPhoto(currentIndex, true);
   updateEditPanel();
-  showEditFeedback('Reset to default');
+  showEditFeedback('Keyframe removed');
 }
 
 function showEditFeedback(message) {
@@ -996,16 +1084,17 @@ function showEditFeedback(message) {
 function updateExportCount() {
   const count = Object.keys(headingAdjustments).length;
   if (elements.editExportCount) {
-    elements.editExportCount.textContent = count > 0 ? `(${count} local edits)` : '(no local edits)';
+    elements.editExportCount.textContent = count > 0 ? `(${count} keyframes)` : '(no keyframes)';
   }
 }
 
 function exportAdjustments() {
   const count = Object.keys(headingAdjustments).length;
-  if (count === 0) { alert('No heading adjustments to export.'); return; }
+  if (count === 0) { alert('No keyframe adjustments to export.'); return; }
 
   const exportData = {
     exported: new Date().toISOString(),
+    mode: 'keyframe',
     count,
     adjustments: headingAdjustments,
   };
@@ -1021,19 +1110,19 @@ function exportAdjustments() {
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
 
-  showEditFeedback(`Exported ${count} adjustments`);
+  showEditFeedback(`Exported ${count} keyframes`);
 }
 
 function clearLocalEdits() {
   const count = Object.keys(headingAdjustments).length;
-  if (count === 0) { showEditFeedback('No local edits to clear'); return; }
+  if (count === 0) { showEditFeedback('No keyframes to clear'); return; }
 
-  if (confirm(`Clear ${count} local edit(s)?`)) {
+  if (confirm(`Clear ${count} keyframe(s)? This will remove all local heading adjustments.`)) {
     headingAdjustments = {};
     saveHeadingAdjustments();
-    loadPhoto(currentIndex);
+    loadPhoto(currentIndex, true);
     updateEditPanel();
-    showEditFeedback(`Cleared ${count} local edits`);
+    showEditFeedback(`Cleared ${count} keyframes`);
   }
 }
 

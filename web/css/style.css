@@ -360,9 +360,6 @@ body {
   height: 100%;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
-  transform: scale(1);
-  will-change: opacity, transform;
 }
 
 .panorama-layer.panorama-active {
@@ -371,37 +368,19 @@ body {
   z-index: 2;
 }
 
-.panorama-layer.panorama-outgoing {
-  opacity: 1;
+.panorama-layer.panorama-fading {
   visibility: visible;
   z-index: 3;
+  animation: pano-fade-out 250ms ease-out forwards;
 }
 
-.panorama-layer.panorama-zoom-in {
-  transform: scale(1.4);
-  opacity: 0;
+@keyframes pano-fade-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
 }
 
 .transition-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 10;
-  opacity: 0;
-  background: radial-gradient(
-    ellipse 80% 80% at 50% 50%,
-    transparent 0%,
-    transparent 40%,
-    rgba(0, 0, 0, 0.3) 100%
-  );
-  transition: opacity 0.2s ease-out;
-}
-
-.transition-overlay.active {
-  opacity: 1;
+  display: none;
 }
 
 .panorama-layer .pnlm-container {
@@ -938,12 +917,16 @@ body {
   vertical-align: middle;
 }
 
-.edit-status.has-custom .status-dot {
+.edit-status.has-keyframe .status-dot {
+  background: #22c55e;
+}
+
+.edit-status.has-inherited .status-dot {
   background: #f59e0b;
 }
 
-.edit-status.has-index .status-dot {
-  background: #22c55e;
+.edit-status.has-data .status-dot {
+  background: #3b82f6;
 }
 
 .edit-status .status-text {
@@ -954,6 +937,39 @@ body {
 .edit-status .status-text.feedback {
   color: #22c55e;
   font-weight: 500;
+}
+
+.edit-propagation-info {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  padding: 0.375rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.propagation-count {
+  color: var(--text-muted);
+}
+
+.propagation-source {
+  color: var(--text-secondary);
+  font-family: monospace;
+  font-size: 0.625rem;
+}
+
+.propagation-jump {
+  color: var(--accent-primary);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.6875rem;
+  white-space: nowrap;
+}
+
+.propagation-jump:hover {
+  text-decoration: underline;
+  color: var(--accent-secondary);
 }
 
 .edit-buttons {

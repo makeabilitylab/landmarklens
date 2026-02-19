@@ -99,7 +99,14 @@ async function init() {
     const resp = await fetch('data.json');
     const allData = await resp.json();
 
-    frames = allData.frames.filter(f => f.neighborhood === neighborhoodId);
+    frames = allData.frames
+      .filter(f => f.neighborhood === neighborhoodId)
+      .map(f => {
+        if (f.lat_snapped != null && f.lon_snapped != null) {
+          return { ...f, lat_original: f.lat, lon_original: f.lon, lat: f.lat_snapped, lon: f.lon_snapped };
+        }
+        return f;
+      });
 
     if (frames.length === 0) {
       console.error('No frames found for neighborhood:', neighborhoodId);
@@ -580,9 +587,13 @@ function updatePhotoUI(index, frame) {
     elements.debugSource.textContent = frame.source || 'N/A';
     const parts = frame.filename.split('/');
     elements.debugFile.textContent = parts[parts.length - 1] || 'N/A';
-    elements.debugCoords.textContent = frame.lat && frame.lon
-      ? `${frame.lat.toFixed(6)}, ${frame.lon.toFixed(6)}`
-      : 'No coordinates';
+    if (frame.lat && frame.lon) {
+      let coordText = `${frame.lat.toFixed(6)}, ${frame.lon.toFixed(6)}`;
+      if (frame.lat_original != null) coordText += ' (snapped)';
+      elements.debugCoords.textContent = coordText;
+    } else {
+      elements.debugCoords.textContent = 'No coordinates';
+    }
     elements.debugAlt.textContent = frame.alt != null ? `${frame.alt.toFixed(1)} m` : 'N/A';
 
     const color = frameColors[index] || '#999';

@@ -2,9 +2,10 @@
 """
 Import adjusted GPS coordinates from a QGIS-edited GeoJSON back into data.json.
 
-Reads a GeoJSON file (exported from QGIS after manual adjustments) and updates
-the corresponding frame coordinates in web/data.json. Frames are matched by
-'frame_index' and 'filename' properties.
+Reads a GeoJSON file (exported from QGIS after manual adjustments) and writes
+the adjusted coordinates as lat_snapped / lon_snapped in web/data.json,
+preserving the original lat / lon. Frames are matched by 'filename' (with
+'frame_index' as fallback).
 
 Usage:
     # Import from an edited GeoJSON
@@ -74,7 +75,11 @@ def apply_edits(
 
     for feature in geojson.get("features", []):
         props = feature.get("properties", {})
-        coords = feature.get("geometry", {}).get("coordinates")
+        geom = feature.get("geometry")
+        if not geom:
+            skipped += 1
+            continue
+        coords = geom.get("coordinates")
         if not coords or len(coords) < 2:
             skipped += 1
             continue
@@ -101,8 +106,8 @@ def apply_edits(
 
         matched += 1
         frame = frames[idx]
-        old_lat, old_lon = frame["lat"], frame["lon"]
-        dist = haversine(old_lat, old_lon, new_lat, new_lon)
+        orig_lat, orig_lon = frame["lat"], frame["lon"]
+        dist = haversine(orig_lat, orig_lon, new_lat, new_lon)
 
         if dist < 0.01:  # less than 1 cm — unchanged
             continue
@@ -110,21 +115,30 @@ def apply_edits(
         moved += 1
         if dry_run:
             print(f"  [dry-run] {filename}: "
-                  f"({old_lat:.7f}, {old_lon:.7f}) → ({new_lat:.7f}, {new_lon:.7f})  "
+                  f"({orig_lat:.7f}, {orig_lon:.7f}) → ({new_lat:.7f}, {new_lon:.7f})  "
                   f"Δ {dist:.2f} m")
         else:
-            frame["lat"] = round(new_lat, 7)
-            frame["lon"] = round(new_lon, 7)
+            frame["lat_snapped"] = round(new_lat, 7)
+            frame["lon_snapped"] = round(new_lon, 7)
 
     return matched, moved, skipped
 
 
+def _effective_coords(frame: Dict) -> Tuple[float, float]:
+    """Return snapped coordinates if available, otherwise original."""
+    lat = frame.get("lat_snapped", frame["lat"])
+    lon = frame.get("lon_snapped", frame["lon"])
+    return lat, lon
+
+
 def recalculate_distances(data: Dict):
-    """Recalculate distance_to_next for every frame within each neighborhood."""
+    """Recalculate distance_to_next using snapped coords when available."""
     frames = data["frames"]
     for i, frame in enumerate(frames):
         if i + 1 < len(frames) and frames[i + 1]["neighborhood"] == frame["neighborhood"]:
-            d = haversine(frame["lat"], frame["lon"], frames[i + 1]["lat"], frames[i + 1]["lon"])
+            lat1, lon1 = _effective_coords(frame)
+            lat2, lon2 = _effective_coords(frames[i + 1])
+            d = haversine(lat1, lon1, lat2, lon2)
             frame["distance_to_next"] = round(d, 2)
         else:
             frame["distance_to_next"] = 0
@@ -158,6 +172,12 @@ def main():
         action="store_true",
         help="Recalculate distance_to_next for all frames after import",
     )
+    parser.add_argument(
+        "--delete-missing",
+        action="store_true",
+        help="Remove frames from data.json that are not in the GeoJSON "
+             "(only applies to neighborhoods/sources present in the GeoJSON)",
+    )
     args = parser.parse_args()
 
     repo_root = Path(__file__).resolve().parent.parent
@@ -175,6 +195,8 @@ def main():
         print(f"  Mode:      DRY RUN (no changes written)")
     if args.recalc_distance:
         print(f"  Recalc:    distance_to_next will be recalculated")
+    if args.delete_missing:
+        print(f"  Delete:    frames missing from GeoJSON will be removed")
     print("=" * 60)
 
     geojson = load_geojson(geojson_path)
@@ -185,14 +207,50 @@ def main():
     print(f"\n  GeoJSON features: {feature_count}")
     print(f"  data.json frames: {frame_count}")
 
+    # Handle deletions
+    deleted = 0
+    if args.delete_missing:
+        geo_filenames = {
+            feat["properties"]["filename"]
+            for feat in geojson.get("features", [])
+            if "filename" in feat.get("properties", {})
+            and feat.get("geometry") is not None
+        }
+        geo_neighborhoods = {
+            feat["properties"].get("neighborhood")
+            for feat in geojson.get("features", [])
+        }
+        geo_sources = {
+            feat["properties"].get("source")
+            for feat in geojson.get("features", [])
+        }
+
+        before = len(data["frames"])
+        kept = []
+        for f in data["frames"]:
+            in_scope = f.get("neighborhood") in geo_neighborhoods or f.get("source") in geo_sources
+            if in_scope and f["filename"] not in geo_filenames:
+                deleted += 1
+                if args.dry_run:
+                    print(f"  [dry-run] delete: {f['filename']}")
+            else:
+                kept.append(f)
+
+        if not args.dry_run:
+            data["frames"] = kept
+            data["frame_count"] = len(kept)
+
+        print(f"\n  Deleted:   {deleted} frames")
+
     matched, moved, skipped = apply_edits(data, geojson, dry_run=args.dry_run)
 
-    print(f"\n  Matched:   {matched}")
+    print(f"  Matched:   {matched}")
     print(f"  Moved:     {moved}")
     print(f"  Skipped:   {skipped}")
 
-    if moved == 0:
-        print("\nNo coordinates changed — nothing to write.")
+    changes = moved + deleted
+    if changes == 0:
+        print("\nNo changes — nothing to write.")
         return
 
     if args.recalc_distance:
@@ -201,11 +259,16 @@ def main():
         print(f"  New total distance: {data['total_distance_m']:.1f} m")
 
     if args.dry_run:
-        print(f"\nDry run complete. Re-run without --dry-run to apply {moved} change(s).")
+        print(f"\nDry run complete. Re-run without --dry-run to apply changes.")
     else:
+        # Re-index frames sequentially
+        if deleted > 0:
+            for i, f in enumerate(data["frames"]):
+                f["index"] = i
+
         with open(data_path, "w") as f:
             json.dump(data, f, indent=2)
-        print(f"\n✓ Updated {moved} frame coordinate(s) in {data_path}")
+        print(f"\n✓ Updated data.json: {moved} moved, {deleted} deleted")
 
 
 if __name__ == "__main__":

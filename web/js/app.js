@@ -25,6 +25,9 @@ async function init() {
 
     const grouped = {};
     frameData.frames.forEach(frame => {
+      if (frame.lat_snapped != null && frame.lon_snapped != null) {
+        frame = { ...frame, lat_original: frame.lat, lon_original: frame.lon, lat: frame.lat_snapped, lon: frame.lon_snapped };
+      }
       const hood = frame.neighborhood || 'unknown';
       if (!grouped[hood]) grouped[hood] = [];
       grouped[hood].push(frame);

@@ -49,8 +49,8 @@ def filter_frames(
 def create_geojson(frames: List[Dict]) -> Dict:
     features = []
     for frame in frames:
-        lat = frame.get("lat")
-        lon = frame.get("lon")
+        lat = frame.get("lat_snapped", frame.get("lat"))
+        lon = frame.get("lon_snapped", frame.get("lon"))
         if lat is None or lon is None:
             continue
 
@@ -68,8 +68,8 @@ def create_geojson(frames: List[Dict]) -> Dict:
                 "alt": frame.get("alt"),
                 "heading": frame.get("heading"),
                 "distance_to_next": frame.get("distance_to_next"),
-                "original_lat": lat,
-                "original_lon": lon,
+                "original_lat": frame.get("lat"),
+                "original_lon": frame.get("lon"),
             },
         }
         features.append(feature)

@@ -30,14 +30,23 @@ FRAME_INTERVAL_SEC = 0.1
 MIN_MOVEMENT_M = 1.5
 TARGET_SPACING_M = 3.0
 
-def discover_all_videos():
+def discover_all_videos(folders=None):
     """Auto-discover all video pairs: .360 in original-files-video + .mp4/.mov in video/."""
     if not VIDEO_360_DIR.exists() or not VIDEO_MP4_DIR.exists():
         return []
-    raw_stems = sorted(p.stem for p in VIDEO_360_DIR.iterdir() if p.suffix.lower() == ".360")
+    if folders:
+        raw_files = []
+        for folder in folders:
+            folder_path = VIDEO_360_DIR / folder
+            if folder_path.is_dir():
+                raw_files.extend(sorted(folder_path.glob("*.360")))
+            else:
+                print(f"  WARNING: Folder not found: {folder_path}")
+    else:
+        raw_files = sorted(VIDEO_360_DIR.rglob("*.360"))
     videos = []
-    for stem in raw_stems:
-        found = find_video_by_stem(stem)
+    for raw_path in raw_files:
+        found = find_video_by_stem(raw_path.stem)
         if found:
             videos.append(found)
     return videos
@@ -46,29 +55,34 @@ def discover_all_videos():
 def parse_args():
     parser = argparse.ArgumentParser(description="Extract frames from GoPro 360 videos and match with GPS.")
     parser.add_argument("--only", metavar="VIDEO", help="Process only this video (filename or stem, e.g. GS010318)")
+    parser.add_argument("--extract-only", action="store_true",
+                        help="Only extract frames (ffmpeg). Skip GPS matching and data.json generation.")
+    parser.add_argument("--json-only", action="store_true",
+                        help="Only rebuild data.json from existing frames on disk. No ffmpeg extraction.")
+    parser.add_argument("folders", nargs="*", metavar="FOLDER",
+                        help="Process only videos in these subfolders (e.g. kinshicho koenji)")
     return parser.parse_args()
 
 
 def find_video_by_stem(stem):
     """Find a video file and its .360 in the data dirs. Returns one dict like VIDEO_FILES entries, or None."""
     stem = stem.strip()
-    raw_path = VIDEO_360_DIR / f"{stem}.360"
-    if not raw_path.exists():
+    raw_matches = list(VIDEO_360_DIR.rglob(f"{stem}.360"))
+    if not raw_matches:
         return None
-    # Match any video file whose stem is exactly the stem or starts with stem_
-    candidates = []
-    for p in VIDEO_MP4_DIR.iterdir():
-        if not p.is_file():
-            continue
-        if p.suffix.lower() not in (".mp4", ".mov"):
-            continue
-        if p.stem == stem or p.stem.startswith(stem + "_"):
-            candidates.append(p)
+    raw_path = raw_matches[0]
+    candidates = [
+        p for p in VIDEO_MP4_DIR.rglob("*")
+        if p.is_file() and p.suffix.lower() in (".mp4", ".mov")
+        and (p.stem == stem or p.stem.startswith(stem + "_"))
+    ]
     if not candidates:
         return None
-    # Prefer exact stem match, then sort for deterministic choice
     candidates.sort(key=lambda p: (p.stem != stem, p.name))
-    return {"mp4": candidates[0].name, "raw": f"{stem}.360"}
+    return {
+        "mp4": str(candidates[0].relative_to(VIDEO_MP4_DIR)),
+        "raw": str(raw_path.relative_to(VIDEO_360_DIR)),
+    }
 
 
 def extract_gps_from_360(filepath):
@@ -136,6 +150,43 @@ def extract_frames(mp4_path, output_dir, prefix):
     return frames
 
 
+def scan_existing_frames(video_path, output_dir, prefix):
+    """Scan already-extracted frames on disk instead of running ffmpeg."""
+    jpgs = sorted(output_dir.glob(f"{prefix}_*.jpg"))
+    if not jpgs:
+        return []
+    duration = get_video_duration(video_path)
+    print(f"    Video duration: {duration:.2f}s | Found {len(jpgs)} frames on disk")
+    frames = []
+    for i, fpath in enumerate(jpgs):
+        num = int(fpath.stem.split("_")[-1])
+        video_time = num * FRAME_INTERVAL_SEC
+        frames.append({
+            "filename": fpath.name,
+            "video_fraction": min(video_time / duration, 1.0) if duration > 0 else 0,
+        })
+    return frames
+
+
+def discover_from_frames():
+    """Discover videos based on existing frame directories on disk."""
+    if not OUTPUT_FRAMES_DIR.exists():
+        return []
+    videos = []
+    for frame_dir in sorted(OUTPUT_FRAMES_DIR.iterdir()):
+        if not frame_dir.is_dir():
+            continue
+        stem = frame_dir.name
+        if not list(frame_dir.glob(f"{stem}_*.jpg")):
+            continue
+        found = find_video_by_stem(stem)
+        if found:
+            videos.append(found)
+        else:
+            print(f"  WARNING: Frames exist for {stem} but no matching .360 + video found, skipping")
+    return videos
+
+
 def haversine_distance(lat1, lon1, lat2, lon2):
     R = 6371000
     dlat, dlon = math.radians(lat2 - lat1), math.radians(lon2 - lon1)
@@ -201,78 +252,63 @@ def cleanup_unused(output_dir, kept_frames):
         print(f"    Cleaned up {removed} unused frame files")
 
 
-def main():
-    args = parse_args()
+def discover_videos(args):
+    """Resolve the list of videos to process based on CLI arguments."""
     if args.only:
         key = args.only.strip()
         found = find_video_by_stem(key)
         if found:
-            videos = [found]
             print(f"  Using: {found['mp4']} + {found['raw']}")
+            return [found]
+        if not VIDEO_MP4_DIR.exists():
+            print(f"ERROR: Video directory not found: {VIDEO_MP4_DIR}")
+        elif not VIDEO_360_DIR.exists():
+            print(f"ERROR: .360 directory not found: {VIDEO_360_DIR}")
         else:
-            if not VIDEO_MP4_DIR.exists():
-                print(f"ERROR: Video directory not found: {VIDEO_MP4_DIR}")
-            elif not VIDEO_360_DIR.exists():
-                print(f"ERROR: .360 directory not found: {VIDEO_360_DIR}")
-            else:
-                videos_in_dir = list(VIDEO_MP4_DIR.glob("*.mp4")) + list(VIDEO_MP4_DIR.glob("*.mov"))
-                print(f"ERROR: No video matching '{key}'.")
-                print(f"  Need: {key}.360 in {VIDEO_360_DIR.name}/ and a .mp4/.mov with stem '{key}' or '{key}_...' in {VIDEO_MP4_DIR.name}/")
-                if videos_in_dir:
-                    print(f"  Found in {VIDEO_MP4_DIR.name}/: {[p.name for p in videos_in_dir[:5]]}" + (" ..." if len(videos_in_dir) > 5 else ""))
-            sys.exit(1)
+            print(f"ERROR: No video matching '{key}'.")
+        sys.exit(1)
+
+    if args.json_only and not args.folders:
+        videos = discover_from_frames()
     else:
-        videos = discover_all_videos()
-        if not videos:
-            print("ERROR: No video pairs found. Need .360 files in original-files-video/ and matching .mp4/.mov in video/")
-            sys.exit(1)
-        print(f"  Auto-discovered {len(videos)} video pairs")
+        videos = discover_all_videos(args.folders or None)
 
-    print("=" * 60)
-    print("GoPro 360 Frame Extractor + GPS Matcher")
-    print(f"  Spacing: {TARGET_SPACING_M}m | Min movement: {MIN_MOVEMENT_M}m | Format: JPG (q:v 1)")
-    print("=" * 60)
+    if not videos:
+        if args.folders:
+            print(f"ERROR: No video pairs found in folders: {', '.join(args.folders)}")
+        else:
+            print("ERROR: No video pairs found.")
+        sys.exit(1)
 
-    OUTPUT_FRAMES_DIR.mkdir(parents=True, exist_ok=True)
-    OUTPUT_JSON.parent.mkdir(parents=True, exist_ok=True)
+    label = f"folders: {', '.join(args.folders)}" if args.folders else "all"
+    print(f"  Auto-discovered {len(videos)} video pairs ({label})")
+    return videos
 
-    all_frames = []
 
-    for vid in videos:
-        mp4_path = VIDEO_MP4_DIR / vid["mp4"]
-        raw_path = VIDEO_360_DIR / vid["raw"]
-        prefix = Path(vid["raw"]).stem
+def write_data_json(new_frames, processed_sources):
+    """Merge new frames with existing data.json (preserving unprocessed sources), then write."""
+    # Load existing data and keep frames for sources we didn't just process
+    existing_frames = []
+    if OUTPUT_JSON.exists():
+        try:
+            with open(OUTPUT_JSON) as f:
+                existing = json.load(f)
+            existing_frames = [
+                fr for fr in existing.get("frames", [])
+                if fr["source"] not in processed_sources
+            ]
+            if existing_frames:
+                kept_sources = sorted(set(fr["source"] for fr in existing_frames))
+                print(f"\n  Keeping {len(existing_frames)} existing frames from: {', '.join(kept_sources)}")
+        except (json.JSONDecodeError, KeyError):
+            pass
 
-        print(f"\nProcessing {prefix}...")
-        if not mp4_path.exists() or not raw_path.exists():
-            print(f"  ERROR: Missing files for {prefix}")
-            continue
+    all_frames = existing_frames + new_frames
 
-        gps_points = extract_gps_from_360(raw_path)
-        if not gps_points:
-            continue
-
-        video_dir = OUTPUT_FRAMES_DIR / prefix
-        frames = extract_frames(mp4_path, video_dir, prefix)
-        if not frames:
-            continue
-
-        # Match GPS
-        for f in frames:
-            gps = interpolate_gps(gps_points, f["video_fraction"])
-            f.update({"lat": round(gps["lat"], 7), "lon": round(gps["lon"], 7),
-                       "alt": round(gps["alt"], 2), "source": prefix,
-                       "filename": f"{prefix}/{f['filename']}"})
-
-        frames = filter_stationary(frames, MIN_MOVEMENT_M)
-        frames = thin_by_distance(frames, TARGET_SPACING_M)
-        cleanup_unused(video_dir, frames)
-        all_frames.extend(frames)
-
-    # Index + distance
+    # Re-index and compute distances
     for i, f in enumerate(all_frames):
         f["index"] = i
-        f["heading"] = 0
+        f["heading"] = f.get("heading", 0)
         if i < len(all_frames) - 1 and f["source"] == all_frames[i+1]["source"]:
             f["distance_to_next"] = round(haversine_distance(
                 f["lat"], f["lon"], all_frames[i+1]["lat"], all_frames[i+1]["lon"]), 2)
@@ -280,6 +316,7 @@ def main():
             f["distance_to_next"] = 0
 
     total_dist = sum(f["distance_to_next"] for f in all_frames)
+    OUTPUT_JSON.parent.mkdir(parents=True, exist_ok=True)
 
     output = {
         "generated": True,
@@ -300,6 +337,79 @@ def main():
     if len(all_frames) > 1:
         print(f" | ~{total_dist / (len(all_frames) - 1):.1f}m avg spacing")
     print(f"Output: {OUTPUT_JSON}")
+
+
+def main():
+    args = parse_args()
+    if args.extract_only and args.json_only:
+        print("ERROR: --extract-only and --json-only are mutually exclusive.")
+        sys.exit(1)
+
+    videos = discover_videos(args)
+
+    mode = "extract-only" if args.extract_only else "json-only" if args.json_only else "full"
+    print("=" * 60)
+    print(f"GoPro 360 Frame Extractor + GPS Matcher  [{mode}]")
+    print(f"  Spacing: {TARGET_SPACING_M}m | Min movement: {MIN_MOVEMENT_M}m | Format: JPG (q:v 1)")
+    print("=" * 60)
+
+    OUTPUT_FRAMES_DIR.mkdir(parents=True, exist_ok=True)
+    all_frames = []
+    processed_sources = set()
+
+    for vid in videos:
+        mp4_path = VIDEO_MP4_DIR / vid["mp4"]
+        raw_path = VIDEO_360_DIR / vid["raw"]
+        prefix = Path(vid["raw"]).stem
+        video_dir = OUTPUT_FRAMES_DIR / prefix
+
+        print(f"\nProcessing {prefix}...")
+        if not mp4_path.exists():
+            print(f"  ERROR: Missing video file: {mp4_path}")
+            continue
+
+        # ── Extract-only: just ffmpeg, then move on ──
+        if args.extract_only:
+            if not raw_path.exists():
+                print(f"  WARNING: .360 missing, extracting frames without GPS")
+            extract_frames(mp4_path, video_dir, prefix)
+            continue
+
+        # ── JSON-only or full: need GPS ──
+        if not raw_path.exists():
+            print(f"  ERROR: Missing .360 file: {raw_path}")
+            continue
+
+        gps_points = extract_gps_from_360(raw_path)
+        if not gps_points:
+            continue
+
+        if args.json_only:
+            frames = scan_existing_frames(mp4_path, video_dir, prefix)
+        else:
+            frames = extract_frames(mp4_path, video_dir, prefix)
+
+        if not frames:
+            continue
+
+        for f in frames:
+            gps = interpolate_gps(gps_points, f["video_fraction"])
+            f.update({"lat": round(gps["lat"], 7), "lon": round(gps["lon"], 7),
+                       "alt": round(gps["alt"], 2), "source": prefix,
+                       "filename": f"{prefix}/{f['filename']}"})
+
+        frames = filter_stationary(frames, MIN_MOVEMENT_M)
+        frames = thin_by_distance(frames, TARGET_SPACING_M)
+        cleanup_unused(video_dir, frames)
+        all_frames.extend(frames)
+        processed_sources.add(prefix)
+
+    if args.extract_only:
+        print(f"\nDone! Frames extracted for {len(videos)} videos.")
+        print("Run with --json-only to rebuild data.json from all frames on disk.")
+        return
+
+    write_data_json(all_frames, processed_sources)
 
 
 if __name__ == "__main__":

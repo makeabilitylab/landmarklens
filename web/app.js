@@ -18,6 +18,7 @@ let headingOffset = 0;       // For map indicator (kept separate)
 let map = null;
 let markers = [];
 let routeLines = [];  // one polyline per route (by source)
+let colorBySource = {};
 let directionMarker = null;
 let yawPollTimer = null;
 
@@ -189,7 +190,6 @@ function initMap() {
 
     // Group frames by source (route) and assign colors
     const sources = [...new Set(frameData.frames.map(f => f.source))];
-    const colorBySource = {};
     sources.forEach((src, idx) => {
         colorBySource[src] = ROUTE_COLORS[idx % ROUTE_COLORS.length];
     });
@@ -267,6 +267,14 @@ function updateUI(frame) {
 
     document.getElementById('btn-prev').disabled = currentIndex === 0;
     document.getElementById('btn-next').disabled = currentIndex === frameData.frames.length - 1;
+
+    // Info panel
+    const parts = frame.filename.split('/');
+    document.getElementById('info-folder').textContent = parts.length > 1 ? parts[0] : '—';
+    document.getElementById('info-file').textContent = parts[parts.length - 1];
+    const color = colorBySource[frame.source] || ROUTE_COLORS[0];
+    document.getElementById('info-color-swatch').style.background = color;
+    document.getElementById('info-color-hex').textContent = color;
 }
 
 // ─── Events ────────────────────────────────────────────────
@@ -302,6 +310,11 @@ function bindEvents() {
         if (v) {
             v.setYaw(v.getYaw() + delta);
         }
+    });
+
+    // Toggle info panel
+    document.getElementById('info-panel-header').addEventListener('click', () => {
+        document.getElementById('info-panel').classList.toggle('collapsed');
     });
 
     // Toggle map size

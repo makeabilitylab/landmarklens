@@ -57,8 +57,38 @@
             </div>
         </div>
 
-        <!-- Map Panel -->
+        <!-- Right Sidebar -->
         <div id="map-panel">
+            <!-- Info Panel -->
+            <div id="info-panel">
+                <div id="info-panel-header">
+                    <h3>Info</h3>
+                    <button id="btn-toggle-info" class="icon-btn" title="Toggle info panel">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="18 15 12 9 6 15"></polyline>
+                        </svg>
+                    </button>
+                </div>
+                <div id="info-panel-body">
+                    <div class="info-row">
+                        <span class="info-label">Folder:</span>
+                        <span class="info-value" id="info-folder">—</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">File:</span>
+                        <span class="info-value" id="info-file">—</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Route Color:</span>
+                        <span class="info-value" id="info-route-color">
+                            <span id="info-color-swatch" class="color-swatch"></span>
+                            <span id="info-color-hex">—</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
             <div id="map-header">
                 <h3>Route Map</h3>
                 <button id="btn-toggle-map" class="icon-btn" title="Toggle map size">

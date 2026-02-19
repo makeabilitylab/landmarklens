@@ -325,7 +325,7 @@ def write_data_json(new_frames, processed_sources):
         "total_distance_m": round(total_dist, 1),
         "settings": {"min_movement_m": MIN_MOVEMENT_M, "target_spacing_m": TARGET_SPACING_M},
         "frames": [
-            {k: f[k] for k in ("index", "filename", "lat", "lon", "alt", "heading", "distance_to_next", "source")}
+            {k: f[k] for k in ("index", "filename", "lat", "lon", "alt", "heading", "distance_to_next", "source", "neighborhood") if k in f}
             for f in all_frames
         ],
     }
@@ -392,10 +392,14 @@ def main():
         if not frames:
             continue
 
+        raw_parts = Path(vid["raw"]).parts
+        neighborhood = raw_parts[0] if len(raw_parts) > 1 else ""
+
         for f in frames:
             gps = interpolate_gps(gps_points, f["video_fraction"])
             f.update({"lat": round(gps["lat"], 7), "lon": round(gps["lon"], 7),
                        "alt": round(gps["alt"], 2), "source": prefix,
+                       "neighborhood": neighborhood,
                        "filename": f"{prefix}/{f['filename']}"})
 
         frames = filter_stationary(frames, MIN_MOVEMENT_M)

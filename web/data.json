@@ -29865,7 +29865,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.697976,
-      "lon_snapped": 139.814859
+      "lon_snapped": 139.814859,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2017,
@@ -29878,7 +29880,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979499,
-      "lon_snapped": 139.8148356
+      "lon_snapped": 139.8148356,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2018,
@@ -29891,7 +29895,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979277,
-      "lon_snapped": 139.8148096
+      "lon_snapped": 139.8148096,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2019,
@@ -29904,7 +29910,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979257,
-      "lon_snapped": 139.81477
+      "lon_snapped": 139.81477,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2020,
@@ -29917,7 +29925,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979236,
-      "lon_snapped": 139.8147303
+      "lon_snapped": 139.8147303,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2021,
@@ -29930,7 +29940,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979216,
-      "lon_snapped": 139.8146907
+      "lon_snapped": 139.8146907,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2022,
@@ -29943,7 +29955,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979195,
-      "lon_snapped": 139.814651
+      "lon_snapped": 139.814651,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2023,
@@ -29956,7 +29970,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979175,
-      "lon_snapped": 139.8146114
+      "lon_snapped": 139.8146114,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2024,
@@ -29969,7 +29985,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979155,
-      "lon_snapped": 139.8145717
+      "lon_snapped": 139.8145717,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2025,
@@ -29982,7 +30000,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979134,
-      "lon_snapped": 139.8145321
+      "lon_snapped": 139.8145321,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2026,
@@ -29995,7 +30015,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979114,
-      "lon_snapped": 139.8144924
+      "lon_snapped": 139.8144924,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2027,
@@ -30008,7 +30030,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979093,
-      "lon_snapped": 139.8144528
+      "lon_snapped": 139.8144528,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2028,
@@ -30021,7 +30045,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979073,
-      "lon_snapped": 139.8144131
+      "lon_snapped": 139.8144131,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2029,
@@ -30034,7 +30060,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979053,
-      "lon_snapped": 139.8143734
+      "lon_snapped": 139.8143734,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2030,
@@ -30047,7 +30075,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979032,
-      "lon_snapped": 139.8143338
+      "lon_snapped": 139.8143338,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2031,
@@ -30060,7 +30090,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979012,
-      "lon_snapped": 139.8142941
+      "lon_snapped": 139.8142941,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2032,
@@ -30073,7 +30105,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978991,
-      "lon_snapped": 139.8142545
+      "lon_snapped": 139.8142545,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2033,
@@ -30086,7 +30120,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978971,
-      "lon_snapped": 139.8142148
+      "lon_snapped": 139.8142148,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2034,
@@ -30099,7 +30135,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.697906,
-      "lon_snapped": 139.8141782
+      "lon_snapped": 139.8141782,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2035,
@@ -30112,7 +30150,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.697905,
-      "lon_snapped": 139.8141385
+      "lon_snapped": 139.8141385,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2036,
@@ -30125,7 +30165,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978936,
-      "lon_snapped": 139.8141042
+      "lon_snapped": 139.8141042,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2037,
@@ -30138,7 +30180,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978892,
-      "lon_snapped": 139.8140658
+      "lon_snapped": 139.8140658,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2038,
@@ -30151,7 +30195,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978871,
-      "lon_snapped": 139.8140262
+      "lon_snapped": 139.8140262,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2039,
@@ -30164,7 +30210,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.697885,
-      "lon_snapped": 139.8139865
+      "lon_snapped": 139.8139865,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2040,
@@ -30177,7 +30225,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978829,
-      "lon_snapped": 139.8139469
+      "lon_snapped": 139.8139469,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2041,
@@ -30190,7 +30240,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978808,
-      "lon_snapped": 139.8139072
+      "lon_snapped": 139.8139072,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2042,
@@ -30203,7 +30255,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978787,
-      "lon_snapped": 139.8138676
+      "lon_snapped": 139.8138676,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2043,
@@ -30216,7 +30270,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978767,
-      "lon_snapped": 139.8138279
+      "lon_snapped": 139.8138279,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2044,
@@ -30229,7 +30285,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978746,
-      "lon_snapped": 139.8137883
+      "lon_snapped": 139.8137883,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2045,
@@ -30242,7 +30300,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978725,
-      "lon_snapped": 139.8137486
+      "lon_snapped": 139.8137486,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2046,
@@ -30255,7 +30315,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978704,
-      "lon_snapped": 139.813709
+      "lon_snapped": 139.813709,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2047,
@@ -30268,7 +30330,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978683,
-      "lon_snapped": 139.8136693
+      "lon_snapped": 139.8136693,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2048,
@@ -30281,7 +30345,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978662,
-      "lon_snapped": 139.8136297
+      "lon_snapped": 139.8136297,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2049,
@@ -30294,7 +30360,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978642,
-      "lon_snapped": 139.81359
+      "lon_snapped": 139.81359,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2050,
@@ -30307,7 +30375,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978623,
-      "lon_snapped": 139.8135503
+      "lon_snapped": 139.8135503,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2051,
@@ -30320,7 +30390,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978599,
-      "lon_snapped": 139.8135107
+      "lon_snapped": 139.8135107,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2052,
@@ -30333,7 +30405,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978581,
-      "lon_snapped": 139.813471
+      "lon_snapped": 139.813471,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2053,
@@ -30346,7 +30420,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978552,
-      "lon_snapped": 139.8134315
+      "lon_snapped": 139.8134315,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2054,
@@ -30359,7 +30435,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.697853,
-      "lon_snapped": 139.8133918
+      "lon_snapped": 139.8133918,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2055,
@@ -30372,7 +30450,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978502,
-      "lon_snapped": 139.8133523
+      "lon_snapped": 139.8133523,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2056,
@@ -30385,7 +30465,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978475,
-      "lon_snapped": 139.8133127
+      "lon_snapped": 139.8133127,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2057,
@@ -30398,7 +30480,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.697845,
-      "lon_snapped": 139.8132731
+      "lon_snapped": 139.8132731,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2058,
@@ -30411,7 +30495,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978426,
-      "lon_snapped": 139.8132334
+      "lon_snapped": 139.8132334,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2059,
@@ -30424,7 +30510,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978402,
-      "lon_snapped": 139.8131938
+      "lon_snapped": 139.8131938,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2060,
@@ -30437,7 +30525,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978378,
-      "lon_snapped": 139.8131542
+      "lon_snapped": 139.8131542,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2061,
@@ -30450,7 +30540,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978354,
-      "lon_snapped": 139.8131146
+      "lon_snapped": 139.8131146,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2062,
@@ -30463,7 +30555,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.697833,
-      "lon_snapped": 139.8130749
+      "lon_snapped": 139.8130749,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2063,
@@ -30476,7 +30570,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978306,
-      "lon_snapped": 139.8130353
+      "lon_snapped": 139.8130353,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2064,
@@ -30489,7 +30585,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978282,
-      "lon_snapped": 139.8129957
+      "lon_snapped": 139.8129957,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2065,
@@ -30502,7 +30600,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978258,
-      "lon_snapped": 139.8129561
+      "lon_snapped": 139.8129561,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2066,
@@ -30515,7 +30615,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978234,
-      "lon_snapped": 139.8129164
+      "lon_snapped": 139.8129164,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2067,
@@ -30528,7 +30630,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.697821,
-      "lon_snapped": 139.8128768
+      "lon_snapped": 139.8128768,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2068,
@@ -30541,7 +30645,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978186,
-      "lon_snapped": 139.8128372
+      "lon_snapped": 139.8128372,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2069,
@@ -30554,7 +30660,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978162,
-      "lon_snapped": 139.8127976
+      "lon_snapped": 139.8127976,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2070,
@@ -30567,7 +30675,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978138,
-      "lon_snapped": 139.812758
+      "lon_snapped": 139.812758,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2071,
@@ -30580,7 +30690,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978113,
-      "lon_snapped": 139.8127183
+      "lon_snapped": 139.8127183,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2072,
@@ -30593,7 +30705,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978097,
-      "lon_snapped": 139.8126787
+      "lon_snapped": 139.8126787,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2073,
@@ -30606,7 +30720,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978081,
-      "lon_snapped": 139.812639
+      "lon_snapped": 139.812639,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2074,
@@ -30619,7 +30735,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978061,
-      "lon_snapped": 139.8125993
+      "lon_snapped": 139.8125993,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2075,
@@ -30632,7 +30750,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978041,
-      "lon_snapped": 139.8125597
+      "lon_snapped": 139.8125597,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2076,
@@ -30645,7 +30765,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978022,
-      "lon_snapped": 139.81252
+      "lon_snapped": 139.81252,
+      "yaw": 18.9,
+      "pitch": 0.2
     },
     {
       "index": 2077,
@@ -30658,7 +30780,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978002,
-      "lon_snapped": 139.8124803
+      "lon_snapped": 139.8124803,
+      "yaw": 26.9,
+      "pitch": -0.1
     },
     {
       "index": 2078,
@@ -30671,7 +30795,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6977982,
-      "lon_snapped": 139.8124407
+      "lon_snapped": 139.8124407,
+      "yaw": 26.9,
+      "pitch": -0.1
     },
     {
       "index": 2079,
@@ -30684,7 +30810,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6977963,
-      "lon_snapped": 139.812401
+      "lon_snapped": 139.812401,
+      "yaw": 26.9,
+      "pitch": -0.1
     },
     {
       "index": 2080,
@@ -30697,7 +30825,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6977943,
-      "lon_snapped": 139.8123614
+      "lon_snapped": 139.8123614,
+      "yaw": 26.9,
+      "pitch": -0.1
     },
     {
       "index": 2081,
@@ -30710,7 +30840,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6977923,
-      "lon_snapped": 139.8123217
+      "lon_snapped": 139.8123217,
+      "yaw": 26.9,
+      "pitch": -0.1
     },
     {
       "index": 2082,
@@ -30723,7 +30855,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6977904,
-      "lon_snapped": 139.812282
+      "lon_snapped": 139.812282,
+      "yaw": 26.9,
+      "pitch": -0.1
     },
     {
       "index": 2083,
@@ -30736,7 +30870,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6977884,
-      "lon_snapped": 139.8122424
+      "lon_snapped": 139.8122424,
+      "yaw": 26.9,
+      "pitch": -0.1
     },
     {
       "index": 2084,
@@ -30749,7 +30885,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6977864,
-      "lon_snapped": 139.8122027
+      "lon_snapped": 139.8122027,
+      "yaw": 26.9,
+      "pitch": -0.1
     },
     {
       "index": 2085,
@@ -30762,7 +30900,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6977845,
-      "lon_snapped": 139.8121631
+      "lon_snapped": 139.8121631,
+      "yaw": 26.9,
+      "pitch": -0.1
     },
     {
       "index": 2086,
@@ -30775,7 +30915,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6977825,
-      "lon_snapped": 139.8121234
+      "lon_snapped": 139.8121234,
+      "yaw": 26.9,
+      "pitch": -0.1
     },
     {
       "index": 2087,
@@ -30788,7 +30930,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6977806,
-      "lon_snapped": 139.8120837
+      "lon_snapped": 139.8120837,
+      "yaw": 26.9,
+      "pitch": -0.1
     },
     {
       "index": 2088,
@@ -30801,7 +30945,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6977786,
-      "lon_snapped": 139.8120441
+      "lon_snapped": 139.8120441,
+      "yaw": 26.9,
+      "pitch": -0.1
     },
     {
       "index": 2089,
@@ -30814,7 +30960,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6977802,
-      "lon_snapped": 139.8120055
+      "lon_snapped": 139.8120055,
+      "yaw": 26.9,
+      "pitch": -0.1
     },
     {
       "index": 2090,
@@ -30827,7 +30975,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.697797,
-      "lon_snapped": 139.8119717
+      "lon_snapped": 139.8119717,
+      "yaw": 26.9,
+      "pitch": -0.1
     },
     {
       "index": 2091,
@@ -30840,7 +30990,9 @@
       "source": "GS010387",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.697795,
-      "lon_snapped": 139.811932
+      "lon_snapped": 139.811932,
+      "yaw": 31,
+      "pitch": 5.3
     },
     {
       "index": 2092,
@@ -30853,7 +31005,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698069,
-      "lon_snapped": 139.811908
+      "lon_snapped": 139.811908,
+      "yaw": 9,
+      "pitch": 0.5
     },
     {
       "index": 2093,
@@ -30866,7 +31020,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980713,
-      "lon_snapped": 139.8119505
+      "lon_snapped": 139.8119505,
+      "yaw": 9,
+      "pitch": 0.5
     },
     {
       "index": 2094,
@@ -30879,7 +31035,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980741,
-      "lon_snapped": 139.811993
+      "lon_snapped": 139.811993,
+      "yaw": 9,
+      "pitch": 0.5
     },
     {
       "index": 2095,
@@ -30892,7 +31050,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980769,
-      "lon_snapped": 139.8120355
+      "lon_snapped": 139.8120355,
+      "yaw": 9,
+      "pitch": 0.5
     },
     {
       "index": 2096,
@@ -30905,7 +31065,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980798,
-      "lon_snapped": 139.812078
+      "lon_snapped": 139.812078,
+      "yaw": 9,
+      "pitch": 0.5
     },
     {
       "index": 2097,
@@ -30918,7 +31080,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980826,
-      "lon_snapped": 139.8121205
+      "lon_snapped": 139.8121205,
+      "yaw": 9,
+      "pitch": 0.5
     },
     {
       "index": 2098,
@@ -30931,7 +31095,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980854,
-      "lon_snapped": 139.8121629
+      "lon_snapped": 139.8121629,
+      "yaw": 9,
+      "pitch": 0.5
     },
     {
       "index": 2099,
@@ -30944,7 +31110,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980882,
-      "lon_snapped": 139.8122054
+      "lon_snapped": 139.8122054,
+      "yaw": 9,
+      "pitch": 0.5
     },
     {
       "index": 2100,
@@ -30957,7 +31125,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980909,
-      "lon_snapped": 139.8122479
+      "lon_snapped": 139.8122479,
+      "yaw": 9,
+      "pitch": 0.5
     },
     {
       "index": 2101,
@@ -30970,7 +31140,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980937,
-      "lon_snapped": 139.8122904
+      "lon_snapped": 139.8122904,
+      "yaw": 9,
+      "pitch": 0.5
     },
     {
       "index": 2102,
@@ -30983,7 +31155,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980961,
-      "lon_snapped": 139.8123329
+      "lon_snapped": 139.8123329,
+      "yaw": 9,
+      "pitch": 0.5
     },
     {
       "index": 2103,
@@ -30996,7 +31170,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980983,
-      "lon_snapped": 139.8123755
+      "lon_snapped": 139.8123755,
+      "yaw": 9,
+      "pitch": 0.5
     },
     {
       "index": 2104,
@@ -31009,7 +31185,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981004,
-      "lon_snapped": 139.812418
+      "lon_snapped": 139.812418,
+      "yaw": 9,
+      "pitch": 0.5
     },
     {
       "index": 2105,
@@ -31022,7 +31200,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981026,
-      "lon_snapped": 139.8124605
+      "lon_snapped": 139.8124605,
+      "yaw": 9,
+      "pitch": 0.5
     },
     {
       "index": 2106,
@@ -31035,7 +31215,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981047,
-      "lon_snapped": 139.8125031
+      "lon_snapped": 139.8125031,
+      "yaw": 9,
+      "pitch": 0.5
     },
     {
       "index": 2107,
@@ -31048,7 +31230,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981069,
-      "lon_snapped": 139.8125456
+      "lon_snapped": 139.8125456,
+      "yaw": 9,
+      "pitch": 0.5
     },
     {
       "index": 2108,
@@ -31061,7 +31245,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698109,
-      "lon_snapped": 139.8125882
+      "lon_snapped": 139.8125882,
+      "yaw": 9,
+      "pitch": 0.5
     },
     {
       "index": 2109,
@@ -31074,7 +31260,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981112,
-      "lon_snapped": 139.8126307
+      "lon_snapped": 139.8126307,
+      "yaw": 9,
+      "pitch": 0.5
     },
     {
       "index": 2110,
@@ -31087,7 +31275,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981133,
-      "lon_snapped": 139.8126732
+      "lon_snapped": 139.8126732,
+      "yaw": 9,
+      "pitch": 0.5
     },
     {
       "index": 2111,
@@ -31100,7 +31290,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981159,
-      "lon_snapped": 139.8127157
+      "lon_snapped": 139.8127157,
+      "yaw": 9,
+      "pitch": 0.5
     },
     {
       "index": 2112,
@@ -31113,7 +31305,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981188,
-      "lon_snapped": 139.8127582
+      "lon_snapped": 139.8127582,
+      "yaw": 15.3,
+      "pitch": 0.4
     },
     {
       "index": 2113,
@@ -31126,7 +31320,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981217,
-      "lon_snapped": 139.8128007
+      "lon_snapped": 139.8128007,
+      "yaw": 15.3,
+      "pitch": 0.4
     },
     {
       "index": 2114,
@@ -31139,7 +31335,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981246,
-      "lon_snapped": 139.8128432
+      "lon_snapped": 139.8128432,
+      "yaw": 15.3,
+      "pitch": 0.4
     },
     {
       "index": 2115,
@@ -31152,7 +31350,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981274,
-      "lon_snapped": 139.8128857
+      "lon_snapped": 139.8128857,
+      "yaw": 15.3,
+      "pitch": 0.4
     },
     {
       "index": 2116,
@@ -31165,7 +31365,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981303,
-      "lon_snapped": 139.8129281
+      "lon_snapped": 139.8129281,
+      "yaw": 15.3,
+      "pitch": 0.4
     },
     {
       "index": 2117,
@@ -31178,7 +31380,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981332,
-      "lon_snapped": 139.8129706
+      "lon_snapped": 139.8129706,
+      "yaw": 15.3,
+      "pitch": 0.4
     },
     {
       "index": 2118,
@@ -31191,7 +31395,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981361,
-      "lon_snapped": 139.8130131
+      "lon_snapped": 139.8130131,
+      "yaw": 15.3,
+      "pitch": 0.4
     },
     {
       "index": 2119,
@@ -31204,7 +31410,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981389,
-      "lon_snapped": 139.8130556
+      "lon_snapped": 139.8130556,
+      "yaw": 15.3,
+      "pitch": 0.4
     },
     {
       "index": 2120,
@@ -31217,7 +31425,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981418,
-      "lon_snapped": 139.813098
+      "lon_snapped": 139.813098,
+      "yaw": 15.3,
+      "pitch": 0.4
     },
     {
       "index": 2121,
@@ -31230,7 +31440,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981447,
-      "lon_snapped": 139.8131405
+      "lon_snapped": 139.8131405,
+      "yaw": 15.3,
+      "pitch": 0.4
     },
     {
       "index": 2122,
@@ -31243,7 +31455,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981477,
-      "lon_snapped": 139.813183
+      "lon_snapped": 139.813183,
+      "yaw": 15.3,
+      "pitch": 0.4
     },
     {
       "index": 2123,
@@ -31256,7 +31470,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981506,
-      "lon_snapped": 139.8132254
+      "lon_snapped": 139.8132254,
+      "yaw": 15.3,
+      "pitch": 0.4
     },
     {
       "index": 2124,
@@ -31269,7 +31485,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981535,
-      "lon_snapped": 139.8132679
+      "lon_snapped": 139.8132679,
+      "yaw": 15.3,
+      "pitch": 0.4
     },
     {
       "index": 2125,
@@ -31282,7 +31500,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981564,
-      "lon_snapped": 139.8133104
+      "lon_snapped": 139.8133104,
+      "yaw": 15.3,
+      "pitch": 0.4
     },
     {
       "index": 2126,
@@ -31295,7 +31515,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981594,
-      "lon_snapped": 139.8133529
+      "lon_snapped": 139.8133529,
+      "yaw": 15.3,
+      "pitch": 0.4
     },
     {
       "index": 2127,
@@ -31308,7 +31530,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981624,
-      "lon_snapped": 139.8133953
+      "lon_snapped": 139.8133953,
+      "yaw": 15.3,
+      "pitch": 0.4
     },
     {
       "index": 2128,
@@ -31321,7 +31545,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981658,
-      "lon_snapped": 139.8134377
+      "lon_snapped": 139.8134377,
+      "yaw": 15.3,
+      "pitch": 0.4
     },
     {
       "index": 2129,
@@ -31334,7 +31560,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981676,
-      "lon_snapped": 139.8134803
+      "lon_snapped": 139.8134803,
+      "yaw": 22.7,
+      "pitch": 0.4
     },
     {
       "index": 2130,
@@ -31347,7 +31575,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.69817,
-      "lon_snapped": 139.8135228
+      "lon_snapped": 139.8135228,
+      "yaw": 22.7,
+      "pitch": 0.4
     },
     {
       "index": 2131,
@@ -31360,7 +31590,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981725,
-      "lon_snapped": 139.8135653
+      "lon_snapped": 139.8135653,
+      "yaw": 22.7,
+      "pitch": 0.4
     },
     {
       "index": 2132,
@@ -31373,7 +31605,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981749,
-      "lon_snapped": 139.8136079
+      "lon_snapped": 139.8136079,
+      "yaw": 22.7,
+      "pitch": 0.4
     },
     {
       "index": 2133,
@@ -31386,7 +31620,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981774,
-      "lon_snapped": 139.8136504
+      "lon_snapped": 139.8136504,
+      "yaw": 22.7,
+      "pitch": 0.4
     },
     {
       "index": 2134,
@@ -31399,7 +31635,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981799,
-      "lon_snapped": 139.8136929
+      "lon_snapped": 139.8136929,
+      "yaw": 22.7,
+      "pitch": 0.4
     },
     {
       "index": 2135,
@@ -31412,7 +31650,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981824,
-      "lon_snapped": 139.8137354
+      "lon_snapped": 139.8137354,
+      "yaw": 22.7,
+      "pitch": 0.4
     },
     {
       "index": 2136,
@@ -31425,7 +31665,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981849,
-      "lon_snapped": 139.8137779
+      "lon_snapped": 139.8137779,
+      "yaw": 22.7,
+      "pitch": 0.4
     },
     {
       "index": 2137,
@@ -31438,7 +31680,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981873,
-      "lon_snapped": 139.8138204
+      "lon_snapped": 139.8138204,
+      "yaw": 22.7,
+      "pitch": 0.4
     },
     {
       "index": 2138,
@@ -31451,7 +31695,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981898,
-      "lon_snapped": 139.8138629
+      "lon_snapped": 139.8138629,
+      "yaw": 22.7,
+      "pitch": 0.4
     },
     {
       "index": 2139,
@@ -31464,7 +31710,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981923,
-      "lon_snapped": 139.8139054
+      "lon_snapped": 139.8139054,
+      "yaw": 22.7,
+      "pitch": 0.4
     },
     {
       "index": 2140,
@@ -31477,7 +31725,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981949,
-      "lon_snapped": 139.813948
+      "lon_snapped": 139.813948,
+      "yaw": 22.7,
+      "pitch": 0.4
     },
     {
       "index": 2141,
@@ -31490,7 +31740,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981974,
-      "lon_snapped": 139.8139905
+      "lon_snapped": 139.8139905,
+      "yaw": 22.7,
+      "pitch": 0.4
     },
     {
       "index": 2142,
@@ -31503,7 +31755,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982,
-      "lon_snapped": 139.814033
+      "lon_snapped": 139.814033,
+      "yaw": 28.9,
+      "pitch": 0.4
     },
     {
       "index": 2143,
@@ -31516,7 +31770,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982025,
-      "lon_snapped": 139.8140755
+      "lon_snapped": 139.8140755,
+      "yaw": 28.9,
+      "pitch": 0.4
     },
     {
       "index": 2144,
@@ -31529,7 +31785,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698205,
-      "lon_snapped": 139.814118
+      "lon_snapped": 139.814118,
+      "yaw": 28.9,
+      "pitch": 0.4
     },
     {
       "index": 2145,
@@ -31542,7 +31800,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982074,
-      "lon_snapped": 139.8141605
+      "lon_snapped": 139.8141605,
+      "yaw": 28.9,
+      "pitch": 0.4
     },
     {
       "index": 2146,
@@ -31555,7 +31815,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982095,
-      "lon_snapped": 139.8142031
+      "lon_snapped": 139.8142031,
+      "yaw": 28.9,
+      "pitch": 0.4
     },
     {
       "index": 2147,
@@ -31568,7 +31830,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982117,
-      "lon_snapped": 139.8142456
+      "lon_snapped": 139.8142456,
+      "yaw": 28.9,
+      "pitch": 0.4
     },
     {
       "index": 2148,
@@ -31581,7 +31845,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982139,
-      "lon_snapped": 139.8142881
+      "lon_snapped": 139.8142881,
+      "yaw": 28.9,
+      "pitch": 0.4
     },
     {
       "index": 2149,
@@ -31594,7 +31860,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698216,
-      "lon_snapped": 139.8143307
+      "lon_snapped": 139.8143307,
+      "yaw": 28.9,
+      "pitch": 0.4
     },
     {
       "index": 2150,
@@ -31607,7 +31875,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982184,
-      "lon_snapped": 139.8143732
+      "lon_snapped": 139.8143732,
+      "yaw": 36.6,
+      "pitch": 0
     },
     {
       "index": 2151,
@@ -31620,7 +31890,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982207,
-      "lon_snapped": 139.8144157
+      "lon_snapped": 139.8144157,
+      "yaw": 36.6,
+      "pitch": 0
     },
     {
       "index": 2152,
@@ -31633,7 +31905,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982231,
-      "lon_snapped": 139.8144583
+      "lon_snapped": 139.8144583,
+      "yaw": 36.6,
+      "pitch": 0
     },
     {
       "index": 2153,
@@ -31646,7 +31920,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982254,
-      "lon_snapped": 139.8145008
+      "lon_snapped": 139.8145008,
+      "yaw": 36.6,
+      "pitch": 0
     },
     {
       "index": 2154,
@@ -31659,7 +31935,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982278,
-      "lon_snapped": 139.8145433
+      "lon_snapped": 139.8145433,
+      "yaw": 36.6,
+      "pitch": 0
     },
     {
       "index": 2155,
@@ -31672,7 +31950,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982301,
-      "lon_snapped": 139.8145858
+      "lon_snapped": 139.8145858,
+      "yaw": 36.6,
+      "pitch": 0
     },
     {
       "index": 2156,
@@ -31685,7 +31965,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982324,
-      "lon_snapped": 139.8146284
+      "lon_snapped": 139.8146284,
+      "yaw": 36.6,
+      "pitch": 0
     },
     {
       "index": 2157,
@@ -31698,7 +31980,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982347,
-      "lon_snapped": 139.8146709
+      "lon_snapped": 139.8146709,
+      "yaw": 36.6,
+      "pitch": 0
     },
     {
       "index": 2158,
@@ -31711,7 +31995,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698237,
-      "lon_snapped": 139.8147134
+      "lon_snapped": 139.8147134,
+      "yaw": 36.6,
+      "pitch": 0
     },
     {
       "index": 2159,
@@ -31724,7 +32010,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982394,
-      "lon_snapped": 139.8147559
+      "lon_snapped": 139.8147559,
+      "yaw": 36.6,
+      "pitch": 0
     },
     {
       "index": 2160,
@@ -31737,7 +32025,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982417,
-      "lon_snapped": 139.8147985
+      "lon_snapped": 139.8147985,
+      "yaw": 36.6,
+      "pitch": 0
     },
     {
       "index": 2161,
@@ -31750,7 +32040,9 @@
       "source": "GS010388",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698244,
-      "lon_snapped": 139.814841
+      "lon_snapped": 139.814841,
+      "yaw": 36.6,
+      "pitch": 0
     },
     {
       "index": 2162,
@@ -31763,7 +32055,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698546,
-      "lon_snapped": 139.814815
+      "lon_snapped": 139.814815,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2163,
@@ -31776,7 +32070,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698543,
-      "lon_snapped": 139.8147699
+      "lon_snapped": 139.8147699,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2164,
@@ -31789,7 +32085,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985399,
-      "lon_snapped": 139.8147248
+      "lon_snapped": 139.8147248,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2165,
@@ -31802,7 +32100,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985369,
-      "lon_snapped": 139.8146796
+      "lon_snapped": 139.8146796,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2166,
@@ -31815,7 +32115,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985338,
-      "lon_snapped": 139.8146345
+      "lon_snapped": 139.8146345,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2167,
@@ -31828,7 +32130,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985308,
-      "lon_snapped": 139.8145894
+      "lon_snapped": 139.8145894,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2168,
@@ -31841,7 +32145,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985277,
-      "lon_snapped": 139.8145443
+      "lon_snapped": 139.8145443,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2169,
@@ -31854,7 +32160,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985247,
-      "lon_snapped": 139.8144991
+      "lon_snapped": 139.8144991,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2170,
@@ -31867,7 +32175,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985223,
-      "lon_snapped": 139.814454
+      "lon_snapped": 139.814454,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2171,
@@ -31880,7 +32190,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985198,
-      "lon_snapped": 139.8144088
+      "lon_snapped": 139.8144088,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2172,
@@ -31893,7 +32205,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985174,
-      "lon_snapped": 139.8143636
+      "lon_snapped": 139.8143636,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2173,
@@ -31906,7 +32220,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985149,
-      "lon_snapped": 139.8143184
+      "lon_snapped": 139.8143184,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2174,
@@ -31919,7 +32235,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985124,
-      "lon_snapped": 139.8142733
+      "lon_snapped": 139.8142733,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2175,
@@ -31932,7 +32250,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985098,
-      "lon_snapped": 139.8142281
+      "lon_snapped": 139.8142281,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2176,
@@ -31945,7 +32265,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985073,
-      "lon_snapped": 139.8141829
+      "lon_snapped": 139.8141829,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2177,
@@ -31958,7 +32280,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985047,
-      "lon_snapped": 139.8141378
+      "lon_snapped": 139.8141378,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2178,
@@ -31971,7 +32295,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985021,
-      "lon_snapped": 139.8140926
+      "lon_snapped": 139.8140926,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2179,
@@ -31984,7 +32310,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984994,
-      "lon_snapped": 139.8140475
+      "lon_snapped": 139.8140475,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2180,
@@ -31997,7 +32325,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984967,
-      "lon_snapped": 139.8140023
+      "lon_snapped": 139.8140023,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2181,
@@ -32010,7 +32340,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984941,
-      "lon_snapped": 139.8139571
+      "lon_snapped": 139.8139571,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2182,
@@ -32023,7 +32355,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984914,
-      "lon_snapped": 139.813912
+      "lon_snapped": 139.813912,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2183,
@@ -32036,7 +32370,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984887,
-      "lon_snapped": 139.8138668
+      "lon_snapped": 139.8138668,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2184,
@@ -32049,7 +32385,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698486,
-      "lon_snapped": 139.8138217
+      "lon_snapped": 139.8138217,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2185,
@@ -32062,7 +32400,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984834,
-      "lon_snapped": 139.8137765
+      "lon_snapped": 139.8137765,
+      "yaw": 13.5,
+      "pitch": -0.2
     },
     {
       "index": 2186,
@@ -32075,7 +32415,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984807,
-      "lon_snapped": 139.8137314
+      "lon_snapped": 139.8137314,
+      "yaw": 20.4,
+      "pitch": -0.3
     },
     {
       "index": 2187,
@@ -32088,7 +32430,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698478,
-      "lon_snapped": 139.8136862
+      "lon_snapped": 139.8136862,
+      "yaw": 20.4,
+      "pitch": -0.3
     },
     {
       "index": 2188,
@@ -32101,7 +32445,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984753,
-      "lon_snapped": 139.813641
+      "lon_snapped": 139.813641,
+      "yaw": 20.4,
+      "pitch": -0.3
     },
     {
       "index": 2189,
@@ -32114,7 +32460,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984727,
-      "lon_snapped": 139.8135959
+      "lon_snapped": 139.8135959,
+      "yaw": 20.4,
+      "pitch": -0.3
     },
     {
       "index": 2190,
@@ -32127,7 +32475,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.69847,
-      "lon_snapped": 139.8135507
+      "lon_snapped": 139.8135507,
+      "yaw": 20.4,
+      "pitch": -0.3
     },
     {
       "index": 2191,
@@ -32140,7 +32490,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984673,
-      "lon_snapped": 139.8135056
+      "lon_snapped": 139.8135056,
+      "yaw": 20.4,
+      "pitch": -0.3
     },
     {
       "index": 2192,
@@ -32153,7 +32505,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984647,
-      "lon_snapped": 139.8134604
+      "lon_snapped": 139.8134604,
+      "yaw": 20.4,
+      "pitch": -0.3
     },
     {
       "index": 2193,
@@ -32166,7 +32520,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984621,
-      "lon_snapped": 139.8134152
+      "lon_snapped": 139.8134152,
+      "yaw": 20.4,
+      "pitch": -0.3
     },
     {
       "index": 2194,
@@ -32179,7 +32535,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984594,
-      "lon_snapped": 139.8133701
+      "lon_snapped": 139.8133701,
+      "yaw": 20.4,
+      "pitch": -0.3
     },
     {
       "index": 2195,
@@ -32192,7 +32550,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984569,
-      "lon_snapped": 139.8133249
+      "lon_snapped": 139.8133249,
+      "yaw": 20.4,
+      "pitch": -0.3
     },
     {
       "index": 2196,
@@ -32205,7 +32565,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984544,
-      "lon_snapped": 139.8132797
+      "lon_snapped": 139.8132797,
+      "yaw": 20.4,
+      "pitch": -0.3
     },
     {
       "index": 2197,
@@ -32218,7 +32580,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698452,
-      "lon_snapped": 139.8132346
+      "lon_snapped": 139.8132346,
+      "yaw": 20.4,
+      "pitch": -0.3
     },
     {
       "index": 2198,
@@ -32231,7 +32595,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984495,
-      "lon_snapped": 139.8131894
+      "lon_snapped": 139.8131894,
+      "yaw": 20.4,
+      "pitch": -0.3
     },
     {
       "index": 2199,
@@ -32244,7 +32610,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698447,
-      "lon_snapped": 139.8131442
+      "lon_snapped": 139.8131442,
+      "yaw": 20.4,
+      "pitch": -0.3
     },
     {
       "index": 2200,
@@ -32257,7 +32625,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984446,
-      "lon_snapped": 139.813099
+      "lon_snapped": 139.813099,
+      "yaw": 20.4,
+      "pitch": -0.3
     },
     {
       "index": 2201,
@@ -32270,7 +32640,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984421,
-      "lon_snapped": 139.8130539
+      "lon_snapped": 139.8130539,
+      "yaw": 20.4,
+      "pitch": -0.3
     },
     {
       "index": 2202,
@@ -32283,7 +32655,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984396,
-      "lon_snapped": 139.8130087
+      "lon_snapped": 139.8130087,
+      "yaw": 20.4,
+      "pitch": -0.3
     },
     {
       "index": 2203,
@@ -32296,7 +32670,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698437,
-      "lon_snapped": 139.8129635
+      "lon_snapped": 139.8129635,
+      "yaw": 20.4,
+      "pitch": -0.3
     },
     {
       "index": 2204,
@@ -32309,7 +32685,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984342,
-      "lon_snapped": 139.8129184
+      "lon_snapped": 139.8129184,
+      "yaw": 20.4,
+      "pitch": -0.3
     },
     {
       "index": 2205,
@@ -32322,7 +32700,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984313,
-      "lon_snapped": 139.8128733
+      "lon_snapped": 139.8128733,
+      "yaw": 20.4,
+      "pitch": -0.3
     },
     {
       "index": 2206,
@@ -32335,7 +32715,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984285,
-      "lon_snapped": 139.8128281
+      "lon_snapped": 139.8128281,
+      "yaw": 20.4,
+      "pitch": -0.3
     },
     {
       "index": 2207,
@@ -32348,7 +32730,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984257,
-      "lon_snapped": 139.812783
+      "lon_snapped": 139.812783,
+      "yaw": 34,
+      "pitch": 0.3
     },
     {
       "index": 2208,
@@ -32361,7 +32745,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984228,
-      "lon_snapped": 139.8127378
+      "lon_snapped": 139.8127378,
+      "yaw": 34,
+      "pitch": 0.3
     },
     {
       "index": 2209,
@@ -32374,7 +32760,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.69842,
-      "lon_snapped": 139.8126927
+      "lon_snapped": 139.8126927,
+      "yaw": 34,
+      "pitch": 0.3
     },
     {
       "index": 2210,
@@ -32387,7 +32775,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984171,
-      "lon_snapped": 139.8126476
+      "lon_snapped": 139.8126476,
+      "yaw": 34,
+      "pitch": 0.3
     },
     {
       "index": 2211,
@@ -32400,7 +32790,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984139,
-      "lon_snapped": 139.8126024
+      "lon_snapped": 139.8126024,
+      "yaw": 34,
+      "pitch": 0.3
     },
     {
       "index": 2212,
@@ -32413,7 +32805,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984108,
-      "lon_snapped": 139.8125573
+      "lon_snapped": 139.8125573,
+      "yaw": 34,
+      "pitch": 0.3
     },
     {
       "index": 2213,
@@ -32426,7 +32820,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984077,
-      "lon_snapped": 139.8125122
+      "lon_snapped": 139.8125122,
+      "yaw": 34,
+      "pitch": 0.3
     },
     {
       "index": 2214,
@@ -32439,7 +32835,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984048,
-      "lon_snapped": 139.8124671
+      "lon_snapped": 139.8124671,
+      "yaw": 34,
+      "pitch": 0.3
     },
     {
       "index": 2215,
@@ -32452,7 +32850,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984019,
-      "lon_snapped": 139.8124219
+      "lon_snapped": 139.8124219,
+      "yaw": 34,
+      "pitch": 0.3
     },
     {
       "index": 2216,
@@ -32465,7 +32865,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698399,
-      "lon_snapped": 139.8123768
+      "lon_snapped": 139.8123768,
+      "yaw": 34,
+      "pitch": 0.3
     },
     {
       "index": 2217,
@@ -32478,7 +32880,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983961,
-      "lon_snapped": 139.8123317
+      "lon_snapped": 139.8123317,
+      "yaw": 34,
+      "pitch": 0.3
     },
     {
       "index": 2218,
@@ -32491,7 +32895,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983932,
-      "lon_snapped": 139.8122865
+      "lon_snapped": 139.8122865,
+      "yaw": 34,
+      "pitch": 0.3
     },
     {
       "index": 2219,
@@ -32504,7 +32910,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983904,
-      "lon_snapped": 139.8122414
+      "lon_snapped": 139.8122414,
+      "yaw": 34,
+      "pitch": 0.3
     },
     {
       "index": 2220,
@@ -32517,7 +32925,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983877,
-      "lon_snapped": 139.8121962
+      "lon_snapped": 139.8121962,
+      "yaw": 34,
+      "pitch": 0.3
     },
     {
       "index": 2221,
@@ -32530,7 +32940,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983849,
-      "lon_snapped": 139.8121511
+      "lon_snapped": 139.8121511,
+      "yaw": 34,
+      "pitch": 0.3
     },
     {
       "index": 2222,
@@ -32543,7 +32955,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983822,
-      "lon_snapped": 139.8121059
+      "lon_snapped": 139.8121059,
+      "yaw": 34,
+      "pitch": 0.3
     },
     {
       "index": 2223,
@@ -32556,7 +32970,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983796,
-      "lon_snapped": 139.8120608
+      "lon_snapped": 139.8120608,
+      "yaw": 34,
+      "pitch": 0.3
     },
     {
       "index": 2224,
@@ -32569,7 +32985,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983771,
-      "lon_snapped": 139.8120156
+      "lon_snapped": 139.8120156,
+      "yaw": 34,
+      "pitch": 0.3
     },
     {
       "index": 2225,
@@ -32582,7 +33000,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983746,
-      "lon_snapped": 139.8119704
+      "lon_snapped": 139.8119704,
+      "yaw": 34,
+      "pitch": 0.3
     },
     {
       "index": 2226,
@@ -32595,7 +33015,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983721,
-      "lon_snapped": 139.8119253
+      "lon_snapped": 139.8119253,
+      "yaw": 34,
+      "pitch": 0.3
     },
     {
       "index": 2227,
@@ -32608,7 +33030,9 @@
       "source": "GS010389",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698371,
-      "lon_snapped": 139.81188
+      "lon_snapped": 139.81188,
+      "yaw": 34,
+      "pitch": 0.3
     },
     {
       "index": 2228,
@@ -32660,7 +33084,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986503,
-      "lon_snapped": 139.8120377
+      "lon_snapped": 139.8120377,
+      "yaw": 3.3,
+      "pitch": 0.5
     },
     {
       "index": 2232,
@@ -32673,7 +33099,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698653,
-      "lon_snapped": 139.8120836
+      "lon_snapped": 139.8120836,
+      "yaw": 3.3,
+      "pitch": 0.5
     },
     {
       "index": 2233,
@@ -32686,7 +33114,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986558,
-      "lon_snapped": 139.8121295
+      "lon_snapped": 139.8121295,
+      "yaw": 3.3,
+      "pitch": 0.5
     },
     {
       "index": 2234,
@@ -32699,7 +33129,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986585,
-      "lon_snapped": 139.8121754
+      "lon_snapped": 139.8121754,
+      "yaw": 3.3,
+      "pitch": 0.5
     },
     {
       "index": 2235,
@@ -32712,7 +33144,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986613,
-      "lon_snapped": 139.8122213
+      "lon_snapped": 139.8122213,
+      "yaw": 3.3,
+      "pitch": 0.5
     },
     {
       "index": 2236,
@@ -32725,7 +33159,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986641,
-      "lon_snapped": 139.8122672
+      "lon_snapped": 139.8122672,
+      "yaw": 3.3,
+      "pitch": 0.5
     },
     {
       "index": 2237,
@@ -32738,7 +33174,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986668,
-      "lon_snapped": 139.8123131
+      "lon_snapped": 139.8123131,
+      "yaw": 6.6,
+      "pitch": 0.5
     },
     {
       "index": 2238,
@@ -32751,7 +33189,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986695,
-      "lon_snapped": 139.812359
+      "lon_snapped": 139.812359,
+      "yaw": 6.6,
+      "pitch": 0.5
     },
     {
       "index": 2239,
@@ -32764,7 +33204,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986722,
-      "lon_snapped": 139.8124049
+      "lon_snapped": 139.8124049,
+      "yaw": 6.6,
+      "pitch": 0.5
     },
     {
       "index": 2240,
@@ -32777,7 +33219,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986751,
-      "lon_snapped": 139.8124508
+      "lon_snapped": 139.8124508,
+      "yaw": 6.6,
+      "pitch": 0.5
     },
     {
       "index": 2241,
@@ -32790,7 +33234,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986781,
-      "lon_snapped": 139.8124966
+      "lon_snapped": 139.8124966,
+      "yaw": 6.6,
+      "pitch": 0.5
     },
     {
       "index": 2242,
@@ -32803,7 +33249,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698681,
-      "lon_snapped": 139.8125425
+      "lon_snapped": 139.8125425,
+      "yaw": 6.6,
+      "pitch": 0.5
     },
     {
       "index": 2243,
@@ -32816,7 +33264,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698684,
-      "lon_snapped": 139.8125884
+      "lon_snapped": 139.8125884,
+      "yaw": 6.6,
+      "pitch": 0.5
     },
     {
       "index": 2244,
@@ -32829,7 +33279,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986869,
-      "lon_snapped": 139.8126343
+      "lon_snapped": 139.8126343,
+      "yaw": 6.6,
+      "pitch": 0.5
     },
     {
       "index": 2245,
@@ -32842,7 +33294,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986897,
-      "lon_snapped": 139.8126802
+      "lon_snapped": 139.8126802,
+      "yaw": 6.6,
+      "pitch": 0.5
     },
     {
       "index": 2246,
@@ -32855,7 +33309,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986925,
-      "lon_snapped": 139.8127261
+      "lon_snapped": 139.8127261,
+      "yaw": 6.6,
+      "pitch": 0.5
     },
     {
       "index": 2247,
@@ -32868,7 +33324,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986953,
-      "lon_snapped": 139.812772
+      "lon_snapped": 139.812772,
+      "yaw": 6.6,
+      "pitch": 0.5
     },
     {
       "index": 2248,
@@ -32881,7 +33339,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986981,
-      "lon_snapped": 139.8128178
+      "lon_snapped": 139.8128178,
+      "yaw": 6.6,
+      "pitch": 0.5
     },
     {
       "index": 2249,
@@ -32894,7 +33354,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698701,
-      "lon_snapped": 139.8128637
+      "lon_snapped": 139.8128637,
+      "yaw": 11.8,
+      "pitch": 0.5
     },
     {
       "index": 2250,
@@ -32907,7 +33369,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698704,
-      "lon_snapped": 139.8129096
+      "lon_snapped": 139.8129096,
+      "yaw": 11.8,
+      "pitch": 0.5
     },
     {
       "index": 2251,
@@ -32920,7 +33384,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698707,
-      "lon_snapped": 139.8129555
+      "lon_snapped": 139.8129555,
+      "yaw": 11.8,
+      "pitch": 0.5
     },
     {
       "index": 2252,
@@ -32933,7 +33399,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987099,
-      "lon_snapped": 139.8130014
+      "lon_snapped": 139.8130014,
+      "yaw": 11.8,
+      "pitch": 0.5
     },
     {
       "index": 2253,
@@ -32946,7 +33414,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987127,
-      "lon_snapped": 139.8130472
+      "lon_snapped": 139.8130472,
+      "yaw": 11.8,
+      "pitch": 0.5
     },
     {
       "index": 2254,
@@ -32959,7 +33429,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987156,
-      "lon_snapped": 139.8130931
+      "lon_snapped": 139.8130931,
+      "yaw": 11.8,
+      "pitch": 0.5
     },
     {
       "index": 2255,
@@ -32972,7 +33444,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987185,
-      "lon_snapped": 139.813139
+      "lon_snapped": 139.813139,
+      "yaw": 11.8,
+      "pitch": 0.5
     },
     {
       "index": 2256,
@@ -32985,7 +33459,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987214,
-      "lon_snapped": 139.8131849
+      "lon_snapped": 139.8131849,
+      "yaw": 11.8,
+      "pitch": 0.5
     },
     {
       "index": 2257,
@@ -32998,7 +33474,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987243,
-      "lon_snapped": 139.8132308
+      "lon_snapped": 139.8132308,
+      "yaw": 11.8,
+      "pitch": 0.5
     },
     {
       "index": 2258,
@@ -33011,7 +33489,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987271,
-      "lon_snapped": 139.8132767
+      "lon_snapped": 139.8132767,
+      "yaw": 11.8,
+      "pitch": 0.5
     },
     {
       "index": 2259,
@@ -33024,7 +33504,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.69873,
-      "lon_snapped": 139.8133226
+      "lon_snapped": 139.8133226,
+      "yaw": 11.8,
+      "pitch": 0.5
     },
     {
       "index": 2260,
@@ -33037,7 +33519,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987328,
-      "lon_snapped": 139.8133685
+      "lon_snapped": 139.8133685,
+      "yaw": 11.8,
+      "pitch": 0.5
     },
     {
       "index": 2261,
@@ -33050,7 +33534,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987358,
-      "lon_snapped": 139.8134143
+      "lon_snapped": 139.8134143,
+      "yaw": 11.8,
+      "pitch": 0.5
     },
     {
       "index": 2262,
@@ -33063,7 +33549,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987386,
-      "lon_snapped": 139.8134602
+      "lon_snapped": 139.8134602,
+      "yaw": 11.8,
+      "pitch": 0.5
     },
     {
       "index": 2263,
@@ -33076,7 +33564,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987414,
-      "lon_snapped": 139.8135061
+      "lon_snapped": 139.8135061,
+      "yaw": 11.8,
+      "pitch": 0.5
     },
     {
       "index": 2264,
@@ -33089,7 +33579,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987441,
-      "lon_snapped": 139.813552
+      "lon_snapped": 139.813552,
+      "yaw": 11.8,
+      "pitch": 0.5
     },
     {
       "index": 2265,
@@ -33102,7 +33594,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987469,
-      "lon_snapped": 139.8135979
+      "lon_snapped": 139.8135979,
+      "yaw": 11.8,
+      "pitch": 0.5
     },
     {
       "index": 2266,
@@ -33115,7 +33609,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987497,
-      "lon_snapped": 139.8136438
+      "lon_snapped": 139.8136438,
+      "yaw": 11.8,
+      "pitch": 0.5
     },
     {
       "index": 2267,
@@ -33128,7 +33624,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987524,
-      "lon_snapped": 139.8136897
+      "lon_snapped": 139.8136897,
+      "yaw": 11.8,
+      "pitch": 0.5
     },
     {
       "index": 2268,
@@ -33141,7 +33639,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987552,
-      "lon_snapped": 139.8137356
+      "lon_snapped": 139.8137356,
+      "yaw": 11.8,
+      "pitch": 0.5
     },
     {
       "index": 2269,
@@ -33154,7 +33654,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987579,
-      "lon_snapped": 139.8137815
+      "lon_snapped": 139.8137815,
+      "yaw": 11.8,
+      "pitch": 0.5
     },
     {
       "index": 2270,
@@ -33167,7 +33669,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987607,
-      "lon_snapped": 139.8138274
+      "lon_snapped": 139.8138274,
+      "yaw": 15.9,
+      "pitch": 0.4
     },
     {
       "index": 2271,
@@ -33180,7 +33684,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987635,
-      "lon_snapped": 139.8138733
+      "lon_snapped": 139.8138733,
+      "yaw": 15.9,
+      "pitch": 0.4
     },
     {
       "index": 2272,
@@ -33193,7 +33699,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987662,
-      "lon_snapped": 139.8139192
+      "lon_snapped": 139.8139192,
+      "yaw": 15.9,
+      "pitch": 0.4
     },
     {
       "index": 2273,
@@ -33206,7 +33714,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698769,
-      "lon_snapped": 139.8139651
+      "lon_snapped": 139.8139651,
+      "yaw": 15.9,
+      "pitch": 0.4
     },
     {
       "index": 2274,
@@ -33219,7 +33729,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987718,
-      "lon_snapped": 139.814011
+      "lon_snapped": 139.814011,
+      "yaw": 15.9,
+      "pitch": 0.4
     },
     {
       "index": 2275,
@@ -33232,7 +33744,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987745,
-      "lon_snapped": 139.8140569
+      "lon_snapped": 139.8140569,
+      "yaw": 15.9,
+      "pitch": 0.4
     },
     {
       "index": 2276,
@@ -33245,7 +33759,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987776,
-      "lon_snapped": 139.8141027
+      "lon_snapped": 139.8141027,
+      "yaw": 15.9,
+      "pitch": 0.4
     },
     {
       "index": 2277,
@@ -33258,7 +33774,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987807,
-      "lon_snapped": 139.8141486
+      "lon_snapped": 139.8141486,
+      "yaw": 15.9,
+      "pitch": 0.4
     },
     {
       "index": 2278,
@@ -33271,7 +33789,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987836,
-      "lon_snapped": 139.8141945
+      "lon_snapped": 139.8141945,
+      "yaw": 15.9,
+      "pitch": 0.4
     },
     {
       "index": 2279,
@@ -33284,7 +33804,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987864,
-      "lon_snapped": 139.8142404
+      "lon_snapped": 139.8142404,
+      "yaw": 15.9,
+      "pitch": 0.4
     },
     {
       "index": 2280,
@@ -33297,7 +33819,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987893,
-      "lon_snapped": 139.8142863
+      "lon_snapped": 139.8142863,
+      "yaw": 15.9,
+      "pitch": 0.4
     },
     {
       "index": 2281,
@@ -33310,7 +33834,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987921,
-      "lon_snapped": 139.8143322
+      "lon_snapped": 139.8143322,
+      "yaw": 15.9,
+      "pitch": 0.4
     },
     {
       "index": 2282,
@@ -33323,7 +33849,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698795,
-      "lon_snapped": 139.814378
+      "lon_snapped": 139.814378,
+      "yaw": 15.9,
+      "pitch": 0.4
     },
     {
       "index": 2283,
@@ -33336,7 +33864,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987978,
-      "lon_snapped": 139.8144239
+      "lon_snapped": 139.8144239,
+      "yaw": 15.9,
+      "pitch": 0.4
     },
     {
       "index": 2284,
@@ -33349,7 +33879,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6988007,
-      "lon_snapped": 139.8144698
+      "lon_snapped": 139.8144698,
+      "yaw": 15.9,
+      "pitch": 0.4
     },
     {
       "index": 2285,
@@ -33362,7 +33894,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6988035,
-      "lon_snapped": 139.8145157
+      "lon_snapped": 139.8145157,
+      "yaw": 25.8,
+      "pitch": 0.2
     },
     {
       "index": 2286,
@@ -33375,7 +33909,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6988064,
-      "lon_snapped": 139.8145616
+      "lon_snapped": 139.8145616,
+      "yaw": 25.8,
+      "pitch": 0.2
     },
     {
       "index": 2287,
@@ -33388,7 +33924,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6988092,
-      "lon_snapped": 139.8146075
+      "lon_snapped": 139.8146075,
+      "yaw": 25.8,
+      "pitch": 0.2
     },
     {
       "index": 2288,
@@ -33401,7 +33939,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6988122,
-      "lon_snapped": 139.8146534
+      "lon_snapped": 139.8146534,
+      "yaw": 25.8,
+      "pitch": 0.2
     },
     {
       "index": 2289,
@@ -33414,7 +33954,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6988151,
-      "lon_snapped": 139.8146992
+      "lon_snapped": 139.8146992,
+      "yaw": 25.8,
+      "pitch": 0.2
     },
     {
       "index": 2290,
@@ -33427,7 +33969,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6988181,
-      "lon_snapped": 139.8147451
+      "lon_snapped": 139.8147451,
+      "yaw": 25.8,
+      "pitch": 0.2
     },
     {
       "index": 2291,
@@ -33440,7 +33984,9 @@
       "source": "GS010390",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698821,
-      "lon_snapped": 139.814791
+      "lon_snapped": 139.814791,
+      "yaw": 25.8,
+      "pitch": 0.2
     },
     {
       "index": 2292,
@@ -33453,7 +33999,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699087,
-      "lon_snapped": 139.814773
+      "lon_snapped": 139.814773,
+      "yaw": 16.6,
+      "pitch": 0.1
     },
     {
       "index": 2293,
@@ -33466,7 +34014,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990846,
-      "lon_snapped": 139.814729
+      "lon_snapped": 139.814729,
+      "yaw": 16.6,
+      "pitch": 0.1
     },
     {
       "index": 2294,
@@ -33479,7 +34029,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990821,
-      "lon_snapped": 139.8146851
+      "lon_snapped": 139.8146851,
+      "yaw": 16.6,
+      "pitch": 0.1
     },
     {
       "index": 2295,
@@ -33492,7 +34044,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990797,
-      "lon_snapped": 139.8146411
+      "lon_snapped": 139.8146411,
+      "yaw": 16.6,
+      "pitch": 0.1
     },
     {
       "index": 2296,
@@ -33505,7 +34059,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990772,
-      "lon_snapped": 139.8145971
+      "lon_snapped": 139.8145971,
+      "yaw": 16.6,
+      "pitch": 0.1
     },
     {
       "index": 2297,
@@ -33518,7 +34074,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990748,
-      "lon_snapped": 139.8145532
+      "lon_snapped": 139.8145532,
+      "yaw": 16.6,
+      "pitch": 0.1
     },
     {
       "index": 2298,
@@ -33531,7 +34089,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990723,
-      "lon_snapped": 139.8145092
+      "lon_snapped": 139.8145092,
+      "yaw": 16.6,
+      "pitch": 0.1
     },
     {
       "index": 2299,
@@ -33544,7 +34104,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990699,
-      "lon_snapped": 139.8144652
+      "lon_snapped": 139.8144652,
+      "yaw": 16.6,
+      "pitch": 0.1
     },
     {
       "index": 2300,
@@ -33557,7 +34119,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990674,
-      "lon_snapped": 139.8144213
+      "lon_snapped": 139.8144213,
+      "yaw": 16.6,
+      "pitch": 0.1
     },
     {
       "index": 2301,
@@ -33570,7 +34134,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699065,
-      "lon_snapped": 139.8143773
+      "lon_snapped": 139.8143773,
+      "yaw": 16.6,
+      "pitch": 0.1
     },
     {
       "index": 2302,
@@ -33583,7 +34149,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990625,
-      "lon_snapped": 139.8143333
+      "lon_snapped": 139.8143333,
+      "yaw": 16.6,
+      "pitch": 0.1
     },
     {
       "index": 2303,
@@ -33596,7 +34164,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.69906,
-      "lon_snapped": 139.8142894
+      "lon_snapped": 139.8142894,
+      "yaw": 16.6,
+      "pitch": 0.1
     },
     {
       "index": 2304,
@@ -33609,7 +34179,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990576,
-      "lon_snapped": 139.8142454
+      "lon_snapped": 139.8142454,
+      "yaw": 16.6,
+      "pitch": 0.1
     },
     {
       "index": 2305,
@@ -33622,7 +34194,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990551,
-      "lon_snapped": 139.8142014
+      "lon_snapped": 139.8142014,
+      "yaw": 16.6,
+      "pitch": 0.1
     },
     {
       "index": 2306,
@@ -33635,7 +34209,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990526,
-      "lon_snapped": 139.8141575
+      "lon_snapped": 139.8141575,
+      "yaw": 16.6,
+      "pitch": 0.1
     },
     {
       "index": 2307,
@@ -33648,7 +34224,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990502,
-      "lon_snapped": 139.8141135
+      "lon_snapped": 139.8141135,
+      "yaw": 16.6,
+      "pitch": 0.1
     },
     {
       "index": 2308,
@@ -33661,7 +34239,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990477,
-      "lon_snapped": 139.8140695
+      "lon_snapped": 139.8140695,
+      "yaw": 16.6,
+      "pitch": 0.1
     },
     {
       "index": 2309,
@@ -33674,7 +34254,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990453,
-      "lon_snapped": 139.8140256
+      "lon_snapped": 139.8140256,
+      "yaw": 26.6,
+      "pitch": 0.4
     },
     {
       "index": 2310,
@@ -33687,7 +34269,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990429,
-      "lon_snapped": 139.8139816
+      "lon_snapped": 139.8139816,
+      "yaw": 26.6,
+      "pitch": 0.4
     },
     {
       "index": 2311,
@@ -33700,7 +34284,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990405,
-      "lon_snapped": 139.8139376
+      "lon_snapped": 139.8139376,
+      "yaw": 26.6,
+      "pitch": 0.4
     },
     {
       "index": 2312,
@@ -33713,7 +34299,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990381,
-      "lon_snapped": 139.8138936
+      "lon_snapped": 139.8138936,
+      "yaw": 26.6,
+      "pitch": 0.4
     },
     {
       "index": 2313,
@@ -33726,7 +34314,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990356,
-      "lon_snapped": 139.8138497
+      "lon_snapped": 139.8138497,
+      "yaw": 26.6,
+      "pitch": 0.4
     },
     {
       "index": 2314,
@@ -33739,7 +34329,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990332,
-      "lon_snapped": 139.8138057
+      "lon_snapped": 139.8138057,
+      "yaw": 26.6,
+      "pitch": 0.4
     },
     {
       "index": 2315,
@@ -33752,7 +34344,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990307,
-      "lon_snapped": 139.8137617
+      "lon_snapped": 139.8137617,
+      "yaw": 26.6,
+      "pitch": 0.4
     },
     {
       "index": 2316,
@@ -33765,7 +34359,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990282,
-      "lon_snapped": 139.8137178
+      "lon_snapped": 139.8137178,
+      "yaw": 26.6,
+      "pitch": 0.4
     },
     {
       "index": 2317,
@@ -33778,7 +34374,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990258,
-      "lon_snapped": 139.8136738
+      "lon_snapped": 139.8136738,
+      "yaw": 26.6,
+      "pitch": 0.4
     },
     {
       "index": 2318,
@@ -33791,7 +34389,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990233,
-      "lon_snapped": 139.8136298
+      "lon_snapped": 139.8136298,
+      "yaw": 26.6,
+      "pitch": 0.4
     },
     {
       "index": 2319,
@@ -33804,7 +34404,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990209,
-      "lon_snapped": 139.8135859
+      "lon_snapped": 139.8135859,
+      "yaw": 26.6,
+      "pitch": 0.4
     },
     {
       "index": 2320,
@@ -33817,7 +34419,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990184,
-      "lon_snapped": 139.8135419
+      "lon_snapped": 139.8135419,
+      "yaw": 26.6,
+      "pitch": 0.4
     },
     {
       "index": 2321,
@@ -33830,7 +34434,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990159,
-      "lon_snapped": 139.8134979
+      "lon_snapped": 139.8134979,
+      "yaw": 26.6,
+      "pitch": 0.4
     },
     {
       "index": 2322,
@@ -33843,7 +34449,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990133,
-      "lon_snapped": 139.813454
+      "lon_snapped": 139.813454,
+      "yaw": 26.6,
+      "pitch": 0.4
     },
     {
       "index": 2323,
@@ -33856,7 +34464,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990106,
-      "lon_snapped": 139.81341
+      "lon_snapped": 139.81341,
+      "yaw": 31.4,
+      "pitch": 0.5
     },
     {
       "index": 2324,
@@ -33869,7 +34479,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990072,
-      "lon_snapped": 139.8133662
+      "lon_snapped": 139.8133662,
+      "yaw": 31.4,
+      "pitch": 0.5
     },
     {
       "index": 2325,
@@ -33882,7 +34494,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990045,
-      "lon_snapped": 139.8133222
+      "lon_snapped": 139.8133222,
+      "yaw": 31.4,
+      "pitch": 0.5
     },
     {
       "index": 2326,
@@ -33895,7 +34509,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990018,
-      "lon_snapped": 139.8132783
+      "lon_snapped": 139.8132783,
+      "yaw": 31.4,
+      "pitch": 0.5
     },
     {
       "index": 2327,
@@ -33908,7 +34524,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989992,
-      "lon_snapped": 139.8132343
+      "lon_snapped": 139.8132343,
+      "yaw": 31.4,
+      "pitch": 0.5
     },
     {
       "index": 2328,
@@ -33921,7 +34539,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989966,
-      "lon_snapped": 139.8131904
+      "lon_snapped": 139.8131904,
+      "yaw": 31.4,
+      "pitch": 0.5
     },
     {
       "index": 2329,
@@ -33934,7 +34554,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698994,
-      "lon_snapped": 139.8131464
+      "lon_snapped": 139.8131464,
+      "yaw": 31.4,
+      "pitch": 0.5
     },
     {
       "index": 2330,
@@ -33947,7 +34569,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989914,
-      "lon_snapped": 139.8131025
+      "lon_snapped": 139.8131025,
+      "yaw": 31.4,
+      "pitch": 0.5
     },
     {
       "index": 2331,
@@ -33960,7 +34584,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989888,
-      "lon_snapped": 139.8130585
+      "lon_snapped": 139.8130585,
+      "yaw": 31.4,
+      "pitch": 0.5
     },
     {
       "index": 2332,
@@ -33973,7 +34599,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989862,
-      "lon_snapped": 139.8130146
+      "lon_snapped": 139.8130146,
+      "yaw": 31.4,
+      "pitch": 0.5
     },
     {
       "index": 2333,
@@ -33986,7 +34614,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989835,
-      "lon_snapped": 139.8129706
+      "lon_snapped": 139.8129706,
+      "yaw": 31.4,
+      "pitch": 0.5
     },
     {
       "index": 2334,
@@ -33999,7 +34629,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989809,
-      "lon_snapped": 139.8129267
+      "lon_snapped": 139.8129267,
+      "yaw": 31.4,
+      "pitch": 0.5
     },
     {
       "index": 2335,
@@ -34012,7 +34644,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989783,
-      "lon_snapped": 139.8128827
+      "lon_snapped": 139.8128827,
+      "yaw": 31.4,
+      "pitch": 0.5
     },
     {
       "index": 2336,
@@ -34025,7 +34659,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989757,
-      "lon_snapped": 139.8128388
+      "lon_snapped": 139.8128388,
+      "yaw": 31.4,
+      "pitch": 0.5
     },
     {
       "index": 2337,
@@ -34038,7 +34674,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989731,
-      "lon_snapped": 139.8127948
+      "lon_snapped": 139.8127948,
+      "yaw": 31.4,
+      "pitch": 0.5
     },
     {
       "index": 2338,
@@ -34051,7 +34689,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989704,
-      "lon_snapped": 139.8127508
+      "lon_snapped": 139.8127508,
+      "yaw": 31.4,
+      "pitch": 0.5
     },
     {
       "index": 2339,
@@ -34064,7 +34704,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989678,
-      "lon_snapped": 139.8127069
+      "lon_snapped": 139.8127069,
+      "yaw": 31.4,
+      "pitch": 0.5
     },
     {
       "index": 2340,
@@ -34077,7 +34719,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989652,
-      "lon_snapped": 139.8126629
+      "lon_snapped": 139.8126629,
+      "yaw": 31.4,
+      "pitch": 0.5
     },
     {
       "index": 2341,
@@ -34090,7 +34734,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989625,
-      "lon_snapped": 139.812619
+      "lon_snapped": 139.812619,
+      "yaw": 39.2,
+      "pitch": 0.7
     },
     {
       "index": 2342,
@@ -34103,7 +34749,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989596,
-      "lon_snapped": 139.8125751
+      "lon_snapped": 139.8125751,
+      "yaw": 39.2,
+      "pitch": 0.7
     },
     {
       "index": 2343,
@@ -34116,7 +34764,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989566,
-      "lon_snapped": 139.8125312
+      "lon_snapped": 139.8125312,
+      "yaw": 39.2,
+      "pitch": 0.7
     },
     {
       "index": 2344,
@@ -34129,7 +34779,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989536,
-      "lon_snapped": 139.8124872
+      "lon_snapped": 139.8124872,
+      "yaw": 39.2,
+      "pitch": 0.7
     },
     {
       "index": 2345,
@@ -34142,7 +34794,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989505,
-      "lon_snapped": 139.8124433
+      "lon_snapped": 139.8124433,
+      "yaw": 39.2,
+      "pitch": 0.7
     },
     {
       "index": 2346,
@@ -34155,7 +34809,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989475,
-      "lon_snapped": 139.8123994
+      "lon_snapped": 139.8123994,
+      "yaw": 39.2,
+      "pitch": 0.7
     },
     {
       "index": 2347,
@@ -34168,7 +34824,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989445,
-      "lon_snapped": 139.8123555
+      "lon_snapped": 139.8123555,
+      "yaw": 39.2,
+      "pitch": 0.7
     },
     {
       "index": 2348,
@@ -34181,7 +34839,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989415,
-      "lon_snapped": 139.8123116
+      "lon_snapped": 139.8123116,
+      "yaw": 39.2,
+      "pitch": 0.7
     },
     {
       "index": 2349,
@@ -34194,7 +34854,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989386,
-      "lon_snapped": 139.8122677
+      "lon_snapped": 139.8122677,
+      "yaw": 39.2,
+      "pitch": 0.7
     },
     {
       "index": 2350,
@@ -34207,7 +34869,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698936,
-      "lon_snapped": 139.8122237
+      "lon_snapped": 139.8122237,
+      "yaw": 39.2,
+      "pitch": 0.7
     },
     {
       "index": 2351,
@@ -34220,7 +34884,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989333,
-      "lon_snapped": 139.8121798
+      "lon_snapped": 139.8121798,
+      "yaw": 39.2,
+      "pitch": 0.7
     },
     {
       "index": 2352,
@@ -34233,7 +34899,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989307,
-      "lon_snapped": 139.8121358
+      "lon_snapped": 139.8121358,
+      "yaw": 39.2,
+      "pitch": 0.7
     },
     {
       "index": 2353,
@@ -34246,7 +34914,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989282,
-      "lon_snapped": 139.8120918
+      "lon_snapped": 139.8120918,
+      "yaw": 39.2,
+      "pitch": 0.7
     },
     {
       "index": 2354,
@@ -34259,7 +34929,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989258,
-      "lon_snapped": 139.8120479
+      "lon_snapped": 139.8120479,
+      "yaw": 39.2,
+      "pitch": 0.7
     },
     {
       "index": 2355,
@@ -34272,7 +34944,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989233,
-      "lon_snapped": 139.8120039
+      "lon_snapped": 139.8120039,
+      "yaw": 39.2,
+      "pitch": 0.7
     },
     {
       "index": 2356,
@@ -34285,7 +34959,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989209,
-      "lon_snapped": 139.8119599
+      "lon_snapped": 139.8119599,
+      "yaw": 39.2,
+      "pitch": 0.7
     },
     {
       "index": 2357,
@@ -34298,7 +34974,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989184,
-      "lon_snapped": 139.811916
+      "lon_snapped": 139.811916,
+      "yaw": 39.2,
+      "pitch": 0.7
     },
     {
       "index": 2358,
@@ -34311,7 +34989,9 @@
       "source": "GS010391",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698916,
-      "lon_snapped": 139.811872
+      "lon_snapped": 139.811872,
+      "yaw": 39.2,
+      "pitch": 0.7
     },
     {
       "index": 2359,
@@ -34324,7 +35004,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699151,
-      "lon_snapped": 139.811852
+      "lon_snapped": 139.811852,
+      "yaw": 22.6,
+      "pitch": 0.6
     },
     {
       "index": 2360,
@@ -34337,7 +35019,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991537,
-      "lon_snapped": 139.811896
+      "lon_snapped": 139.811896,
+      "yaw": 22.6,
+      "pitch": 0.6
     },
     {
       "index": 2361,
@@ -34350,7 +35034,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991564,
-      "lon_snapped": 139.81194
+      "lon_snapped": 139.81194,
+      "yaw": 22.6,
+      "pitch": 0.6
     },
     {
       "index": 2362,
@@ -34363,7 +35049,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991591,
-      "lon_snapped": 139.811984
+      "lon_snapped": 139.811984,
+      "yaw": 22.6,
+      "pitch": 0.6
     },
     {
       "index": 2363,
@@ -34376,7 +35064,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991617,
-      "lon_snapped": 139.8120279
+      "lon_snapped": 139.8120279,
+      "yaw": 22.6,
+      "pitch": 0.6
     },
     {
       "index": 2364,
@@ -34389,7 +35079,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991644,
-      "lon_snapped": 139.8120719
+      "lon_snapped": 139.8120719,
+      "yaw": 22.6,
+      "pitch": 0.6
     },
     {
       "index": 2365,
@@ -34402,7 +35094,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991671,
-      "lon_snapped": 139.8121159
+      "lon_snapped": 139.8121159,
+      "yaw": 22.6,
+      "pitch": 0.6
     },
     {
       "index": 2366,
@@ -34415,7 +35109,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991698,
-      "lon_snapped": 139.8121599
+      "lon_snapped": 139.8121599,
+      "yaw": 22.6,
+      "pitch": 0.6
     },
     {
       "index": 2367,
@@ -34428,7 +35124,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991725,
-      "lon_snapped": 139.8122039
+      "lon_snapped": 139.8122039,
+      "yaw": 22.6,
+      "pitch": 0.6
     },
     {
       "index": 2368,
@@ -34441,7 +35139,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991751,
-      "lon_snapped": 139.8122479
+      "lon_snapped": 139.8122479,
+      "yaw": 24.6,
+      "pitch": 0.6
     },
     {
       "index": 2369,
@@ -34454,7 +35154,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991778,
-      "lon_snapped": 139.8122918
+      "lon_snapped": 139.8122918,
+      "yaw": 24.6,
+      "pitch": 0.6
     },
     {
       "index": 2370,
@@ -34467,7 +35169,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991804,
-      "lon_snapped": 139.8123358
+      "lon_snapped": 139.8123358,
+      "yaw": 24.6,
+      "pitch": 0.6
     },
     {
       "index": 2371,
@@ -34480,7 +35184,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699183,
-      "lon_snapped": 139.8123798
+      "lon_snapped": 139.8123798,
+      "yaw": 24.6,
+      "pitch": 0.6
     },
     {
       "index": 2372,
@@ -34493,7 +35199,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991857,
-      "lon_snapped": 139.8124238
+      "lon_snapped": 139.8124238,
+      "yaw": 24.6,
+      "pitch": 0.6
     },
     {
       "index": 2373,
@@ -34506,7 +35214,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991883,
-      "lon_snapped": 139.8124678
+      "lon_snapped": 139.8124678,
+      "yaw": 24.6,
+      "pitch": 0.6
     },
     {
       "index": 2374,
@@ -34519,7 +35229,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991909,
-      "lon_snapped": 139.8125118
+      "lon_snapped": 139.8125118,
+      "yaw": 24.6,
+      "pitch": 0.6
     },
     {
       "index": 2375,
@@ -34532,7 +35244,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991936,
-      "lon_snapped": 139.8125558
+      "lon_snapped": 139.8125558,
+      "yaw": 24.6,
+      "pitch": 0.6
     },
     {
       "index": 2376,
@@ -34545,7 +35259,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991963,
-      "lon_snapped": 139.8125997
+      "lon_snapped": 139.8125997,
+      "yaw": 27.9,
+      "pitch": 0.9
     },
     {
       "index": 2377,
@@ -34558,7 +35274,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991991,
-      "lon_snapped": 139.8126437
+      "lon_snapped": 139.8126437,
+      "yaw": 27.9,
+      "pitch": 0.9
     },
     {
       "index": 2378,
@@ -34571,7 +35289,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992018,
-      "lon_snapped": 139.8126877
+      "lon_snapped": 139.8126877,
+      "yaw": 27.9,
+      "pitch": 0.9
     },
     {
       "index": 2379,
@@ -34584,7 +35304,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992045,
-      "lon_snapped": 139.8127317
+      "lon_snapped": 139.8127317,
+      "yaw": 27.9,
+      "pitch": 0.9
     },
     {
       "index": 2380,
@@ -34597,7 +35319,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992071,
-      "lon_snapped": 139.8127757
+      "lon_snapped": 139.8127757,
+      "yaw": 27.9,
+      "pitch": 0.9
     },
     {
       "index": 2381,
@@ -34610,7 +35334,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992098,
-      "lon_snapped": 139.8128197
+      "lon_snapped": 139.8128197,
+      "yaw": 27.9,
+      "pitch": 0.9
     },
     {
       "index": 2382,
@@ -34623,7 +35349,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992124,
-      "lon_snapped": 139.8128636
+      "lon_snapped": 139.8128636,
+      "yaw": 27.9,
+      "pitch": 0.9
     },
     {
       "index": 2383,
@@ -34636,7 +35364,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992151,
-      "lon_snapped": 139.8129076
+      "lon_snapped": 139.8129076,
+      "yaw": 27.9,
+      "pitch": 0.9
     },
     {
       "index": 2384,
@@ -34649,7 +35379,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992178,
-      "lon_snapped": 139.8129516
+      "lon_snapped": 139.8129516,
+      "yaw": 27.9,
+      "pitch": 0.9
     },
     {
       "index": 2385,
@@ -34662,7 +35394,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992204,
-      "lon_snapped": 139.8129956
+      "lon_snapped": 139.8129956,
+      "yaw": 27.9,
+      "pitch": 0.9
     },
     {
       "index": 2386,
@@ -34675,7 +35409,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992231,
-      "lon_snapped": 139.8130396
+      "lon_snapped": 139.8130396,
+      "yaw": 27.9,
+      "pitch": 0.9
     },
     {
       "index": 2387,
@@ -34688,7 +35424,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992257,
-      "lon_snapped": 139.8130836
+      "lon_snapped": 139.8130836,
+      "yaw": 27.9,
+      "pitch": 0.9
     },
     {
       "index": 2388,
@@ -34701,7 +35439,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992283,
-      "lon_snapped": 139.8131276
+      "lon_snapped": 139.8131276,
+      "yaw": 27.9,
+      "pitch": 0.9
     },
     {
       "index": 2389,
@@ -34714,7 +35454,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992309,
-      "lon_snapped": 139.8131716
+      "lon_snapped": 139.8131716,
+      "yaw": 27.9,
+      "pitch": 0.9
     },
     {
       "index": 2390,
@@ -34727,7 +35469,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992334,
-      "lon_snapped": 139.8132156
+      "lon_snapped": 139.8132156,
+      "yaw": 27.9,
+      "pitch": 0.9
     },
     {
       "index": 2391,
@@ -34740,7 +35484,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699236,
-      "lon_snapped": 139.8132595
+      "lon_snapped": 139.8132595,
+      "yaw": 27.9,
+      "pitch": 0.9
     },
     {
       "index": 2392,
@@ -34753,7 +35499,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992386,
-      "lon_snapped": 139.8133035
+      "lon_snapped": 139.8133035,
+      "yaw": 27.9,
+      "pitch": 0.9
     },
     {
       "index": 2393,
@@ -34766,7 +35514,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992415,
-      "lon_snapped": 139.8133475
+      "lon_snapped": 139.8133475,
+      "yaw": 27.9,
+      "pitch": 0.9
     },
     {
       "index": 2394,
@@ -34779,7 +35529,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992443,
-      "lon_snapped": 139.8133915
+      "lon_snapped": 139.8133915,
+      "yaw": 27.9,
+      "pitch": 0.9
     },
     {
       "index": 2395,
@@ -34792,7 +35544,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992469,
-      "lon_snapped": 139.8134355
+      "lon_snapped": 139.8134355,
+      "yaw": 27.9,
+      "pitch": 0.9
     },
     {
       "index": 2396,
@@ -34805,7 +35559,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992496,
-      "lon_snapped": 139.8134794
+      "lon_snapped": 139.8134794,
+      "yaw": 38.1,
+      "pitch": 1
     },
     {
       "index": 2397,
@@ -34818,7 +35574,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992522,
-      "lon_snapped": 139.8135234
+      "lon_snapped": 139.8135234,
+      "yaw": 38.1,
+      "pitch": 1
     },
     {
       "index": 2398,
@@ -34831,7 +35589,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992548,
-      "lon_snapped": 139.8135674
+      "lon_snapped": 139.8135674,
+      "yaw": 38.1,
+      "pitch": 1
     },
     {
       "index": 2399,
@@ -34844,7 +35604,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992574,
-      "lon_snapped": 139.8136114
+      "lon_snapped": 139.8136114,
+      "yaw": 38.1,
+      "pitch": 1
     },
     {
       "index": 2400,
@@ -34857,7 +35619,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.69926,
-      "lon_snapped": 139.8136554
+      "lon_snapped": 139.8136554,
+      "yaw": 38.1,
+      "pitch": 1
     },
     {
       "index": 2401,
@@ -34870,7 +35634,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992627,
-      "lon_snapped": 139.8136994
+      "lon_snapped": 139.8136994,
+      "yaw": 38.1,
+      "pitch": 1
     },
     {
       "index": 2402,
@@ -34883,7 +35649,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992653,
-      "lon_snapped": 139.8137434
+      "lon_snapped": 139.8137434,
+      "yaw": 38.1,
+      "pitch": 1
     },
     {
       "index": 2403,
@@ -34896,7 +35664,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992679,
-      "lon_snapped": 139.8137874
+      "lon_snapped": 139.8137874,
+      "yaw": 38.1,
+      "pitch": 1
     },
     {
       "index": 2404,
@@ -34909,7 +35679,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992706,
-      "lon_snapped": 139.8138314
+      "lon_snapped": 139.8138314,
+      "yaw": 38.1,
+      "pitch": 1
     },
     {
       "index": 2405,
@@ -34922,7 +35694,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992732,
-      "lon_snapped": 139.8138753
+      "lon_snapped": 139.8138753,
+      "yaw": 38.1,
+      "pitch": 1
     },
     {
       "index": 2406,
@@ -34935,7 +35709,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992758,
-      "lon_snapped": 139.8139193
+      "lon_snapped": 139.8139193,
+      "yaw": 38.1,
+      "pitch": 1
     },
     {
       "index": 2407,
@@ -34948,7 +35724,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992785,
-      "lon_snapped": 139.8139633
+      "lon_snapped": 139.8139633,
+      "yaw": 38.1,
+      "pitch": 1
     },
     {
       "index": 2408,
@@ -34961,7 +35739,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992811,
-      "lon_snapped": 139.8140073
+      "lon_snapped": 139.8140073,
+      "yaw": 38.1,
+      "pitch": 1
     },
     {
       "index": 2409,
@@ -34974,7 +35754,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992838,
-      "lon_snapped": 139.8140513
+      "lon_snapped": 139.8140513,
+      "yaw": 38.1,
+      "pitch": 1
     },
     {
       "index": 2410,
@@ -34987,7 +35769,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992865,
-      "lon_snapped": 139.8140953
+      "lon_snapped": 139.8140953,
+      "yaw": 38.1,
+      "pitch": 1
     },
     {
       "index": 2411,
@@ -35000,7 +35784,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992892,
-      "lon_snapped": 139.8141393
+      "lon_snapped": 139.8141393,
+      "yaw": 38.1,
+      "pitch": 1
     },
     {
       "index": 2412,
@@ -35013,7 +35799,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992919,
-      "lon_snapped": 139.8141832
+      "lon_snapped": 139.8141832,
+      "yaw": 46.3,
+      "pitch": 0.9
     },
     {
       "index": 2413,
@@ -35026,7 +35814,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992946,
-      "lon_snapped": 139.8142272
+      "lon_snapped": 139.8142272,
+      "yaw": 46.3,
+      "pitch": 0.9
     },
     {
       "index": 2414,
@@ -35039,7 +35829,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992973,
-      "lon_snapped": 139.8142712
+      "lon_snapped": 139.8142712,
+      "yaw": 46.3,
+      "pitch": 0.9
     },
     {
       "index": 2415,
@@ -35052,7 +35844,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993,
-      "lon_snapped": 139.8143152
+      "lon_snapped": 139.8143152,
+      "yaw": 46.3,
+      "pitch": 0.9
     },
     {
       "index": 2416,
@@ -35065,7 +35859,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993027,
-      "lon_snapped": 139.8143592
+      "lon_snapped": 139.8143592,
+      "yaw": 46.3,
+      "pitch": 0.9
     },
     {
       "index": 2417,
@@ -35078,7 +35874,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993054,
-      "lon_snapped": 139.8144031
+      "lon_snapped": 139.8144031,
+      "yaw": 46.3,
+      "pitch": 0.9
     },
     {
       "index": 2418,
@@ -35091,7 +35889,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993081,
-      "lon_snapped": 139.8144471
+      "lon_snapped": 139.8144471,
+      "yaw": 46.3,
+      "pitch": 0.9
     },
     {
       "index": 2419,
@@ -35104,7 +35904,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993108,
-      "lon_snapped": 139.8144911
+      "lon_snapped": 139.8144911,
+      "yaw": 46.3,
+      "pitch": 0.9
     },
     {
       "index": 2420,
@@ -35117,7 +35919,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993135,
-      "lon_snapped": 139.8145351
+      "lon_snapped": 139.8145351,
+      "yaw": 46.3,
+      "pitch": 0.9
     },
     {
       "index": 2421,
@@ -35130,7 +35934,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993162,
-      "lon_snapped": 139.8145791
+      "lon_snapped": 139.8145791,
+      "yaw": 46.3,
+      "pitch": 0.9
     },
     {
       "index": 2422,
@@ -35143,7 +35949,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993189,
-      "lon_snapped": 139.8146231
+      "lon_snapped": 139.8146231,
+      "yaw": 46.3,
+      "pitch": 0.9
     },
     {
       "index": 2423,
@@ -35156,7 +35964,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993216,
-      "lon_snapped": 139.814667
+      "lon_snapped": 139.814667,
+      "yaw": 46.3,
+      "pitch": 0.9
     },
     {
       "index": 2424,
@@ -35169,7 +35979,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993243,
-      "lon_snapped": 139.814711
+      "lon_snapped": 139.814711,
+      "yaw": 46.3,
+      "pitch": 0.9
     },
     {
       "index": 2425,
@@ -35182,7 +35994,9 @@
       "source": "GS010392",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699327,
-      "lon_snapped": 139.814755
+      "lon_snapped": 139.814755,
+      "yaw": 46.3,
+      "pitch": 0.9
     },
     {
       "index": 2426,
@@ -35195,7 +36009,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699534,
-      "lon_snapped": 139.814738
+      "lon_snapped": 139.814738,
+      "yaw": 17.9,
+      "pitch": -0.3
     },
     {
       "index": 2427,
@@ -35208,7 +36024,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699569,
-      "lon_snapped": 139.8147198
+      "lon_snapped": 139.8147198,
+      "yaw": 17.9,
+      "pitch": -0.3
     },
     {
       "index": 2428,
@@ -35221,7 +36039,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699569,
-      "lon_snapped": 139.814671
+      "lon_snapped": 139.814671,
+      "yaw": 17.9,
+      "pitch": -0.3
     },
     {
       "index": 2429,
@@ -35234,7 +36054,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995659,
-      "lon_snapped": 139.8146213
+      "lon_snapped": 139.8146213,
+      "yaw": 17.9,
+      "pitch": -0.3
     },
     {
       "index": 2430,
@@ -35247,7 +36069,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995629,
-      "lon_snapped": 139.8145716
+      "lon_snapped": 139.8145716,
+      "yaw": 17.9,
+      "pitch": -0.3
     },
     {
       "index": 2431,
@@ -35260,7 +36084,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995598,
-      "lon_snapped": 139.814522
+      "lon_snapped": 139.814522,
+      "yaw": 17.9,
+      "pitch": -0.3
     },
     {
       "index": 2432,
@@ -35273,7 +36099,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995567,
-      "lon_snapped": 139.8144723
+      "lon_snapped": 139.8144723,
+      "yaw": 17.9,
+      "pitch": -0.3
     },
     {
       "index": 2433,
@@ -35286,7 +36114,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995536,
-      "lon_snapped": 139.8144226
+      "lon_snapped": 139.8144226,
+      "yaw": 17.9,
+      "pitch": -0.3
     },
     {
       "index": 2434,
@@ -35299,7 +36129,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995506,
-      "lon_snapped": 139.8143729
+      "lon_snapped": 139.8143729,
+      "yaw": 17.9,
+      "pitch": -0.3
     },
     {
       "index": 2435,
@@ -35312,7 +36144,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995475,
-      "lon_snapped": 139.8143233
+      "lon_snapped": 139.8143233,
+      "yaw": 17.9,
+      "pitch": -0.3
     },
     {
       "index": 2436,
@@ -35325,7 +36159,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995444,
-      "lon_snapped": 139.8142736
+      "lon_snapped": 139.8142736,
+      "yaw": 17.9,
+      "pitch": -0.3
     },
     {
       "index": 2437,
@@ -35338,7 +36174,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995413,
-      "lon_snapped": 139.8142239
+      "lon_snapped": 139.8142239,
+      "yaw": 17.9,
+      "pitch": -0.3
     },
     {
       "index": 2438,
@@ -35351,7 +36189,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995383,
-      "lon_snapped": 139.8141742
+      "lon_snapped": 139.8141742,
+      "yaw": 17.9,
+      "pitch": -0.3
     },
     {
       "index": 2439,
@@ -35364,7 +36204,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995352,
-      "lon_snapped": 139.8141246
+      "lon_snapped": 139.8141246,
+      "yaw": 17.9,
+      "pitch": -0.3
     },
     {
       "index": 2440,
@@ -35377,7 +36219,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995321,
-      "lon_snapped": 139.8140749
+      "lon_snapped": 139.8140749,
+      "yaw": 17.9,
+      "pitch": -0.3
     },
     {
       "index": 2441,
@@ -35390,7 +36234,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995125,
-      "lon_snapped": 139.8140353
+      "lon_snapped": 139.8140353,
+      "yaw": 24.3,
+      "pitch": -0.6
     },
     {
       "index": 2442,
@@ -35403,7 +36249,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995101,
-      "lon_snapped": 139.8139856
+      "lon_snapped": 139.8139856,
+      "yaw": 24.3,
+      "pitch": -0.6
     },
     {
       "index": 2443,
@@ -35416,7 +36264,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995233,
-      "lon_snapped": 139.8139412
+      "lon_snapped": 139.8139412,
+      "yaw": 24.3,
+      "pitch": -0.6
     },
     {
       "index": 2444,
@@ -35429,7 +36279,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995204,
-      "lon_snapped": 139.8138915
+      "lon_snapped": 139.8138915,
+      "yaw": 24.3,
+      "pitch": -0.6
     },
     {
       "index": 2445,
@@ -35442,7 +36294,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995176,
-      "lon_snapped": 139.8138418
+      "lon_snapped": 139.8138418,
+      "yaw": 24.3,
+      "pitch": -0.6
     },
     {
       "index": 2446,
@@ -35455,7 +36309,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995147,
-      "lon_snapped": 139.8137921
+      "lon_snapped": 139.8137921,
+      "yaw": 24.3,
+      "pitch": -0.6
     },
     {
       "index": 2447,
@@ -35468,7 +36324,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995119,
-      "lon_snapped": 139.8137424
+      "lon_snapped": 139.8137424,
+      "yaw": 24.3,
+      "pitch": -0.6
     },
     {
       "index": 2448,
@@ -35481,7 +36339,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699509,
-      "lon_snapped": 139.8136927
+      "lon_snapped": 139.8136927,
+      "yaw": 24.3,
+      "pitch": -0.6
     },
     {
       "index": 2449,
@@ -35494,7 +36354,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995062,
-      "lon_snapped": 139.813643
+      "lon_snapped": 139.813643,
+      "yaw": 24.3,
+      "pitch": -0.6
     },
     {
       "index": 2450,
@@ -35507,7 +36369,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995033,
-      "lon_snapped": 139.8135933
+      "lon_snapped": 139.8135933,
+      "yaw": 24.3,
+      "pitch": -0.6
     },
     {
       "index": 2451,
@@ -35520,7 +36384,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995005,
-      "lon_snapped": 139.8135436
+      "lon_snapped": 139.8135436,
+      "yaw": 24.3,
+      "pitch": -0.6
     },
     {
       "index": 2452,
@@ -35533,7 +36399,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994976,
-      "lon_snapped": 139.8134939
+      "lon_snapped": 139.8134939,
+      "yaw": 24.3,
+      "pitch": -0.6
     },
     {
       "index": 2453,
@@ -35546,7 +36414,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994948,
-      "lon_snapped": 139.8134442
+      "lon_snapped": 139.8134442,
+      "yaw": 24.3,
+      "pitch": -0.6
     },
     {
       "index": 2454,
@@ -35559,7 +36429,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994896,
-      "lon_snapped": 139.8133949
+      "lon_snapped": 139.8133949,
+      "yaw": 24.3,
+      "pitch": -0.6
     },
     {
       "index": 2455,
@@ -35572,7 +36444,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994658,
-      "lon_snapped": 139.8133644
+      "lon_snapped": 139.8133644,
+      "yaw": 24.3,
+      "pitch": -0.6
     },
     {
       "index": 2456,
@@ -35585,7 +36459,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994588,
-      "lon_snapped": 139.8133194
+      "lon_snapped": 139.8133194,
+      "yaw": 24.3,
+      "pitch": -0.6
     },
     {
       "index": 2457,
@@ -35598,7 +36474,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994567,
-      "lon_snapped": 139.8132718
+      "lon_snapped": 139.8132718,
+      "yaw": 24.3,
+      "pitch": -0.6
     },
     {
       "index": 2458,
@@ -35611,7 +36489,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994831,
-      "lon_snapped": 139.8132473
+      "lon_snapped": 139.8132473,
+      "yaw": 24.3,
+      "pitch": -0.6
     },
     {
       "index": 2459,
@@ -35624,7 +36504,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994824,
-      "lon_snapped": 139.8131979
+      "lon_snapped": 139.8131979,
+      "yaw": 35.2,
+      "pitch": -0.8
     },
     {
       "index": 2460,
@@ -35637,7 +36519,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994791,
-      "lon_snapped": 139.8131482
+      "lon_snapped": 139.8131482,
+      "yaw": 35.2,
+      "pitch": -0.8
     },
     {
       "index": 2461,
@@ -35650,7 +36534,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994758,
-      "lon_snapped": 139.8130986
+      "lon_snapped": 139.8130986,
+      "yaw": 35.2,
+      "pitch": -0.8
     },
     {
       "index": 2462,
@@ -35663,7 +36549,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994725,
-      "lon_snapped": 139.8130489
+      "lon_snapped": 139.8130489,
+      "yaw": 35.2,
+      "pitch": -0.8
     },
     {
       "index": 2463,
@@ -35676,7 +36564,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994692,
-      "lon_snapped": 139.8129993
+      "lon_snapped": 139.8129993,
+      "yaw": 35.2,
+      "pitch": -0.8
     },
     {
       "index": 2464,
@@ -35689,7 +36579,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994658,
-      "lon_snapped": 139.8129496
+      "lon_snapped": 139.8129496,
+      "yaw": 35.2,
+      "pitch": -0.8
     },
     {
       "index": 2465,
@@ -35702,7 +36594,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994625,
-      "lon_snapped": 139.8129
+      "lon_snapped": 139.8129,
+      "yaw": 35.2,
+      "pitch": -0.8
     },
     {
       "index": 2466,
@@ -35715,7 +36609,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994593,
-      "lon_snapped": 139.8128503
+      "lon_snapped": 139.8128503,
+      "yaw": 35.2,
+      "pitch": -0.8
     },
     {
       "index": 2467,
@@ -35728,7 +36624,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994563,
-      "lon_snapped": 139.8128006
+      "lon_snapped": 139.8128006,
+      "yaw": 35.2,
+      "pitch": -0.8
     },
     {
       "index": 2468,
@@ -35741,7 +36639,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994534,
-      "lon_snapped": 139.8127509
+      "lon_snapped": 139.8127509,
+      "yaw": 35.2,
+      "pitch": -0.8
     },
     {
       "index": 2469,
@@ -35754,7 +36654,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994504,
-      "lon_snapped": 139.8127012
+      "lon_snapped": 139.8127012,
+      "yaw": 35.2,
+      "pitch": -0.8
     },
     {
       "index": 2470,
@@ -35767,7 +36669,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994475,
-      "lon_snapped": 139.8126515
+      "lon_snapped": 139.8126515,
+      "yaw": 35.2,
+      "pitch": -0.8
     },
     {
       "index": 2471,
@@ -35780,7 +36684,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994337,
-      "lon_snapped": 139.812607
+      "lon_snapped": 139.812607,
+      "yaw": 35.2,
+      "pitch": -0.8
     },
     {
       "index": 2472,
@@ -35793,7 +36699,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994239,
-      "lon_snapped": 139.812569
+      "lon_snapped": 139.812569,
+      "yaw": 35.2,
+      "pitch": -0.8
     },
     {
       "index": 2473,
@@ -35806,7 +36714,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994327,
-      "lon_snapped": 139.8125248
+      "lon_snapped": 139.8125248,
+      "yaw": 35.2,
+      "pitch": -0.8
     },
     {
       "index": 2474,
@@ -35819,7 +36729,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994346,
-      "lon_snapped": 139.8124761
+      "lon_snapped": 139.8124761,
+      "yaw": 35.2,
+      "pitch": -0.8
     },
     {
       "index": 2475,
@@ -35832,7 +36744,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994315,
-      "lon_snapped": 139.8124265
+      "lon_snapped": 139.8124265,
+      "yaw": 35.2,
+      "pitch": -0.8
     },
     {
       "index": 2476,
@@ -35845,7 +36759,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994283,
-      "lon_snapped": 139.8123768
+      "lon_snapped": 139.8123768,
+      "yaw": 35.2,
+      "pitch": -0.8
     },
     {
       "index": 2477,
@@ -35858,7 +36774,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994251,
-      "lon_snapped": 139.8123271
+      "lon_snapped": 139.8123271,
+      "yaw": 35.2,
+      "pitch": -0.8
     },
     {
       "index": 2478,
@@ -35871,7 +36789,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699422,
-      "lon_snapped": 139.8122775
+      "lon_snapped": 139.8122775,
+      "yaw": 35.2,
+      "pitch": -0.8
     },
     {
       "index": 2479,
@@ -35884,7 +36804,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994188,
-      "lon_snapped": 139.8122278
+      "lon_snapped": 139.8122278,
+      "yaw": 46,
+      "pitch": -1.1
     },
     {
       "index": 2480,
@@ -35897,7 +36819,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994156,
-      "lon_snapped": 139.8121781
+      "lon_snapped": 139.8121781,
+      "yaw": 46,
+      "pitch": -1.1
     },
     {
       "index": 2481,
@@ -35910,7 +36834,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994125,
-      "lon_snapped": 139.8121284
+      "lon_snapped": 139.8121284,
+      "yaw": 46,
+      "pitch": -1.1
     },
     {
       "index": 2482,
@@ -35923,7 +36849,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994093,
-      "lon_snapped": 139.8120788
+      "lon_snapped": 139.8120788,
+      "yaw": 46,
+      "pitch": -1.1
     },
     {
       "index": 2483,
@@ -35936,7 +36864,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994061,
-      "lon_snapped": 139.8120291
+      "lon_snapped": 139.8120291,
+      "yaw": 46,
+      "pitch": -1.1
     },
     {
       "index": 2484,
@@ -35949,7 +36879,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699403,
-      "lon_snapped": 139.8119794
+      "lon_snapped": 139.8119794,
+      "yaw": 46,
+      "pitch": -1.1
     },
     {
       "index": 2485,
@@ -35962,7 +36894,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993998,
-      "lon_snapped": 139.8119298
+      "lon_snapped": 139.8119298,
+      "yaw": 46,
+      "pitch": -1.1
     },
     {
       "index": 2486,
@@ -35975,7 +36909,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993955,
-      "lon_snapped": 139.8118804
+      "lon_snapped": 139.8118804,
+      "yaw": 46,
+      "pitch": -1.1
     },
     {
       "index": 2487,
@@ -35988,7 +36924,9 @@
       "source": "GS010393",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699383,
-      "lon_snapped": 139.811833
+      "lon_snapped": 139.811833,
+      "yaw": 46,
+      "pitch": -1.1
     },
     {
       "index": 2488,
@@ -36001,7 +36939,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.697795,
-      "lon_snapped": 139.811932
+      "lon_snapped": 139.811932,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2489,
@@ -36014,7 +36954,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978013,
-      "lon_snapped": 139.8119716
+      "lon_snapped": 139.8119716,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2490,
@@ -36027,7 +36969,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978381,
-      "lon_snapped": 139.811968
+      "lon_snapped": 139.811968,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2491,
@@ -36040,7 +36984,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978749,
-      "lon_snapped": 139.8119644
+      "lon_snapped": 139.8119644,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2492,
@@ -36053,7 +36999,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979116,
-      "lon_snapped": 139.8119608
+      "lon_snapped": 139.8119608,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2493,
@@ -36066,7 +37014,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979484,
-      "lon_snapped": 139.8119572
+      "lon_snapped": 139.8119572,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2494,
@@ -36079,7 +37029,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979852,
-      "lon_snapped": 139.8119536
+      "lon_snapped": 139.8119536,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2495,
@@ -36092,7 +37044,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980219,
-      "lon_snapped": 139.81195
+      "lon_snapped": 139.81195,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2496,
@@ -36105,7 +37059,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980587,
-      "lon_snapped": 139.8119467
+      "lon_snapped": 139.8119467,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2497,
@@ -36118,7 +37074,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980955,
-      "lon_snapped": 139.8119455
+      "lon_snapped": 139.8119455,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2498,
@@ -36131,7 +37089,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981323,
-      "lon_snapped": 139.8119432
+      "lon_snapped": 139.8119432,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2499,
@@ -36144,7 +37104,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981691,
-      "lon_snapped": 139.8119399
+      "lon_snapped": 139.8119399,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2500,
@@ -36157,7 +37119,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982059,
-      "lon_snapped": 139.8119367
+      "lon_snapped": 139.8119367,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2501,
@@ -36170,7 +37134,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982427,
-      "lon_snapped": 139.8119335
+      "lon_snapped": 139.8119335,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2502,
@@ -36183,7 +37149,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982795,
-      "lon_snapped": 139.8119303
+      "lon_snapped": 139.8119303,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2503,
@@ -36196,7 +37164,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983163,
-      "lon_snapped": 139.811927
+      "lon_snapped": 139.811927,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2504,
@@ -36209,7 +37179,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983531,
-      "lon_snapped": 139.811924
+      "lon_snapped": 139.811924,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2505,
@@ -36222,7 +37194,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983898,
-      "lon_snapped": 139.8119209
+      "lon_snapped": 139.8119209,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2506,
@@ -36235,7 +37209,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984265,
-      "lon_snapped": 139.8119165
+      "lon_snapped": 139.8119165,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2507,
@@ -36248,7 +37224,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984633,
-      "lon_snapped": 139.8119137
+      "lon_snapped": 139.8119137,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2508,
@@ -36261,7 +37239,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985001,
-      "lon_snapped": 139.8119109
+      "lon_snapped": 139.8119109,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2509,
@@ -36274,7 +37254,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985369,
-      "lon_snapped": 139.811908
+      "lon_snapped": 139.811908,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2510,
@@ -36287,7 +37269,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985737,
-      "lon_snapped": 139.8119052
+      "lon_snapped": 139.8119052,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2511,
@@ -36300,7 +37284,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986105,
-      "lon_snapped": 139.8119024
+      "lon_snapped": 139.8119024,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2512,
@@ -36313,7 +37299,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986473,
-      "lon_snapped": 139.8118995
+      "lon_snapped": 139.8118995,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2513,
@@ -36326,7 +37314,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986841,
-      "lon_snapped": 139.8118958
+      "lon_snapped": 139.8118958,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2514,
@@ -36339,7 +37329,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987209,
-      "lon_snapped": 139.8118921
+      "lon_snapped": 139.8118921,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2515,
@@ -36352,7 +37344,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987576,
-      "lon_snapped": 139.8118883
+      "lon_snapped": 139.8118883,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2516,
@@ -36365,7 +37359,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987944,
-      "lon_snapped": 139.8118846
+      "lon_snapped": 139.8118846,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2517,
@@ -36378,7 +37374,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6988311,
-      "lon_snapped": 139.8118809
+      "lon_snapped": 139.8118809,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2518,
@@ -36391,7 +37389,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6988679,
-      "lon_snapped": 139.8118772
+      "lon_snapped": 139.8118772,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2519,
@@ -36404,7 +37404,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989046,
-      "lon_snapped": 139.8118733
+      "lon_snapped": 139.8118733,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2520,
@@ -36417,7 +37419,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989414,
-      "lon_snapped": 139.8118698
+      "lon_snapped": 139.8118698,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2521,
@@ -36430,7 +37434,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989782,
-      "lon_snapped": 139.8118667
+      "lon_snapped": 139.8118667,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2522,
@@ -36443,7 +37449,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699015,
-      "lon_snapped": 139.8118636
+      "lon_snapped": 139.8118636,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2523,
@@ -36456,7 +37464,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990518,
-      "lon_snapped": 139.8118604
+      "lon_snapped": 139.8118604,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2524,
@@ -36469,7 +37479,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990886,
-      "lon_snapped": 139.8118573
+      "lon_snapped": 139.8118573,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2525,
@@ -36482,7 +37494,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991254,
-      "lon_snapped": 139.8118542
+      "lon_snapped": 139.8118542,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2526,
@@ -36495,7 +37509,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991622,
-      "lon_snapped": 139.8118511
+      "lon_snapped": 139.8118511,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2527,
@@ -36508,7 +37524,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699199,
-      "lon_snapped": 139.8118481
+      "lon_snapped": 139.8118481,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2528,
@@ -36521,7 +37539,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992358,
-      "lon_snapped": 139.8118451
+      "lon_snapped": 139.8118451,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2529,
@@ -36534,7 +37554,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992726,
-      "lon_snapped": 139.8118421
+      "lon_snapped": 139.8118421,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2530,
@@ -36547,7 +37569,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993094,
-      "lon_snapped": 139.8118391
+      "lon_snapped": 139.8118391,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2531,
@@ -36560,7 +37584,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993462,
-      "lon_snapped": 139.8118361
+      "lon_snapped": 139.8118361,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2532,
@@ -36573,7 +37599,9 @@
       "source": "GS010396",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699383,
-      "lon_snapped": 139.811833
+      "lon_snapped": 139.811833,
+      "yaw": 20.3,
+      "pitch": 1.2
     },
     {
       "index": 2533,
@@ -36586,7 +37614,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699422,
-      "lon_snapped": 139.812538
+      "lon_snapped": 139.812538,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2534,
@@ -36599,7 +37629,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993829,
-      "lon_snapped": 139.8125422
+      "lon_snapped": 139.8125422,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2535,
@@ -36612,7 +37644,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993438,
-      "lon_snapped": 139.8125464
+      "lon_snapped": 139.8125464,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2536,
@@ -36625,7 +37659,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993047,
-      "lon_snapped": 139.8125505
+      "lon_snapped": 139.8125505,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2537,
@@ -36638,7 +37674,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992655,
-      "lon_snapped": 139.8125547
+      "lon_snapped": 139.8125547,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2538,
@@ -36651,7 +37689,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992264,
-      "lon_snapped": 139.8125589
+      "lon_snapped": 139.8125589,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2539,
@@ -36664,7 +37704,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991874,
-      "lon_snapped": 139.8125634
+      "lon_snapped": 139.8125634,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2540,
@@ -36677,7 +37719,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991482,
-      "lon_snapped": 139.8125661
+      "lon_snapped": 139.8125661,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2541,
@@ -36690,7 +37734,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699109,
-      "lon_snapped": 139.8125687
+      "lon_snapped": 139.8125687,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2542,
@@ -36703,7 +37749,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990698,
-      "lon_snapped": 139.8125714
+      "lon_snapped": 139.8125714,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2543,
@@ -36716,7 +37764,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990306,
-      "lon_snapped": 139.8125741
+      "lon_snapped": 139.8125741,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2544,
@@ -36729,7 +37779,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989914,
-      "lon_snapped": 139.8125768
+      "lon_snapped": 139.8125768,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2545,
@@ -36742,7 +37794,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989606,
-      "lon_snapped": 139.8125905
+      "lon_snapped": 139.8125905,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2546,
@@ -36755,7 +37809,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989403,
-      "lon_snapped": 139.8126139
+      "lon_snapped": 139.8126139,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2547,
@@ -36768,7 +37824,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989012,
-      "lon_snapped": 139.8126173
+      "lon_snapped": 139.8126173,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2548,
@@ -36781,7 +37839,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698862,
-      "lon_snapped": 139.8126207
+      "lon_snapped": 139.8126207,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2549,
@@ -36794,7 +37854,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6988229,
-      "lon_snapped": 139.8126241
+      "lon_snapped": 139.8126241,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2550,
@@ -36807,7 +37869,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987837,
-      "lon_snapped": 139.8126276
+      "lon_snapped": 139.8126276,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2551,
@@ -36820,7 +37884,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987445,
-      "lon_snapped": 139.812631
+      "lon_snapped": 139.812631,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2552,
@@ -36833,7 +37899,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987054,
-      "lon_snapped": 139.8126344
+      "lon_snapped": 139.8126344,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2553,
@@ -36846,7 +37914,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986662,
-      "lon_snapped": 139.8126379
+      "lon_snapped": 139.8126379,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2554,
@@ -36859,7 +37929,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986271,
-      "lon_snapped": 139.8126416
+      "lon_snapped": 139.8126416,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2555,
@@ -36872,7 +37944,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985879,
-      "lon_snapped": 139.8126452
+      "lon_snapped": 139.8126452,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2556,
@@ -36885,7 +37959,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985488,
-      "lon_snapped": 139.8126488
+      "lon_snapped": 139.8126488,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2557,
@@ -36898,7 +37974,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985096,
-      "lon_snapped": 139.8126525
+      "lon_snapped": 139.8126525,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2558,
@@ -36911,7 +37989,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984705,
-      "lon_snapped": 139.8126561
+      "lon_snapped": 139.8126561,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2559,
@@ -36924,7 +38004,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984313,
-      "lon_snapped": 139.8126598
+      "lon_snapped": 139.8126598,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2560,
@@ -36937,7 +38019,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983922,
-      "lon_snapped": 139.8126632
+      "lon_snapped": 139.8126632,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2561,
@@ -36950,7 +38034,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698353,
-      "lon_snapped": 139.8126666
+      "lon_snapped": 139.8126666,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2562,
@@ -36963,7 +38049,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983138,
-      "lon_snapped": 139.8126699
+      "lon_snapped": 139.8126699,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2563,
@@ -36976,7 +38064,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982747,
-      "lon_snapped": 139.8126733
+      "lon_snapped": 139.8126733,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2564,
@@ -36989,7 +38079,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982355,
-      "lon_snapped": 139.8126766
+      "lon_snapped": 139.8126766,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2565,
@@ -37002,7 +38094,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981963,
-      "lon_snapped": 139.81268
+      "lon_snapped": 139.81268,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2566,
@@ -37015,7 +38109,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981572,
-      "lon_snapped": 139.8126833
+      "lon_snapped": 139.8126833,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2567,
@@ -37028,7 +38124,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698118,
-      "lon_snapped": 139.8126867
+      "lon_snapped": 139.8126867,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2568,
@@ -37041,7 +38139,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980789,
-      "lon_snapped": 139.8126903
+      "lon_snapped": 139.8126903,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2569,
@@ -37054,7 +38154,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980397,
-      "lon_snapped": 139.8126938
+      "lon_snapped": 139.8126938,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2570,
@@ -37067,7 +38169,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980005,
-      "lon_snapped": 139.8126973
+      "lon_snapped": 139.8126973,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2571,
@@ -37080,7 +38184,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979614,
-      "lon_snapped": 139.8127007
+      "lon_snapped": 139.8127007,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2572,
@@ -37093,7 +38199,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979222,
-      "lon_snapped": 139.8127042
+      "lon_snapped": 139.8127042,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2573,
@@ -37106,7 +38214,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978831,
-      "lon_snapped": 139.8127076
+      "lon_snapped": 139.8127076,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2574,
@@ -37119,7 +38229,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978439,
-      "lon_snapped": 139.8127111
+      "lon_snapped": 139.8127111,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2575,
@@ -37132,7 +38244,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978107,
-      "lon_snapped": 139.8127063
+      "lon_snapped": 139.8127063,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2576,
@@ -37145,7 +38259,9 @@
       "source": "GS010397",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.697809,
-      "lon_snapped": 139.812658
+      "lon_snapped": 139.812658,
+      "yaw": 7.1,
+      "pitch": 0.3
     },
     {
       "index": 2577,
@@ -37158,7 +38274,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.697858,
-      "lon_snapped": 139.813468
+      "lon_snapped": 139.813468,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2578,
@@ -37171,7 +38289,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6978959,
-      "lon_snapped": 139.8134646
+      "lon_snapped": 139.8134646,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2579,
@@ -37184,7 +38304,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979337,
-      "lon_snapped": 139.8134611
+      "lon_snapped": 139.8134611,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2580,
@@ -37197,7 +38319,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979716,
-      "lon_snapped": 139.8134577
+      "lon_snapped": 139.8134577,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2581,
@@ -37210,7 +38334,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980095,
-      "lon_snapped": 139.8134542
+      "lon_snapped": 139.8134542,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2582,
@@ -37223,7 +38349,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980473,
-      "lon_snapped": 139.8134508
+      "lon_snapped": 139.8134508,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2583,
@@ -37236,7 +38364,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980852,
-      "lon_snapped": 139.8134473
+      "lon_snapped": 139.8134473,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2584,
@@ -37249,7 +38379,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981231,
-      "lon_snapped": 139.8134439
+      "lon_snapped": 139.8134439,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2585,
@@ -37262,7 +38394,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698161,
-      "lon_snapped": 139.8134405
+      "lon_snapped": 139.8134405,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2586,
@@ -37275,7 +38409,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981627,
-      "lon_snapped": 139.8133997
+      "lon_snapped": 139.8133997,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2587,
@@ -37288,7 +38424,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981928,
-      "lon_snapped": 139.813389
+      "lon_snapped": 139.813389,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2588,
@@ -37301,7 +38439,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982307,
-      "lon_snapped": 139.8133859
+      "lon_snapped": 139.8133859,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2589,
@@ -37314,7 +38454,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982686,
-      "lon_snapped": 139.8133832
+      "lon_snapped": 139.8133832,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2590,
@@ -37327,7 +38469,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983065,
-      "lon_snapped": 139.8133806
+      "lon_snapped": 139.8133806,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2591,
@@ -37340,7 +38484,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983445,
-      "lon_snapped": 139.8133779
+      "lon_snapped": 139.8133779,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2592,
@@ -37353,7 +38499,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983824,
-      "lon_snapped": 139.8133753
+      "lon_snapped": 139.8133753,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2593,
@@ -37366,7 +38514,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984203,
-      "lon_snapped": 139.8133726
+      "lon_snapped": 139.8133726,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2594,
@@ -37379,7 +38529,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984573,
-      "lon_snapped": 139.8133636
+      "lon_snapped": 139.8133636,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2595,
@@ -37392,7 +38544,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984952,
-      "lon_snapped": 139.8133645
+      "lon_snapped": 139.8133645,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2596,
@@ -37405,7 +38559,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698533,
-      "lon_snapped": 139.8133608
+      "lon_snapped": 139.8133608,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2597,
@@ -37418,7 +38574,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985709,
-      "lon_snapped": 139.8133571
+      "lon_snapped": 139.8133571,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2598,
@@ -37431,7 +38589,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986087,
-      "lon_snapped": 139.8133534
+      "lon_snapped": 139.8133534,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2599,
@@ -37444,7 +38604,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986466,
-      "lon_snapped": 139.8133497
+      "lon_snapped": 139.8133497,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2600,
@@ -37457,7 +38619,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986844,
-      "lon_snapped": 139.813346
+      "lon_snapped": 139.813346,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2601,
@@ -37470,7 +38634,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987221,
-      "lon_snapped": 139.8133408
+      "lon_snapped": 139.8133408,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2602,
@@ -37483,7 +38649,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987598,
-      "lon_snapped": 139.8133366
+      "lon_snapped": 139.8133366,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2603,
@@ -37496,7 +38664,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987976,
-      "lon_snapped": 139.8133333
+      "lon_snapped": 139.8133333,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2604,
@@ -37509,7 +38679,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6988355,
-      "lon_snapped": 139.8133299
+      "lon_snapped": 139.8133299,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2605,
@@ -37522,7 +38694,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6988734,
-      "lon_snapped": 139.8133265
+      "lon_snapped": 139.8133265,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2606,
@@ -37535,7 +38709,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989113,
-      "lon_snapped": 139.8133231
+      "lon_snapped": 139.8133231,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2607,
@@ -37548,7 +38724,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989491,
-      "lon_snapped": 139.8133198
+      "lon_snapped": 139.8133198,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2608,
@@ -37561,7 +38739,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698987,
-      "lon_snapped": 139.8133164
+      "lon_snapped": 139.8133164,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2609,
@@ -37574,7 +38754,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990249,
-      "lon_snapped": 139.8133137
+      "lon_snapped": 139.8133137,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2610,
@@ -37587,7 +38769,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990628,
-      "lon_snapped": 139.8133108
+      "lon_snapped": 139.8133108,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2611,
@@ -37600,7 +38784,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991007,
-      "lon_snapped": 139.8133076
+      "lon_snapped": 139.8133076,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2612,
@@ -37613,7 +38799,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991386,
-      "lon_snapped": 139.8133044
+      "lon_snapped": 139.8133044,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2613,
@@ -37626,7 +38814,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991765,
-      "lon_snapped": 139.8133012
+      "lon_snapped": 139.8133012,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2614,
@@ -37639,7 +38829,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992143,
-      "lon_snapped": 139.813298
+      "lon_snapped": 139.813298,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2615,
@@ -37652,7 +38844,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699252,
-      "lon_snapped": 139.813293
+      "lon_snapped": 139.813293,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2616,
@@ -37665,7 +38859,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992899,
-      "lon_snapped": 139.8132896
+      "lon_snapped": 139.8132896,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2617,
@@ -37678,7 +38874,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993277,
-      "lon_snapped": 139.8132855
+      "lon_snapped": 139.8132855,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2618,
@@ -37691,7 +38889,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993655,
-      "lon_snapped": 139.8132815
+      "lon_snapped": 139.8132815,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2619,
@@ -37704,7 +38904,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994034,
-      "lon_snapped": 139.8132775
+      "lon_snapped": 139.8132775,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2620,
@@ -37717,7 +38919,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994412,
-      "lon_snapped": 139.8132735
+      "lon_snapped": 139.8132735,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2621,
@@ -37730,7 +38934,9 @@
       "source": "GS010398",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699479,
-      "lon_snapped": 139.813269
+      "lon_snapped": 139.813269,
+      "yaw": 26.5,
+      "pitch": 0.3
     },
     {
       "index": 2622,
@@ -37743,7 +38949,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699512,
-      "lon_snapped": 139.814023
+      "lon_snapped": 139.814023,
+      "yaw": -15.6,
+      "pitch": 0.1
     },
     {
       "index": 2623,
@@ -37756,7 +38964,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994755,
-      "lon_snapped": 139.8140254
+      "lon_snapped": 139.8140254,
+      "yaw": -15.6,
+      "pitch": 0.1
     },
     {
       "index": 2624,
@@ -37769,7 +38979,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994389,
-      "lon_snapped": 139.8140278
+      "lon_snapped": 139.8140278,
+      "yaw": -15.6,
+      "pitch": 0.1
     },
     {
       "index": 2625,
@@ -37782,7 +38994,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994024,
-      "lon_snapped": 139.8140302
+      "lon_snapped": 139.8140302,
+      "yaw": -15.6,
+      "pitch": 0.1
     },
     {
       "index": 2626,
@@ -37795,7 +39009,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993659,
-      "lon_snapped": 139.8140326
+      "lon_snapped": 139.8140326,
+      "yaw": -15.6,
+      "pitch": 0.1
     },
     {
       "index": 2627,
@@ -37808,7 +39024,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993293,
-      "lon_snapped": 139.814035
+      "lon_snapped": 139.814035,
+      "yaw": -15.6,
+      "pitch": 0.1
     },
     {
       "index": 2628,
@@ -37821,7 +39039,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992928,
-      "lon_snapped": 139.8140374
+      "lon_snapped": 139.8140374,
+      "yaw": -15.6,
+      "pitch": 0.1
     },
     {
       "index": 2629,
@@ -37834,7 +39054,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992563,
-      "lon_snapped": 139.81404
+      "lon_snapped": 139.81404,
+      "yaw": -15.6,
+      "pitch": 0.1
     },
     {
       "index": 2630,
@@ -37847,7 +39069,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992197,
-      "lon_snapped": 139.8140427
+      "lon_snapped": 139.8140427,
+      "yaw": -15.6,
+      "pitch": 0.1
     },
     {
       "index": 2631,
@@ -37860,7 +39084,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991832,
-      "lon_snapped": 139.8140456
+      "lon_snapped": 139.8140456,
+      "yaw": -15.6,
+      "pitch": 0.1
     },
     {
       "index": 2632,
@@ -37873,7 +39099,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991467,
-      "lon_snapped": 139.8140487
+      "lon_snapped": 139.8140487,
+      "yaw": -15.6,
+      "pitch": 0.1
     },
     {
       "index": 2633,
@@ -37886,7 +39114,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991102,
-      "lon_snapped": 139.8140517
+      "lon_snapped": 139.8140517,
+      "yaw": -15.6,
+      "pitch": 0.1
     },
     {
       "index": 2634,
@@ -37899,7 +39129,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990737,
-      "lon_snapped": 139.8140548
+      "lon_snapped": 139.8140548,
+      "yaw": -15.6,
+      "pitch": 0.1
     },
     {
       "index": 2635,
@@ -37912,7 +39144,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990372,
-      "lon_snapped": 139.8140579
+      "lon_snapped": 139.8140579,
+      "yaw": -15.6,
+      "pitch": 0.1
     },
     {
       "index": 2636,
@@ -37925,7 +39159,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990007,
-      "lon_snapped": 139.8140611
+      "lon_snapped": 139.8140611,
+      "yaw": -15.6,
+      "pitch": 0.1
     },
     {
       "index": 2637,
@@ -37938,7 +39174,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989642,
-      "lon_snapped": 139.8140644
+      "lon_snapped": 139.8140644,
+      "yaw": -15.6,
+      "pitch": 0.1
     },
     {
       "index": 2638,
@@ -37951,7 +39189,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989277,
-      "lon_snapped": 139.8140676
+      "lon_snapped": 139.8140676,
+      "yaw": -15.6,
+      "pitch": 0.1
     },
     {
       "index": 2639,
@@ -37964,7 +39204,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6988912,
-      "lon_snapped": 139.8140708
+      "lon_snapped": 139.8140708,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2640,
@@ -37977,7 +39219,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6988547,
-      "lon_snapped": 139.8140741
+      "lon_snapped": 139.8140741,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2641,
@@ -37990,7 +39234,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6988182,
-      "lon_snapped": 139.8140774
+      "lon_snapped": 139.8140774,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2642,
@@ -38003,7 +39249,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987817,
-      "lon_snapped": 139.8140805
+      "lon_snapped": 139.8140805,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2643,
@@ -38016,7 +39264,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987453,
-      "lon_snapped": 139.814084
+      "lon_snapped": 139.814084,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2644,
@@ -38029,7 +39279,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987088,
-      "lon_snapped": 139.8140876
+      "lon_snapped": 139.8140876,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2645,
@@ -38042,7 +39294,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986723,
-      "lon_snapped": 139.8140913
+      "lon_snapped": 139.8140913,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2646,
@@ -38055,7 +39309,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986359,
-      "lon_snapped": 139.8140949
+      "lon_snapped": 139.8140949,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2647,
@@ -38068,7 +39324,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985994,
-      "lon_snapped": 139.8140985
+      "lon_snapped": 139.8140985,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2648,
@@ -38081,7 +39339,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985629,
-      "lon_snapped": 139.8141021
+      "lon_snapped": 139.8141021,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2649,
@@ -38094,7 +39354,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985264,
-      "lon_snapped": 139.8141057
+      "lon_snapped": 139.8141057,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2650,
@@ -38107,7 +39369,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.69849,
-      "lon_snapped": 139.8141091
+      "lon_snapped": 139.8141091,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2651,
@@ -38120,7 +39384,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984535,
-      "lon_snapped": 139.8141123
+      "lon_snapped": 139.8141123,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2652,
@@ -38133,7 +39399,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698417,
-      "lon_snapped": 139.8141155
+      "lon_snapped": 139.8141155,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2653,
@@ -38146,7 +39414,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983805,
-      "lon_snapped": 139.8141187
+      "lon_snapped": 139.8141187,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2654,
@@ -38159,7 +39429,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698344,
-      "lon_snapped": 139.8141219
+      "lon_snapped": 139.8141219,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2655,
@@ -38172,7 +39444,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983075,
-      "lon_snapped": 139.8141251
+      "lon_snapped": 139.8141251,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2656,
@@ -38185,7 +39459,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698271,
-      "lon_snapped": 139.8141283
+      "lon_snapped": 139.8141283,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2657,
@@ -38198,7 +39474,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982345,
-      "lon_snapped": 139.8141315
+      "lon_snapped": 139.8141315,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2658,
@@ -38211,7 +39489,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698198,
-      "lon_snapped": 139.8141346
+      "lon_snapped": 139.8141346,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2659,
@@ -38224,7 +39504,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981615,
-      "lon_snapped": 139.8141373
+      "lon_snapped": 139.8141373,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2660,
@@ -38237,7 +39519,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698125,
-      "lon_snapped": 139.8141405
+      "lon_snapped": 139.8141405,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2661,
@@ -38250,7 +39534,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980885,
-      "lon_snapped": 139.8141438
+      "lon_snapped": 139.8141438,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2662,
@@ -38263,7 +39549,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698052,
-      "lon_snapped": 139.8141471
+      "lon_snapped": 139.8141471,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2663,
@@ -38276,7 +39564,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980155,
-      "lon_snapped": 139.8141503
+      "lon_snapped": 139.8141503,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2664,
@@ -38289,7 +39579,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.697979,
-      "lon_snapped": 139.8141535
+      "lon_snapped": 139.8141535,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2665,
@@ -38302,7 +39594,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6979425,
-      "lon_snapped": 139.8141568
+      "lon_snapped": 139.8141568,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2666,
@@ -38315,7 +39609,9 @@
       "source": "GS010399",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.697906,
-      "lon_snapped": 139.81416
+      "lon_snapped": 139.81416,
+      "yaw": -10.4,
+      "pitch": -0.1
     },
     {
       "index": 2667,
@@ -38328,7 +39624,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.697976,
-      "lon_snapped": 139.814859
+      "lon_snapped": 139.814859,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2668,
@@ -38341,7 +39639,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980085,
-      "lon_snapped": 139.8148568
+      "lon_snapped": 139.8148568,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2669,
@@ -38354,7 +39654,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698041,
-      "lon_snapped": 139.8148547
+      "lon_snapped": 139.8148547,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2670,
@@ -38367,7 +39669,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6980734,
-      "lon_snapped": 139.8148525
+      "lon_snapped": 139.8148525,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2671,
@@ -38380,7 +39684,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981059,
-      "lon_snapped": 139.8148504
+      "lon_snapped": 139.8148504,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2672,
@@ -38393,7 +39699,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981384,
-      "lon_snapped": 139.8148482
+      "lon_snapped": 139.8148482,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2673,
@@ -38406,7 +39714,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6981709,
-      "lon_snapped": 139.8148461
+      "lon_snapped": 139.8148461,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2674,
@@ -38419,7 +39729,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982033,
-      "lon_snapped": 139.8148439
+      "lon_snapped": 139.8148439,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2675,
@@ -38432,7 +39744,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982358,
-      "lon_snapped": 139.8148416
+      "lon_snapped": 139.8148416,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2676,
@@ -38445,7 +39759,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6982683,
-      "lon_snapped": 139.8148389
+      "lon_snapped": 139.8148389,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2677,
@@ -38458,7 +39774,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983007,
-      "lon_snapped": 139.8148361
+      "lon_snapped": 139.8148361,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2678,
@@ -38471,7 +39789,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983331,
-      "lon_snapped": 139.8148331
+      "lon_snapped": 139.8148331,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2679,
@@ -38484,7 +39804,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6983656,
-      "lon_snapped": 139.8148302
+      "lon_snapped": 139.8148302,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2680,
@@ -38497,7 +39819,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.698398,
-      "lon_snapped": 139.8148273
+      "lon_snapped": 139.8148273,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2681,
@@ -38510,7 +39834,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984304,
-      "lon_snapped": 139.8148244
+      "lon_snapped": 139.8148244,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2682,
@@ -38523,7 +39849,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984629,
-      "lon_snapped": 139.8148215
+      "lon_snapped": 139.8148215,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2683,
@@ -38536,7 +39864,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6984953,
-      "lon_snapped": 139.8148186
+      "lon_snapped": 139.8148186,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2684,
@@ -38549,7 +39879,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985278,
-      "lon_snapped": 139.8148158
+      "lon_snapped": 139.8148158,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2685,
@@ -38562,7 +39894,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985602,
-      "lon_snapped": 139.8148136
+      "lon_snapped": 139.8148136,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2686,
@@ -38575,7 +39909,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6985927,
-      "lon_snapped": 139.8148107
+      "lon_snapped": 139.8148107,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2687,
@@ -38588,7 +39924,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986251,
-      "lon_snapped": 139.8148079
+      "lon_snapped": 139.8148079,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2688,
@@ -38601,7 +39939,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6986576,
-      "lon_snapped": 139.8148051
+      "lon_snapped": 139.8148051,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2689,
@@ -38614,7 +39954,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.69869,
-      "lon_snapped": 139.8148023
+      "lon_snapped": 139.8148023,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2690,
@@ -38627,7 +39969,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987224,
-      "lon_snapped": 139.8147995
+      "lon_snapped": 139.8147995,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2691,
@@ -38640,7 +39984,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987549,
-      "lon_snapped": 139.8147967
+      "lon_snapped": 139.8147967,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2692,
@@ -38653,7 +39999,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6987873,
-      "lon_snapped": 139.8147939
+      "lon_snapped": 139.8147939,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2693,
@@ -38666,7 +40014,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6988198,
-      "lon_snapped": 139.8147911
+      "lon_snapped": 139.8147911,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2694,
@@ -38679,7 +40029,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6988523,
-      "lon_snapped": 139.8147889
+      "lon_snapped": 139.8147889,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2695,
@@ -38692,7 +40044,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6988847,
-      "lon_snapped": 139.8147867
+      "lon_snapped": 139.8147867,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2696,
@@ -38705,7 +40059,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989172,
-      "lon_snapped": 139.8147845
+      "lon_snapped": 139.8147845,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2697,
@@ -38718,7 +40074,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989497,
-      "lon_snapped": 139.8147823
+      "lon_snapped": 139.8147823,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2698,
@@ -38731,7 +40089,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6989822,
-      "lon_snapped": 139.8147801
+      "lon_snapped": 139.8147801,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2699,
@@ -38744,7 +40104,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990146,
-      "lon_snapped": 139.8147779
+      "lon_snapped": 139.8147779,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2700,
@@ -38757,7 +40119,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990471,
-      "lon_snapped": 139.8147757
+      "lon_snapped": 139.8147757,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2701,
@@ -38770,7 +40134,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6990796,
-      "lon_snapped": 139.8147735
+      "lon_snapped": 139.8147735,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2702,
@@ -38783,7 +40149,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699112,
-      "lon_snapped": 139.8147711
+      "lon_snapped": 139.8147711,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2703,
@@ -38796,7 +40164,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6991445,
-      "lon_snapped": 139.8147687
+      "lon_snapped": 139.8147687,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2704,
@@ -38809,7 +40179,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699177,
-      "lon_snapped": 139.8147663
+      "lon_snapped": 139.8147663,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2705,
@@ -38822,7 +40194,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992094,
-      "lon_snapped": 139.8147638
+      "lon_snapped": 139.8147638,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2706,
@@ -38835,7 +40209,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992419,
-      "lon_snapped": 139.8147614
+      "lon_snapped": 139.8147614,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2707,
@@ -38848,7 +40224,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6992744,
-      "lon_snapped": 139.8147589
+      "lon_snapped": 139.8147589,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2708,
@@ -38861,7 +40239,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993068,
-      "lon_snapped": 139.8147565
+      "lon_snapped": 139.8147565,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2709,
@@ -38874,7 +40254,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993393,
-      "lon_snapped": 139.814754
+      "lon_snapped": 139.814754,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2710,
@@ -38887,7 +40269,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6993717,
-      "lon_snapped": 139.8147513
+      "lon_snapped": 139.8147513,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2711,
@@ -38900,7 +40284,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994042,
-      "lon_snapped": 139.8147487
+      "lon_snapped": 139.8147487,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2712,
@@ -38913,7 +40299,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994366,
-      "lon_snapped": 139.814746
+      "lon_snapped": 139.814746,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2713,
@@ -38926,7 +40314,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6994691,
-      "lon_snapped": 139.8147433
+      "lon_snapped": 139.8147433,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2714,
@@ -38939,7 +40329,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.6995015,
-      "lon_snapped": 139.8147407
+      "lon_snapped": 139.8147407,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2715,
@@ -38952,7 +40344,9 @@
       "source": "GS010400",
       "neighborhood": "kinshicho",
       "lat_snapped": 35.699534,
-      "lon_snapped": 139.814738
+      "lon_snapped": 139.814738,
+      "yaw": 48.9,
+      "pitch": -1.6
     },
     {
       "index": 2716,

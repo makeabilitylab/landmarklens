@@ -4,19 +4,27 @@ Redistribute frame GPS points evenly along a Valhalla-computed route.
 
 For sources where map-matching produced erratic results, this script:
   1. Takes the start and end points of a source (or custom ones you provide)
-  2. Asks Valhalla for the pedestrian route between them
-  3. Evenly spaces N points (one per frame) along the route shape
-  4. Writes lat_snapped / lon_snapped back to data.json
+  2. Auto-samples intermediate waypoints from existing frame coordinates
+     (every N frames) to guide Valhalla along the actual walked path
+  3. Asks Valhalla for the pedestrian route through all waypoints
+  4. Evenly spaces N points (one per frame) along the route shape
+  5. Writes lat_snapped / lon_snapped back to data.json
 
 Usage:
-    # Redistribute a single source using its first/last frame as endpoints
+    # Redistribute a single source (auto-samples via points every 10 frames)
     python script/redistribute_gps.py --source GS010320
+
+    # Tighter adherence to the original trace (via point every 5 frames)
+    python script/redistribute_gps.py --source GS010320 --via-every 5
+
+    # Disable auto via-points (old behavior: start/end only)
+    python script/redistribute_gps.py --source GS010320 --no-auto-via
 
     # Use custom start/end points (lat,lon)
     python script/redistribute_gps.py --source GS010320 \
         --start 35.6712,139.7650 --end 35.6745,139.7680
 
-    # Add intermediate waypoints to guide the route through turns
+    # Add manual intermediate waypoints (disables auto-sampling)
     python script/redistribute_gps.py --source GS010320 \
         --via 35.6725,139.7660 --via 35.6735,139.7670
 
@@ -39,6 +47,7 @@ from typing import List, Dict, Optional, Tuple
 
 
 VALHALLA_DEFAULT_URL = "http://localhost:8002"
+DEFAULT_VIA_EVERY = 10
 
 
 def haversine(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
@@ -128,6 +137,27 @@ def distribute_points(
     return result
 
 
+def sample_via_points(
+    frames: List[Dict],
+    every: int = DEFAULT_VIA_EVERY,
+) -> List[Tuple[float, float]]:
+    """Sample intermediate frames as via waypoints to guide the Valhalla route.
+
+    Uses snapped coordinates when available, otherwise falls back to original GPS.
+    Skips the first and last frame (those become the start/end of the route).
+    """
+    if len(frames) <= 2 or every < 1:
+        return []
+
+    via = []
+    for i in range(every, len(frames) - 1, every):
+        f = frames[i]
+        lat = f.get("lat_snapped", f["lat"])
+        lon = f.get("lon_snapped", f["lon"])
+        via.append((lat, lon))
+    return via
+
+
 def get_route(
     url: str,
     start: Tuple[float, float],
@@ -169,8 +199,13 @@ def get_route(
 
     try:
         legs = result["trip"]["legs"]
-        encoded = legs[0]["shape"]
-        return decode_polyline(encoded)
+        all_points = []
+        for leg in legs:
+            decoded = decode_polyline(leg["shape"])
+            if all_points:
+                decoded = decoded[1:]
+            all_points.extend(decoded)
+        return all_points
     except (KeyError, IndexError) as e:
         print(f"  Failed to parse route response: {e}")
         return None
@@ -249,6 +284,21 @@ def main():
     parser.add_argument(
         "--data", type=str, default=None,
         help="Path to data.json (default: web/data.json)",
+    )
+    parser.add_argument(
+        "--via-every", type=int, default=DEFAULT_VIA_EVERY,
+        help=f"Auto-sample a via waypoint every N frames to guide the route along "
+             f"the actual walked path (default: {DEFAULT_VIA_EVERY}). "
+             f"Lower values = more waypoints = tighter adherence to the original trace.",
+    )
+    parser.add_argument(
+        "--no-auto-via", action="store_true",
+        help="Disable automatic via-point sampling. Only use start/end (and any manual --via).",
+    )
+    parser.add_argument(
+        "--straight", action="store_true",
+        help="Linearly interpolate between start/end/via instead of using Valhalla routing. "
+             "Use for roads that Valhalla routes incorrectly.",
     )
     parser.add_argument(
         "--dry-run", action="store_true",
@@ -339,7 +389,15 @@ def main():
             fN = src_frames[-1]
             end = (fN.get("lat_snapped", fN["lat"]), fN.get("lon_snapped", fN["lon"]))
 
-        via_points = [parse_latlon(v) for v in args.via] if (args.source and args.via) else []
+        if args.source and args.via:
+            via_points = [parse_latlon(v) for v in args.via]
+            via_label = "manual"
+        elif args.no_auto_via:
+            via_points = []
+            via_label = "disabled"
+        else:
+            via_points = sample_via_points(src_frames, every=args.via_every)
+            via_label = f"auto, every {args.via_every} frames"
 
         if len(sources_to_process) == 1:
             print("=" * 60)
@@ -347,7 +405,10 @@ def main():
             print("=" * 60)
             print(f"  Source:        {source} ({hood})")
             print(f"  Frames:        {len(src_frames)}")
-            print(f"  Valhalla URL:  {args.valhalla_url}")
+            if args.straight:
+                print(f"  Mode:          STRAIGHT-LINE interpolation")
+            else:
+                print(f"  Valhalla URL:  {args.valhalla_url}")
             s_label = "snapped" if "lat_snapped" in src_frames[0] else "original"
             e_label = "snapped" if "lat_snapped" in src_frames[-1] else "original"
             if args.source and args.start:
@@ -356,23 +417,24 @@ def main():
                 e_label = "custom"
             print(f"  Start:         {start[0]:.7f}, {start[1]:.7f} ({s_label})")
             print(f"  End:           {end[0]:.7f}, {end[1]:.7f} ({e_label})")
-            if via_points:
-                print(f"  Via points:    {len(via_points)}")
-                for vi, v in enumerate(via_points):
-                    print(f"    {vi + 1}. {v[0]:.7f}, {v[1]:.7f}")
+            print(f"  Via points:    {len(via_points)} ({via_label})")
             if args.dry_run:
                 print(f"  Mode:          DRY RUN")
             print("=" * 60)
 
-        # Get route from Valhalla
         n = len(src_frames)
-        print(f"\n  [{hood}] {source}: {n} frames")
-        shape = get_route(args.valhalla_url, start, end, via=via_points, costing=args.costing)
+        via_info = f", {len(via_points)} via pts" if via_points else ""
+        print(f"\n  [{hood}] {source}: {n} frames{via_info}")
 
-        if shape is None:
-            print(f"    ✗ Failed to get route")
-            total_failed += 1
-            continue
+        if args.straight:
+            shape = [start] + via_points + [end]
+            print(f"    Using straight-line interpolation ({len(shape)} waypoints)")
+        else:
+            shape = get_route(args.valhalla_url, start, end, via=via_points, costing=args.costing)
+            if shape is None:
+                print(f"    ✗ Failed to get route")
+                total_failed += 1
+                continue
 
         route_dist = sum(
             haversine(shape[i][0], shape[i][1], shape[i + 1][0], shape[i + 1][1])

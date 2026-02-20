@@ -162,6 +162,7 @@ async function init() {
     initRouteBuilder();
 
     loadPhoto(0);
+    startConeSync();
   } catch (error) {
     console.error('Failed to initialize viewer:', error);
   }
@@ -421,7 +422,9 @@ function initMinimap() {
       if (lassoJustFinished) return;
       if (e.features && e.features.length > 0) {
         const idx = e.features[0].properties.index;
-        if (routeBuilderMode) {
+        if (routePlayback) {
+          navigateRoutePlaybackTo(idx);
+        } else if (routeBuilderMode) {
           toggleFrameInRoute(idx);
         } else {
           loadPhoto(idx);
@@ -431,6 +434,17 @@ function initMinimap() {
 
     map.on('mouseenter', 'photos-points', () => { map.getCanvas().style.cursor = 'pointer'; });
     map.on('mouseleave', 'photos-points', () => { map.getCanvas().style.cursor = ''; });
+
+    map.on('click', 'route-selection-dots', (e) => {
+      if (!routePlayback) return;
+      if (e.features && e.features.length > 0) {
+        const idx = e.features[0].properties.index;
+        navigateRoutePlaybackTo(idx);
+      }
+    });
+
+    map.on('mouseenter', 'route-selection-dots', () => { map.getCanvas().style.cursor = 'pointer'; });
+    map.on('mouseleave', 'route-selection-dots', () => { map.getCanvas().style.cursor = ''; });
 
     // Active marker source
     if (!map.hasImage('cone-icon')) {
@@ -575,6 +589,11 @@ function initMinimap() {
       },
     });
 
+    // Ensure active marker renders above everything else
+    map.moveLayer('active-cone-glow');
+    map.moveLayer('active-cone');
+    map.moveLayer('active-dot');
+
     const coordinates = frames.map(f => [f.lon, f.lat]);
     if (coordinates.length > 0) {
       const bounds = coordinates.reduce(
@@ -590,8 +609,10 @@ function updateActiveMarker(index) {
   if (!map || !map.getSource('active-photo') || !frames[index]) return;
 
   const frame = frames[index];
-  const color = frameColors[index] || '#ffffff';
-  const bearing = frameBearings[index] || 0;
+  const color = routePlayback ? '#facc15' : (frameColors[index] || '#ffffff');
+  const baseBearing = frameBearings[index] || 0;
+  const flipOffset = (routePlayback && routeFlippedFrames.has(index)) ? 180 : 0;
+  const bearing = baseBearing + flipOffset;
 
   map.getSource('active-photo').setData({
     type: 'Feature',
@@ -606,6 +627,7 @@ function updateActiveMarker(index) {
 function loadPhoto(index, forceImmediate = false) {
   if (index < 0 || index >= frames.length) return;
   if (isTransitioning && !forceImmediate) return;
+  lastSyncedBearing = null;
 
   const previousIndex = currentIndex;
   const isForward = index > previousIndex;
@@ -774,7 +796,7 @@ function updatePhotoUI(index, frame) {
 
 function updateMapPosition(frame) {
   if (!map) return;
-  map.flyTo({ center: [frame.lon, frame.lat], zoom: 17, duration: 500 });
+  map.flyTo({ center: [frame.lon, frame.lat], duration: 500 });
 }
 
 function updateLineVisibility() {
@@ -1985,6 +2007,15 @@ function navigateRoutePlayback(delta) {
   updatePlaybackUI();
 }
 
+function navigateRoutePlaybackTo(frameIndex) {
+  if (!routePlayback) return;
+  const routePos = routePlayback.indices.indexOf(frameIndex);
+  if (routePos === -1) return;
+  routePlayback.position = routePos;
+  loadPhoto(frameIndex, true);
+  updatePlaybackUI();
+}
+
 function updatePlaybackUI() {
   if (!routePlayback) return;
   elements.rbPlaybackCounter.textContent =
@@ -2034,6 +2065,41 @@ function calculateBearing(lat1, lon1, lat2, lon2) {
             Math.sin(lat1Rad) * Math.cos(lat2Rad) * Math.cos(dLon);
 
   return (Math.atan2(y, x) * 180 / Math.PI + 360) % 360;
+}
+
+// ========================================
+// Cone Sync (tracks panorama view direction)
+// ========================================
+let lastSyncedBearing = null;
+
+function startConeSync() {
+  function sync() {
+    requestAnimationFrame(sync);
+    if (!map || !map.getSource('active-photo') || !viewer) return;
+
+    const frame = frames[currentIndex];
+    if (!frame) return;
+
+    let viewerYaw;
+    try { viewerYaw = viewer.getYaw(); } catch (_) { return; }
+
+    const heading = getEffectiveHeading(frame, currentIndex);
+    const baseBearing = frameBearings[currentIndex] || 0;
+    const flipOffset = (routePlayback && routeFlippedFrames.has(currentIndex)) ? 180 : 0;
+    const coneBearing = baseBearing + flipOffset + (viewerYaw - heading.yaw);
+
+    // Only push an update when the bearing actually changes
+    if (lastSyncedBearing !== null && Math.abs(coneBearing - lastSyncedBearing) < 0.5) return;
+    lastSyncedBearing = coneBearing;
+
+    const color = routePlayback ? '#facc15' : (frameColors[currentIndex] || '#ffffff');
+    map.getSource('active-photo').setData({
+      type: 'Feature',
+      properties: { bearing: coneBearing, color },
+      geometry: { type: 'Point', coordinates: [frame.lon, frame.lat] },
+    });
+  }
+  requestAnimationFrame(sync);
 }
 
 function generateRouteColors(count) {

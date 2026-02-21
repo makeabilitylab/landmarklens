@@ -53,6 +53,7 @@ let routeFlippedFrames = new Set(); // frames needing 180° yaw offset during pl
 let savedRoutes = [];
 let routePlayback = null; // { indices: [...], position: 0 }
 let routeTurning = null; // active cross-source yaw animation { animId }
+let editingRouteId = null; // route ID being modified (null = new route)
 const ROUTE_STORAGE_KEY = 'tokyo-streetview-routes';
 
 // Lasso state
@@ -1733,6 +1734,7 @@ function updateRouteBuilderPanel() {
   elements.rbCount.textContent = count;
   elements.rbPlayBtn.disabled = count === 0;
   elements.rbSaveBtn.disabled = count === 0;
+  elements.rbSaveBtn.textContent = editingRouteId ? 'Update Route' : 'Save Route';
   if (elements.rbDirection) {
     elements.rbDirection.style.display = count > 0 ? '' : 'none';
   }
@@ -1747,8 +1749,10 @@ function clearRouteSelection() {
   routeFrameIndices.clear();
   routeReversed = false;
   routeFlippedFrames.clear();
+  editingRouteId = null;
   updateRouteHighlight();
   updateRouteBuilderPanel();
+  renderSavedRoutesList();
 }
 
 // ── Save / Load / Delete ─────────────────────────────────
@@ -1756,6 +1760,14 @@ function loadSavedRoutes() {
   try {
     const saved = localStorage.getItem(ROUTE_STORAGE_KEY);
     savedRoutes = saved ? JSON.parse(saved) : [];
+    let needsPersist = false;
+    savedRoutes.forEach((r, i) => {
+      if (!r.name) {
+        r.name = `Route ${i + 1}`;
+        needsPersist = true;
+      }
+    });
+    if (needsPersist) persistSavedRoutes();
   } catch (e) {
     savedRoutes = [];
   }
@@ -1765,18 +1777,36 @@ function persistSavedRoutes() {
   localStorage.setItem(ROUTE_STORAGE_KEY, JSON.stringify(savedRoutes));
 }
 
+function nextRouteName() {
+  const myRoutes = savedRoutes.filter(r => r.neighborhoodId === neighborhoodId);
+  const existing = new Set(myRoutes.map(r => r.name).filter(Boolean));
+  for (let i = 1; ; i++) {
+    const name = `Route ${i}`;
+    if (!existing.has(name)) return name;
+  }
+}
+
 function saveRoute() {
   if (routeFrameIndices.size === 0) return;
 
-  const route = {
-    id: 'route_' + Date.now(),
-    created: new Date().toISOString(),
-    neighborhoodId,
-    frameIndices: getSortedRouteIndices(),
-    reversed: routeReversed,
-  };
+  if (editingRouteId) {
+    const route = savedRoutes.find(r => r.id === editingRouteId);
+    if (route) {
+      route.frameIndices = getSortedRouteIndices();
+      route.reversed = routeReversed;
+      editingRouteId = null;
+    }
+  } else {
+    savedRoutes.push({
+      id: 'route_' + Date.now(),
+      name: nextRouteName(),
+      created: new Date().toISOString(),
+      neighborhoodId,
+      frameIndices: getSortedRouteIndices(),
+      reversed: routeReversed,
+    });
+  }
 
-  savedRoutes.push(route);
   persistSavedRoutes();
   renderSavedRoutesList();
   updateRouteBuilderPanel();
@@ -1784,18 +1814,35 @@ function saveRoute() {
 
 function deleteRoute(routeId) {
   savedRoutes = savedRoutes.filter(r => r.id !== routeId);
+  if (editingRouteId === routeId) {
+    editingRouteId = null;
+    updateRouteBuilderPanel();
+  }
   persistSavedRoutes();
   renderSavedRoutesList();
 }
 
-function loadRouteIntoSelection(routeId) {
+function editRoute(routeId) {
   const route = savedRoutes.find(r => r.id === routeId);
   if (!route) return;
 
+  editingRouteId = routeId;
   routeFrameIndices = new Set(route.frameIndices);
   routeReversed = route.reversed || false;
   updateRouteHighlight();
   updateRouteBuilderPanel();
+}
+
+function renameRoute(routeId) {
+  const route = savedRoutes.find(r => r.id === routeId);
+  if (!route) return;
+
+  const newName = prompt('Rename route:', route.name || '');
+  if (newName === null || newName.trim() === '') return;
+
+  route.name = newName.trim();
+  persistSavedRoutes();
+  renderSavedRoutesList();
 }
 
 function renderSavedRoutesList() {
@@ -1806,26 +1853,38 @@ function renderSavedRoutesList() {
     return;
   }
 
-  elements.rbSavedList.innerHTML = myRoutes.map((route, i) => {
+  elements.rbSavedList.innerHTML = myRoutes.map((route) => {
+    const name = route.name || route.id;
     const date = new Date(route.created);
     const dateStr = date.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
     const timeStr = date.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' });
+    const isEditing = editingRouteId === route.id;
     return `
-      <div class="rb-saved-route" data-route-id="${route.id}">
+      <div class="rb-saved-route${isEditing ? ' rb-editing' : ''}" data-route-id="${route.id}">
         <div class="rb-route-info">
-          <span class="rb-route-name">Route ${i + 1}</span>
-          <span class="rb-route-meta">${route.frameIndices.length} frames · ${dateStr} ${timeStr}</span>
+          <span class="rb-route-name" data-route-id="${route.id}" title="Click to rename">${name}</span>
+          <span class="rb-route-meta">${route.frameIndices.length} frames · ${dateStr} ${timeStr}${isEditing ? ' · editing' : ''}</span>
         </div>
         <div class="rb-route-actions">
-          <button class="rb-route-btn rb-route-load" data-route-id="${route.id}" title="Load">▶</button>
+          <button class="rb-route-btn rb-route-edit" data-route-id="${route.id}" title="Edit">✎</button>
+          <button class="rb-route-btn rb-route-load" data-route-id="${route.id}" title="Play">▶</button>
           <button class="rb-route-btn rb-route-delete" data-route-id="${route.id}" title="Delete">✕</button>
         </div>
       </div>
     `;
   }).join('');
 
+  elements.rbSavedList.querySelectorAll('.rb-route-name').forEach(el => {
+    el.addEventListener('click', () => renameRoute(el.dataset.routeId));
+  });
+  elements.rbSavedList.querySelectorAll('.rb-route-edit').forEach(btn => {
+    btn.addEventListener('click', () => editRoute(btn.dataset.routeId));
+  });
   elements.rbSavedList.querySelectorAll('.rb-route-load').forEach(btn => {
-    btn.addEventListener('click', () => loadRouteIntoSelection(btn.dataset.routeId));
+    btn.addEventListener('click', () => {
+      editRoute(btn.dataset.routeId);
+      startRoutePlayback();
+    });
   });
   elements.rbSavedList.querySelectorAll('.rb-route-delete').forEach(btn => {
     btn.addEventListener('click', () => deleteRoute(btn.dataset.routeId));
@@ -1927,29 +1986,78 @@ function animateYawTo(targetYaw, callback) {
   while (diff > 180) diff -= 360;
   while (diff < -180) diff += 360;
 
+  console.log('[AnimateYaw] start', {
+    startYaw: startYaw.toFixed(1),
+    targetYaw: targetYaw.toFixed(1),
+    diff: diff.toFixed(1),
+    skipped: Math.abs(diff) < 3,
+  });
+
   if (Math.abs(diff) < 3) { callback(); return; }
 
-  const duration = Math.min(Math.max(Math.abs(diff) * 14, 600), 2500);
+  const duration = Math.min(Math.max(Math.abs(diff) * 22, 800), 3500);
   const startTime = performance.now();
   const state = { animId: 0 };
   routeTurning = state;
+  let frameCount = 0;
 
   function step(time) {
-    if (routeTurning !== state) return;
+    if (routeTurning !== state) {
+      console.log('[AnimateYaw] cancelled at frame', frameCount);
+      return;
+    }
     const t = Math.min((time - startTime) / duration, 1);
     const ease = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
-    // Normalize to [-180, 180] so pannellum doesn't clamp the value
     const yaw = ((startYaw + diff * ease) % 360 + 540) % 360 - 180;
-    viewer.setYaw(yaw);
+    viewer.setYaw(yaw, false);
+    const actualYaw = viewer.getYaw();
+    frameCount++;
+
+    if (frameCount <= 3 || t >= 1) {
+      console.log('[AnimateYaw] frame', frameCount, {
+        t: t.toFixed(3),
+        ease: ease.toFixed(3),
+        setYaw: yaw.toFixed(1),
+        actualYaw: actualYaw.toFixed(1),
+        delta: (actualYaw - startYaw).toFixed(1),
+      });
+    }
+
     if (t < 1) {
       state.animId = requestAnimationFrame(step);
     } else {
+      console.log('[AnimateYaw] done', { frames: frameCount, durationMs: duration.toFixed(0) });
       routeTurning = null;
       callback();
     }
   }
 
   state.animId = requestAnimationFrame(step);
+}
+
+function computeJunctionTurn(routeIndices, position, newPos, span = 8) {
+  const curGlobal = routeIndices[position];
+  const nextGlobal = routeIndices[newPos];
+
+  const backPos = Math.max(0, position - span);
+  const backIdx = routeIndices[backPos];
+  const curDir = (backPos < position)
+    ? calculateBearing(frames[backIdx].lat, frames[backIdx].lon,
+                       frames[curGlobal].lat, frames[curGlobal].lon)
+    : (frameBearings[curGlobal] || 0) + (routeFlippedFrames.has(curGlobal) ? 180 : 0);
+
+  const aheadPos = Math.min(routeIndices.length - 1, newPos + span);
+  const aheadIdx = routeIndices[aheadPos];
+  const nextDir = (aheadPos > newPos)
+    ? calculateBearing(frames[nextGlobal].lat, frames[nextGlobal].lon,
+                       frames[aheadIdx].lat, frames[aheadIdx].lon)
+    : (frameBearings[nextGlobal] || 0) + (routeFlippedFrames.has(nextGlobal) ? 180 : 0);
+
+  let turn = nextDir - curDir;
+  while (turn > 180) turn -= 360;
+  while (turn < -180) turn += 360;
+
+  return { curGlobal, nextGlobal, curDir, nextDir, turn, backPos, aheadPos };
 }
 
 function navigateRoutePlayback(delta) {
@@ -1964,34 +2072,27 @@ function navigateRoutePlayback(delta) {
   const crossSource = frames[curGlobal].source !== frames[nextGlobal].source;
 
   if (crossSource) {
-    const curHeading = getEffectiveHeading(frames[curGlobal], curGlobal);
-    const SPAN = 8;
+    const junction = computeJunctionTurn(routePlayback.indices, routePlayback.position, newPos);
+    const startYaw = viewer.getYaw();
+    const targetYaw = startYaw + junction.turn;
 
-    // Compute current route direction from GPS positions several frames apart
-    const backPos = Math.max(0, routePlayback.position - SPAN);
-    const backIdx = routePlayback.indices[backPos];
-    const curDir = (backPos < routePlayback.position)
-      ? calculateBearing(frames[backIdx].lat, frames[backIdx].lon,
-                         frames[curGlobal].lat, frames[curGlobal].lon)
-      : (frameBearings[curGlobal] || 0) + (routeFlippedFrames.has(curGlobal) ? 180 : 0);
-
-    // Compute next route direction from GPS positions several frames ahead
-    const aheadPos = Math.min(routePlayback.indices.length - 1, newPos + SPAN);
-    const aheadIdx = routePlayback.indices[aheadPos];
-    const nextDir = (aheadPos > newPos)
-      ? calculateBearing(frames[nextGlobal].lat, frames[nextGlobal].lon,
-                         frames[aheadIdx].lat, frames[aheadIdx].lon)
-      : (frameBearings[nextGlobal] || 0) + (routeFlippedFrames.has(nextGlobal) ? 180 : 0);
-
-    let turn = nextDir - curDir;
-    while (turn > 180) turn -= 360;
-    while (turn < -180) turn += 360;
-
-    const targetYaw = curHeading.yaw + turn;
+    console.log('[Junction]', {
+      from: `${frames[junction.curGlobal].source} #${junction.curGlobal}`,
+      to: `${frames[junction.nextGlobal].source} #${junction.nextGlobal}`,
+      curDir: junction.curDir.toFixed(1),
+      nextDir: junction.nextDir.toFixed(1),
+      turn: junction.turn.toFixed(1),
+      sampledBack: junction.backPos,
+      sampledAhead: junction.aheadPos,
+      startYaw: startYaw.toFixed(1),
+      targetYaw: targetYaw.toFixed(1),
+      flipped: routeFlippedFrames.has(junction.curGlobal),
+      nextFlipped: routeFlippedFrames.has(junction.nextGlobal),
+    });
 
     animateYawTo(targetYaw, () => {
       routePlayback.position = newPos;
-      loadPhoto(nextGlobal, true);
+      loadPhoto(junction.nextGlobal, true);
       updatePlaybackUI();
     });
     return;

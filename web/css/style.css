@@ -1397,6 +1397,27 @@ body {
   color: #f87171;
 }
 
+.rb-route-edit:hover {
+  background: rgba(250, 204, 21, 0.3);
+  border-color: rgba(250, 204, 21, 0.5);
+  color: #facc15;
+}
+
+.rb-saved-route.rb-editing {
+  background: rgba(250, 204, 21, 0.1);
+  border: 1px solid rgba(250, 204, 21, 0.3);
+}
+
+.rb-route-name {
+  cursor: pointer;
+}
+
+.rb-route-name:hover {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+}
+
 .rb-io {
   display: flex;
   gap: 0.5rem;

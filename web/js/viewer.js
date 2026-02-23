@@ -1909,7 +1909,7 @@ function exportRouteJSON() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `routes-${neighborhoodId}-${new Date().toISOString().slice(0, 10)}.json`;
+  a.download = `routes-${neighborhoodId}-${new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19)}.json`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);

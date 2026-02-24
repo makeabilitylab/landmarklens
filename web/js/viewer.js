@@ -54,6 +54,7 @@ let savedRoutes = [];
 let routePlayback = null; // { indices: [...], position: 0 }
 let routeTurning = null; // active cross-source yaw animation { animId }
 let editingRouteId = null; // route ID being modified (null = new route)
+let visibleRouteIds = new Set(); // routes shown on the map
 const ROUTE_STORAGE_KEY = 'tokyo-streetview-routes';
 
 // Lasso state
@@ -589,6 +590,33 @@ function initMinimap() {
         'circle-stroke-color': '#ffffff',
       },
     });
+
+    // Saved route preview layers (below selection, above base)
+    map.addSource('saved-route-preview', {
+      type: 'geojson',
+      data: { type: 'FeatureCollection', features: [] },
+    });
+
+    map.addLayer({
+      id: 'saved-route-preview-line',
+      type: 'line',
+      source: 'saved-route-preview',
+      filter: ['==', '$type', 'LineString'],
+      layout: { 'line-join': 'round', 'line-cap': 'round' },
+      paint: { 'line-color': ['get', 'color'], 'line-width': 3, 'line-opacity': 0.7 },
+    }, 'route-selection-glow');
+
+    map.addLayer({
+      id: 'saved-route-preview-dots',
+      type: 'circle',
+      source: 'saved-route-preview',
+      filter: ['==', '$type', 'Point'],
+      paint: {
+        'circle-radius': 4,
+        'circle-color': ['get', 'color'],
+        'circle-opacity': 0.85,
+      },
+    }, 'route-selection-glow');
 
     // Ensure active marker renders above everything else
     map.moveLayer('active-cone-glow');
@@ -1552,6 +1580,25 @@ function distBetweenFrames(i, j) {
   return 6371000 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
+function splitSourceIntoSegments(group) {
+  if (group.length < 2) return [group];
+
+  const SPLIT_DISTANCE = 20; // meters
+  const segments = [[group[0]]];
+
+  for (let i = 1; i < group.length; i++) {
+    const prevIdx = group[i - 1];
+    const currIdx = group[i];
+    if ((currIdx - prevIdx) > 1 && distBetweenFrames(prevIdx, currIdx) > SPLIT_DISTANCE) {
+      segments.push([currIdx]);
+    } else {
+      segments[segments.length - 1].push(currIdx);
+    }
+  }
+
+  return segments;
+}
+
 function getSortedRouteIndices() {
   const all = Array.from(routeFrameIndices).sort((a, b) => a - b);
   if (all.length < 2) {
@@ -1566,16 +1613,28 @@ function getSortedRouteIndices() {
     sourceGroups[src].push(idx);
   });
 
-  const sources = Object.keys(sourceGroups);
-  if (sources.length === 1) {
+  // Split sources with spatial gaps into independent sub-segments
+  const segments = {};
+  Object.entries(sourceGroups).forEach(([src, group]) => {
+    const subSegs = splitSourceIntoSegments(group);
+    if (subSegs.length === 1) {
+      segments[src] = group;
+    } else {
+      subSegs.forEach((seg, i) => {
+        segments[`${src}__${i}`] = seg;
+      });
+    }
+  });
+
+  const segmentKeys = Object.keys(segments);
+  if (segmentKeys.length === 1) {
     routeFlippedFrames = routeReversed ? new Set(all) : new Set();
     return routeReversed ? [...all].reverse() : all;
   }
 
-  const { ordered, segmentReversed } = chainSourceSegments(sourceGroups);
+  const { ordered, segmentReversed } = chainSourceSegments(segments);
 
   if (routeReversed) {
-    // Flip toggles: forward segments become reversed, reversed become forward
     routeFlippedFrames = new Set(ordered.filter(idx => !segmentReversed.has(idx)));
     return ordered.reverse();
   } else {
@@ -1786,14 +1845,40 @@ function nextRouteName() {
   }
 }
 
+function computeRouteJunctions(sortedIndices) {
+  const junctions = [];
+  for (let i = 0; i < sortedIndices.length - 1; i++) {
+    const curIdx = sortedIndices[i];
+    const nextIdx = sortedIndices[i + 1];
+    if (frames[curIdx].source === frames[nextIdx].source) continue;
+
+    const junc = computeJunctionTurn(sortedIndices, i, i + 1);
+    junctions.push({
+      position: i,
+      fromIndex: curIdx,
+      toIndex: nextIdx,
+      fromSource: frames[curIdx].source,
+      toSource: frames[nextIdx].source,
+      fromBearing: Math.round(junc.curDir * 10) / 10,
+      toBearing: Math.round(junc.nextDir * 10) / 10,
+      turnAngle: Math.round(junc.turn * 10) / 10,
+    });
+  }
+  return junctions;
+}
+
 function saveRoute() {
   if (routeFrameIndices.size === 0) return;
+
+  const sortedIndices = getSortedRouteIndices();
+  const junctions = computeRouteJunctions(sortedIndices);
 
   if (editingRouteId) {
     const route = savedRoutes.find(r => r.id === editingRouteId);
     if (route) {
-      route.frameIndices = getSortedRouteIndices();
+      route.frameIndices = sortedIndices;
       route.reversed = routeReversed;
+      route.junctions = junctions;
       editingRouteId = null;
     }
   } else {
@@ -1802,24 +1887,28 @@ function saveRoute() {
       name: nextRouteName(),
       created: new Date().toISOString(),
       neighborhoodId,
-      frameIndices: getSortedRouteIndices(),
+      frameIndices: sortedIndices,
       reversed: routeReversed,
+      junctions,
     });
   }
 
   persistSavedRoutes();
   renderSavedRoutesList();
   updateRouteBuilderPanel();
+  updateSavedRoutePreview();
 }
 
 function deleteRoute(routeId) {
   savedRoutes = savedRoutes.filter(r => r.id !== routeId);
+  visibleRouteIds.delete(routeId);
   if (editingRouteId === routeId) {
     editingRouteId = null;
     updateRouteBuilderPanel();
   }
   persistSavedRoutes();
   renderSavedRoutesList();
+  updateSavedRoutePreview();
 }
 
 function editRoute(routeId) {
@@ -1859,6 +1948,7 @@ function renderSavedRoutesList() {
     const dateStr = date.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
     const timeStr = date.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' });
     const isEditing = editingRouteId === route.id;
+    const isVisible = visibleRouteIds.has(route.id);
     return `
       <div class="rb-saved-route${isEditing ? ' rb-editing' : ''}" data-route-id="${route.id}">
         <div class="rb-route-info">
@@ -1866,7 +1956,9 @@ function renderSavedRoutesList() {
           <span class="rb-route-meta">${route.frameIndices.length} frames · ${dateStr} ${timeStr}${isEditing ? ' · editing' : ''}</span>
         </div>
         <div class="rb-route-actions">
+          <button class="rb-route-btn rb-route-visibility${isVisible ? ' rb-visible' : ''}" data-route-id="${route.id}" title="${isVisible ? 'Hide on map' : 'Show on map'}">${isVisible ? '👁' : '👁‍🗨'}</button>
           <button class="rb-route-btn rb-route-edit" data-route-id="${route.id}" title="Edit">✎</button>
+          <button class="rb-route-btn rb-route-export" data-route-id="${route.id}" title="Export">⤓</button>
           <button class="rb-route-btn rb-route-load" data-route-id="${route.id}" title="Play">▶</button>
           <button class="rb-route-btn rb-route-delete" data-route-id="${route.id}" title="Delete">✕</button>
         </div>
@@ -1877,8 +1969,14 @@ function renderSavedRoutesList() {
   elements.rbSavedList.querySelectorAll('.rb-route-name').forEach(el => {
     el.addEventListener('click', () => renameRoute(el.dataset.routeId));
   });
+  elements.rbSavedList.querySelectorAll('.rb-route-visibility').forEach(btn => {
+    btn.addEventListener('click', () => toggleRouteVisibility(btn.dataset.routeId));
+  });
   elements.rbSavedList.querySelectorAll('.rb-route-edit').forEach(btn => {
     btn.addEventListener('click', () => editRoute(btn.dataset.routeId));
+  });
+  elements.rbSavedList.querySelectorAll('.rb-route-export').forEach(btn => {
+    btn.addEventListener('click', () => exportSingleRoute(btn.dataset.routeId));
   });
   elements.rbSavedList.querySelectorAll('.rb-route-load').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -1891,7 +1989,105 @@ function renderSavedRoutesList() {
   });
 }
 
+// ── Route Visibility on Map ──────────────────────────────
+const SAVED_ROUTE_COLORS = ['#22d3ee', '#f97316', '#a855f7', '#10b981', '#f43f5e', '#3b82f6', '#eab308', '#ec4899'];
+
+function toggleRouteVisibility(routeId) {
+  if (visibleRouteIds.has(routeId)) {
+    visibleRouteIds.delete(routeId);
+  } else {
+    visibleRouteIds.add(routeId);
+  }
+  updateSavedRoutePreview();
+  renderSavedRoutesList();
+}
+
+function updateSavedRoutePreview() {
+  if (!map || !map.getSource('saved-route-preview')) return;
+
+  const myRoutes = savedRoutes.filter(r => r.neighborhoodId === neighborhoodId);
+  const features = [];
+
+  myRoutes.forEach((route, ri) => {
+    if (!visibleRouteIds.has(route.id)) return;
+    const color = SAVED_ROUTE_COLORS[ri % SAVED_ROUTE_COLORS.length];
+    const indices = route.frameIndices;
+    if (!indices || indices.length === 0) return;
+
+    let currentSegment = [];
+    let currentSource = null;
+
+    indices.forEach(idx => {
+      const frame = frames[idx];
+      if (!frame) return;
+
+      if (frame.source !== currentSource) {
+        if (currentSegment.length > 1) {
+          features.push({
+            type: 'Feature',
+            properties: { color },
+            geometry: { type: 'LineString', coordinates: currentSegment },
+          });
+        }
+        currentSegment = [];
+        currentSource = frame.source;
+      }
+      currentSegment.push([frame.lon, frame.lat]);
+
+      features.push({
+        type: 'Feature',
+        properties: { color },
+        geometry: { type: 'Point', coordinates: [frame.lon, frame.lat] },
+      });
+    });
+
+    if (currentSegment.length > 1) {
+      features.push({
+        type: 'Feature',
+        properties: { color },
+        geometry: { type: 'LineString', coordinates: currentSegment },
+      });
+    }
+  });
+
+  map.getSource('saved-route-preview').setData({
+    type: 'FeatureCollection',
+    features,
+  });
+}
+
 // ── Export / Import ──────────────────────────────────────
+function enrichRouteForExport(route) {
+  const enriched = { ...route };
+  if (!enriched.junctions && enriched.frameIndices && enriched.frameIndices.length > 1) {
+    enriched.junctions = computeRouteJunctions(enriched.frameIndices);
+  }
+  return enriched;
+}
+
+function exportSingleRoute(routeId) {
+  const route = savedRoutes.find(r => r.id === routeId);
+  if (!route) return;
+
+  const exportData = {
+    exported: new Date().toISOString(),
+    neighborhoodId: route.neighborhoodId,
+    routes: [enrichRouteForExport(route)],
+  };
+
+  const safeName = (route.name || 'unnamed').replace(/[^a-zA-Z0-9_-]/g, '_');
+  const dateStr = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
+  const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `route_${safeName}_${dateStr}.json`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
 function exportRouteJSON() {
   const myRoutes = savedRoutes.filter(r => r.neighborhoodId === neighborhoodId);
   if (myRoutes.length === 0) {
@@ -1902,7 +2098,7 @@ function exportRouteJSON() {
   const exportData = {
     exported: new Date().toISOString(),
     neighborhoodId,
-    routes: myRoutes,
+    routes: myRoutes.map(enrichRouteForExport),
   };
 
   const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
@@ -1949,7 +2145,9 @@ function importRouteJSON(e) {
 function startRoutePlayback() {
   if (routeFrameIndices.size === 0) return;
 
-  routePlayback = { indices: getSortedRouteIndices(), position: 0 };
+  const indices = getSortedRouteIndices();
+  const resumePos = indices.indexOf(currentIndex);
+  routePlayback = { indices, position: resumePos !== -1 ? resumePos : 0 };
 
   routeBuilderMode = false;
   elements.rbPanel.classList.remove('visible');
@@ -1959,7 +2157,7 @@ function startRoutePlayback() {
   if (map) map.dragPan.enable();
   detachLassoEvents();
 
-  loadPhoto(routePlayback.indices[0], true);
+  loadPhoto(routePlayback.indices[routePlayback.position], true);
   updatePlaybackUI();
 }
 

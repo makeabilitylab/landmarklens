@@ -22,7 +22,7 @@ Adjust yaw/pitch/roll on a frame and save — it propagates forward to all follo
 Click "Export Keyframes" in the edit panel. This downloads a JSON file.
 
 ### Step 3: Import into data.json
-`python script/import_heading_adjustments.py heading-adjustments-2026-02-03.json`
+`python script/import_heading_adjustments.py data/heading-adjustments/heading-adjustments-2026-02-24T04-14-42.json `
 
 Preview first with `--dry-run`, or filter by neighborhood with `--neighborhood ginza`.
 

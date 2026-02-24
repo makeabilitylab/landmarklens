@@ -1403,6 +1403,26 @@ body {
   color: #facc15;
 }
 
+.rb-route-visibility {
+  opacity: 0.4;
+  font-size: 0.75rem;
+}
+
+.rb-route-visibility.rb-visible {
+  opacity: 1;
+}
+
+.rb-route-visibility:hover {
+  background: rgba(34, 211, 238, 0.3);
+  border-color: rgba(34, 211, 238, 0.5);
+}
+
+.rb-route-export:hover {
+  background: rgba(16, 185, 129, 0.3);
+  border-color: rgba(16, 185, 129, 0.5);
+  color: #10b981;
+}
+
 .rb-saved-route.rb-editing {
   background: rgba(250, 204, 21, 0.1);
   border: 1px solid rgba(250, 204, 21, 0.3);

@@ -239,6 +239,7 @@ def main():
     route = routes[args.route_index]
     route_indices = route["frameIndices"]
     route_id = route.get("id", f"route_{args.route_index}")
+    route_junctions = route.get("junctions", [])
 
     if args.output:
         output_dir = Path(args.output)
@@ -345,7 +346,18 @@ def main():
         })
 
     # ── Junction links (left/right between sequences) ────────────────
+    # Build lookup: (fromIndex, toIndex) -> pre-computed junction from Route Builder
+    precomputed = {}
+    for junc in route_junctions:
+        key = (junc["fromIndex"], junc["toIndex"])
+        precomputed[key] = junc
+
     print(f"\n  Computing junction links...")
+    if route_junctions:
+        print(f"    Using {len(route_junctions)} pre-computed junction(s) from Route Builder")
+
+    junction_summary = []
+
     for i in range(len(segment_meta) - 1):
         seg_a = segment_meta[i]
         seg_b = segment_meta[i + 1]
@@ -356,16 +368,26 @@ def main():
         frame_a = frames[last_idx_a]
         frame_b = frames[first_idx_b]
 
-        bearing_a = bearings.get(last_idx_a, 0)
-        if seg_a["reversed"]:
-            bearing_a = (bearing_a + 180) % 360
+        # Use pre-computed junction data if available, otherwise compute
+        pre = precomputed.get((last_idx_a, first_idx_b))
+        if pre:
+            turn_angle = pre["turnAngle"]
+            from_bearing = pre["fromBearing"]
+            to_bearing = pre["toBearing"]
+        else:
+            bearing_a = bearings.get(last_idx_a, 0)
+            if seg_a["reversed"]:
+                bearing_a = (bearing_a + 180) % 360
 
-        bearing_to_b = calculate_bearing(
-            frame_a["lat"], frame_a["lon"],
-            frame_b["lat"], frame_b["lon"],
-        )
+            bearing_b = bearings.get(first_idx_b, 0)
+            if seg_b["reversed"]:
+                bearing_b = (bearing_b + 180) % 360
 
-        turn_dir = compute_turn_direction(bearing_a, bearing_to_b)
+            from_bearing = round(bearing_a, 1)
+            to_bearing = round(bearing_b, 1)
+            turn_angle = round((to_bearing - from_bearing + 540) % 360 - 180, 1)
+
+        turn_dir = "right" if turn_angle >= 0 else "left"
         opposite_dir = "left" if turn_dir == "right" else "right"
 
         stem_a = Path(frame_a["filename"]).stem
@@ -373,13 +395,30 @@ def main():
 
         seq_a_photos = sequences[seg_a["seq_id"]]["photos"]
         seq_a_photos[-1][turn_dir] = f"{seg_b['seq_id']}/{stem_b}"
+        seq_a_photos[-1]["turnAngle"] = turn_angle
 
         seq_b_photos = sequences[seg_b["seq_id"]]["photos"]
         seq_b_photos[0][opposite_dir] = f"{seg_a['seq_id']}/{stem_a}"
+        seq_b_photos[0]["turnAngle"] = -turn_angle
 
         dist = haversine(frame_a["lat"], frame_a["lon"],
                          frame_b["lat"], frame_b["lon"])
-        print(f"    Junction {i + 1}: {seg_a['seq_id']} —({turn_dir})→ {seg_b['seq_id']}  ({dist:.1f} m)")
+
+        junction_summary.append({
+            "from_sequence": seg_a["seq_id"],
+            "to_sequence": seg_b["seq_id"],
+            "from_frame": stem_a,
+            "to_frame": stem_b,
+            "turn_direction": turn_dir,
+            "turn_angle": turn_angle,
+            "from_bearing": from_bearing,
+            "to_bearing": to_bearing,
+            "distance_m": round(dist, 1),
+            "source": "route_builder" if pre else "computed",
+        })
+
+        src_label = " (from Route Builder)" if pre else ""
+        print(f"    Junction {i + 1}: {seg_a['seq_id']} —({turn_dir} {turn_angle:+.1f}°)→ {seg_b['seq_id']}  ({dist:.1f} m){src_label}")
 
     # ── Compute total distance ───────────────────────────────────────
     total_dist = 0.0
@@ -397,13 +436,16 @@ def main():
         "route_id": route_id,
         "total_frames": len(route_indices),
         "total_sequences": len(sequences),
+        "total_junctions": len(junction_summary),
         "total_distance_m": round(total_dist, 1),
+        "junctions": junction_summary,
         "sequences": sequences,
     }
 
     print(f"\n  Route summary:")
     print(f"    Frames:      {len(route_indices)}")
     print(f"    Sequences:   {len(sequences)}")
+    print(f"    Junctions:   {len(junction_summary)}")
     print(f"    Distance:    {total_dist:.0f} m")
 
     if args.dry_run:

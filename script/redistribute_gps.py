@@ -31,6 +31,16 @@ Usage:
     # Dry-run
     python script/redistribute_gps.py --source GS010320 --dry-run
 
+    # Partial redistribute: only frames between two keyframes
+    # (e.g. fix an intersection point then redistribute from there to end)
+    python script/redistribute_gps.py --source GS010355 \
+        --from-frame GS010355_0199 --to-frame GS010355_0272 \
+        --start 35.7234575,139.7627354 --straight
+
+    # Partial redistribute: fix a middle segment, leave both ends untouched
+    python script/redistribute_gps.py --source GS010355 \
+        --from-frame GS010355_0050 --to-frame GS010355_0120
+
     # List all sources with their frame counts and endpoints
     python script/redistribute_gps.py --list
     python script/redistribute_gps.py --list --neighborhood ginza
@@ -226,6 +236,20 @@ def parse_latlon(s: str) -> Tuple[float, float]:
     return (float(parts[0]), float(parts[1]))
 
 
+def resolve_frame_name(name: str, source: str) -> str:
+    """Normalize a frame name to the filename format used in data.json.
+
+    Accepts: 'GS010355_0199', 'GS010355_0199.jpg', or 'GS010355/GS010355_0199.jpg'
+    Returns: 'GS010355/GS010355_0199.jpg'
+    """
+    name = name.strip()
+    if "/" in name:
+        return name
+    if not name.endswith(".jpg"):
+        name += ".jpg"
+    return f"{source}/{name}"
+
+
 def list_sources(data: Dict, neighborhood: Optional[str] = None):
     frames = data.get("frames", [])
     if neighborhood:
@@ -312,6 +336,16 @@ def main():
         "--neighborhood", type=str, default=None,
         help="Filter by neighborhood (used with --list)",
     )
+    parser.add_argument(
+        "--from-frame", type=str, default=None,
+        help="Start of sub-range: frame name (e.g. GS010355_0199). "
+             "Only frames from this one onward are redistributed; earlier frames stay untouched.",
+    )
+    parser.add_argument(
+        "--to-frame", type=str, default=None,
+        help="End of sub-range: frame name (e.g. GS010355_0272). "
+             "Only frames up to and including this one are redistributed; later frames stay untouched.",
+    )
     args = parser.parse_args()
 
     repo_root = Path(__file__).resolve().parent.parent
@@ -376,6 +410,31 @@ def main():
 
         hood = src_frames[0].get("neighborhood", "?")
 
+        # Sub-range slicing: only redistribute a portion of the source
+        from_frame = getattr(args, "from_frame", None)
+        to_frame = getattr(args, "to_frame", None)
+        if from_frame or to_frame:
+            filenames = [f["filename"] for f in src_frames]
+            if from_frame:
+                from_key = resolve_frame_name(from_frame, source)
+                if from_key not in filenames:
+                    print(f"\n  {source}: --from-frame '{from_frame}' not found, skipping")
+                    total_failed += 1
+                    continue
+                from_idx = filenames.index(from_key)
+            else:
+                from_idx = 0
+            if to_frame:
+                to_key = resolve_frame_name(to_frame, source)
+                if to_key not in filenames:
+                    print(f"\n  {source}: --to-frame '{to_frame}' not found, skipping")
+                    total_failed += 1
+                    continue
+                to_idx = filenames.index(to_key)
+            else:
+                to_idx = len(src_frames) - 1
+            src_frames = src_frames[from_idx : to_idx + 1]
+
         # Determine start/end — prefer snapped coords (from QGIS import) over originals
         if args.source and args.start:
             start = parse_latlon(args.start)
@@ -399,12 +458,17 @@ def main():
             via_points = sample_via_points(src_frames, every=args.via_every)
             via_label = f"auto, every {args.via_every} frames"
 
+        is_partial = from_frame or to_frame
+
         if len(sources_to_process) == 1:
             print("=" * 60)
-            print("Redistribute GPS Points Along Route")
+            title = "Partial Redistribute GPS Points" if is_partial else "Redistribute GPS Points Along Route"
+            print(title)
             print("=" * 60)
             print(f"  Source:        {source} ({hood})")
             print(f"  Frames:        {len(src_frames)}")
+            if is_partial:
+                print(f"  Range:         {src_frames[0]['filename']} → {src_frames[-1]['filename']}")
             if args.straight:
                 print(f"  Mode:          STRAIGHT-LINE interpolation")
             else:

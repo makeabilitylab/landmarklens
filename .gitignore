@@ -209,3 +209,7 @@ __marimo__/
 data/
 QGIS/
 exports/
+
+StudyData/
+
+.DS_Store

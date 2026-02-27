@@ -237,7 +237,6 @@ def main():
         sys.exit(1)
 
     route = routes[args.route_index]
-    route_indices = route["frameIndices"]
     route_id = route.get("id", f"route_{args.route_index}")
     route_junctions = route.get("junctions", [])
 
@@ -247,6 +246,37 @@ def main():
         output_dir = BASE_DIR / "exports" / route_id
 
     route_name = args.name or f"{neighborhood_id.title()} Route"
+
+    # ── Load frame data ─────────────────────────────────────────────
+    frames = load_neighborhood_frames(args.data, neighborhood_id)
+    filename_lookup = {f["filename"]: i for i, f in enumerate(frames)}
+
+    # Resolve route frames (filename-based or legacy index-based)
+    if "frames" in route:
+        route_indices = []
+        missing = []
+        for fn in route["frames"]:
+            idx = filename_lookup.get(fn)
+            if idx is not None:
+                route_indices.append(idx)
+            else:
+                missing.append(fn)
+        if missing:
+            print(f"  Warning: {len(missing)} frame(s) not found in data.json")
+            for fn in missing[:5]:
+                print(f"    - {fn}")
+        if not route_indices:
+            print("Error: no valid frames found in route")
+            sys.exit(1)
+    elif "frameIndices" in route:
+        route_indices = route["frameIndices"]
+        invalid = [i for i in route_indices if i < 0 or i >= len(frames)]
+        if invalid:
+            print(f"  Error: {len(invalid)} frame indices out of range: {invalid[:5]}...")
+            sys.exit(1)
+    else:
+        print("Error: route has neither 'frames' nor 'frameIndices'")
+        sys.exit(1)
 
     print("=" * 60)
     print("Export Route for VR")
@@ -263,15 +293,7 @@ def main():
         print(f"  Mode:           DRY RUN")
     print("=" * 60)
 
-    # ── Load frame data ─────────────────────────────────────────────
-    print(f"\n  Loading data.json...")
-    frames = load_neighborhood_frames(args.data, neighborhood_id)
-    print(f"    {len(frames)} frames for '{neighborhood_id}'")
-
-    invalid = [i for i in route_indices if i < 0 or i >= len(frames)]
-    if invalid:
-        print(f"  Error: {len(invalid)} frame indices out of range: {invalid[:5]}...")
-        sys.exit(1)
+    print(f"\n  {len(frames)} frames for '{neighborhood_id}'")
 
     bearings = compute_frame_bearings(frames)
 
@@ -346,11 +368,15 @@ def main():
         })
 
     # ── Junction links (left/right between sequences) ────────────────
-    # Build lookup: (fromIndex, toIndex) -> pre-computed junction from Route Builder
     precomputed = {}
     for junc in route_junctions:
-        key = (junc["fromIndex"], junc["toIndex"])
-        precomputed[key] = junc
+        if "fromFrame" in junc:
+            fi = filename_lookup.get(junc["fromFrame"])
+            ti = filename_lookup.get(junc["toFrame"])
+            if fi is not None and ti is not None:
+                precomputed[(fi, ti)] = junc
+        elif "fromIndex" in junc:
+            precomputed[(junc["fromIndex"], junc["toIndex"])] = junc
 
     print(f"\n  Computing junction links...")
     if route_junctions:

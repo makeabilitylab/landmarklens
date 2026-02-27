@@ -36,6 +36,7 @@ const STORAGE_KEY = 'tokyo-streetview-heading-adjustments';
 // Source-frame lookup for keyframe propagation
 let sourceFrameIndices = {};  // source -> [globalIndex, ...]
 let frameSourcePosition = {}; // globalIndex -> position within source array
+let filenameToIndex = {};     // filename -> index in frames[]
 
 // Smooth transition state
 let viewers = { a: null, b: null };
@@ -193,10 +194,12 @@ function saveHeadingAdjustments() {
 function buildSourceFrameIndices() {
   sourceFrameIndices = {};
   frameSourcePosition = {};
+  filenameToIndex = {};
   frames.forEach((frame, index) => {
     if (!sourceFrameIndices[frame.source]) sourceFrameIndices[frame.source] = [];
     frameSourcePosition[index] = sourceFrameIndices[frame.source].length;
     sourceFrameIndices[frame.source].push(index);
+    filenameToIndex[frame.filename] = index;
   });
 }
 
@@ -1814,6 +1817,26 @@ function clearRouteSelection() {
   renderSavedRoutesList();
 }
 
+// ── Route format resolvers (filename-based, with legacy index fallback) ──
+function resolveRouteFrameList(route) {
+  if (route.frames) {
+    return route.frames.map(fn => filenameToIndex[fn]).filter(idx => idx !== undefined);
+  }
+  return route.frameIndices || [];
+}
+
+function resolveRouteFrameSet(route) {
+  if (route.frames) {
+    const set = new Set();
+    route.frames.forEach(fn => {
+      const idx = filenameToIndex[fn];
+      if (idx !== undefined) set.add(idx);
+    });
+    return set;
+  }
+  return new Set(route.frameIndices || []);
+}
+
 // ── Save / Load / Delete ─────────────────────────────────
 function loadSavedRoutes() {
   try {
@@ -1823,6 +1846,21 @@ function loadSavedRoutes() {
     savedRoutes.forEach((r, i) => {
       if (!r.name) {
         r.name = `Route ${i + 1}`;
+        needsPersist = true;
+      }
+      if (r.frameIndices && !r.frames && r.neighborhoodId === neighborhoodId) {
+        r.frames = r.frameIndices.map(idx => frames[idx]?.filename).filter(Boolean);
+        if (r.junctions) {
+          r.junctions.forEach(j => {
+            if (j.fromIndex !== undefined && j.fromFrame === undefined) {
+              j.fromFrame = frames[j.fromIndex]?.filename;
+              j.toFrame = frames[j.toIndex]?.filename;
+              delete j.fromIndex;
+              delete j.toIndex;
+            }
+          });
+        }
+        delete r.frameIndices;
         needsPersist = true;
       }
     });
@@ -1855,8 +1893,8 @@ function computeRouteJunctions(sortedIndices) {
     const junc = computeJunctionTurn(sortedIndices, i, i + 1);
     junctions.push({
       position: i,
-      fromIndex: curIdx,
-      toIndex: nextIdx,
+      fromFrame: frames[curIdx].filename,
+      toFrame: frames[nextIdx].filename,
       fromSource: frames[curIdx].source,
       toSource: frames[nextIdx].source,
       fromBearing: Math.round(junc.curDir * 10) / 10,
@@ -1873,10 +1911,13 @@ function saveRoute() {
   const sortedIndices = getSortedRouteIndices();
   const junctions = computeRouteJunctions(sortedIndices);
 
+  const frameFilenames = sortedIndices.map(i => frames[i].filename);
+
   if (editingRouteId) {
     const route = savedRoutes.find(r => r.id === editingRouteId);
     if (route) {
-      route.frameIndices = sortedIndices;
+      route.frames = frameFilenames;
+      delete route.frameIndices;
       route.reversed = routeReversed;
       route.junctions = junctions;
       editingRouteId = null;
@@ -1887,7 +1928,7 @@ function saveRoute() {
       name: nextRouteName(),
       created: new Date().toISOString(),
       neighborhoodId,
-      frameIndices: sortedIndices,
+      frames: frameFilenames,
       reversed: routeReversed,
       junctions,
     });
@@ -1916,7 +1957,7 @@ function editRoute(routeId) {
   if (!route) return;
 
   editingRouteId = routeId;
-  routeFrameIndices = new Set(route.frameIndices);
+  routeFrameIndices = resolveRouteFrameSet(route);
   routeReversed = route.reversed || false;
   updateRouteHighlight();
   updateRouteBuilderPanel();
@@ -1953,7 +1994,7 @@ function renderSavedRoutesList() {
       <div class="rb-saved-route${isEditing ? ' rb-editing' : ''}" data-route-id="${route.id}">
         <div class="rb-route-info">
           <span class="rb-route-name" data-route-id="${route.id}" title="Click to rename">${name}</span>
-          <span class="rb-route-meta">${route.frameIndices.length} frames · ${dateStr} ${timeStr}${isEditing ? ' · editing' : ''}</span>
+          <span class="rb-route-meta">${(route.frames || route.frameIndices || []).length} frames · ${dateStr} ${timeStr}${isEditing ? ' · editing' : ''}</span>
         </div>
         <div class="rb-route-actions">
           <button class="rb-route-btn rb-route-visibility${isVisible ? ' rb-visible' : ''}" data-route-id="${route.id}" title="${isVisible ? 'Hide on map' : 'Show on map'}">${isVisible ? '👁' : '👁‍🗨'}</button>
@@ -2011,8 +2052,8 @@ function updateSavedRoutePreview() {
   myRoutes.forEach((route, ri) => {
     if (!visibleRouteIds.has(route.id)) return;
     const color = SAVED_ROUTE_COLORS[ri % SAVED_ROUTE_COLORS.length];
-    const indices = route.frameIndices;
-    if (!indices || indices.length === 0) return;
+    const indices = resolveRouteFrameList(route);
+    if (indices.length === 0) return;
 
     let currentSegment = [];
     let currentSource = null;
@@ -2059,8 +2100,11 @@ function updateSavedRoutePreview() {
 // ── Export / Import ──────────────────────────────────────
 function enrichRouteForExport(route) {
   const enriched = { ...route };
-  if (!enriched.junctions && enriched.frameIndices && enriched.frameIndices.length > 1) {
-    enriched.junctions = computeRouteJunctions(enriched.frameIndices);
+  if (!enriched.junctions) {
+    const indices = resolveRouteFrameList(route);
+    if (indices.length > 1) {
+      enriched.junctions = computeRouteJunctions(indices);
+    }
   }
   return enriched;
 }

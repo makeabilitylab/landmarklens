@@ -1,6 +1,9 @@
 # tokyo-streetview
 
-Start the viewer: `python -m http.server 3000` (serves `web/`)
+## Getting Started
+1. In the route directory, create a data folder, drop in the frames folder from Google drive (https://drive.google.com/drive/folders/1WOiSnUeZP2YRl7grwVf1YkAWtIF1KkkH?usp=drive_link).
+2. In the route directory, drop in the study-data folder from Google drive (https://drive.google.com/drive/folders/1WOiSnUeZP2YRl7grwVf1YkAWtIF1KkkH?usp=drive_link).
+3. Start the viewer: `python -m http.server 3000` (serves `web/`)
 
 ## Exporting routes for VR / participant sets
 

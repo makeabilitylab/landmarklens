@@ -158,18 +158,38 @@ def compute_frame_bearings(frames: List[Dict]) -> Dict[int, float]:
 
 # ── Route segmentation ─────────────────────────────────────────────────
 
-def split_into_segments(route_indices: List[int], frames: List[Dict]) -> List[List[int]]:
-    """Split route into segments where each is a contiguous run of one source."""
+def get_frame_number(frame: Dict) -> str:
+    """Extract frame number from filename (e.g. GS010366_0086.jpg -> 0086)."""
+    stem = Path(frame["filename"]).stem  # GS010366_0086
+    return stem.split("_")[-1] if "_" in stem else stem
+
+
+def split_into_segments(
+    route_indices: List[int],
+    frames: List[Dict],
+    sequence_splits: Optional[Dict[str, List[str]]] = None,
+) -> List[List[int]]:
+    """Split route into segments by source and by sequence_splits (same-source splits)."""
     if not route_indices:
         return []
+    sequence_splits = sequence_splits or {}
     segments: List[List[int]] = []
     current = [route_indices[0]]
     for idx in route_indices[1:]:
-        if frames[idx]["source"] == frames[current[0]]["source"]:
-            current.append(idx)
-        else:
+        f_curr = frames[idx]
+        src = f_curr["source"]
+        if src != frames[current[0]]["source"]:
             segments.append(current)
             current = [idx]
+            continue
+        # Same source: break if there's a split after the last frame in current
+        last_idx = current[-1]
+        last_frame_num = get_frame_number(frames[last_idx])
+        if last_frame_num in sequence_splits.get(src, []):
+            segments.append(current)
+            current = [idx]
+        else:
+            current.append(idx)
     segments.append(current)
     return segments
 
@@ -297,8 +317,13 @@ def main():
 
     bearings = compute_frame_bearings(frames)
 
+    # Load sequence_splits (same-source splits from script/split_sequence.py)
+    with open(args.data) as f:
+        data_full = json.load(f)
+    sequence_splits = data_full.get("sequence_splits", {})
+
     # ── Split into segments ──────────────────────────────────────────
-    segments = split_into_segments(route_indices, frames)
+    segments = split_into_segments(route_indices, frames, sequence_splits)
     print(f"    {len(segments)} sequence(s) in route")
 
     # ── Build sequences ──────────────────────────────────────────────

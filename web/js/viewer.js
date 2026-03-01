@@ -67,6 +67,9 @@ let editingRouteId = null; // route ID being modified (null = new route)
 let visibleRouteIds = new Set(); // routes shown on the map
 const ROUTE_STORAGE_KEY = 'tokyo-streetview-routes';
 
+// Sequence splits (same-source segments from script/split_sequence.py)
+let sequenceSplits = {};
+
 // Lasso state
 let lassoActive = false;
 let lassoStartPx = null;
@@ -145,6 +148,8 @@ async function init() {
 
     const resp = await fetch('data.json');
     const allData = await resp.json();
+
+    sequenceSplits = allData.sequence_splits || {};
 
     frames = allData.frames
       .filter(f => f.neighborhood === neighborhoodId)
@@ -360,20 +365,21 @@ function initMinimap() {
   });
 
   map.once('load', () => {
-    const routesBySource = {};
+    const routesBySegment = {};
     frames.forEach((frame, index) => {
       if (!frame.lat || !frame.lon) return;
-      if (!routesBySource[frame.source]) routesBySource[frame.source] = [];
-      routesBySource[frame.source].push({ frame, index });
+      const segKey = getSegmentKey(index);
+      if (!routesBySegment[segKey]) routesBySegment[segKey] = [];
+      routesBySegment[segKey].push({ frame, index });
     });
 
-    const sourceNames = Object.keys(routesBySource);
-    const routeColors = generateRouteColors(sourceNames.length);
+    const segmentKeys = Object.keys(routesBySegment);
+    const routeColors = generateRouteColors(segmentKeys.length);
 
     const allFeatures = [];
 
-    sourceNames.forEach((source, routeIndex) => {
-      const routeFrames = routesBySource[source];
+    segmentKeys.forEach((segKey, routeIndex) => {
+      const routeFrames = routesBySegment[segKey];
       const color = routeColors[routeIndex];
 
       const lineCoords = routeFrames.map(r => [r.frame.lon, r.frame.lat]);
@@ -1597,6 +1603,27 @@ function distBetweenFrames(i, j) {
   return 6371000 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
+// Segment key for sequence_splits: same source can be multiple segments (different colors, turns)
+function getFrameNumberFromFilename(filename) {
+  const stem = filename.split('/').pop().replace(/\.(jpg|jpeg|png)$/i, '');
+  const parts = stem.split('_');
+  return parts.length > 1 ? parts[parts.length - 1] : stem;
+}
+
+function getSegmentKey(frameIndex) {
+  const frame = frames[frameIndex];
+  const src = frame.source;
+  const splits = sequenceSplits[src];
+  if (!splits || splits.length === 0) return src;
+  const frameNum = getFrameNumberFromFilename(frame.filename);
+  let segmentIndex = 0;
+  for (const s of splits) {
+    if (frameNum > s) segmentIndex++;
+    else break;
+  }
+  return segmentIndex === 0 ? src : `${src}_${segmentIndex}`;
+}
+
 function splitSourceIntoSegments(group) {
   if (group.length < 2) return [group];
 
@@ -1625,20 +1652,20 @@ function getSortedRouteIndices() {
 
   const sourceGroups = {};
   all.forEach(idx => {
-    const src = frames[idx].source;
-    if (!sourceGroups[src]) sourceGroups[src] = [];
-    sourceGroups[src].push(idx);
+    const segKey = getSegmentKey(idx);
+    if (!sourceGroups[segKey]) sourceGroups[segKey] = [];
+    sourceGroups[segKey].push(idx);
   });
 
-  // Split sources with spatial gaps into independent sub-segments
+  // Split by spatial gaps within each segment into independent sub-segments
   const segments = {};
-  Object.entries(sourceGroups).forEach(([src, group]) => {
+  Object.entries(sourceGroups).forEach(([segKey, group]) => {
     const subSegs = splitSourceIntoSegments(group);
     if (subSegs.length === 1) {
-      segments[src] = group;
+      segments[segKey] = group;
     } else {
       subSegs.forEach((seg, i) => {
-        segments[`${src}__${i}`] = seg;
+        segments[`${segKey}__${i}`] = seg;
       });
     }
   });
@@ -1902,7 +1929,7 @@ function computeRouteJunctions(sortedIndices) {
   for (let i = 0; i < sortedIndices.length - 1; i++) {
     const curIdx = sortedIndices[i];
     const nextIdx = sortedIndices[i + 1];
-    if (frames[curIdx].source === frames[nextIdx].source) continue;
+    if (getSegmentKey(curIdx) === getSegmentKey(nextIdx)) continue;
 
     const junc = computeJunctionTurn(sortedIndices, i, i + 1);
     junctions.push({

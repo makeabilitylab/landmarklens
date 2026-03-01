@@ -210,8 +210,8 @@ data/
 QGIS/
 exports/
 
-StudyData/
-
+study-materials/
+study-data/
 .DS_Store
 .DS_Store
 web/.DS_Store

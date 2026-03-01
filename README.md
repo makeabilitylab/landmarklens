@@ -49,18 +49,22 @@ GINZA_C="route_ginza_c_2026-02-27T15-47-54.json"
 GINZA_U1="route_ginza_u1_2026-02-27T15-47-58.json"
 GINZA_U2="route_ginza_u2_2026-02-27T15-48-02.json"
 GINZA_U3="route_ginza_u3_2026-02-28T06-48-00.json"
+GINZA_U4="route_ginza_u4_2026-03-01T05-16-38.json"
 KOENJI_C="route_konenji_c_2026-02-27T15-48-23.json"
 KOENJI_U1="route_koenji_u1_2026-02-27T15-48-26.json"
 KOENJI_U2="route_koenji_u2_2026-02-27T15-48-29.json"
 KOENJI_U3="route_koenji_u3_2026-02-28T09-49-54.json"
+KOENJI_U4="route_koenji_u4_2026-03-01T05-18-23.json"
 NEZU_C="route_nezu_c_2026-02-27T15-48-08.json"
 NEZU_U1="route_nezu_u1_2026-02-27T15-48-10.json"
 NEZU_U2="route_nezu_u2_2026-02-27T15-48-16.json"
 NEZU_U3="route_nezu_u3_2026-02-28T09-48-47.json"
+NEZU_U4="route_nezu_u4_2026-03-01T05-27-14.json"
 KINSHICHO_C="route_kinshicho_c_2026-02-27T15-48-39.json"
 KINSHICHO_U1="route_kinshicho_u1_2026-02-27T15-48-35.json"
 KINSHICHO_U2="route_kinshicho_u2_2026-02-27T15-48-42.json"
 KINSHICHO_U3="route_kinshicho_u3_2026-02-28T06-17-52.json"
+KINSHICHO_U4="route_kinshicho_u4_2026-03-01T05-18-11.json"
 PRACTICE="route_practice_route_2026-02-27T15-48-13.json"
 R="data/routes"
 ```
@@ -108,6 +112,21 @@ python script/export_route_vr.py --route "$R/$KINSHICHO_C"   --name "Kinshicho (
 python script/export_route_vr.py --route "$R/$KINSHICHO_U3"  --name "Kinshicho (U3)"  --output "$O/kinshicho_u3" && \
 python script/export_route_vr.py --route "$R/$KOENJI_U3"      --name "Koenji (U3)"     --output "$O/koenji_u3" && \
 python script/export_route_vr.py --route "$R/$KOENJI_C"      --name "Koenji (C)"      --output "$O/koenji_c"
+```
+
+```bash
+# ── P04: Practice, Kinshicho(U4), Kinshicho(C), Nezu(C), Nezu(U4), Koenji(U4), Koenji(C), Ginza(C), Ginza(U4)
+rm -rf StudyData/ParticipantSets/P04/Routes
+O="StudyData/ParticipantSets/P04/Routes"
+python script/export_route_vr.py --route "$R/$PRACTICE"       --name "Practice"        --output "$O/practice" && \
+python script/export_route_vr.py --route "$R/$KINSHICHO_U4"  --name "Kinshicho (U4)"  --output "$O/kinshicho_u4" && \
+python script/export_route_vr.py --route "$R/$KINSHICHO_C"   --name "Kinshicho (C)"   --output "$O/kinshicho_c" && \
+python script/export_route_vr.py --route "$R/$NEZU_C"        --name "Nezu (C)"        --output "$O/nezu_c" && \
+python script/export_route_vr.py --route "$R/$NEZU_U4"       --name "Nezu (U4)"       --output "$O/nezu_u4" && \
+python script/export_route_vr.py --route "$R/$KOENJI_U4"     --name "Koenji (U4)"     --output "$O/koenji_u4" && \
+python script/export_route_vr.py --route "$R/$KOENJI_C"      --name "Koenji (C)"      --output "$O/koenji_c" && \
+python script/export_route_vr.py --route "$R/$GINZA_C"       --name "Ginza (C)"       --output "$O/ginza_c" && \
+python script/export_route_vr.py --route "$R/$GINZA_U4"      --name "Ginza (U4)"       --output "$O/ginza_u4"
 ```
 
 

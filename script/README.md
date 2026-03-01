@@ -1,3 +1,26 @@
+## Prerequisites: Start Valhalla (local routing engine)
+Several scripts (`snap_gps.py`, `redistribute_gps.py`, `route_frames.py`) require a local Valhalla instance for map-matching and routing.
+
+**First-time setup:**
+```bash
+# Download Kanto region OSM data
+mkdir -p data/valhalla_data/custom_files
+wget https://download.geofabrik.de/asia/japan/kanto-latest.osm.pbf \
+     -O data/valhalla_data/custom_files/kanto.osm.pbf
+
+# Start Valhalla in Docker (first run builds routing tiles — takes a while)
+docker run --name valhalla -p 8002:8002 \
+     -v $PWD/data/valhalla_data/custom_files:/custom_files \
+     ghcr.io/gis-ops/docker-valhalla/valhalla:latest
+```
+
+**Subsequent runs:**
+```bash
+docker start valhalla
+```
+
+Verify it's running: `curl http://localhost:8002/status`
+
 ## How to clean GPS for each neighborhood
 ### Step 1: Snap GPS to the nearest OSM geometry
 `python script/snap_gps.py --neighborhood nezu --search-radius 20 --gps-accuracy 3 --turn-penalty 500`

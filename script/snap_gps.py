@@ -8,11 +8,11 @@ lat_snapped / lon_snapped (preserving the original lat / lon).
 
 Prerequisites:
     # Download Kanto region OSM data and start Valhalla in Docker
-    mkdir -p valhalla_data/custom_files
+    mkdir -p data/valhalla_data/custom_files
     wget https://download.geofabrik.de/asia/japan/kanto-latest.osm.pbf \
-         -O valhalla_data/custom_files/kanto.osm.pbf
+         -O data/valhalla_data/custom_files/kanto.osm.pbf
     docker run -p 8002:8002 \
-         -v $PWD/valhalla_data/custom_files:/custom_files \
+         -v $PWD/data/valhalla_data/custom_files:/custom_files \
          ghcr.io/gis-ops/docker-valhalla/valhalla:latest
 
 Usage:

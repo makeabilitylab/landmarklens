@@ -38,14 +38,10 @@ let sourceFrameIndices = {};  // source -> [globalIndex, ...]
 let frameSourcePosition = {}; // globalIndex -> position within source array
 let filenameToIndex = {};     // filename -> index in frames[]
 
-// Heatmap overlay state
-let heatmapEnabled = false;
-let heatmapParticipant = null;
+// Heatmap composite state (dropdown selects participant, swaps image path)
+let heatmapParticipant = null;  // null = original, or participant id string
 let heatmapManifest = null;
-let heatmapViewer = null;
-let heatmapFrameSet = null;
-let heatmapOpacity = 0.85;
-let heatmapLoading = false;
+let heatmapFrameSet = null;     // Set of web_paths (without .jpg) that have composites
 
 // Smooth transition state
 let viewers = { a: null, b: null };
@@ -78,6 +74,17 @@ let lassoMoved = false;
 let lassoJustFinished = false;
 
 const FRAMES_BASE = 'frames/';
+const HEATMAP_FRAMES_BASE = 'heatmap-frames/';
+
+function getImagePath(frame) {
+  if (heatmapParticipant && heatmapFrameSet) {
+    const key = frame.filename.replace(/\.jpg$/i, '');
+    if (heatmapFrameSet.has(key)) {
+      return `${HEATMAP_FRAMES_BASE}${heatmapParticipant}/${frame.filename}`;
+    }
+  }
+  return FRAMES_BASE + frame.filename;
+}
 
 // ========================================
 // DOM Elements
@@ -89,7 +96,6 @@ const elements = {
   photoInfo: document.getElementById('photo-info'),
   panoramaA: document.getElementById('panorama-a'),
   panoramaB: document.getElementById('panorama-b'),
-  panoramaHeatmap: document.getElementById('panorama-heatmap'),
   transitionOverlay: document.getElementById('transition-overlay'),
   minimap: document.getElementById('minimap'),
   minimapContainer: document.getElementById('minimap-container'),
@@ -324,7 +330,7 @@ function preloadAdjacentPhotos(idx) {
   toPreload.forEach(j => {
     if (!preloadCache.has(j)) {
       const img = new Image();
-      const path = FRAMES_BASE + frames[j].filename;
+      const path = getImagePath(frames[j]);
       preloadCache.set(j, { img, loaded: false, path });
       img.onload = () => {
         const cached = preloadCache.get(j);
@@ -699,7 +705,7 @@ function loadPhotoImmediate(index) {
   }
 
   const heading = getEffectiveHeading(frame, index);
-  const imagePath = FRAMES_BASE + frame.filename;
+  const imagePath = getImagePath(frame);
 
   const activeContainer = activeViewer === 'a' ? elements.panoramaA : elements.panoramaB;
   const currentV = viewers[activeViewer];
@@ -741,7 +747,7 @@ function transitionToPhoto(index, isForward) {
   currentIndex = index;
 
   const heading = getEffectiveHeading(frame, index);
-  const imagePath = FRAMES_BASE + frame.filename;
+  const imagePath = getImagePath(frame);
 
   const nextViewerKey = activeViewer === 'a' ? 'b' : 'a';
   const currentContainer = activeViewer === 'a' ? elements.panoramaA : elements.panoramaB;
@@ -839,7 +845,6 @@ function updatePhotoUI(index, frame) {
 
   updateMapPosition(frame);
   updateActiveMarker(index);
-  loadHeatmapForFrame(frame);
 
   if (editMode) updateEditPanel();
 }
@@ -913,8 +918,6 @@ function initControls() {
       toggleRouteBuilder();
     } else if ((e.key === 'e' || e.key === 'E') && !routeBuilderMode) {
       toggleEditMode();
-    } else if ((e.key === 'h' || e.key === 'H') && !editMode && !routeBuilderMode) {
-      toggleHeatmap();
     } else if (e.key === 's' && editMode && (e.metaKey || e.ctrlKey)) {
       e.preventDefault();
       saveCurrentHeading();
@@ -1248,7 +1251,7 @@ function applyEditedHeading() {
 
 function applyEditedRoll() {
   const frame = frames[currentIndex];
-  const imagePath = FRAMES_BASE + frame.filename;
+  const imagePath = getImagePath(frame);
   const yaw = parseFloat(elements.editYaw.value) || 0;
   const pitch = parseFloat(elements.editPitch.value) || 0;
   const roll = parseFloat(elements.editRoll.value) || 0;
@@ -2413,11 +2416,11 @@ function updatePlaybackUI() {
 }
 
 // ========================================
-// Heatmap Overlay
+// Heatmap Composites (dropdown to swap image source)
 // ========================================
 async function initHeatmapOverlay() {
   try {
-    const resp = await fetch('heatmaps/manifest.json');
+    const resp = await fetch('heatmap-frames/manifest.json');
     if (!resp.ok) return;
     heatmapManifest = await resp.json();
   } catch (_) {
@@ -2426,155 +2429,34 @@ async function initHeatmapOverlay() {
 
   if (!heatmapManifest || !heatmapManifest.participants || heatmapManifest.participants.length === 0) return;
 
-  heatmapParticipant = heatmapManifest.participants[0];
-  heatmapFrameSet = new Set(heatmapManifest.frames[heatmapParticipant] || []);
-
   const optionsHTML = heatmapManifest.participants
     .map(p => `<option value="${p}">${p}</option>`)
     .join('');
 
-  const panelHTML = `
-    <div class="heatmap-panel" id="heatmap-panel">
-      <div class="heatmap-header">
-        <div class="heatmap-title">Gaze Heatmap</div>
-      </div>
-      <div class="heatmap-row">
-        <label>Participant:</label>
-        <select id="heatmap-participant">${optionsHTML}</select>
-      </div>
-      <div class="heatmap-row">
-        <label>Opacity:</label>
-        <input type="range" id="heatmap-opacity" min="0" max="1" step="0.05" value="${heatmapOpacity}">
-      </div>
-      <div class="heatmap-status" id="heatmap-status"></div>
+  const selectHTML = `
+    <div class="heatmap-select-container" id="heatmap-select-container">
+      <select id="heatmap-select" title="View mode">
+        <option value="">Original</option>
+        ${optionsHTML}
+      </select>
     </div>
   `;
-  document.querySelector('.viewer-container').insertAdjacentHTML('beforeend', panelHTML);
+  document.querySelector('.viewer-header').insertAdjacentHTML('beforeend', selectHTML);
 
-  const toggleHTML = `
-    <button class="heatmap-toggle" id="heatmap-toggle" title="Toggle gaze heatmap (H)">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="12" cy="12" r="3"/>
-        <circle cx="12" cy="12" r="7" stroke-dasharray="3 3"/>
-        <circle cx="12" cy="12" r="10" opacity="0.4"/>
-      </svg>
-    </button>
-  `;
-  elements.minimapContainer.insertAdjacentHTML('beforeend', toggleHTML);
+  elements.heatmapSelect = document.getElementById('heatmap-select');
 
-  elements.heatmapPanel = document.getElementById('heatmap-panel');
-  elements.heatmapToggle = document.getElementById('heatmap-toggle');
-  elements.heatmapParticipantSelect = document.getElementById('heatmap-participant');
-  elements.heatmapOpacitySlider = document.getElementById('heatmap-opacity');
-  elements.heatmapStatus = document.getElementById('heatmap-status');
-
-  elements.heatmapToggle.addEventListener('click', toggleHeatmap);
-
-  elements.heatmapParticipantSelect.addEventListener('change', (e) => {
-    heatmapParticipant = e.target.value;
-    heatmapFrameSet = new Set(heatmapManifest.frames[heatmapParticipant] || []);
-    if (heatmapEnabled) loadHeatmapForFrame(frames[currentIndex]);
-  });
-
-  elements.heatmapOpacitySlider.addEventListener('input', (e) => {
-    heatmapOpacity = parseFloat(e.target.value);
-    elements.panoramaHeatmap.style.opacity = heatmapOpacity;
-  });
-}
-
-function toggleHeatmap() {
-  if (!heatmapManifest) return;
-  heatmapEnabled = !heatmapEnabled;
-
-  elements.heatmapPanel.classList.toggle('visible', heatmapEnabled);
-  elements.heatmapToggle.classList.toggle('active', heatmapEnabled);
-
-  if (heatmapEnabled) {
-    loadHeatmapForFrame(frames[currentIndex]);
-  } else {
-    elements.panoramaHeatmap.classList.remove('visible');
-    if (heatmapViewer) {
-      heatmapViewer.destroy();
-      heatmapViewer = null;
+  elements.heatmapSelect.addEventListener('change', (e) => {
+    const value = e.target.value;
+    if (value) {
+      heatmapParticipant = value;
+      heatmapFrameSet = new Set(heatmapManifest.frames[value] || []);
+    } else {
+      heatmapParticipant = null;
+      heatmapFrameSet = null;
     }
-    updateHeatmapStatus('');
-  }
-}
-
-function heatmapKeyForFrame(frame) {
-  if (!frame) return null;
-  return frame.filename.replace(/\.jpg$/i, '');
-}
-
-function loadHeatmapForFrame(frame) {
-  if (!heatmapEnabled || !heatmapManifest || !frame) return;
-
-  const key = heatmapKeyForFrame(frame);
-  if (!key || !heatmapFrameSet.has(key)) {
-    elements.panoramaHeatmap.classList.remove('visible');
-    if (heatmapViewer) {
-      heatmapViewer.destroy();
-      heatmapViewer = null;
-    }
-    updateHeatmapStatus('No gaze data for this frame');
-    return;
-  }
-
-  const heatmapPath = `heatmaps/${heatmapParticipant}/${key}.png`;
-  heatmapLoading = true;
-  updateHeatmapStatus('Loading...');
-
-  if (heatmapViewer) {
-    heatmapViewer.destroy();
-    heatmapViewer = null;
-  }
-
-  const heading = getEffectiveHeading(frame, currentIndex);
-
-  heatmapViewer = pannellum.viewer('panorama-heatmap', {
-    type: 'equirectangular',
-    panorama: heatmapPath,
-    autoLoad: true,
-    showControls: false,
-    mouseZoom: false,
-    keyboardZoom: false,
-    draggable: false,
-    hfov: viewer.getHfov(),
-    minHfov: 50,
-    maxHfov: 120,
-    compass: false,
-    showFullscreenCtrl: false,
-    showZoomCtrl: false,
-    yaw: heading.yaw,
-    pitch: heading.pitch,
-    horizonRoll: heading.roll,
+    preloadCache.clear();
+    loadPhoto(currentIndex, true);
   });
-
-  heatmapViewer.on('load', () => {
-    heatmapLoading = false;
-    elements.panoramaHeatmap.classList.add('visible');
-    elements.panoramaHeatmap.style.opacity = heatmapOpacity;
-    updateHeatmapStatus(`${heatmapParticipant}`);
-  });
-
-  heatmapViewer.on('error', () => {
-    heatmapLoading = false;
-    elements.panoramaHeatmap.classList.remove('visible');
-    updateHeatmapStatus('Failed to load heatmap');
-  });
-}
-
-function syncHeatmapViewer() {
-  if (!heatmapViewer || !heatmapEnabled || heatmapLoading) return;
-  try {
-    heatmapViewer.setYaw(viewer.getYaw(), false);
-    heatmapViewer.setPitch(viewer.getPitch(), false);
-    heatmapViewer.setHfov(viewer.getHfov(), false);
-  } catch (_) {}
-}
-
-function updateHeatmapStatus(text) {
-  if (elements.heatmapStatus) elements.heatmapStatus.textContent = text;
 }
 
 // ========================================
@@ -2636,8 +2518,6 @@ function startConeSync() {
     const baseBearing = frameBearings[currentIndex] || 0;
     const flipOffset = (routePlayback && routeFlippedFrames.has(currentIndex)) ? 180 : 0;
     const coneBearing = baseBearing + flipOffset + (viewerYaw - heading.yaw);
-
-    syncHeatmapViewer();
 
     // Only push an update when the bearing actually changes
     if (lastSyncedBearing !== null && Math.abs(coneBearing - lastSyncedBearing) < 0.5) return;

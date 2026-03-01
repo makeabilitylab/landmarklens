@@ -154,3 +154,47 @@ Connect the Galaxy XR headset via ADB, then from `StudyData/`:
 ./push_routes.sh P00 --clean  # clear device first, then push
 ./push_routes.sh --list       # list available participant sets
 ```
+
+## Generating gaze heatmaps
+
+After collecting eye-tracking data from the VR study, you can generate heatmap composites that overlay gaze density onto the original panorama images.
+
+### Prerequisites
+
+- Eye-gaze CSVs in `study-data/eye-gaze-data/` (exported from the VR app's `EyeGazeLogger`)
+- Python with `opencv-python` and `numpy` installed
+- Original panorama frames in `web/frames/`
+
+### Generate heatmaps
+
+```bash
+# All participants at once
+python script/generate_heatmaps.py study-data/eye-gaze-data/*.csv
+
+# Single participant
+python script/generate_heatmaps.py study-data/eye-gaze-data/p1-good.csv
+
+# Filter to a specific sequence (useful for testing)
+python script/generate_heatmaps.py study-data/eye-gaze-data/p1-good.csv --sequence GS010317
+
+# Preview frame counts without writing files
+python script/generate_heatmaps.py study-data/eye-gaze-data/*.csv --dry-run
+```
+
+Each CSV filename becomes a participant label in the viewer dropdown (e.g., `p1-good.csv` → "p1-good"). Output goes to `study-data/heatmap-frames/<participant>/`, mirroring the `web/frames/` directory structure. A `manifest.json` is written alongside the heatmap folders so the web viewer knows which participants and frames are available.
+
+The script corrects for two coordinate offsets between the VR app's recorded `hitU` and the actual panorama image pixel position:
+1. Unity's sphere UV convention (90° offset)
+2. Per-frame sphere rotation from heading adjustments (including +180° for `_rev` sequences)
+
+### View in the browser
+
+1. Create a symlink so the web server can access the heatmap frames:
+   ```bash
+   ln -s ../study-data/heatmap-frames web/heatmap-frames
+   ```
+2. Start the viewer:
+   ```bash
+   cd web && python -m http.server 3000
+   ```
+3. Open `http://localhost:3000/viewer.html`. A dropdown in the header lets you switch between "Original" and any participant's heatmap overlay.

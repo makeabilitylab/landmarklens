@@ -219,7 +219,10 @@ study-materials/**
 !study-materials/ParticipantSets/*/Routes/*/
 !study-materials/ParticipantSets/*/Routes/*/route.json
 
-study-data/
+study-data/*
+!study-data/eye-gaze-data/
+study-data/eye-gaze-data/*
+!study-data/eye-gaze-data/clean/
 .DS_Store
 .DS_Store
 web/.DS_Store

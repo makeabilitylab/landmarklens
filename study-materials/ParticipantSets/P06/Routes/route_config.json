@@ -1,0 +1,15 @@
+{
+  "participant_id": "P06",
+  "routes": [
+    "practice",
+    "koenji_c",
+    "koenji_u6",
+    "kinshicho_u6",
+    "kinshicho_c",
+    "ginza_c",
+    "ginza_u6",
+    "nezu_u6",
+    "nezu_c",
+    "freenav"
+  ]
+}

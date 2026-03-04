@@ -1,16 +1,14 @@
 # Geodata
 
-Structured spatial database linking panorama frames, walking routes, and (future) participant data. Generated from `web/data.json` and the route files in `study-materials/`.
+Structured spatial database linking panorama frames, walking routes, and participant data (todo).
 
-## Regenerating
+## Updates
 
-After updating `data.json` (e.g. QGIS edit → `import_gps.py` → `redistribute_gps.py`), re-run:
+After updating `data.json` re-run:
 
 ```
 python script/build_geodata.py
 ```
-
-This rebuilds both GeoJSON files. Coordinates are always sourced from `data.json`, so GPS corrections propagate automatically.
 
 ---
 
@@ -117,6 +115,5 @@ panos.geojson              routes.geojson             participants (future)
 
 ## Notes
 
-- **P00 is excluded** — pilot participant with old naming conventions (`ginza_common` instead of `ginza_c`).
 - **Coordinates:** `lat`/`lon` in panos are road-snapped (Valhalla) or manually corrected (QGIS). The `lat_original`/`lon_original` fields preserve the raw GoPro GPS for reference.
 - **Turn warnings:** Marked 2 frames before each junction exit frame, matching the VR app behavior where participants see "left/right turn ahead".

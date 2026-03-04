@@ -164,6 +164,22 @@ def get_frame_number(frame: Dict) -> str:
     return stem.split("_")[-1] if "_" in stem else stem
 
 
+def crosses_split(num_a: str, num_b: str, splits: List[str]) -> bool:
+    """Check if two frame numbers from the same source are on different sides of any split."""
+    for sp in splits:
+        if (num_a <= sp) != (num_b <= sp):
+            return True
+    return False
+
+
+def find_split_between(num_a: str, num_b: str, splits: List[str]) -> Optional[str]:
+    """Return the split point that separates two frame numbers, or None."""
+    for sp in splits:
+        if (num_a <= sp) != (num_b <= sp):
+            return sp
+    return None
+
+
 def split_into_segments(
     route_indices: List[int],
     frames: List[Dict],
@@ -182,14 +198,15 @@ def split_into_segments(
             segments.append(current)
             current = [idx]
             continue
-        # Same source: break if there's a split after the last frame in current
-        last_idx = current[-1]
-        last_frame_num = get_frame_number(frames[last_idx])
-        if last_frame_num in sequence_splits.get(src, []):
-            segments.append(current)
-            current = [idx]
-        else:
-            current.append(idx)
+        src_splits = sequence_splits.get(src, [])
+        if src_splits:
+            last_num = get_frame_number(frames[current[-1]])
+            curr_num = get_frame_number(f_curr)
+            if crosses_split(last_num, curr_num, src_splits):
+                segments.append(current)
+                current = [idx]
+                continue
+        current.append(idx)
     segments.append(current)
     return segments
 
@@ -321,6 +338,7 @@ def main():
     with open(args.data) as f:
         data_full = json.load(f)
     sequence_splits = data_full.get("sequence_splits", {})
+    split_turn_overrides = data_full.get("split_turn_overrides", {})
 
     # ── Split into segments ──────────────────────────────────────────
     segments = split_into_segments(route_indices, frames, sequence_splits)
@@ -421,6 +439,23 @@ def main():
 
         # Use pre-computed junction data if available, otherwise compute
         pre = precomputed.get((last_idx_a, first_idx_b))
+
+        # Check for turn angle override from split_sequence.py
+        # Look up by the split point between the two frames (works regardless of direction)
+        split_override = None
+        if frame_a["source"] == frame_b["source"]:
+            sp = find_split_between(
+                get_frame_number(frame_a), get_frame_number(frame_b),
+                sequence_splits.get(frame_a["source"], []),
+            )
+            if sp:
+                split_override_key = f"{frame_a['source']}_{sp}"
+                split_override = split_turn_overrides.get(split_override_key)
+        else:
+            # Cross-source: check override keyed on from-frame
+            split_override_key = f"{frame_a['source']}_{get_frame_number(frame_a)}"
+            split_override = split_turn_overrides.get(split_override_key)
+
         if pre:
             turn_angle = pre["turnAngle"]
             from_bearing = pre["fromBearing"]
@@ -437,6 +472,10 @@ def main():
             from_bearing = round(bearing_a, 1)
             to_bearing = round(bearing_b, 1)
             turn_angle = round((to_bearing - from_bearing + 540) % 360 - 180, 1)
+
+        if split_override is not None:
+            turn_angle = split_override
+            to_bearing = round((from_bearing + turn_angle + 360) % 360, 1)
 
         turn_dir = "right" if turn_angle >= 0 else "left"
         opposite_dir = "left" if turn_dir == "right" else "right"

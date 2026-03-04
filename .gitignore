@@ -210,7 +210,15 @@ data/
 QGIS/
 exports/
 
-study-materials/
+# study-materials: ignore everything except route metadata (for collaborators)
+study-materials/**
+!study-materials/ParticipantSets/
+!study-materials/ParticipantSets/*/
+!study-materials/ParticipantSets/*/Routes/
+!study-materials/ParticipantSets/*/Routes/route_config.json
+!study-materials/ParticipantSets/*/Routes/*/
+!study-materials/ParticipantSets/*/Routes/*/route.json
+
 study-data/
 .DS_Store
 .DS_Store

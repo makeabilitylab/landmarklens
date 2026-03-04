@@ -65,6 +65,7 @@ const ROUTE_STORAGE_KEY = 'tokyo-streetview-routes';
 
 // Sequence splits (same-source segments from script/split_sequence.py)
 let sequenceSplits = {};
+let splitTurnOverrides = {};
 
 // Lasso state
 let lassoActive = false;
@@ -156,6 +157,7 @@ async function init() {
     const allData = await resp.json();
 
     sequenceSplits = allData.sequence_splits || {};
+    splitTurnOverrides = allData.split_turn_overrides || {};
 
     frames = allData.frames
       .filter(f => f.neighborhood === neighborhoodId)
@@ -2343,6 +2345,13 @@ function computeJunctionTurn(routeIndices, position, newPos, span = 8) {
   while (turn > 180) turn -= 360;
   while (turn < -180) turn += 360;
 
+  // Check for turn angle override from split_sequence.py
+  const curFrame = frames[curGlobal];
+  const overrideKey = curFrame.source + '_' + getFrameNumberFromFilename(curFrame.filename);
+  if (splitTurnOverrides[overrideKey] !== undefined) {
+    turn = splitTurnOverrides[overrideKey];
+  }
+
   return { curGlobal, nextGlobal, curDir, nextDir, turn, backPos, aheadPos };
 }
 
@@ -2355,9 +2364,9 @@ function navigateRoutePlayback(delta) {
 
   const curGlobal = routePlayback.indices[routePlayback.position];
   const nextGlobal = routePlayback.indices[newPos];
-  const crossSource = frames[curGlobal].source !== frames[nextGlobal].source;
+  const crossSegment = getSegmentKey(curGlobal) !== getSegmentKey(nextGlobal);
 
-  if (crossSource) {
+  if (crossSegment) {
     const junction = computeJunctionTurn(routePlayback.indices, routePlayback.position, newPos);
     const startYaw = viewer.getYaw();
     const targetYaw = startYaw + junction.turn;

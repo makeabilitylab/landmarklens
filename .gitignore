@@ -223,6 +223,7 @@ study-data/*
 !study-data/eye-gaze-data/
 study-data/eye-gaze-data/*
 !study-data/eye-gaze-data/clean/
+study-data/eye-gaze-data/clean/_archive/
 .DS_Store
 .DS_Store
 web/.DS_Store

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaze Heatmap Viewer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="header-left">
+        <h1 class="title">Gaze Heatmap Viewer</h1>
+        <select id="route-select" class="route-select" title="Select route"></select>
+      </div>
+      <div class="header-center">
+        <button class="nav-btn" id="prev-btn" title="Previous frame (←)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <span class="frame-counter">
+          <input type="number" id="frame-input" class="frame-input" min="1" value="1">
+          <span id="frame-total" class="frame-total">/ 1</span>
+        </span>
+        <button class="nav-btn" id="next-btn" title="Next frame (→)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+      <div class="header-right">
+        <span class="frame-id" id="frame-id"></span>
+      </div>
+    </header>
+
+    <div class="main">
+      <div class="panorama-wrapper">
+        <div id="panorama" class="panorama"></div>
+        <div class="loading-overlay" id="loading-overlay">
+          <div class="spinner"></div>
+        </div>
+      </div>
+
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-section">
+          <div class="group-header good-header">
+            <label class="group-toggle">
+              <input type="checkbox" id="toggle-good">
+              <span class="group-label">Good Navigators</span>
+            </label>
+          </div>
+          <div class="pid-grid" id="good-participants"></div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="group-header poor-header">
+            <label class="group-toggle">
+              <input type="checkbox" id="toggle-poor">
+              <span class="group-label">Poor Navigators</span>
+            </label>
+          </div>
+          <div class="pid-grid" id="poor-participants"></div>
+        </div>
+
+        <div class="sidebar-section opacity-section">
+          <label class="opacity-label">
+            Marker Size
+            <span id="opacity-value" class="opacity-value">70%</span>
+          </label>
+          <input type="range" id="opacity-slider" class="opacity-slider" min="20" max="150" value="70">
+        </div>
+
+        <div class="sidebar-section stats-section" id="stats-section">
+          <div class="stat-row"><span>Selected:</span> <span id="stat-selected">0</span></div>
+          <div class="stat-row"><span>Gaze points:</span> <span id="stat-points">0</span></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+  <script src="viewer.js"></script>
+</body>
+</html>

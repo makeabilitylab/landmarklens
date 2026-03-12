@@ -41,7 +41,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 FRAMES_DIR = BASE_DIR / "web" / "frames"
 DATA_JSON = BASE_DIR / "web" / "data.json"
 OUTPUT_DIR = BASE_DIR / "study-data" / "heatmap-frames"
+HEATMAP_ARRAY_DIR = BASE_DIR / "study-data" / "heatmap-arrays"
+COMBINED_ARRAY_DIR = BASE_DIR / "study-data" / "heatmap-arrays-combined"
+COMBINED_OUTPUT_DIR = BASE_DIR / "study-data" / "heatmap-frames-combined"
 MANIFEST_PATH = OUTPUT_DIR / "manifest.json"
+GAZE_CSV_DIR = BASE_DIR / "study-data" / "eye-gaze-data" / "clean"
 
 MIN_GAZE_POINTS = 3
 HEATMAP_SCALE = 0.25  # compute heatmap at quarter res, upscale for compositing
@@ -113,7 +117,7 @@ def load_gaze_data(
     with open(csv_path, newline="") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            if row.get("isTracked") != "1":
+            if row.get("isTracked") not in ("1", "1.0"):
                 continue
             photo_path = row.get("photoPath", "").strip()
             if not photo_path:
@@ -182,6 +186,100 @@ def generate_heatmap(
         heatmap /= peak
 
     return heatmap
+
+
+# ── In-memory API ─────────────────────────────────────────────────────
+
+def load_participant_gaze(participant: str) -> dict[str, list[tuple[float, float]]]:
+    """Load corrected gaze data for a participant, ready for heatmap generation.
+
+    Returns {frame_id: [(u, v), ...]} where frame_id is like
+    'GS010317/GS010317_0004'.
+    """
+    csv_path = GAZE_CSV_DIR / f"{participant}.csv"
+    if not csv_path.exists():
+        raise FileNotFoundError(f"Gaze CSV not found: {csv_path}")
+    yaw_lookup = load_yaw_lookup()
+    return load_gaze_data(csv_path, yaw_lookup)
+
+
+def get_heatmap(
+    participant: str,
+    frame_id: str,
+    width: int = 1920,
+    height: int = 960,
+    sigma: float | None = None,
+    gaze_cache: dict | None = None,
+) -> np.ndarray | None:
+    """Return a heatmap array for a single frame, ready for model training.
+
+    Args:
+        participant: e.g. 'p01-good'
+        frame_id: e.g. 'GS010317/GS010317_0004'
+        width: heatmap width (default 1920 = 7680 * 0.25)
+        height: heatmap height (default 960 = 3840 * 0.25)
+        sigma: Gaussian blur sigma (default: width * 0.015)
+        gaze_cache: pre-loaded gaze dict from load_participant_gaze() to
+            avoid re-parsing CSV on every call. If None, loads from CSV.
+
+    Returns:
+        Normalised float32 heatmap (0-1), shape (height, width), or None
+        if the frame has fewer than MIN_GAZE_POINTS gaze samples.
+    """
+    if gaze_cache is None:
+        gaze_cache = load_participant_gaze(participant)
+
+    uv_points = gaze_cache.get(frame_id)
+    if uv_points is None or len(uv_points) < MIN_GAZE_POINTS:
+        return None
+
+    if sigma is None:
+        sigma = width * 0.015
+
+    return generate_heatmap(uv_points, width, height, sigma)
+
+
+def get_combined_heatmap(
+    participants: list[str],
+    frame_id: str,
+    width: int = 1920,
+    height: int = 960,
+    sigma: float | None = None,
+    gaze_caches: dict[str, dict] | None = None,
+) -> np.ndarray | None:
+    """Return a heatmap combining gaze data from multiple participants.
+
+    Args:
+        participants: e.g. ['p01-good', 'p02-good', 'p10-poor']
+        frame_id: e.g. 'GS010317/GS010317_0004'
+        width: heatmap width (default 1920 = 7680 * 0.25)
+        height: heatmap height (default 960 = 3840 * 0.25)
+        sigma: Gaussian blur sigma (default: width * 0.015)
+        gaze_caches: {participant: gaze_dict} pre-loaded via
+            load_participant_gaze(). If None, loads from CSV for each.
+
+    Returns:
+        Normalised float32 heatmap (0-1), shape (height, width), or None
+        if the frame has fewer than MIN_GAZE_POINTS total gaze samples.
+    """
+    all_points: list[tuple[float, float]] = []
+    for p in participants:
+        if gaze_caches is not None:
+            gaze = gaze_caches.get(p)
+            if gaze is None:
+                gaze = load_participant_gaze(p)
+        else:
+            gaze = load_participant_gaze(p)
+        pts = gaze.get(frame_id, [])
+        all_points.extend(pts)
+
+    if len(all_points) < MIN_GAZE_POINTS:
+        return None
+
+    if sigma is None:
+        sigma = width * 0.015
+
+    return generate_heatmap(all_points, width, height, sigma)
 
 
 # ── Compositing ────────────────────────────────────────────────────────
@@ -272,14 +370,19 @@ def process_one(
     dry_run: bool,
     limit: int | None,
     sequence: str | None = None,
+    heatmaps_only: bool = False,
 ):
+    base_out_dir = HEATMAP_ARRAY_DIR if heatmaps_only else OUTPUT_DIR
+
     print(f"\n{'=' * 60}")
-    print(f"  Generate Heatmap Composites")
+    mode_label = "Heatmap Arrays (.npy)" if heatmaps_only else "Heatmap Composites"
+    print(f"  Generate {mode_label}")
     print(f"{'=' * 60}")
     print(f"  CSV:          {csv_path}")
     print(f"  Participant:  {participant}")
-    print(f"  Frames dir:   {FRAMES_DIR}")
-    print(f"  Output dir:   {OUTPUT_DIR / participant}")
+    if not heatmaps_only:
+        print(f"  Frames dir:   {FRAMES_DIR}")
+    print(f"  Output dir:   {base_out_dir / participant}")
     if sequence:
         print(f"  Sequence:     {sequence}")
     if limit:
@@ -313,7 +416,7 @@ def process_one(
     if limit:
         sorted_frames = sorted_frames[:limit]
 
-    out_dir = OUTPUT_DIR / participant
+    out_dir = base_out_dir / participant
     start = time.time()
     workers = min(os.cpu_count() or 1, len(sorted_frames))
     print(f"  Workers:      {workers}")
@@ -325,11 +428,14 @@ def process_one(
     generated = []
     futures_map = {}
 
+    worker_fn = _process_frame_heatmap_only if heatmaps_only else _process_frame
+
     with ProcessPoolExecutor(max_workers=workers) as pool:
         for web_path, uv_points in sorted_frames:
-            fut = pool.submit(
-                _process_frame, web_path, uv_points, str(FRAMES_DIR), str(out_dir),
-            )
+            if heatmaps_only:
+                fut = pool.submit(worker_fn, web_path, uv_points, str(out_dir))
+            else:
+                fut = pool.submit(worker_fn, web_path, uv_points, str(FRAMES_DIR), str(out_dir))
             futures_map[fut] = (web_path, len(uv_points))
 
         done_count = 0
@@ -348,7 +454,8 @@ def process_one(
                 )
 
     elapsed = time.time() - start
-    print(f"\n  Done: {len(generated)} composites in {elapsed:.1f}s")
+    label = "heatmaps" if heatmaps_only else "composites"
+    print(f"\n  Done: {len(generated)} {label} in {elapsed:.1f}s")
     if generated:
         print(f"  Output: {out_dir}")
 
@@ -388,6 +495,128 @@ def _process_frame(
     return True, f"{web_path} ({len(uv_points)} pts, {pano_w}x{pano_h})"
 
 
+def _process_frame_heatmap_only(
+    web_path: str,
+    uv_points: list[tuple[float, float]],
+    out_dir: str,
+    width: int = 1920,
+    height: int = 960,
+) -> tuple[bool, str]:
+    """Generate and save a raw heatmap as .npy (runs in a worker process)."""
+    sigma = width * 0.015
+    heatmap = generate_heatmap(uv_points, width, height, sigma)
+
+    out_file = Path(out_dir) / f"{web_path}.npy"
+    out_file.parent.mkdir(parents=True, exist_ok=True)
+    np.save(str(out_file), heatmap)
+
+    return True, f"{web_path} ({len(uv_points)} pts, {width}x{height})"
+
+
+def process_combined(
+    csv_paths: list[Path],
+    yaw_lookup: dict[str, float],
+    dry_run: bool,
+    limit: int | None,
+    sequence: str | None = None,
+    heatmaps_only: bool = False,
+) -> list[str]:
+    """Merge gaze data from all CSVs and generate one heatmap per frame."""
+    participants = [p.stem for p in csv_paths]
+
+    out_dir = COMBINED_ARRAY_DIR if heatmaps_only else COMBINED_OUTPUT_DIR
+    mode_label = "Combined Heatmap Arrays (.npy)" if heatmaps_only else "Combined Heatmap Composites"
+
+    print(f"\n{'=' * 60}")
+    print(f"  Generate {mode_label}")
+    print(f"{'=' * 60}")
+    print(f"  Participants: {', '.join(participants)}")
+    if not heatmaps_only:
+        print(f"  Frames dir:   {FRAMES_DIR}")
+    print(f"  Output dir:   {out_dir}")
+    if sequence:
+        print(f"  Sequence:     {sequence}")
+    if limit:
+        print(f"  Limit:        {limit} frame(s)")
+    if dry_run:
+        print(f"  Mode:         DRY RUN")
+    print(f"{'=' * 60}")
+
+    # Merge gaze points across all participants per frame
+    merged: dict[str, list[tuple[float, float]]] = defaultdict(list)
+    for csv_path in csv_paths:
+        gaze_data = load_gaze_data(csv_path, yaw_lookup)
+        for frame_id, pts in gaze_data.items():
+            merged[frame_id].extend(pts)
+
+    print(f"\n  Frames with gaze data: {len(merged)}")
+
+    if sequence:
+        merged = {k: v for k, v in merged.items() if k.startswith(sequence + "/")}
+
+    skipped = sum(1 for pts in merged.values() if len(pts) < MIN_GAZE_POINTS)
+    eligible = {k: v for k, v in merged.items() if len(v) >= MIN_GAZE_POINTS}
+    print(f"  Eligible (>={MIN_GAZE_POINTS} points): {len(eligible)}")
+    if skipped:
+        print(f"  Skipped (<{MIN_GAZE_POINTS} points): {skipped}")
+
+    total_points = sum(len(v) for v in eligible.values())
+    print(f"  Total gaze points: {total_points}")
+
+    if not eligible:
+        print("\n  No frames to process.")
+        return []
+
+    sorted_frames = sorted(eligible.items(), key=lambda x: len(x[1]), reverse=True)
+
+    if limit:
+        sorted_frames = sorted_frames[:limit]
+
+    start = time.time()
+    workers = min(os.cpu_count() or 1, len(sorted_frames))
+    print(f"  Workers:      {workers}")
+
+    if dry_run:
+        print(f"\n  Done (dry run): {len(sorted_frames)} frames eligible")
+        return [wp for wp, _ in sorted_frames]
+
+    generated = []
+    futures_map = {}
+
+    worker_fn = _process_frame_heatmap_only if heatmaps_only else _process_frame
+
+    with ProcessPoolExecutor(max_workers=workers) as pool:
+        for web_path, uv_points in sorted_frames:
+            if heatmaps_only:
+                fut = pool.submit(worker_fn, web_path, uv_points, str(out_dir))
+            else:
+                fut = pool.submit(worker_fn, web_path, uv_points, str(FRAMES_DIR), str(out_dir))
+            futures_map[fut] = (web_path, len(uv_points))
+
+        done_count = 0
+        for fut in as_completed(futures_map):
+            web_path, n_pts = futures_map[fut]
+            done_count += 1
+            ok, msg = fut.result()
+            if ok:
+                generated.append(web_path)
+            if not ok or done_count % 50 == 0 or done_count == len(futures_map):
+                elapsed = time.time() - start
+                rate = done_count / elapsed if elapsed > 0 else 0
+                print(
+                    f"  [{done_count}/{len(futures_map)}] {rate:.1f} frames/s"
+                    f"  | {msg}"
+                )
+
+    elapsed = time.time() - start
+    label = "heatmaps" if heatmaps_only else "composites"
+    print(f"\n  Done: {len(generated)} combined {label} in {elapsed:.1f}s")
+    if generated:
+        print(f"  Output: {out_dir}")
+
+    return generated
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Generate gaze heatmap composites overlaid on panorama images."
@@ -408,12 +637,21 @@ def main():
         "--dry-run", action="store_true",
         help="Preview without writing files",
     )
+    parser.add_argument(
+        "--heatmaps-only", action="store_true",
+        help="Save raw heatmap arrays as .npy files (no panorama compositing)",
+    )
+    parser.add_argument(
+        "--combined", action="store_true",
+        help="Merge gaze data across all CSVs and generate one combined heatmap per frame",
+    )
     args = parser.parse_args()
 
-    manifest = load_manifest()
     yaw_lookup = load_yaw_lookup()
     print(f"  Yaw lookup: {len(yaw_lookup)} frames loaded from data.json")
 
+    # Resolve all CSV paths upfront
+    csv_paths: list[Path] = []
     for csv_file in args.csv_files:
         csv_path = Path(csv_file)
         if not csv_path.is_absolute():
@@ -421,10 +659,18 @@ def main():
         if not csv_path.exists():
             print(f"Error: {csv_path} not found")
             sys.exit(1)
+        csv_paths.append(csv_path)
 
+    if args.combined:
+        process_combined(csv_paths, yaw_lookup, args.dry_run, args.limit, args.sequence, args.heatmaps_only)
+        return
+
+    manifest = load_manifest()
+
+    for csv_path in csv_paths:
         participant = csv_path.stem
 
-        generated = process_one(csv_path, participant, yaw_lookup, args.dry_run, args.limit, args.sequence)
+        generated = process_one(csv_path, participant, yaw_lookup, args.dry_run, args.limit, args.sequence, args.heatmaps_only)
 
         if not args.dry_run and generated:
             if participant not in manifest["participants"]:

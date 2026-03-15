@@ -1,0 +1,30 @@
+---
+description: Conventions for working with VR eye-tracking study data
+globs: study-data/**
+alwaysApply: false
+---
+
+# Study Data Conventions
+
+## Timestamps
+
+Always use the `timestamp` column (ISO datetime) for time calculations, **not** `timestampMs`.
+
+The `timestampMs` field is a session clock that resets to 0 if the VR headset restarts mid-session. The `timestamp` column records actual wall-clock time and is reliable across restarts.
+
+```python
+# BAD — timestampMs resets on headset restart
+duration_ms = df['timestampMs'].max() - df['timestampMs'].min()
+
+# GOOD — actual datetime is reliable
+df['timestamp_dt'] = pd.to_datetime(df['timestamp'])
+duration_s = (df['timestamp_dt'].max() - df['timestamp_dt'].min()).total_seconds()
+```
+
+## Participant Pairing
+
+Participants are paired by route: p01/p11, p02/p12, ..., p10/p20. Each pair walks the same routes. The `good` group is p01–p10, `poor` is p11–p20.
+
+## Freenav Route
+
+The `freenav` route_id does not appear in `routes.geojson`. Match it to its original route by finding the route with the most frame overlap in the participant's data.

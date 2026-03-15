@@ -14,6 +14,8 @@ The VLM pipeline takes sequences of panoramic street images and asks Gemini to i
 
 Panoramas are captured by a 360 camera that has an arbitrary forward direction. Before sending images to the VLM, each panorama is **rotated** so the walking direction is centered in the image. This uses the same `rotate_panorama` function from `models/dataloader.py` that the gaze heatmap pipeline uses, ensuring coordinate consistency. For reverse-direction segments, an additional 180-degree offset is applied.
 
+At junctions, an additional rotation is applied to center the **turn direction** in the image. This uses the `turn_angle` field from the route JSON and is only applied when the previous frame (by `frame_order` within the segment) had `is_turn_warning` set to `true`. The rotation is a second `np.roll` applied after the walking-direction rotation.
+
 ### Batching and Prompt Templating
 
 The input JSON is organized by segment (e.g., `{"segment1": [frames...], "segment2": [frames...]}`). Each segment is processed independently — batches never span segment boundaries. Within each segment, frames are sorted by `frame_order` and sent to Gemini in consecutive windows of `--window-size` (default 5). The last batch in a segment may be smaller than the window size.

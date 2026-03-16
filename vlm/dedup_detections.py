@@ -20,7 +20,6 @@ import argparse
 import copy
 import dataclasses
 import json
-import sys
 import warnings
 from collections import defaultdict
 from pathlib import Path
@@ -30,10 +29,7 @@ import torch
 import torch.nn.functional as F
 from PIL import Image
 
-# Project root — import rotate_panorama the same way run_gemini.py does
-BASE_DIR = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(BASE_DIR / "models"))
-from dataloader import _load_orientation_lookup, rotate_panorama
+from geo_utils import load_orientation_lookup, rotate_panorama
 
 
 # ---------------------------------------------------------------------------
@@ -468,7 +464,7 @@ def main():
 
     # Phase 2: Crop Detections
     print("\n[Phase 2] Cropping detections from panoramas...")
-    orientation_lookup = _load_orientation_lookup()
+    orientation_lookup = load_orientation_lookup()
     crops = crop_all_detections(detections, orientation_lookup, buffer=args.buffer)
     print(f"  Cropped {len(crops)} regions")
 

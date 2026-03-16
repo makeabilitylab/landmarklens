@@ -227,3 +227,6 @@ study-data/eye-gaze-data/clean/_archive/
 .DS_Store
 .DS_Store
 web/.DS_Store
+
+key.json
+web/.DS_Store

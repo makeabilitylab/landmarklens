@@ -20,7 +20,6 @@ import io
 import json
 import os
 import random
-import sys
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -32,12 +31,7 @@ from google import genai
 from google.genai import types
 
 
-# Project root
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-# Add models/ to path for rotate_panorama
-sys.path.insert(0, str(BASE_DIR / "models"))
-from dataloader import _load_orientation_lookup, rotate_panorama
+from geo_utils import load_orientation_lookup, rotate_panorama
 
 
 def rotate_and_encode(pano_path, frame_stem, orientation_lookup, is_reverse,
@@ -182,9 +176,6 @@ def process_batch(client, batch, orientation_lookup, system_prompt_template,
             max_output_tokens=65536,
             response_mime_type="application/json",
             response_schema=build_response_schema(n_images),
-            thinking_config=types.ThinkingConfig(
-                thinking_level=types.ThinkingLevel.LOW
-            ),
         ),
     )
 
@@ -285,7 +276,7 @@ def main():
     print(f"Processing {total_frames} frames across {len(segments)} segments{crop_msg}")
 
     # Load orientation lookup for panorama rotation
-    orientation_lookup = _load_orientation_lookup()
+    orientation_lookup = load_orientation_lookup()
     print(f"Orientation lookup: {len(orientation_lookup)} frames")
 
     # Load prompt template (contains $NUM_IMAGES placeholder)

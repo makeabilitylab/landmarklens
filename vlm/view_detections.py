@@ -7,8 +7,8 @@ Usage:
         --detections output/kinshicho_c \
         --image-dir kinshicho_c
 
-Images are rotated on-the-fly using the same rotate_panorama function from
-models/dataloader.py, so bounding boxes align with the displayed image.
+Images are rotated on-the-fly using rotate_panorama from geo_utils.py,
+so bounding boxes align with the displayed image.
 Frame ordering comes from the input route JSON (sorted by segment then frame_order).
 
 Navigate with left/right arrow keys or the on-screen buttons.
@@ -28,10 +28,7 @@ from urllib.parse import parse_qs, urlparse
 import numpy as np
 from PIL import Image
 
-# Setup imports from models/
-BASE_DIR = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(BASE_DIR / "models"))
-from dataloader import _load_orientation_lookup, rotate_panorama
+from geo_utils import load_orientation_lookup, rotate_panorama
 
 
 def load_ordered_frames(input_json):
@@ -340,7 +337,7 @@ def main():
     args = parser.parse_args()
 
     # Load orientation data for rotation
-    orientation_lookup = _load_orientation_lookup()
+    orientation_lookup = load_orientation_lookup()
     if not orientation_lookup:
         print("Warning: no orientation data found, images will not be rotated")
 

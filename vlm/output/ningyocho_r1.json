@@ -1,0 +1,1474 @@
+{
+  "metadata": {
+    "window_size": 5,
+    "crop_width": null
+  },
+  "batches": {
+    "segment1_b0": {
+      "segment_id": "segment1",
+      "batch_index": 0,
+      "frame_ids": [
+        "GS010417_0000",
+        "GS010417_0002",
+        "GS010417_0004",
+        "GS010417_0007",
+        "GS010417_0010"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010417_0000": [
+          {
+            "bbox": [
+              248,
+              782,
+              544,
+              928
+            ],
+            "description": "Bright red awning of the TIARA Bar & Lounge, providing a strong color contrast on the right side of the street.",
+            "landmark_score": 0.7
+          },
+          {
+            "bbox": [
+              522,
+              546,
+              750,
+              590
+            ],
+            "description": "Blue Asahi vending machine located at the corner of the intersection.",
+            "landmark_score": 0.5
+          }
+        ],
+        "GS010417_0002": [
+          {
+            "bbox": [
+              546,
+              808,
+              754,
+              896
+            ],
+            "description": "Bright blue drink vending machine standing out against the beige building on the right.",
+            "landmark_score": 0.6
+          },
+          {
+            "bbox": [
+              340,
+              489,
+              406,
+              507
+            ],
+            "description": "Vertical black sign with white Japanese characters, protruding from the beige building.",
+            "landmark_score": 0.6
+          }
+        ],
+        "GS010417_0004": [
+          {
+            "bbox": [
+              374,
+              534,
+              472,
+              752
+            ],
+            "description": "Dark blue awning with white Japanese characters over the storefront on the right.",
+            "landmark_score": 0.65
+          },
+          {
+            "bbox": [
+              254,
+              522,
+              362,
+              542
+            ],
+            "description": "Vertical black sign with white Japanese characters, clearly visible on the corner building.",
+            "landmark_score": 0.65
+          }
+        ],
+        "GS010417_0007": [
+          {
+            "bbox": [
+              346,
+              510,
+              492,
+              586
+            ],
+            "description": "White awning over the storefront on the right side of the street.",
+            "landmark_score": 0.5
+          },
+          {
+            "bbox": [
+              466,
+              328,
+              500,
+              400
+            ],
+            "description": "White awning over the storefront on the left side of the street.",
+            "landmark_score": 0.5
+          }
+        ],
+        "GS010417_0010": [
+          {
+            "bbox": [
+              32,
+              522,
+              780,
+              910
+            ],
+            "description": "Distinctive curved building facade, featuring a sharp contrast between white tiles on the upper half and dark grey bricks on the lower half.",
+            "landmark_score": 0.85
+          },
+          {
+            "bbox": [
+              494,
+              206,
+              636,
+              370
+            ],
+            "description": "Closed storefront with a wide corrugated metal shutter on the left side of the street.",
+            "landmark_score": 0.4
+          }
+        ]
+      }
+    },
+    "segment1_b1": {
+      "segment_id": "segment1",
+      "batch_index": 1,
+      "frame_ids": [
+        "GS010417_0012",
+        "GS010417_0016",
+        "GS010417_0018",
+        "GS010417_0020",
+        "GS010417_0025"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010417_0012": [
+          {
+            "bbox": [
+              335,
+              270,
+              500,
+              410
+            ],
+            "description": "Traditional two-story wooden building with a dark fence \u2014 its classic architecture contrasts sharply with the surrounding modern concrete buildings.",
+            "landmark_score": 0.75
+          }
+        ],
+        "GS010417_0016": [
+          {
+            "bbox": [
+              185,
+              505,
+              760,
+              925
+            ],
+            "description": "Large, dark, polished stone facade of the corner building \u2014 the smooth, reflective surface creates a massive and distinct visual anchor on the right side of the street.",
+            "landmark_score": 0.65
+          }
+        ],
+        "GS010417_0018": [
+          {
+            "bbox": [
+              50,
+              185,
+              605,
+              400
+            ],
+            "description": "Modern building facade featuring prominent vertical slats \u2014 the repetitive linear texture stands out against the smoother neighboring structures.",
+            "landmark_score": 0.6
+          }
+        ],
+        "GS010417_0020": [
+          {
+            "bbox": [
+              425,
+              480,
+              520,
+              515
+            ],
+            "description": "Bright red building facade visible down the street \u2014 its vivid color provides a strong, unmistakable focal point directly in the walking path.",
+            "landmark_score": 0.8
+          }
+        ],
+        "GS010417_0025": [
+          {
+            "bbox": [
+              390,
+              240,
+              545,
+              310
+            ],
+            "description": "Bright red building on the corner \u2014 the vivid, solid red exterior makes it a highly recognizable and memorable landmark at the intersection.",
+            "landmark_score": 0.85
+          },
+          {
+            "bbox": [
+              265,
+              365,
+              620,
+              425
+            ],
+            "description": "Tall, dark utility pole with a distinctive angled arm extending over the street \u2014 it stands prominently as a vertical marker at the intersection.",
+            "landmark_score": 0.55
+          }
+        ]
+      }
+    },
+    "segment2_b0": {
+      "segment_id": "segment2",
+      "batch_index": 0,
+      "frame_ids": [
+        "GS010418_0000",
+        "GS010418_0002",
+        "GS010418_0005",
+        "GS010418_0008",
+        "GS010418_0010"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010418_0000": [
+          {
+            "bbox": [
+              380,
+              240,
+              540,
+              305
+            ],
+            "description": "Red-painted facade of the low-rise building on the left \u2014 the vibrant red color stands out strongly among the mostly neutral-toned surrounding structures.",
+            "landmark_score": 0.65
+          },
+          {
+            "bbox": [
+              310,
+              520,
+              670,
+              730
+            ],
+            "description": "Dark stone ground-floor facade of the large curved building on the right \u2014 the solid, dark material contrasts sharply with the lighter upper floors, anchoring the corner.",
+            "landmark_score": 0.6
+          }
+        ],
+        "GS010418_0002": [
+          {
+            "bbox": [
+              235,
+              375,
+              295,
+              425
+            ],
+            "description": "Circular red fire hydrant sign (\u6d88\u706b\u6813) mounted on a tall pole \u2014 its bright red color stands out clearly against the sky and surrounding streetscape.",
+            "landmark_score": 0.55
+          }
+        ],
+        "GS010418_0005": [
+          {
+            "bbox": [
+              35,
+              505,
+              475,
+              625
+            ],
+            "description": "Curved, metallic-tiled facade of the building on the right \u2014 the smooth, sweeping shape and reflective surface make it a visually distinct architectural feature.",
+            "landmark_score": 0.6
+          }
+        ],
+        "GS010418_0008": [
+          {
+            "bbox": [
+              415,
+              510,
+              490,
+              645
+            ],
+            "description": "Bright green awning above a ground-floor storefront \u2014 the solid block of vibrant color provides a strong visual contrast to the white tiled building.",
+            "landmark_score": 0.65
+          },
+          {
+            "bbox": [
+              420,
+              140,
+              850,
+              330
+            ],
+            "description": "Large, dense bush with red flowers situated on the left sidewalk \u2014 it provides a distinct, colorful patch of greenery that contrasts with the urban paving.",
+            "landmark_score": 0.5
+          }
+        ],
+        "GS010418_0010": [
+          {
+            "bbox": [
+              275,
+              645,
+              495,
+              980
+            ],
+            "description": "Bright green awning wrapping around the corner of the white tiled building \u2014 its vibrant color and prominent position at pedestrian level make it a clear wayfinding anchor.",
+            "landmark_score": 0.65
+          }
+        ]
+      }
+    },
+    "segment2_b1": {
+      "segment_id": "segment2",
+      "batch_index": 1,
+      "frame_ids": [
+        "GS010418_0013",
+        "GS010418_0015",
+        "GS010418_0019",
+        "GS010418_0023",
+        "GS010418_0027"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010418_0013": [
+          {
+            "bbox": [
+              230,
+              570,
+              450,
+              960
+            ],
+            "description": "Orange scalloped awning on the corner building \u2014 the bright color and distinctive shape make it a noticeable feature at the start of the street.",
+            "landmark_score": 0.65
+          }
+        ],
+        "GS010418_0015": [
+          {
+            "bbox": [
+              220,
+              680,
+              460,
+              940
+            ],
+            "description": "Green and white patterned facade above a wooden storefront \u2014 the unique organic pattern contrasts strongly with the surrounding buildings.",
+            "landmark_score": 0.75
+          }
+        ],
+        "GS010418_0019": [
+          {
+            "bbox": [
+              250,
+              740,
+              400,
+              900
+            ],
+            "description": "Large gold 'PIZZA' sign on the curved facade of the Da Babbo restaurant \u2014 the prominent metallic lettering is highly visible along the street.",
+            "landmark_score": 0.8
+          }
+        ],
+        "GS010418_0023": [
+          {
+            "bbox": [
+              330,
+              320,
+              530,
+              380
+            ],
+            "description": "Light blue multi-story building at the intersection \u2014 its distinct color and grid of square windows make it a clear landmark when approaching the crossing.",
+            "landmark_score": 0.85
+          }
+        ],
+        "GS010418_0027": [
+          {
+            "bbox": [
+              280,
+              500,
+              540,
+              570
+            ],
+            "description": "Light blue multi-story building \u2014 seen clearly across the intersection, its vivid color serves as a strong anchor for the walking direction.",
+            "landmark_score": 0.85
+          },
+          {
+            "bbox": [
+              450,
+              880,
+              690,
+              980
+            ],
+            "description": "Large glass block wall on the ground floor of the modern building \u2014 the textured, translucent surface is a distinctive architectural element.",
+            "landmark_score": 0.65
+          }
+        ]
+      }
+    },
+    "segment3_b0": {
+      "segment_id": "segment3",
+      "batch_index": 0,
+      "frame_ids": [
+        "GS010419_0000",
+        "GS010419_0002",
+        "GS010419_0004",
+        "GS010419_0006",
+        "GS010419_0008"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010419_0000": [
+          {
+            "bbox": [
+              238,
+              734,
+              380,
+              760
+            ],
+            "description": "Vertical 'Xob' sign attached to the white building on the right, serving as a peripheral anchor.",
+            "landmark_score": 0.55
+          },
+          {
+            "bbox": [
+              288,
+              334,
+              520,
+              408
+            ],
+            "description": "Brown multi-story building on the left side of the street leading up to the intersection.",
+            "landmark_score": 0.6
+          }
+        ],
+        "GS010419_0002": [
+          {
+            "bbox": [
+              188,
+              482,
+              566,
+              595
+            ],
+            "description": "Distinctive light blue building at the intersection ahead, its color contrasting strongly with the surrounding structures.",
+            "landmark_score": 0.85
+          },
+          {
+            "bbox": [
+              242,
+              38,
+              530,
+              172
+            ],
+            "description": "White building on the left corner featuring a distinctive curved facade.",
+            "landmark_score": 0.65
+          }
+        ],
+        "GS010419_0004": [
+          {
+            "bbox": [
+              370,
+              498,
+              680,
+              688
+            ],
+            "description": "The dark wood and glass shop front of 'Walletaria YAMATOU 1899' on the ground floor of the light blue building.",
+            "landmark_score": 0.88
+          },
+          {
+            "bbox": [
+              228,
+              293,
+              538,
+              380
+            ],
+            "description": "Tall pinkish-beige building on the left side of the street, standing out due to its color.",
+            "landmark_score": 0.7
+          }
+        ],
+        "GS010419_0006": [
+          {
+            "bbox": [
+              460,
+              350,
+              490,
+              408
+            ],
+            "description": "Bright pink sign for a laundromat on the dark grey building ahead, providing a strong color contrast.",
+            "landmark_score": 0.82
+          },
+          {
+            "bbox": [
+              485,
+              695,
+              815,
+              905
+            ],
+            "description": "Dark-colored shop front on the right with a large, illuminated display window.",
+            "landmark_score": 0.68
+          }
+        ],
+        "GS010419_0008": [
+          {
+            "bbox": [
+              455,
+              270,
+              485,
+              370
+            ],
+            "description": "The bright pink laundromat sign on the dark grey building, now closer and clearly visible on the left.",
+            "landmark_score": 0.85
+          },
+          {
+            "bbox": [
+              145,
+              835,
+              590,
+              965
+            ],
+            "description": "Tall, narrow light blue building on the right side of the street.",
+            "landmark_score": 0.75
+          }
+        ]
+      }
+    },
+    "segment3_b1": {
+      "segment_id": "segment3",
+      "batch_index": 1,
+      "frame_ids": [
+        "GS010419_0012",
+        "GS010419_0015",
+        "GS010419_0018",
+        "GS010419_0020",
+        "GS010419_0022"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010419_0012": [
+          {
+            "bbox": [
+              465,
+              110,
+              495,
+              210
+            ],
+            "description": "Bright pink sign for a laundromat on the grey building to the left \u2014 the vivid color stands out against the muted streetscape.",
+            "landmark_score": 0.65
+          },
+          {
+            "bbox": [
+              460,
+              690,
+              780,
+              880
+            ],
+            "description": "Black building facade with horizontal slats on the right \u2014 its dark color and textured surface contrast with the neighboring structures.",
+            "landmark_score": 0.55
+          }
+        ],
+        "GS010419_0015": [
+          {
+            "bbox": [
+              350,
+              785,
+              490,
+              975
+            ],
+            "description": "Prominent red awning over a tobacco shop on the right \u2014 the large, bright red structure is a highly visible landmark along the street.",
+            "landmark_score": 0.75
+          },
+          {
+            "bbox": [
+              90,
+              490,
+              450,
+              670
+            ],
+            "description": "Modern corner building ahead on the right \u2014 its recessed balconies and touches of green foliage make it architecturally distinct.",
+            "landmark_score": 0.6
+          }
+        ],
+        "GS010419_0018": [
+          {
+            "bbox": [
+              280,
+              550,
+              830,
+              940
+            ],
+            "description": "Large, unadorned beige stone facade of the building on the right \u2014 its massive, blank appearance creates a strong visual anchor.",
+            "landmark_score": 0.5
+          },
+          {
+            "bbox": [
+              670,
+              15,
+              840,
+              185
+            ],
+            "description": "Green metal pedestrian guardrail along the left sidewalk \u2014 its bright color and repeating pattern provide a clear edge to the walking path.",
+            "landmark_score": 0.45
+          }
+        ],
+        "GS010419_0020": [
+          {
+            "bbox": [
+              35,
+              490,
+              480,
+              720
+            ],
+            "description": "Curved glass facade of the modern building on the right \u2014 the sweeping reflective surface is a major architectural feature on this street.",
+            "landmark_score": 0.7
+          },
+          {
+            "bbox": [
+              700,
+              160,
+              850,
+              395
+            ],
+            "description": "Curved green metal fence protecting a tree base on the left \u2014 its distinct shape and color make it a noticeable piece of street furniture.",
+            "landmark_score": 0.55
+          }
+        ],
+        "GS010419_0022": [
+          {
+            "bbox": [
+              450,
+              520,
+              740,
+              900
+            ],
+            "description": "Large, recessed open entrance of the curved glass building on the right \u2014 the deep, dark void contrasts sharply with the reflective glass above.",
+            "landmark_score": 0.65
+          },
+          {
+            "bbox": [
+              45,
+              365,
+              780,
+              405
+            ],
+            "description": "Thick, dark grey utility pole on the left side of the street \u2014 its unusually large diameter makes it stand out from typical street poles.",
+            "landmark_score": 0.5
+          }
+        ]
+      }
+    },
+    "segment3_b2": {
+      "segment_id": "segment3",
+      "batch_index": 2,
+      "frame_ids": [
+        "GS010419_0024",
+        "GS010419_0026",
+        "GS010419_0029",
+        "GS010419_0031",
+        "GS010419_0035"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010419_0024": [
+          {
+            "bbox": [
+              450,
+              610,
+              700,
+              890
+            ],
+            "description": "Large, open ground-floor entrance of the modern building on the right. The wide, dark-framed opening contrasts with the tiled facade above.",
+            "landmark_score": 0.6
+          },
+          {
+            "bbox": [
+              465,
+              265,
+              550,
+              340
+            ],
+            "description": "Building on the left side of the street featuring a distinctive bright blue awning over its ground-floor storefront.",
+            "landmark_score": 0.5
+          }
+        ],
+        "GS010419_0026": [
+          {
+            "bbox": [
+              380,
+              710,
+              740,
+              850
+            ],
+            "description": "Glass revolving door at the entrance of the modern building on the right, set within a polished dark stone facade.",
+            "landmark_score": 0.65
+          }
+        ],
+        "GS010419_0029": [
+          {
+            "bbox": [
+              220,
+              690,
+              460,
+              940
+            ],
+            "description": "Large, prominent white sign with black Japanese characters attached to the facade of the red building on the right.",
+            "landmark_score": 0.7
+          }
+        ],
+        "GS010419_0031": [
+          {
+            "bbox": [
+              170,
+              540,
+              380,
+              730
+            ],
+            "description": "Traditional Japanese wooden storefront on the right. The large wooden sign with gold characters and small tiled roof make it highly distinctive.",
+            "landmark_score": 0.8
+          }
+        ],
+        "GS010419_0035": [
+          {
+            "bbox": [
+              110,
+              570,
+              500,
+              620
+            ],
+            "description": "Tall, narrow brown building ahead with a prominent, zig-zagging exposed exterior staircase.",
+            "landmark_score": 0.75
+          },
+          {
+            "bbox": [
+              280,
+              740,
+              510,
+              970
+            ],
+            "description": "Bright orange awnings on the brick building at the corner of the intersection, providing a strong splash of color.",
+            "landmark_score": 0.7
+          }
+        ]
+      }
+    },
+    "segment3_b3": {
+      "segment_id": "segment3",
+      "batch_index": 3,
+      "frame_ids": [
+        "GS010419_0039"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010419_0039": [
+          {
+            "bbox": [
+              100,
+              483,
+              555,
+              608
+            ],
+            "description": "Prominent grid pattern of balconies on the tall, light-colored apartment building directly ahead, serving as a central focal point.",
+            "landmark_score": 0.85
+          },
+          {
+            "bbox": [
+              455,
+              133,
+              500,
+              198
+            ],
+            "description": "Bright orange awning on the corner of a red brick building, providing a strong color contrast at the intersection.",
+            "landmark_score": 0.8
+          }
+        ]
+      }
+    },
+    "segment4_b0": {
+      "segment_id": "segment4",
+      "batch_index": 0,
+      "frame_ids": [
+        "GS010420_0000",
+        "GS010420_0002",
+        "GS010420_0004",
+        "GS010420_0006",
+        "GS010420_0008"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010420_0000": [
+          {
+            "bbox": [
+              458,
+              468,
+              555,
+              562
+            ],
+            "description": "Dark green marble base of the tall beige building ahead \u2014 the dark, polished stone contrasts sharply with the lighter upper floors, making it a strong visual anchor.",
+            "landmark_score": 0.75
+          },
+          {
+            "bbox": [
+              455,
+              102,
+              505,
+              165
+            ],
+            "description": "Bright orange awning on the brick building to the left \u2014 the vibrant color stands out against the surrounding streetscape.",
+            "landmark_score": 0.65
+          }
+        ],
+        "GS010420_0002": [
+          {
+            "bbox": [
+              435,
+              485,
+              595,
+              608
+            ],
+            "description": "Dark green marble base of the tall beige building \u2014 the dark, polished stone contrasts sharply with the lighter upper floors.",
+            "landmark_score": 0.75
+          },
+          {
+            "bbox": [
+              465,
+              108,
+              508,
+              162
+            ],
+            "description": "Bright orange awning on the brick building to the left \u2014 the vibrant color stands out against the surrounding streetscape.",
+            "landmark_score": 0.65
+          }
+        ],
+        "GS010420_0004": [
+          {
+            "bbox": [
+              480,
+              550,
+              612,
+              580
+            ],
+            "description": "Wooden double doors set into the dark green marble building base \u2014 the warm wood provides a strong contrast to the dark stone.",
+            "landmark_score": 0.68
+          },
+          {
+            "bbox": [
+              230,
+              355,
+              550,
+              420
+            ],
+            "description": "Modern building with a dark grey facade on the left \u2014 its dark color and horizontal window bands make it visually distinct.",
+            "landmark_score": 0.65
+          }
+        ],
+        "GS010420_0006": [
+          {
+            "bbox": [
+              475,
+              330,
+              565,
+              395
+            ],
+            "description": "Wooden entrance structure of the dark grey building on the left \u2014 the traditional-looking wooden slats contrast with the modern dark facade.",
+            "landmark_score": 0.72
+          },
+          {
+            "bbox": [
+              485,
+              785,
+              650,
+              840
+            ],
+            "description": "Wooden double doors set into the dark green marble building base \u2014 the warm wood provides a strong contrast to the dark stone.",
+            "landmark_score": 0.68
+          }
+        ],
+        "GS010420_0008": [
+          {
+            "bbox": [
+              470,
+              195,
+              600,
+              345
+            ],
+            "description": "Wooden entrance structure of the dark grey building on the left \u2014 the traditional-looking wooden slats contrast with the modern dark facade.",
+            "landmark_score": 0.72
+          },
+          {
+            "bbox": [
+              550,
+              668,
+              700,
+              735
+            ],
+            "description": "Large, light green utility box on the sidewalk to the right \u2014 its blocky shape and color make it a noticeable piece of street infrastructure.",
+            "landmark_score": 0.55
+          }
+        ]
+      }
+    },
+    "segment4_b1": {
+      "segment_id": "segment4",
+      "batch_index": 1,
+      "frame_ids": [
+        "GS010420_0010",
+        "GS010420_0012",
+        "GS010420_0014",
+        "GS010420_0016",
+        "GS010420_0018"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010420_0010": [
+          {
+            "bbox": [
+              200,
+              260,
+              580,
+              420
+            ],
+            "description": "Light-colored tiled building with a distinctive curved corner facade at the intersection.",
+            "landmark_score": 0.65
+          },
+          {
+            "bbox": [
+              470,
+              580,
+              700,
+              790
+            ],
+            "description": "Brown building featuring a prominent glass storefront with white framing.",
+            "landmark_score": 0.55
+          }
+        ],
+        "GS010420_0012": [
+          {
+            "bbox": [
+              330,
+              590,
+              400,
+              830
+            ],
+            "description": "Prominent blue Japanese characters reading 'Ito Cleaning Shop' across the building facade.",
+            "landmark_score": 0.75
+          },
+          {
+            "bbox": [
+              160,
+              170,
+              610,
+              390
+            ],
+            "description": "Light-colored tiled building with a distinctive curved corner, now viewed from closer up on the left.",
+            "landmark_score": 0.65
+          }
+        ],
+        "GS010420_0014": [
+          {
+            "bbox": [
+              70,
+              520,
+              460,
+              850
+            ],
+            "description": "Building with a distinctive curved facade and horizontal window bands.",
+            "landmark_score": 0.65
+          },
+          {
+            "bbox": [
+              540,
+              580,
+              680,
+              760
+            ],
+            "description": "Ground floor storefront featuring distinctive blue informational signs on the windows.",
+            "landmark_score": 0.6
+          }
+        ],
+        "GS010420_0016": [
+          {
+            "bbox": [
+              210,
+              550,
+              330,
+              570
+            ],
+            "description": "Vertical sign with red Japanese characters attached to the building facade.",
+            "landmark_score": 0.6
+          },
+          {
+            "bbox": [
+              430,
+              320,
+              590,
+              370
+            ],
+            "description": "Dark storefront entrance with a contrasting white sign board.",
+            "landmark_score": 0.5
+          }
+        ],
+        "GS010420_0018": [
+          {
+            "bbox": [
+              90,
+              510,
+              750,
+              910
+            ],
+            "description": "Building with a distinctive curved, light-colored facade featuring vertical ribbing.",
+            "landmark_score": 0.7
+          },
+          {
+            "bbox": [
+              410,
+              180,
+              600,
+              280
+            ],
+            "description": "Building entrance featuring a dark facade and a white sign board.",
+            "landmark_score": 0.5
+          }
+        ]
+      }
+    },
+    "segment4_b2": {
+      "segment_id": "segment4",
+      "batch_index": 2,
+      "frame_ids": [
+        "GS010420_0021",
+        "GS010420_0024",
+        "GS010420_0028"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010420_0021": [
+          {
+            "bbox": [
+              510,
+              815,
+              770,
+              925
+            ],
+            "description": "Cluster of blue vending machines on the right side of the street, providing a bright splash of color against the surrounding buildings.",
+            "landmark_score": 0.55
+          },
+          {
+            "bbox": [
+              300,
+              365,
+              535,
+              445
+            ],
+            "description": "White multi-story building on the left corner ahead, featuring a distinctive regular grid of square windows.",
+            "landmark_score": 0.45
+          }
+        ],
+        "GS010420_0024": [
+          {
+            "bbox": [
+              295,
+              545,
+              365,
+              610
+            ],
+            "description": "Blue sign with white text on the second floor of the building ahead on the right, standing out against the beige tiled facade.",
+            "landmark_score": 0.65
+          },
+          {
+            "bbox": [
+              245,
+              305,
+              565,
+              435
+            ],
+            "description": "White multi-story building on the left corner, its grid of windows making it a clear visual anchor at the intersection.",
+            "landmark_score": 0.55
+          }
+        ],
+        "GS010420_0028": [
+          {
+            "bbox": [
+              235,
+              325,
+              340,
+              400
+            ],
+            "description": "Blue sign on the second floor of the beige building, now clearly visible on the left side of the street as we approach.",
+            "landmark_score": 0.65
+          },
+          {
+            "bbox": [
+              370,
+              260,
+              435,
+              295
+            ],
+            "description": "Round convex traffic mirror mounted on a utility pole on the left, serving as a distinctive piece of street furniture.",
+            "landmark_score": 0.5
+          }
+        ]
+      }
+    },
+    "segment5_b0": {
+      "segment_id": "segment5",
+      "batch_index": 0,
+      "frame_ids": [
+        "GS010421_0000",
+        "GS010421_0003",
+        "GS010421_0005",
+        "GS010421_0008",
+        "GS010421_0011"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010421_0000": [
+          {
+            "bbox": [
+              178,
+              216,
+              431,
+              375
+            ],
+            "description": "Building on the left with a distinctive curved glass facade on its upper floors. The reflective, rounded surface stands out against the surrounding flat, opaque buildings.",
+            "landmark_score": 0.65
+          },
+          {
+            "bbox": [
+              282,
+              654,
+              391,
+              713
+            ],
+            "description": "Bright blue building visible in the distance on the right. Its vivid color makes it a noticeable landmark down the street.",
+            "landmark_score": 0.55
+          }
+        ],
+        "GS010421_0003": [
+          {
+            "bbox": [
+              141,
+              43,
+              618,
+              194
+            ],
+            "description": "Building on the left with a dark grey facade and a prominent grid pattern of windows. The stark color and regular geometric pattern contrast with neighboring structures.",
+            "landmark_score": 0.6
+          }
+        ],
+        "GS010421_0005": [
+          {
+            "bbox": [
+              228,
+              258,
+              581,
+              326
+            ],
+            "description": "Beige building on the left featuring prominent, dark brown slatted balconies. The contrasting colors and protruding structures make it visually distinct.",
+            "landmark_score": 0.6
+          },
+          {
+            "bbox": [
+              354,
+              440,
+              506,
+              462
+            ],
+            "description": "Tall, unusually thin, dark-colored building visible straight ahead in the distance. Its slender profile and dark hue make it a strong central focal point.",
+            "landmark_score": 0.65
+          }
+        ],
+        "GS010421_0008": [
+          {
+            "bbox": [
+              150,
+              362,
+              538,
+              416
+            ],
+            "description": "Building on the left featuring a prominent, zig-zagging external staircase. The exposed structural element is a strong visual anchor.",
+            "landmark_score": 0.7
+          },
+          {
+            "bbox": [
+              208,
+              214,
+              618,
+              396
+            ],
+            "description": "White building on the left with a highly textured, grid-like facade. The repeating square pattern gives the building a unique, recognizable surface.",
+            "landmark_score": 0.6
+          }
+        ],
+        "GS010421_0011": [
+          {
+            "bbox": [
+              74,
+              264,
+              588,
+              350
+            ],
+            "description": "Building on the left with a prominent external staircase. The zig-zag pattern of the stairs is clearly visible and serves as a distinct architectural feature.",
+            "landmark_score": 0.75
+          },
+          {
+            "bbox": [
+              309,
+              478,
+              482,
+              518
+            ],
+            "description": "Tall, thin, dark building located near the center of the view. Its narrow shape and dark color contrast sharply with the sky and surrounding buildings.",
+            "landmark_score": 0.7
+          }
+        ]
+      }
+    },
+    "segment5_b1": {
+      "segment_id": "segment5",
+      "batch_index": 1,
+      "frame_ids": [
+        "GS010421_0013",
+        "GS010421_0015",
+        "GS010421_0020"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010421_0013": [
+          {
+            "bbox": [
+              428,
+              241,
+              453,
+              288
+            ],
+            "description": "Entrance sign for 'Stella Ningyocho' on the distinctive brown horizontally-striped building.",
+            "landmark_score": 0.75
+          }
+        ],
+        "GS010421_0015": [
+          {
+            "bbox": [
+              518,
+              193,
+              635,
+              245
+            ],
+            "description": "Bright green public notice board standing outside the building entrance, providing a strong color contrast.",
+            "landmark_score": 0.65
+          },
+          {
+            "bbox": [
+              265,
+              484,
+              495,
+              525
+            ],
+            "description": "Tall, narrow building with a dark, textured facade standing out against the sky and surrounding lighter buildings.",
+            "landmark_score": 0.6
+          }
+        ],
+        "GS010421_0020": [
+          {
+            "bbox": [
+              204,
+              356,
+              585,
+              470
+            ],
+            "description": "Prominent bare tree with a wide, branching canopy situated on the sidewalk, serving as a natural visual anchor.",
+            "landmark_score": 0.75
+          },
+          {
+            "bbox": [
+              505,
+              876,
+              595,
+              921
+            ],
+            "description": "Bright green automated locker or vending structure on the sidewalk, highly visible due to its vivid color.",
+            "landmark_score": 0.7
+          }
+        ]
+      }
+    },
+    "segment6_b0": {
+      "segment_id": "segment6",
+      "batch_index": 0,
+      "frame_ids": [
+        "GS010422_0000",
+        "GS010422_0002",
+        "GS010422_0004",
+        "GS010422_0006",
+        "GS010422_0008"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010422_0000": [
+          {
+            "bbox": [
+              245,
+              258,
+              518,
+              318
+            ],
+            "description": "Tall, dark rectangular building on the left side of the street \u2014 its dark facade contrasts strongly with the lighter buildings around it, making it a recognizable distant landmark.",
+            "landmark_score": 0.6
+          }
+        ],
+        "GS010422_0002": [
+          {
+            "bbox": [
+              362,
+              254,
+              711,
+              436
+            ],
+            "description": "Bus stop shelter with a flat, overhanging roof \u2014 a clear and permanent transit infrastructure landmark situated along the sidewalk.",
+            "landmark_score": 0.75
+          }
+        ],
+        "GS010422_0004": [
+          {
+            "bbox": [
+              423,
+              34,
+              668,
+              140
+            ],
+            "description": "Bus stop shelter with a flat roof, now seen from the side \u2014 serves as a prominent transit anchor on the route.",
+            "landmark_score": 0.65
+          }
+        ],
+        "GS010422_0006": [
+          {
+            "bbox": [
+              34,
+              508,
+              688,
+              730
+            ],
+            "description": "Building with a distinctive curved facade and horizontal banding \u2014 its unique architectural shape makes it a strong visual anchor on the right.",
+            "landmark_score": 0.7
+          },
+          {
+            "bbox": [
+              578,
+              269,
+              725,
+              335
+            ],
+            "description": "Large, grey rectangular utility box situated on the sidewalk \u2014 a permanent piece of street infrastructure.",
+            "landmark_score": 0.45
+          }
+        ],
+        "GS010422_0008": [
+          {
+            "bbox": [
+              384,
+              615,
+              748,
+              900
+            ],
+            "description": "Curved glass storefront of the building on the right, featuring distinctive interior wooden slats \u2014 a highly visible and unique architectural feature.",
+            "landmark_score": 0.75
+          }
+        ]
+      }
+    },
+    "segment6_b1": {
+      "segment_id": "segment6",
+      "batch_index": 1,
+      "frame_ids": [
+        "GS010422_0010",
+        "GS010422_0012",
+        "GS010422_0014",
+        "GS010422_0017",
+        "GS010422_0019"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010422_0010": [
+          {
+            "bbox": [
+              45,
+              555,
+              460,
+              930
+            ],
+            "description": "Curved brown balconies of the corner building \u2014 the distinctive rounded architecture and layered balconies make it a strong visual anchor.",
+            "landmark_score": 0.65
+          }
+        ],
+        "GS010422_0012": [
+          {
+            "bbox": [
+              340,
+              528,
+              425,
+              550
+            ],
+            "description": "Red Japan Post (\u3012) sign attached to the building facade \u2014 the bright red color and recognizable symbol serve as a clear wayfinding marker.",
+            "landmark_score": 0.75
+          },
+          {
+            "bbox": [
+              360,
+              660,
+              410,
+              690
+            ],
+            "description": "Red flame-like logo on the white storefront \u2014 the stark contrast of the red symbol against the plain white wall makes it easily recognizable.",
+            "landmark_score": 0.55
+          }
+        ],
+        "GS010422_0014": [
+          {
+            "bbox": [
+              345,
+              560,
+              400,
+              665
+            ],
+            "description": "Silver 'TOKYO DENTAL HOUSE' lettering above the entrance \u2014 the prominent metallic text on the grey facade provides a clear, readable landmark.",
+            "landmark_score": 0.6
+          },
+          {
+            "bbox": [
+              380,
+              800,
+              440,
+              870
+            ],
+            "description": "Black Japanese calligraphy for 'Sanuki Udon' on the white storefront \u2014 the large, distinct characters stand out clearly along the street.",
+            "landmark_score": 0.55
+          }
+        ],
+        "GS010422_0017": [
+          {
+            "bbox": [
+              270,
+              270,
+              510,
+              390
+            ],
+            "description": "Tall red brick building at the intersection \u2014 its distinct reddish-brown color and height make it a prominent landmark visible from a distance.",
+            "landmark_score": 0.7
+          },
+          {
+            "bbox": [
+              500,
+              675,
+              700,
+              840
+            ],
+            "description": "Cluster of three brightly colored vending machines (white, red, blue) \u2014 their vivid colors contrast sharply with the grey building facade, making them a prominent street-level anchor.",
+            "landmark_score": 0.65
+          }
+        ],
+        "GS010422_0019": [
+          {
+            "bbox": [
+              40,
+              740,
+              440,
+              980
+            ],
+            "description": "Curved glass facade of the corner building \u2014 the large, reflective grid of windows creates a striking architectural feature at the intersection.",
+            "landmark_score": 0.7
+          },
+          {
+            "bbox": [
+              320,
+              740,
+              415,
+              760
+            ],
+            "description": "Red Japan Post (\u3012) sign on the corner building \u2014 the bright red vertical sign stands out against the glass facade, serving as a clear wayfinding marker.",
+            "landmark_score": 0.6
+          }
+        ]
+      }
+    }
+  }
+}

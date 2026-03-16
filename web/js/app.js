@@ -9,6 +9,7 @@ const NEIGHBORHOOD_META = {
   kinshicho:  { name: 'Kinshichō',  nameJa: '錦糸町', description: 'A vibrant commercial hub in eastern Tokyo blending modern malls with old-school izakaya culture.' },
   koenji:     { name: 'Kōenji',     nameJa: '高円寺', description: 'A bohemian neighborhood famous for vintage clothing shops, live music venues, and its annual Awa Odori festival.' },
   nezu:       { name: 'Nezu',       nameJa: '根津',   description: "One of Tokyo's few remaining old-town districts, known for its charming shrine, narrow lanes, and quiet cafés." },
+  ningyocho:  { name: 'Ningyōchō',  nameJa: '人形町', description: 'A historic merchant quarter in Nihonbashi with Edo-era charm, famous for its traditional crafts, sweet shops, and atmospheric backstreets.' },
 };
 
 let frameData = null;

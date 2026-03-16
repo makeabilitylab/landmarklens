@@ -26,7 +26,7 @@ from dotenv import load_dotenv
 load_dotenv() 
 
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageDraw
 from google import genai
 from google.genai import types
 
@@ -35,18 +35,22 @@ from geo_utils import load_orientation_lookup, rotate_panorama
 
 
 def rotate_and_encode(pano_path, frame_stem, orientation_lookup, is_reverse,
-                      crop_width=None, turn_angle=0.0):
+                      crop_width=None, crop_height=None, turn_angle=0.0, line_width_deg=None):
     """Load a panorama, rotate so walking direction is centered, return JPEG bytes and PIL images.
 
     Args:
         crop_width: if set, a float in (0, 1] indicating what fraction of the
-            width to keep (centered). E.g. 0.5 keeps the middle 50%.
+            panorama width to keep (centered). E.g. 0.5 keeps the middle 50%.
+        crop_height: if set, a float in (0, 1] indicating what fraction of the
+            panorama height to keep (centered). E.g. 0.8 keeps the middle 80%.
         turn_angle: additional rotation in degrees for junction frames, applied
             after the walking-direction rotation so the turn direction is centered.
+        line_width_deg: if set, draw two vertical lines on the cropped image at
+            this many degrees from center (total span = line_width_deg).
 
     Returns:
         (jpeg_bytes, full_pil_img, cropped_pil_img)
-        full_pil_img is the rotated panorama (always full width).
+        full_pil_img is the rotated panorama (always full width/height).
         cropped_pil_img is the center-cropped version (same as full if no crop).
         jpeg_bytes are encoded from cropped_pil_img.
     """
@@ -57,14 +61,47 @@ def rotate_and_encode(pano_path, frame_stem, orientation_lookup, is_reverse,
         img = np.roll(img, shift_x, axis=1)
     full_pil_img = Image.fromarray(img.astype(np.uint8))
 
+    # Apply width and height cropping (both centered)
+    crop_left = 0
+    crop_right = full_pil_img.width
+    crop_top = 0
+    crop_bottom = full_pil_img.height
+
     if crop_width is not None and crop_width < 1.0:
         w = full_pil_img.width
         crop_px = int(w * crop_width)
-        left = (w - crop_px) // 2
-        right = left + crop_px
-        cropped_pil_img = full_pil_img.crop((left, 0, right, full_pil_img.height))
+        crop_left = (w - crop_px) // 2
+        crop_right = crop_left + crop_px
+
+    if crop_height is not None and crop_height < 1.0:
+        h = full_pil_img.height
+        crop_px = int(h * crop_height)
+        crop_top = (h - crop_px) // 2
+        crop_bottom = crop_top + crop_px
+
+    if crop_left > 0 or crop_top > 0 or crop_right < full_pil_img.width or crop_bottom < full_pil_img.height:
+        cropped_pil_img = full_pil_img.crop((crop_left, crop_top, crop_right, crop_bottom))
     else:
         cropped_pil_img = full_pil_img
+
+    # Draw vertical guide lines if requested
+    if line_width_deg is not None:
+        # line_width_deg is the total span in degrees centered on the image center.
+        # The cropped image spans crop_width * 360 degrees (or 360 if no crop).
+        crop_degrees = (crop_width if crop_width is not None and crop_width < 1.0 else 1.0) * 360.0
+        line_fraction = line_width_deg / crop_degrees  # fraction of cropped image width
+        cw = cropped_pil_img.width
+        ch = cropped_pil_img.height
+        center_x = cw / 2.0
+        half_line_px = (line_fraction / 2.0) * cw
+        left_line_x = int(round(center_x - half_line_px))
+        right_line_x = int(round(center_x + half_line_px))
+
+        draw = ImageDraw.Draw(cropped_pil_img)
+        line_color = (255, 0, 0)  # red
+        line_thickness = max(4, cw // 500)
+        draw.line([(left_line_x, 0), (left_line_x, ch - 1)], fill=line_color, width=line_thickness)
+        draw.line([(right_line_x, 0), (right_line_x, ch - 1)], fill=line_color, width=line_thickness)
 
     buf = io.BytesIO()
     cropped_pil_img.save(buf, format="JPEG", quality=95)
@@ -82,9 +119,14 @@ def build_response_schema(n_images):
                 description="[y_min, x_min, y_max, x_max] normalized 0-1000",
             ),
             "description": types.Schema(type="STRING"),
-            "landmark_score": types.Schema(type="NUMBER"),
+            "category": types.Schema(type="INTEGER"),
+            "category_label": types.Schema(type="STRING"),
+            "color_prominence": types.Schema(type="NUMBER"),
+            "shape_prominence": types.Schema(type="NUMBER"),
+            "semantic_familiarity": types.Schema(type="NUMBER"),
         },
-        required=["bbox", "description", "landmark_score"],
+        required=["bbox", "description", "category", "category_label",
+                   "color_prominence", "shape_prominence", "semantic_familiarity"],
     )
 
     detection_list = types.Schema(
@@ -105,43 +147,50 @@ def substitute_prompt(template, n_images):
     return template.replace("$NUM_IMAGES", str(n_images))
 
 
-def remap_bboxes_to_full(detections, crop_width):
-    """Remap bbox x-coordinates from cropped image space back to full panorama space.
+def remap_bboxes_to_full(detections, crop_width, crop_height=None):
+    """Remap bbox coordinates from cropped image space back to full panorama space.
 
-    The crop is centered, so the left edge of the crop starts at (1 - crop_width) / 2
-    of the full image width. x-coordinates in the cropped image (0-1000) are mapped
-    back to the full panorama (0-1000).
-
-    y-coordinates are unchanged (full height is always kept).
+    Both crops are centered, so offsets are (1 - crop_fraction) / 2.
+    Coordinates in the cropped image (0-1000) are mapped back to the full panorama (0-1000).
     """
-    if crop_width is None or crop_width >= 1.0:
+    do_x = crop_width is not None and crop_width < 1.0
+    do_y = crop_height is not None and crop_height < 1.0
+    if not do_x and not do_y:
         return detections
 
-    crop_start = (1.0 - crop_width) / 2.0
+    x_offset = (1.0 - crop_width) / 2.0 if do_x else 0.0
+    x_scale = crop_width if do_x else 1.0
+    y_offset = (1.0 - crop_height) / 2.0 if do_y else 0.0
+    y_scale = crop_height if do_y else 1.0
 
     remapped = []
     for det in detections:
         bbox = det["bbox"]  # [y_min, x_min, y_max, x_max]
         y_min, x_min, y_max, x_max = bbox
 
-        # Map x from cropped (0-1000) to full (0-1000)
-        x_min_full = int(round(crop_start * 1000 + (x_min / 1000.0) * crop_width * 1000))
-        x_max_full = int(round(crop_start * 1000 + (x_max / 1000.0) * crop_width * 1000))
+        x_min_full = int(round(x_offset * 1000 + (x_min / 1000.0) * x_scale * 1000))
+        x_max_full = int(round(x_offset * 1000 + (x_max / 1000.0) * x_scale * 1000))
+        y_min_full = int(round(y_offset * 1000 + (y_min / 1000.0) * y_scale * 1000))
+        y_max_full = int(round(y_offset * 1000 + (y_max / 1000.0) * y_scale * 1000))
 
         remapped.append({
             **det,
-            "bbox": [y_min, x_min_full, y_max, x_max_full],
+            "bbox": [y_min_full, x_min_full, y_max_full, x_max_full],
         })
     return remapped
 
 
 def process_batch(client, batch, orientation_lookup, system_prompt_template,
-                  crop_width=None, processed_images=None):
+                  crop_width=None, crop_height=None, line_width_deg=None,
+                  processed_images=None, dry_run=False):
     """Send a batch of frames to Gemini and return parsed results.
 
     Args:
         crop_width: if set, crop to middle fraction of width before sending
+        crop_height: if set, crop to middle fraction of height before sending
+        line_width_deg: if set, draw vertical guide lines at this degree span
         processed_images: if provided, a list to append (frame_id, pil_img) tuples to
+        dry_run: if True, skip the API call and return empty detections
     Returns:
         dict mapping frame_id -> list of detections
     Raises:
@@ -158,14 +207,17 @@ def process_batch(client, batch, orientation_lookup, system_prompt_template,
         turn_angle = (frame.get("turn_angle", 0.0) or 0.0) if frame.get("_apply_turn_angle") else 0.0
         image_bytes, full_pil_img, cropped_pil_img = rotate_and_encode(
             frame["pano_path"], frame_stem, orientation_lookup, is_reverse,
-            crop_width=crop_width, turn_angle=turn_angle,
+            crop_width=crop_width, crop_height=crop_height,
+            turn_angle=turn_angle, line_width_deg=line_width_deg,
         )
         if processed_images is not None:
-            # Always save the full panorama for sample images
-            processed_images.append((frame_stem, full_pil_img))
+            processed_images.append((frame_stem, cropped_pil_img))
         content_parts.append(
             types.Part.from_bytes(data=image_bytes, mime_type="image/jpeg")
         )
+
+    if dry_run:
+        return {frame["frame_id"]: [] for frame in batch}
 
     response = client.models.generate_content(
         model="gemini-3.1-pro-preview",
@@ -186,7 +238,7 @@ def process_batch(client, batch, orientation_lookup, system_prompt_template,
     for i, frame in enumerate(batch):
         key = f"image{i + 1}"
         detections = raw.get(key, [])
-        results[frame["frame_id"]] = remap_bboxes_to_full(detections, crop_width)
+        results[frame["frame_id"]] = remap_bboxes_to_full(detections, crop_width, crop_height)
 
     return results
 
@@ -241,15 +293,39 @@ def main():
     parser.add_argument("--save-samples", type=int, default=0, help="Save N random processed (post-rotation) images for testing")
     parser.add_argument("--save-samples-dir", default=None, help="Directory to save sample images (default: <output_dir>/sample_images)")
     parser.add_argument("--crop-width", type=float, default=None,
-                        help="Fraction of panorama width to keep (centered), e.g. 0.5 for middle 50%%. "
-                             "Output bboxes are remapped to full panorama coordinates.")
+                        help="Degrees of panorama width to keep (centered), e.g. 180 for middle 180°. "
+                             "Panorama is assumed to be 360°. Output bboxes are remapped to full panorama coordinates.")
+    parser.add_argument("--crop-height", type=float, default=None,
+                        help="Fraction of panorama height to keep (centered), e.g. 0.8 keeps the middle 80%% "
+                             "(removing 10%% from top and bottom). Output bboxes are remapped to full panorama coordinates.")
+    parser.add_argument("--line-width", type=float, default=None,
+                        help="Draw two vertical red guide lines on each image spanning this many degrees "
+                             "(centered). Used to indicate the region where detected object centers should lie. "
+                             "Requires a prompt that references the lines.")
+    parser.add_argument("--dry-run", action="store_true",
+                        help="Run the full pipeline (loading, batching, image processing) but skip "
+                             "the Gemini API call. Returns empty detections for each frame.")
     parser.add_argument("--project", default=None, help="Google Cloud project ID (or set GOOGLE_CLOUD_PROJECT)")
     parser.add_argument("--location", default="global", help="Google Cloud region")
     args = parser.parse_args()
 
-    # Validate crop-width
-    if args.crop_width is not None and not (0.0 < args.crop_width <= 1.0):
-        parser.error("--crop-width must be between 0 (exclusive) and 1 (inclusive)")
+    # Convert crop-width from degrees to fraction (internal representation)
+    if args.crop_width is not None:
+        if not (0.0 < args.crop_width <= 360.0):
+            parser.error("--crop-width must be between 0 (exclusive) and 360 (inclusive) degrees")
+        args.crop_width = args.crop_width / 360.0
+
+    # Validate crop-height (already a fraction)
+    if args.crop_height is not None:
+        if not (0.0 < args.crop_height <= 1.0):
+            parser.error("--crop-height must be between 0 (exclusive) and 1 (inclusive)")
+
+    # Validate line-width
+    if args.line_width is not None:
+        crop_deg = (args.crop_width * 360.0) if args.crop_width is not None else 360.0
+        if not (0.0 < args.line_width <= crop_deg):
+            parser.error(f"--line-width must be between 0 (exclusive) and {crop_deg:.0f} degrees "
+                         f"(the crop width)")
 
     # Load segments and sort each by frame_order
     with open(args.input, "r") as f:
@@ -272,8 +348,10 @@ def main():
                 remaining -= len(segments[seg_id])
 
     total_frames = sum(len(frames) for frames in segments.values())
-    crop_msg = f" (crop: {args.crop_width:.0%} center)" if args.crop_width else ""
-    print(f"Processing {total_frames} frames across {len(segments)} segments{crop_msg}")
+    crop_h_msg = f" (crop-height: {args.crop_height:.0%})" if args.crop_height else ""
+    crop_msg = f" (crop: {args.crop_width * 360:.0f}°)" if args.crop_width else ""
+    line_msg = f" (lines: ±{args.line_width / 2:.0f}°)" if args.line_width else ""
+    print(f"Processing {total_frames} frames across {len(segments)} segments{crop_msg}{crop_h_msg}{line_msg}")
 
     # Load orientation lookup for panorama rotation
     orientation_lookup = load_orientation_lookup()
@@ -283,12 +361,16 @@ def main():
     with open(args.system_prompt, "r") as f:
         system_prompt_template = f.read()
 
-    # Initialize Vertex AI client
-    client = genai.Client(
-        vertexai=True,
-        project=args.project or os.getenv("GOOGLE_CLOUD_PROJECT"),
-        location=args.location,
-    )
+    # Initialize Vertex AI client (skip in dry-run mode)
+    if args.dry_run:
+        client = None
+        print("DRY RUN: skipping Gemini API calls")
+    else:
+        client = genai.Client(
+            vertexai=True,
+            project=args.project or os.getenv("GOOGLE_CLOUD_PROJECT"),
+            location=args.location,
+        )
 
     # Process each segment independently, batching within each
     ws = args.window_size
@@ -299,6 +381,8 @@ def main():
         "metadata": {
             "window_size": ws,
             "crop_width": args.crop_width,
+            "crop_height": args.crop_height,
+            "line_width": args.line_width,
         },
         "batches": dict(existing_output.get("batches", {})),
     }
@@ -335,7 +419,10 @@ def main():
                 batch_results = process_batch(
                     client, batch, orientation_lookup, system_prompt_template,
                     crop_width=args.crop_width,
+                    crop_height=args.crop_height,
+                    line_width_deg=args.line_width,
                     processed_images=processed_images,
+                    dry_run=args.dry_run,
                 )
                 output_data["batches"][batch_id] = {
                     "segment_id": seg_id,

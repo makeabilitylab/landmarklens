@@ -186,10 +186,14 @@ function render() {{
   }} else {{
     frame.detections.forEach((d, i) => {{
       const color = COLORS[i % COLORS.length];
+      const cat = d.category_label || ('cat ' + d.category);
       html += '<div class="det">' +
-        '<span class="det-score" style="color:' + color + '">[' + (i+1) + '] Score: ' + d.landmark_score.toFixed(2) + '</span> &mdash; ' +
+        '<span class="det-score" style="color:' + color + '">[' + (i+1) + '] ' + cat + '</span> &mdash; ' +
         '<span class="det-desc">' + d.description + '</span>' +
-        '<div class="det-bbox">bbox: [' + d.bbox.join(', ') + ']</div>' +
+        '<div class="det-bbox">color: ' + (d.color_prominence || 0).toFixed(2) +
+        ' &middot; shape: ' + (d.shape_prominence || 0).toFixed(2) +
+        ' &middot; familiarity: ' + (d.semantic_familiarity || 0).toFixed(2) +
+        ' &middot; bbox: [' + d.bbox.join(', ') + ']</div>' +
         '</div>';
     }});
   }}
@@ -232,7 +236,7 @@ function drawBoxes(dets, w, h) {{
     ctx.strokeRect(x1, y1, x2 - x1, y2 - y1);
 
     // Label
-    const label = '[' + (i+1) + '] ' + d.landmark_score.toFixed(2);
+    const label = '[' + (i+1) + '] ' + (d.category_label || 'cat ' + d.category);
     ctx.font = 'bold 50px system-ui';
     const tw = ctx.measureText(label).width;
     ctx.fillStyle = color;
@@ -269,7 +273,7 @@ canvas.addEventListener('mousemove', (e) => {{
     tooltip.style.display = 'block';
     tooltip.style.left = (e.clientX + 12) + 'px';
     tooltip.style.top = (e.clientY + 12) + 'px';
-    tooltip.textContent = hit.description + ' (score: ' + hit.landmark_score.toFixed(2) + ')';
+    tooltip.textContent = hit.description + ' (color: ' + (hit.color_prominence || 0).toFixed(2) + ', shape: ' + (hit.shape_prominence || 0).toFixed(2) + ', familiarity: ' + (hit.semantic_familiarity || 0).toFixed(2) + ')';
   }} else {{
     tooltip.style.display = 'none';
   }}

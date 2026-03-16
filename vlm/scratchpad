@@ -1,16 +1,19 @@
 python run_gemini.py \
-    --input /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/kinshicho_c/kinshicho_c_route.json \
-    --output /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/output/kinshicho_c.json \
-    --system-prompt /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/prompt_engineering/system_prompt3.md \
-    --window-size 5 \
-    --max-frames 10 \
-    --crop-width 0.5 \
-    --save-samples 5
+    --input /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/ningyocho_r1_route.json \
+    --output /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/output/ningyocho_r1_route.json \
+    --system-prompt /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/prompt_engineering/vertical_lines/system_prompt1.md \
+    --window-size 3 \
+    --max-frames 20 \
+    --crop-width 180 \
+    --line-width 90 \
+    --save-samples 10 \
+    --crop-height 0.7 \
+    --dry-run
 
 python dedup_detections.py \
-    --input kinshicho_c/kinshicho_c_route.json \
-    --detections output/kinshicho_c.json \
-    --output output/kinshicho_c_deduped.json \
+    --input /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/ningyocho_r1_route.json \
+    --detections /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/output/ningyocho_r1_route.json \
+    --output output/ningyocho_r1_route_deduped.json \
     --similarity-threshold 0.75 \
     --max-duplicates 2 \
     --window-size 5 \
@@ -18,9 +21,9 @@ python dedup_detections.py \
     --device mps
 
 python view_detections.py \
-    --input /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/kinshicho_c/kinshicho_c_route.json \
-    --detections /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/output/kinshicho_c_deduped.json \
-    --image-dir /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/kinshicho_c
+    --input /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/ningyocho_r1_route.json \
+    --detections /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/output/ningyocho_r1_route.json \
+    --image-dir /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1
 
 
 

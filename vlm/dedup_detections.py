@@ -47,7 +47,11 @@ class Detection:
     bbox: list[int]        # [y_min, x_min, y_max, x_max] 0-1000
     det_index: int         # index within frame's detection list
     description: str
-    landmark_score: float
+    category: int
+    category_label: str
+    color_prominence: float
+    shape_prominence: float
+    semantic_familiarity: float
     global_index: int      # for union-find
     turn_angle: float = 0.0
 
@@ -252,7 +256,11 @@ def load_and_flatten(route_path: str, detections_path: str) -> list[Detection]:
                     bbox=det["bbox"],
                     det_index=det_idx,
                     description=det["description"],
-                    landmark_score=det["landmark_score"],
+                    category=det["category"],
+                    category_label=det["category_label"],
+                    color_prominence=det["color_prominence"],
+                    shape_prominence=det["shape_prominence"],
+                    semantic_familiarity=det["semantic_familiarity"],
                     global_index=global_index,
                     turn_angle=(frame_info.get("turn_angle", 0.0) or 0.0) if frame_info.get("_apply_turn_angle") else 0.0,
                 ))

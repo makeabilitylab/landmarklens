@@ -32,7 +32,11 @@ The Gemini response is constrained to a JSON schema via `response_mime_type` and
 {
   "bbox": [y_min, x_min, y_max, x_max],
   "description": "...",
-  "landmark_score": 0.0
+  "category": 1,
+  "category_label": "famous landmark",
+  "color_prominence": 0.85,
+  "shape_prominence": 0.90,
+  "semantic_familiarity": 0.95
 }
 ```
 
@@ -43,6 +47,7 @@ Bounding boxes use Gemini's normalized 0-1000 coordinate system.
 - **Cross-frame deduplication**: The same real-world object is reported in at most 2 images across a batch, preferring its earliest appearance.
 - **Per-frame cap**: At most 2 objects per image.
 - **Directional bias**: Objects near the center (walking direction) are prioritized.
+- **Vertical guide lines** (optional): When `--line-width` is set, two red vertical lines are drawn on each image to define a detection zone. A separate prompt (`vertical_lines/system_prompt1.md`) instructs the VLM to only detect objects whose center falls between the lines.
 
 ## Directory Structure
 
@@ -54,7 +59,9 @@ vlm/
 ├── view_detections.py             # Browser-based detection viewer
 └── prompt_engineering/
     ├── create_prompt_prompt.md     # Original spec used to draft the prompts
-    └── system_prompt1.md           # System prompt template
+    ├── system_prompt1.md           # System prompt template
+    └── vertical_lines/
+        └── system_prompt1.md      # Prompt for use with --line-width
 ```
 
 ## Usage
@@ -104,8 +111,10 @@ python vlm/run_gemini.py \
 | `--system-prompt` | *(required)*   | Path to system prompt `.md` template             |
 | `--window-size`   | `5`            | Number of images per API call                    |
 | `--max-frames`    | all            | Truncate input to first N frames (for testing)   |
-| `--crop-width`    | none (full)    | Fraction of panorama width to keep, centered (e.g. `0.5` for middle 50%). Output bboxes are remapped to full panorama coordinates. |
-| `--save-samples`  | `0`            | Save N random processed (post-rotation) images for testing |
+| `--crop-width`    | none (full)    | Degrees of panorama width to keep, centered (e.g. `180` for middle 180°). Panorama is assumed to be 360°. Output bboxes are remapped to full panorama coordinates. |
+| `--crop-height`   | none (full)    | Fraction of panorama height to keep, centered (e.g. `0.8` keeps middle 80%, removing 10% from top and bottom). Output bboxes are remapped to full panorama coordinates. |
+| `--line-width`    | none           | Draw two vertical red guide lines spanning this many degrees (centered). Use with the `vertical_lines/` prompt. |
+| `--save-samples`  | `0`            | Save N random processed images (exactly as sent to the VLM, including crop and lines) for inspection |
 | `--save-samples-dir` | `<output_dir>/sample_images` | Directory to save sample images |
 | `--project`       | env var        | Google Cloud project ID                          |
 | `--location`      | `global`       | Google Cloud region                              |
@@ -134,7 +143,8 @@ The output JSON is structured by batch, with metadata:
 {
   "metadata": {
     "window_size": 5,
-    "crop_width": null
+    "crop_width": null,
+    "line_width": null
   },
   "batches": {
     "segment1_b0": {
@@ -147,7 +157,11 @@ The output JSON is structured by batch, with metadata:
           {
             "bbox": [120, 340, 450, 620],
             "description": "Large red torii gate at the entrance to a shrine.",
-            "landmark_score": 0.92
+            "category": 1,
+            "category_label": "famous landmark",
+            "color_prominence": 0.85,
+            "shape_prominence": 0.90,
+            "semantic_familiarity": 0.95
           }
         ],
         "GS010388_0003": []

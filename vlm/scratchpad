@@ -1,0 +1,26 @@
+python run_gemini.py \
+    --input /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/kinshicho_c/kinshicho_c_route.json \
+    --output /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/output/kinshicho_c.json \
+    --system-prompt /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/prompt_engineering/system_prompt3.md \
+    --window-size 5 \
+    --max-frames 10 \
+    --crop-width 0.5 \
+    --save-samples 5
+
+python dedup_detections.py \
+    --input kinshicho_c/kinshicho_c_route.json \
+    --detections output/kinshicho_c.json \
+    --output output/kinshicho_c_deduped.json \
+    --similarity-threshold 0.75 \
+    --max-duplicates 2 \
+    --window-size 5 \
+    --batch-size 16 \
+    --device mps
+
+python view_detections.py \
+    --input /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/kinshicho_c/kinshicho_c_route.json \
+    --detections /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/output/kinshicho_c_deduped.json \
+    --image-dir /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/kinshicho_c
+
+
+

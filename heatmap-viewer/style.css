@@ -212,6 +212,10 @@ body {
 .group-header {
   padding: 4px 0;
   border-bottom: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
 }
 
 .good-header { border-color: #00BFC4; }
@@ -236,6 +240,30 @@ body {
 
 .good-header .group-toggle { color: #00BFC4; }
 .poor-header .group-toggle { color: #F8766D; }
+
+.heatmap-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.heatmap-toggle input[type="checkbox"] {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.good-header .heatmap-toggle input { accent-color: #00BFC4; }
+.poor-header .heatmap-toggle input { accent-color: #F8766D; }
+
+.heatmap-label {
+  font-size: 10px;
+  color: #71717a;
+  letter-spacing: 0.02em;
+}
 
 .group-label {
   font-size: 12px;

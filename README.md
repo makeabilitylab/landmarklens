@@ -257,6 +257,18 @@ Connect the Galaxy XR headset via ADB, then from `study-materials/`:
 ./push_routes.sh --list       # list available participant sets
 ```
 
+To update just the `detections.json` on the headset (without re-pushing images):
+
+```
+./push_detections.sh <route_id> <path/to/detections.json>
+```
+
+Example:
+
+```bash
+./push_detections.sh ningyocho_r1 EvaluationSets/P00/Routes/ningyocho_r1/detections.json
+```
+
 ## Generating gaze heatmaps
 
 After collecting eye-tracking data from the VR study, you can generate heatmap composites that overlay gaze density onto the original panorama images.

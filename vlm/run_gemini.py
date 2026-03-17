@@ -149,21 +149,25 @@ def substitute_prompt(template, n_images):
     return template.replace("$NUM_IMAGES", str(n_images))
 
 
-def remap_bboxes_to_full(detections, crop_width, crop_height=None):
+def remap_bboxes_to_full(detections, crop_width, crop_height=None, turn_angle=0.0):
     """Remap bbox coordinates from cropped image space back to full panorama space.
 
     Both crops are centered, so offsets are (1 - crop_fraction) / 2.
     Coordinates in the cropped image (0-1000) are mapped back to the full panorama (0-1000).
+    turn_angle reverses the extra rotation applied to junction frames so that
+    the saved coordinates are in the yaw-only rotated space (what Unity expects).
     """
     do_x = crop_width is not None and crop_width < 1.0
     do_y = crop_height is not None and crop_height < 1.0
-    if not do_x and not do_y:
+    if not do_x and not do_y and turn_angle == 0.0:
         return detections
 
     x_offset = (1.0 - crop_width) / 2.0 if do_x else 0.0
     x_scale = crop_width if do_x else 1.0
     y_offset = (1.0 - crop_height) / 2.0 if do_y else 0.0
     y_scale = crop_height if do_y else 1.0
+
+    turn_shift = round(turn_angle / 360.0 * 1000)
 
     remapped = []
     for det in detections:
@@ -174,6 +178,10 @@ def remap_bboxes_to_full(detections, crop_width, crop_height=None):
         x_max_full = int(round(x_offset * 1000 + (x_max / 1000.0) * x_scale * 1000))
         y_min_full = int(round(y_offset * 1000 + (y_min / 1000.0) * y_scale * 1000))
         y_max_full = int(round(y_offset * 1000 + (y_max / 1000.0) * y_scale * 1000))
+
+        if turn_shift != 0:
+            x_min_full = (x_min_full + turn_shift) % 1000
+            x_max_full = (x_max_full + turn_shift) % 1000
 
         remapped.append({
             **det,
@@ -208,8 +216,8 @@ def process_batch(client, batch, orientation_lookup, system_prompt_template,
         frame_stem = frame["frame_id"]
         turn_angle = (frame.get("turn_angle", 0.0) or 0.0) if frame.get("_apply_turn_angle") else 0.0
 
-        # Junction and turn-warning frames get a wider crop to capture landmarks in all directions
-        is_intersection_frame = frame.get("is_junction") or frame.get("is_turn_warning")
+        # Junction frames get a wider crop and more detections
+        is_intersection_frame = frame.get("is_junction")
         frame_crop_width = crop_width
         if is_intersection_frame and crop_width is not None:
             frame_crop_width = min(270.0 / 360.0, 1.0)
@@ -260,11 +268,13 @@ def process_batch(client, batch, orientation_lookup, system_prompt_template,
     for i, frame in enumerate(batch):
         key = f"image{i + 1}"
         detections = raw.get(key, [])
-        is_intersection_frame = frame.get("is_junction") or frame.get("is_turn_warning")
         frame_crop_width = crop_width
-        if is_intersection_frame and crop_width is not None:
+        if frame.get("is_junction") and crop_width is not None:
             frame_crop_width = min(270.0 / 360.0, 1.0)
-        results[frame["frame_id"]] = remap_bboxes_to_full(detections, frame_crop_width, crop_height)
+        frame_turn_angle = (frame.get("turn_angle", 0.0) or 0.0) if frame.get("_apply_turn_angle") else 0.0
+        results[frame["frame_id"]] = remap_bboxes_to_full(
+            detections, frame_crop_width, crop_height, turn_angle=frame_turn_angle
+        )
 
     return results
 

@@ -78,8 +78,12 @@ def load_route(route_id):
     raise ValueError(f"Route '{route_id}' not found. Available: {available}")
 
 
-def load_detections(detections_path):
-    """Flatten VLM detections JSON into {frame_id: [detections]}."""
+def load_detections(detections_path, valid_only=False):
+    """Flatten VLM detections JSON into {frame_id: [detections]}.
+
+    If valid_only is True, only include detections where is_valid == True
+    (for second-pass validated files).
+    """
     with open(detections_path) as f:
         data = json.load(f)
     result = {}
@@ -87,13 +91,17 @@ def load_detections(detections_path):
         if batch.get("status") != "completed":
             continue
         for frame_id, dets in batch.get("results", {}).items():
+            if not dets:
+                continue
+            if valid_only:
+                dets = [d for d in dets if d.get("is_valid", False)]
             if dets:
                 result[frame_id] = dets
     return result
 
 
 def export_route(route_id, output_dir, frames_dir, detections_path=None,
-                 no_copy=False):
+                 valid_only=False, no_copy=False):
     route = load_route(route_id)
     pano_lookup = load_pano_lookup()
     frames = route["frames"]
@@ -267,7 +275,7 @@ def export_route(route_id, output_dir, frames_dir, detections_path=None,
 
     # Detections
     if detections_path:
-        det_map = load_detections(detections_path)
+        det_map = load_detections(detections_path, valid_only=valid_only)
         det_json_path = output_dir / "detections.json"
         with open(det_json_path, "w") as f:
             json.dump(det_map, f, indent=2)
@@ -319,6 +327,8 @@ def main():
                         help="VLM detections JSON (from run_gemini.py or dedup)")
     parser.add_argument("--frames-dir", default=str(FRAMES_DIR),
                         help="Panorama frames directory")
+    parser.add_argument("--valid-only", action="store_true",
+                        help="Only include detections where is_valid == True (second-pass)")
     parser.add_argument("--no-copy", action="store_true",
                         help="Skip image copy (metadata only)")
     args = parser.parse_args()
@@ -333,6 +343,7 @@ def main():
         output_dir,
         Path(args.frames_dir),
         detections_path=args.detections,
+        valid_only=args.valid_only,
         no_copy=args.no_copy,
     )
 

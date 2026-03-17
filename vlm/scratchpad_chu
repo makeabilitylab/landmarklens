@@ -1,26 +1,43 @@
 python vlm/run_gemini.py \
     --input vlm/ningyocho_r1/ningyocho_r1_route.json \
-    --output vlm/output/ningyocho_r1_prompt5-medium-intersection.json \
+    --output vlm/output/ningyocho_r1_20_frames.json \
     --system-prompt vlm/prompt_engineering/system_prompt5.md \
     --window-size 3 \
-    --max-frames 20 \
     --crop-width 180 \
     --line-width 90 \
-    --crop-height 0.7 \
-    --save-samples 20
+    --crop-height 0.7
 
 python vlm/dedup_detections.py \
     --input vlm/ningyocho_r1/ningyocho_r1_route.json \
-    --detections vlm/output/ningyocho_r1_test.json \
-    --output vlm/output/ningyocho_r1_test_deduped.json \
+    --detections vlm/output/ningyocho_r1_20_frames_secondpass.json \
+    --output vlm/output/ningyocho_r1_20_frames_secondpass_deduped.json \
     --similarity-threshold 0.75 \
     --max-duplicates 2 \
     --window-size 5 \
     --batch-size 16 \
     --device mps
 
+python vlm/validate_detections.py \
+    --input vlm/ningyocho_r1/ningyocho_r1_route.json \
+    --detections vlm/output/ningyocho_r1_20_frames.json \
+    --output vlm/output/ningyocho_r1_20_frames_secondpass.json \
+    --system-prompt vlm/prompt_engineering/second_pass/system_prompt1.md \
+    --buffer 1.5 \
+    --save-samples-dir vlm/output/secondpass_crops
+
+python vlm/shrink_bboxes.py \
+    --input vlm/ningyocho_r1/ningyocho_r1_route.json \
+    --detections vlm/output/ningyocho_r1_20_frames_secondpass_deduped.json \
+    --output vlm/output/ningyocho_r1_20_frames_secondpass_deduped_shrunk.json \
+    --max-height 100 --max-width 100 \
+    --save-debug vlm/output/debug_shrink    
+
 python vlm/view_detections.py \
     --input vlm/ningyocho_r1/ningyocho_r1_route\.json \
-    --detections vlm/output/ningyocho_r1_intersections_4.json \
+    --detections vlm/output/ningyocho_r1_20_frames_secondpass_deduped.json \
     --image-dir data/frames \
     --port 8769
+
+python vlm/export_for_vr.py ningyocho_r1 \
+    --detections vlm/output/ningyocho_r1_20_frames_secondpass_deduped.json \
+    --valid-only

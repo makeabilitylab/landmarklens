@@ -80,6 +80,18 @@ def compute_color_variance(region: np.ndarray) -> float:
     return float(np.std(region.astype(np.float32)))
 
 
+def compute_color_contrast(region: np.ndarray, context: np.ndarray) -> float:
+    """Euclidean distance between the mean RGB of the region and its context.
+
+    Higher values mean the region's colors stand out more from surroundings.
+    """
+    if region.size == 0 or context.size == 0:
+        return 0.0
+    region_mean = region.astype(np.float32).reshape(-1, 3).mean(axis=0)
+    context_mean = context.astype(np.float32).reshape(-1, 3).mean(axis=0)
+    return float(np.linalg.norm(region_mean - context_mean))
+
+
 def compute_edge_density(region: np.ndarray) -> float:
     """Sum of gradient magnitudes on the grayscale version of the region."""
     if region.size == 0:
@@ -158,13 +170,16 @@ def shrink_bbox_horizontal(
     if len(candidates) == 0:
         return list(bbox), None
 
+    # Extract the full original bbox as context for color contrast
+    full_region = extract_region(image, bbox)
+
     # Score each candidate
     color_scores = []
     edge_scores = []
     for cx_min in candidates:
         candidate_bbox = [y_min, cx_min, y_max, cx_min + max_width]
         region = extract_region(image, candidate_bbox)
-        color_scores.append(compute_color_variance(region))
+        color_scores.append(compute_color_contrast(region, full_region))
         edge_scores.append(compute_edge_density(region))
 
     color_scores = np.array(color_scores, dtype=np.float64)
@@ -390,10 +405,10 @@ def main():
                         help="Max bbox height in 0-1000 space (default: 300)")
     parser.add_argument("--max-width", type=int, default=200,
                         help="Max bbox width in 0-1000 space (default: 200)")
-    parser.add_argument("--color-weight", type=float, default=0.5,
-                        help="Weight for color variance score (default: 0.5)")
-    parser.add_argument("--edge-weight", type=float, default=0.5,
-                        help="Weight for edge density score (default: 0.5)")
+    parser.add_argument("--color-weight", type=float, default=0.7,
+                        help="Weight for color contrast score (default: 0.7)")
+    parser.add_argument("--edge-weight", type=float, default=0.3,
+                        help="Weight for edge density score (default: 0.3)")
     parser.add_argument("--stride", type=int, default=3,
                         help="Sliding window step in 0-1000 space (default: 5)")
     parser.add_argument("--save-debug", default=None,

@@ -124,9 +124,11 @@ def build_response_schema(n_images):
             "color_prominence": types.Schema(type="NUMBER"),
             "shape_prominence": types.Schema(type="NUMBER"),
             "semantic_familiarity": types.Schema(type="NUMBER"),
+            "navigational_context": types.Schema(type="STRING"),
         },
         required=["bbox", "description", "category", "category_label",
-                   "color_prominence", "shape_prominence", "semantic_familiarity"],
+                   "color_prominence", "shape_prominence", "semantic_familiarity",
+                   "navigational_context"],
     )
 
     detection_list = types.Schema(
@@ -205,13 +207,30 @@ def process_batch(client, batch, orientation_lookup, system_prompt_template,
         is_reverse = frame["direction"] == "reverse"
         frame_stem = frame["frame_id"]
         turn_angle = (frame.get("turn_angle", 0.0) or 0.0) if frame.get("_apply_turn_angle") else 0.0
+
+        # Junction and turn-warning frames get a wider crop to capture landmarks in all directions
+        is_intersection_frame = frame.get("is_junction") or frame.get("is_turn_warning")
+        frame_crop_width = crop_width
+        if is_intersection_frame and crop_width is not None:
+            frame_crop_width = min(270.0 / 360.0, 1.0)
+
         image_bytes, full_pil_img, cropped_pil_img = rotate_and_encode(
             frame["pano_path"], frame_stem, orientation_lookup, is_reverse,
-            crop_width=crop_width, crop_height=crop_height,
+            crop_width=frame_crop_width, crop_height=crop_height,
             turn_angle=turn_angle, line_width_deg=line_width_deg,
         )
         if processed_images is not None:
             processed_images.append((frame_stem, cropped_pil_img))
+
+        if is_intersection_frame:
+            turn_dir = frame.get("turn_direction") or frame.get("turn_warning_direction") or ""
+            label = "[INTERSECTION — this image is at or near a junction"
+            if turn_dir:
+                label += f", turn direction: {turn_dir}"
+            label += ". You MUST highlight 3–4 objects for this image.]"
+            content_parts.append(types.Part.from_text(text=label))
+            print(f"    → Intersection label for {frame_stem}: {label}")
+
         content_parts.append(
             types.Part.from_bytes(data=image_bytes, mime_type="image/jpeg")
         )
@@ -228,6 +247,9 @@ def process_batch(client, batch, orientation_lookup, system_prompt_template,
             max_output_tokens=65536,
             response_mime_type="application/json",
             response_schema=build_response_schema(n_images),
+            thinking_config=types.ThinkingConfig(
+                thinking_level=types.ThinkingLevel.MEDIUM
+            ),
         ),
     )
 
@@ -238,7 +260,11 @@ def process_batch(client, batch, orientation_lookup, system_prompt_template,
     for i, frame in enumerate(batch):
         key = f"image{i + 1}"
         detections = raw.get(key, [])
-        results[frame["frame_id"]] = remap_bboxes_to_full(detections, crop_width, crop_height)
+        is_intersection_frame = frame.get("is_junction") or frame.get("is_turn_warning")
+        frame_crop_width = crop_width
+        if is_intersection_frame and crop_width is not None:
+            frame_crop_width = min(270.0 / 360.0, 1.0)
+        results[frame["frame_id"]] = remap_bboxes_to_full(detections, frame_crop_width, crop_height)
 
     return results
 
@@ -305,6 +331,8 @@ def main():
     parser.add_argument("--dry-run", action="store_true",
                         help="Run the full pipeline (loading, batching, image processing) but skip "
                              "the Gemini API call. Returns empty detections for each frame.")
+    parser.add_argument("--frames", nargs="+", default=None,
+                        help="Only process these specific frame IDs (e.g. --frames GS010418_0023 GS010418_0027)")
     parser.add_argument("--project", default=None, help="Google Cloud project ID (or set GOOGLE_CLOUD_PROJECT)")
     parser.add_argument("--location", default="global", help="Google Cloud region")
     args = parser.parse_args()
@@ -336,6 +364,14 @@ def main():
         for i, frame in enumerate(segments[seg_id]):
             prev_warned = (i > 0 and segments[seg_id][i - 1].get("is_turn_warning", False))
             frame["_apply_turn_angle"] = prev_warned
+
+    # Filter to specific frames if requested
+    if args.frames:
+        frame_set = set(args.frames)
+        for seg_id in segments:
+            segments[seg_id] = [f for f in segments[seg_id] if f["frame_id"] in frame_set]
+        matched = sum(len(v) for v in segments.values())
+        print(f"Filtered to {matched}/{len(frame_set)} requested frames")
 
     # Apply global max-frames budget across segments in order
     remaining = args.max_frames

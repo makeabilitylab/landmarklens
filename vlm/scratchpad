@@ -20,10 +20,25 @@ python dedup_detections.py \
     --batch-size 16 \
     --device mps
 
+python validate_detections.py \
+    --input ningyocho_r1/ningyocho_r1_route.json \
+    --detections output/ningyocho_r1_route_deduped.json \
+    --output output/ningyocho_r1_route_secondpass.json \
+    --system-prompt prompt_engineering/second_pass/system_prompt1.md \
+    --buffer 1.5 \
+    --max-frames 20 \
+    --save-samples 10 \
+    --save-samples-dir /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/output/secondpass_crops \
+    --dry-run
+
+python shrink_bboxes.py \
+    --input ningyocho_r1/ningyocho_r1_route.json \
+    --detections output/ningyocho_r1_route_secondpass.json \
+    --output output/ningyocho_r1_route_shrunk.json \
+    --max-height 20 --max-width 20 \
+    --save-debug vlm/output/debug_shrink
+
 python view_detections.py \
     --input /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/ningyocho_r1_route.json \
-    --detections /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/output/ningyocho_r1_route.json \
+    --detections /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/output/ningyocho_r1_route_shrunk.json \
     --image-dir /Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1
-
-
-

@@ -56,12 +56,16 @@ vlm/
 ├── README.md
 ├── run_gemini.py                  # Main detection script
 ├── dedup_detections.py            # Post-processing deduplication
+├── validate_detections.py         # Second-pass validation of detections
+├── shrink_bboxes.py              # Shrink oversized bboxes to striking regions
 ├── view_detections.py             # Browser-based detection viewer
 └── prompt_engineering/
     ├── create_prompt_prompt.md     # Original spec used to draft the prompts
     ├── system_prompt1.md           # System prompt template
-    └── vertical_lines/
-        └── system_prompt1.md      # Prompt for use with --line-width
+    ├── vertical_lines/
+    │   └── system_prompt1.md      # Prompt for use with --line-width
+    └── second_pass/
+        └── system_prompt1.md      # Prompt for detection validation
 ```
 
 ## Usage
@@ -231,6 +235,161 @@ Total detections (after):  31
 Matched sets found:        8
 Detections removed:        16
 Output written to: vlm/output/kinshicho_c_deduped.json
+```
+
+## Second-Pass Validation
+
+`validate_detections.py` is a second-pass step that sends each detected object back to Gemini for individual validation. Each detection is cropped from its source panorama (with a configurable buffer) and sent as a single image along with the first-pass description and category. Gemini returns whether the detection is valid and an explanation.
+
+### How It Works
+
+1. **Load & Flatten** — Reuses `load_and_flatten` from `dedup_detections.py` to produce a flat list of detections with panorama paths and orientation data.
+2. **Crop** — For each detection, crops the bounding box region from the rotated panorama (with buffer, handling 360° wrapping), using the same `crop_detection_buffered` function as dedup.
+3. **Validate** — Sends each crop individually to Gemini with a system prompt that includes the detection's `$DESCRIPTION` and `$CATEGORY`. Gemini returns `is_valid` (bool) and `reason_is_valid` (string).
+4. **Augment** — Writes the validation fields into the original detection JSON structure.
+
+### Validation Usage
+
+```bash
+python vlm/validate_detections.py \
+    --input vlm/ningyocho_r1/ningyocho_r1_route.json \
+    --detections vlm/output/ningyocho_r1_route_deduped.json \
+    --output vlm/output/ningyocho_r1_route_validated.json \
+    --system-prompt vlm/prompt_engineering/second_pass/system_prompt1.md
+```
+
+### Validation Options
+
+| Flag              | Default      | Description                                                    |
+|-------------------|--------------|----------------------------------------------------------------|
+| `--input`         | *(required)* | Route JSON (has `pano_path`, `frame_order`, `direction`)       |
+| `--detections`    | *(required)* | Detections JSON (typically deduped output)                     |
+| `--output`        | *(required)* | Output path for validated JSON                                 |
+| `--system-prompt` | *(required)* | Path to `.md` prompt template (`$DESCRIPTION`, `$CATEGORY`)   |
+| `--buffer`        | `1.5`        | Crop buffer multiplier in each direction                       |
+| `--dry-run`       | off          | Skip Gemini API calls; mark all detections as valid            |
+| `--project`       | env var      | Google Cloud project ID                                        |
+| `--location`      | `global`     | Google Cloud region                                            |
+
+### Validation Prerequisites
+
+- Same as `run_gemini.py`: `google-genai`, `numpy`, `Pillow`, `python-dotenv`
+- Also requires dependencies from `dedup_detections.py`: `torch`, `transformers` (for imports)
+
+### Validation Output
+
+The output JSON has the same structure as the input detections JSON, with two additional fields on each detection:
+
+```json
+{
+  "bbox": [120, 340, 450, 620],
+  "description": "Large red torii gate at the entrance to a shrine.",
+  "category": 1,
+  "category_label": "famous landmark",
+  "color_prominence": 0.85,
+  "shape_prominence": 0.90,
+  "semantic_familiarity": 0.95,
+  "is_valid": true,
+  "reason_is_valid": "The crop clearly shows a red torii gate matching the description."
+}
+```
+
+The validated output can be used directly with `view_detections.py` for inspection (extra fields are ignored by the viewer).
+
+### Resumability
+
+The script saves progress after each frame group. On re-run, detections that already have `is_valid` set are skipped. API errors are recorded per-detection (`is_valid: null`) without aborting, so re-running will retry only failed detections.
+
+The script prints a summary on completion:
+
+```
+=== Validation Summary ===
+Total detections:  31
+Validated (new):   29
+Skipped (already): 0
+Valid:             25
+Invalid:            4
+Errors:             2
+Output written to: vlm/output/ningyocho_r1_route_validated.json
+```
+
+## Bounding Box Shrinking
+
+`shrink_bboxes.py` is a post-processing step that shrinks oversized bounding boxes to a configurable maximum size, repositioning them to the most visually striking sub-region. It runs after `validate_detections.py`.
+
+### How It Works
+
+1. **Load & Flatten** — Reuses `load_and_flatten` from `dedup_detections.py` to produce a flat list of detections.
+2. **Check Size** — For each detection, if the bbox is already within `--max-height` and `--max-width`, it passes through unchanged.
+3. **Vertical Shrink** — Oversized bboxes are shrunk vertically toward the horizon line (y=500 in normalized space). The center is pulled proportionally toward y=500 based on how much shrinking is needed — a barely-oversized bbox barely moves, while a very tall bbox shifts significantly toward the horizon.
+4. **Horizontal Shrink** — The width is reduced by sliding a window of the target size across the original bbox's x-range. Each candidate position is scored using a weighted combination of:
+   - **Color variance**: standard deviation of RGB pixel values (captures colorful/contrasting regions)
+   - **Edge density**: sum of gradient magnitudes on the grayscale image (captures shape/texture detail)
+
+   Both scores are normalized to 0-1 across candidate positions before combining. The position with the highest combined score is selected.
+5. **Output** — Writes a new JSON with adjusted bboxes, preserving the original bbox in a `bbox_original` field.
+
+### Shrink Usage
+
+```bash
+python vlm/shrink_bboxes.py \
+    --input vlm/ningyocho_r1/ningyocho_r1_route.json \
+    --detections vlm/output/ningyocho_r1_route_secondpass.json \
+    --output vlm/output/ningyocho_r1_route_shrunk.json \
+    --max-height 300 --max-width 200
+```
+
+### Shrink Options
+
+| Flag              | Default      | Description                                              |
+|-------------------|--------------|----------------------------------------------------------|
+| `--input`         | *(required)* | Route JSON (has `pano_path`, `frame_order`, `direction`) |
+| `--detections`    | *(required)* | Detections JSON (typically validated output)              |
+| `--output`        | *(required)* | Output path for shrunk JSON                              |
+| `--max-height`    | `300`        | Max bbox height in 0-1000 normalized space               |
+| `--max-width`     | `200`        | Max bbox width in 0-1000 normalized space                |
+| `--color-weight`  | `0.5`        | Weight for color variance in combined score              |
+| `--edge-weight`   | `0.5`        | Weight for edge density in combined score                |
+| `--stride`        | `5`          | Sliding window step size in 0-1000 space                 |
+
+### Shrink Prerequisites
+
+- Python packages: `numpy`, `Pillow`
+- Also requires dependencies from `dedup_detections.py`: `torch`, `transformers` (for imports)
+
+### Shrink Output
+
+The output JSON has the same structure as the input detections JSON, with three additional fields on each detection:
+
+```json
+{
+  "bbox": [320, 400, 620, 600],
+  "bbox_original": [120, 340, 750, 620],
+  "bbox_shrunk": true,
+  "description": "Large red torii gate at the entrance to a shrine.",
+  "category": 1,
+  "category_label": "famous landmark",
+  "color_prominence": 0.85,
+  "shape_prominence": 0.90,
+  "semantic_familiarity": 0.95
+}
+```
+
+The shrunk output can be used directly with `view_detections.py` for inspection (extra fields are ignored by the viewer).
+
+### Resumability
+
+The script saves progress after each frame group. On re-run, detections that already have `bbox_shrunk` set are skipped.
+
+The script prints a summary on completion:
+
+```
+=== Bbox Shrink Summary ===
+Total detections:  31
+Shrunk:            18
+Unchanged:         13
+Skipped (resumed): 0
+Output written to: vlm/output/ningyocho_r1_route_shrunk.json
 ```
 
 ## Detection Viewer

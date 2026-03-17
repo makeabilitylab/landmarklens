@@ -187,9 +187,20 @@ function render() {{
     frame.detections.forEach((d, i) => {{
       const color = COLORS[i % COLORS.length];
       const cat = d.category_label || ('cat ' + d.category);
+      let validTag = '';
+      if (d.is_valid === true) {{
+        validTag = '<span style="color:#4f4;font-weight:600"> &#10003; valid</span>';
+      }} else if (d.is_valid === false) {{
+        validTag = '<span style="color:#f44;font-weight:600"> &#10007; invalid</span>';
+      }}
+      let reasonLine = '';
+      if (d.reason_is_valid) {{
+        reasonLine = '<div class="det-bbox" style="color:#aaa;font-style:italic">' + d.reason_is_valid + '</div>';
+      }}
       html += '<div class="det">' +
-        '<span class="det-score" style="color:' + color + '">[' + (i+1) + '] ' + cat + '</span> &mdash; ' +
+        '<span class="det-score" style="color:' + color + '">[' + (i+1) + '] ' + cat + '</span>' + validTag + ' &mdash; ' +
         '<span class="det-desc">' + d.description + '</span>' +
+        reasonLine +
         '<div class="det-bbox">color: ' + (d.color_prominence || 0).toFixed(2) +
         ' &middot; shape: ' + (d.shape_prominence || 0).toFixed(2) +
         ' &middot; familiarity: ' + (d.semantic_familiarity || 0).toFixed(2) +
@@ -234,6 +245,20 @@ function drawBoxes(dets, w, h) {{
     ctx.strokeStyle = color;
     ctx.lineWidth = 20;
     ctx.strokeRect(x1, y1, x2 - x1, y2 - y1);
+
+    // Diagonal strikethrough if marked invalid
+    if (d.is_valid === false) {{
+      ctx.strokeStyle = '#ff0000';
+      ctx.lineWidth = 6;
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(x2, y1);
+      ctx.lineTo(x1, y2);
+      ctx.stroke();
+    }}
 
     // Label
     const label = '[' + (i+1) + '] ' + (d.category_label || 'cat ' + d.category);

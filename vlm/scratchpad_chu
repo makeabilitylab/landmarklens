@@ -1,0 +1,26 @@
+python vlm/run_gemini.py \
+    --input vlm/ningyocho_r1/ningyocho_r1_route.json \
+    --output vlm/output/ningyocho_r1_prompt5-medium-intersection.json \
+    --system-prompt vlm/prompt_engineering/system_prompt5.md \
+    --window-size 3 \
+    --max-frames 20 \
+    --crop-width 180 \
+    --line-width 90 \
+    --crop-height 0.7 \
+    --save-samples 20
+
+python vlm/dedup_detections.py \
+    --input vlm/ningyocho_r1/ningyocho_r1_route.json \
+    --detections vlm/output/ningyocho_r1_test.json \
+    --output vlm/output/ningyocho_r1_test_deduped.json \
+    --similarity-threshold 0.75 \
+    --max-duplicates 2 \
+    --window-size 5 \
+    --batch-size 16 \
+    --device mps
+
+python vlm/view_detections.py \
+    --input vlm/ningyocho_r1/ningyocho_r1_route\.json \
+    --detections vlm/output/ningyocho_r1_intersections_4.json \
+    --image-dir data/frames \
+    --port 8769

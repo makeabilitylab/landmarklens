@@ -1,0 +1,621 @@
+{
+  "metadata": {
+    "window_size": 3,
+    "crop_width": 0.5,
+    "crop_height": 0.7,
+    "line_width": 90.0
+  },
+  "batches": {
+    "segment1_b0": {
+      "segment_id": "segment1",
+      "batch_index": 0,
+      "frame_ids": [
+        "GS010417_0000",
+        "GS010417_0002",
+        "GS010417_0004"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010417_0000": [
+          {
+            "bbox": [
+              521,
+              545,
+              745,
+              595
+            ],
+            "description": "Bright blue Asahi vending machine located on the right side of the street.",
+            "category": 6,
+            "category_label": "Vending machines",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.9,
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows a bright blue Asahi vending machine within the bounding box, matching the category and description. It is a permanent and distinctive object suitable for navigation."
+          },
+          {
+            "bbox": [
+              304,
+              440,
+              500,
+              465
+            ],
+            "description": "Tall, narrow black building visible down the street, serving as a distant focal point.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.4,
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows the tall, narrow black building described, and the bounding box accurately highlights it. It is a permanent and visually distinctive structure suitable as a landmark."
+          }
+        ],
+        "GS010417_0002": [
+          {
+            "bbox": [
+              332,
+              490,
+              598,
+              610
+            ],
+            "description": "Corner building housing a ramen shop with a distinctive stone-patterned wall and dark awning.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.5,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.7,
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows a corner building with a distinctive stone-patterned wall and dark awnings, matching the description of the ramen shop. This is a permanent and visually distinct landmark."
+          },
+          {
+            "bbox": [
+              290,
+              435,
+              500,
+              465
+            ],
+            "description": "Tall, narrow black building, now closer, acting as a landmark for the direction of travel.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.4,
+            "is_valid": true,
+            "reason_is_valid": "The bounding box accurately highlights a tall, narrow black building with a prominent external staircase. This is a permanent and visually distinctive structure that perfectly matches the provided description and category."
+          }
+        ],
+        "GS010417_0004": [
+          {
+            "bbox": [
+              248,
+              520,
+              360,
+              540
+            ],
+            "description": "Prominent white vertical sign with black Japanese characters for the ramen shop, easily visible from the street.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.7,
+            "semantic_familiarity": 0.8,
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows a prominent white vertical sign with black Japanese characters, matching the description and category. It is a permanent and visually distinctive landmark."
+          }
+        ]
+      }
+    },
+    "segment1_b1": {
+      "segment_id": "segment1",
+      "batch_index": 1,
+      "frame_ids": [
+        "GS010417_0007",
+        "GS010417_0010",
+        "GS010417_0012"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010417_0007": [
+          {
+            "bbox": [
+              346,
+              510,
+              640,
+              585
+            ],
+            "description": "Building on the right side of the street featuring a prominent, plain white awning over its entrance.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.6,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.4,
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows a building with a prominent white awning over its entrance, matching the description and category. The bounding box accurately highlights this distinctive, permanent feature."
+          }
+        ],
+        "GS010417_0010": [
+          {
+            "bbox": [
+              395,
+              357,
+              501,
+              429
+            ],
+            "description": "Traditional Japanese-style building with a dark tiled roof and wooden elements, located on the left corner just past the crosswalk.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.9,
+            "semantic_familiarity": 0.8,
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows the traditional Japanese-style building with a dark tiled roof as described. It is a permanent structure and visually distinctive compared to the surrounding modern buildings, making it a good navigation landmark."
+          }
+        ],
+        "GS010417_0012": [
+          {
+            "bbox": [
+              150,
+              486,
+              588,
+              675
+            ],
+            "description": "Large, modern building on the right side of the street characterized by distinct horizontal grey and beige stripes.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.6,
+            "shape_prominence": 0.7,
+            "semantic_familiarity": 0.5,
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows a large, modern building with distinct horizontal grey and beige stripes, perfectly matching the description. It is a permanent structure and visually distinctive enough to serve as a navigation landmark."
+          }
+        ]
+      }
+    },
+    "segment1_b2": {
+      "segment_id": "segment1",
+      "batch_index": 2,
+      "frame_ids": [
+        "GS010417_0016",
+        "GS010417_0018",
+        "GS010417_0020"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010417_0016": [],
+        "GS010417_0018": [
+          {
+            "bbox": [
+              443,
+              480,
+              518,
+              496
+            ],
+            "description": "Distinctive red building located at the upcoming intersection, serving as a clear visual target along the walking path.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.9,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.7,
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows a distinctive red building that matches the description and category. It is a permanent structure and visually prominent enough to serve as a navigation landmark."
+          }
+        ],
+        "GS010417_0020": [
+          {
+            "bbox": [
+              426,
+              482,
+              527,
+              518
+            ],
+            "description": "Bright red building situated directly across the intersection, acting as a prominent and easily recognizable landmark for navigation.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.9,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.7,
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows a bright red building that matches the description and category. It is a permanent and visually distinctive structure suitable for navigation."
+          }
+        ]
+      }
+    },
+    "segment1_b3": {
+      "segment_id": "segment1",
+      "batch_index": 3,
+      "frame_ids": [
+        "GS010417_0025"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010417_0025": [
+          {
+            "bbox": [
+              282,
+              507,
+              707,
+              624
+            ],
+            "description": "Prominent building corner featuring a sleek, dark polished stone facade on the ground level, providing a strong visual contrast to the surrounding structures.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.7,
+            "semantic_familiarity": 0.8,
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows the prominent building corner with a dark polished stone facade as described. It is a permanent and visually distinctive architectural feature suitable for navigation."
+          },
+          {
+            "bbox": [
+              262,
+              369,
+              625,
+              426
+            ],
+            "description": "Tall, dark metal street lamp post with a distinctive angled arm, standing prominently on the left side of the street.",
+            "category": 5,
+            "category_label": "Street furniture",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.9,
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows a tall, dark metal street lamp post with a distinctive angled arm, matching the description and category. It is a permanent and recognizable feature of the streetscape."
+          }
+        ]
+      }
+    },
+    "segment2_b0": {
+      "segment_id": "segment2",
+      "batch_index": 0,
+      "frame_ids": [
+        "GS010418_0000",
+        "GS010418_0002",
+        "GS010418_0005"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010418_0000": [
+          {
+            "bbox": [
+              408,
+              466,
+              434,
+              484
+            ],
+            "description": "Bright red circular fire hydrant sign on a pole, visible down the sidewalk.",
+            "category": 8,
+            "category_label": "Other permanent urban infrastructure",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.7,
+            "semantic_familiarity": 0.6,
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows the bright red circular fire hydrant sign described, which is a permanent and visually distinct piece of urban infrastructure."
+          },
+          {
+            "bbox": [
+              308,
+              522,
+              668,
+              700
+            ],
+            "description": "Prominent building on the right with a dark grey stone facade and a closed metal shutter at street level.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.4,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.5,
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows the described building with a dark grey stone facade and a closed metal shutter at street level within the bounding box. It is a permanent and visually distinctive structure that matches the category and description."
+          }
+        ],
+        "GS010418_0002": [
+          {
+            "bbox": [
+              238,
+              378,
+              297,
+              428
+            ],
+            "description": "Large, bright red circular fire hydrant sign overhanging the sidewalk, seen closer up.",
+            "category": 8,
+            "category_label": "Other permanent urban infrastructure",
+            "color_prominence": 0.9,
+            "shape_prominence": 0.8,
+            "semantic_familiarity": 0.7,
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows a large, bright red circular fire hydrant sign, which matches the description and category perfectly. It is a permanent and visually distinctive piece of urban infrastructure."
+          },
+          {
+            "bbox": [
+              423,
+              545,
+              570,
+              605
+            ],
+            "description": "The dark, recessed entrance of the grey stone building on the right.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.3,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.4,
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows the dark, recessed entrance of a grey stone building as described, which is a permanent and recognizable architectural feature suitable for navigation."
+          }
+        ],
+        "GS010418_0005": [
+          {
+            "bbox": [
+              402,
+              385,
+              626,
+              415
+            ],
+            "description": "Distinctive green banner hanging from a tree, marking 'Amazake Yokocho' street.",
+            "category": 2,
+            "category_label": "Wayfinding signage",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.8,
+            "is_valid": null,
+            "reason_is_valid": "API error: Unterminated string starting at: line 3 column 22 (char 43)"
+          },
+          {
+            "bbox": [
+              423,
+              515,
+              696,
+              615
+            ],
+            "description": "Clothing boutique named 'angel' on the right, with mannequins and clothing racks displayed outside.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.6,
+            "shape_prominence": 0.7,
+            "semantic_familiarity": 0.7,
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows the clothing boutique named 'angel' with mannequins and clothing racks outside, perfectly matching the description and category. The storefront is a permanent and distinctive landmark."
+          }
+        ]
+      }
+    },
+    "segment2_b1": {
+      "segment_id": "segment2",
+      "batch_index": 1,
+      "frame_ids": [
+        "GS010418_0008",
+        "GS010418_0010",
+        "GS010418_0013"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010418_0008": [
+          {
+            "bbox": [
+              420,
+              513,
+              675,
+              625
+            ],
+            "description": "Storefront with a prominent green awning and closed white shutters on the right side of the street.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.7,
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows a storefront with a prominent green awning and closed shutters, matching the description and serving as a distinctive, permanent landmark."
+          },
+          {
+            "bbox": [
+              354,
+              410,
+              437,
+              432
+            ],
+            "description": "Tall, white, modern building visible in the distance down the street, serving as a far-off orientation point.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.5,
+            "shape_prominence": 0.7,
+            "semantic_familiarity": 0.6,
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows the tall, white, modern building described, which is a permanent and visually distinctive landmark suitable for orientation."
+          }
+        ],
+        "GS010418_0010": [
+          {
+            "bbox": [
+              325,
+              532,
+              647,
+              625
+            ],
+            "description": "Shop with a grey awning, dark facade, and glass windows, located on the right side of the walking path.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.4,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.7,
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows a shop with a grey awning, dark facade, and glass windows as described. It is a permanent and visually distinctive non-residential building that can serve as a navigation landmark."
+          },
+          {
+            "bbox": [
+              350,
+              408,
+              388,
+              428
+            ],
+            "description": "Tall white building still visible in the distance, confirming the walking direction.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.5,
+            "shape_prominence": 0.7,
+            "semantic_familiarity": 0.6,
+            "is_valid": null,
+            "reason_is_valid": "API error: Unterminated string starting at: line 3 column 22 (char 44)"
+          }
+        ],
+        "GS010418_0013": [
+          {
+            "bbox": [
+              234,
+              520,
+              815,
+              625
+            ],
+            "description": "Building on the right featuring a distinctive orange awning over closed shutters.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.6,
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows a building with closed shutters and a distinctive orange awning, matching the description and category perfectly. It is a permanent structure suitable for navigation."
+          }
+        ]
+      }
+    },
+    "segment2_b2": {
+      "segment_id": "segment2",
+      "batch_index": 2,
+      "frame_ids": [
+        "GS010418_0015",
+        "GS010418_0019",
+        "GS010418_0023"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010418_0015": [
+          {
+            "bbox": [
+              276,
+              530,
+              745,
+              645
+            ],
+            "description": "Distinctive traditional Japanese storefront with a wooden facade and prominent white signs featuring black characters.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.7,
+            "semantic_familiarity": 0.6,
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows a traditional Japanese storefront with a wooden facade and prominent white signs with black characters, perfectly matching the description and serving as a distinctive permanent landmark."
+          },
+          {
+            "bbox": [
+              381,
+              400,
+              514,
+              435
+            ],
+            "description": "Tall, narrow building with a distinctive light blue facade, visible down the street.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.4,
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows the tall, narrow building with a light blue facade within the bounding box, matching the description and serving as a distinct permanent landmark."
+          }
+        ],
+        "GS010418_0019": [
+          {
+            "bbox": [
+              227,
+              495,
+              528,
+              590
+            ],
+            "description": "Prominent multi-story white building with a slightly curved corner, located at the upcoming intersection.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.6,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.5,
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows the prominent multi-story white building at the intersection as described, which serves as a permanent and distinctive landmark."
+          },
+          {
+            "bbox": [
+              346,
+              375,
+              514,
+              420
+            ],
+            "description": "Tall, narrow building with a distinctive light blue facade, now closer on the left side of the street.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.4,
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows the tall, narrow building with a distinctive light blue facade as described. It is a permanent structure and visually distinct enough to serve as a navigation landmark."
+          }
+        ],
+        "GS010418_0023": [
+          {
+            "bbox": [
+              171,
+              495,
+              556,
+              620
+            ],
+            "description": "Prominent multi-story white building with a slightly curved corner, now directly across the intersection.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.6,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.5,
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows a prominent multi-story white building with a slightly curved corner, matching the description and category. It is a permanent and visually distinctive structure suitable for navigation."
+          },
+          {
+            "bbox": [
+              213,
+              535,
+              584,
+              575
+            ],
+            "description": "Utility pole at the corner of the intersection, featuring a pedestrian signal and a blue directional sign.",
+            "category": 8,
+            "category_label": "Other permanent urban infrastructure",
+            "color_prominence": 0.5,
+            "shape_prominence": 0.4,
+            "semantic_familiarity": 0.7,
+            "is_valid": false,
+            "reason_is_valid": "The detected object is a generic utility pole with standard traffic signals and a generic one-way sign, which is not visually distinctive enough to serve as a good navigation landmark."
+          }
+        ]
+      }
+    },
+    "segment2_b3": {
+      "segment_id": "segment2",
+      "batch_index": 3,
+      "frame_ids": [
+        "GS010418_0027"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010418_0027": [
+          {
+            "bbox": [
+              277,
+              501,
+              541,
+              573
+            ],
+            "description": "A distinctive light blue, multi-story building located on the corner across the intersection, providing a strong visual anchor for the route.",
+            "category": 7,
+            "category_label": "Visually distinctive non-residential buildings",
+            "color_prominence": 0.85,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.7,
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows the distinctive light blue, multi-story building on the corner as described. It is a permanent structure that serves as a good visual landmark."
+          }
+        ]
+      }
+    }
+  }
+}

@@ -24,11 +24,8 @@ The detection is **valid** if ALL of the following are true:
    the description must be identifiable somewhere in the image. It does not need to
    be entirely within the green rectangle — partial overlap or proximity is fine.
 
-2. **The category, description, and bounding box are consistent.** Taken together,
-   the three signals should point to the same real-world object. For example, a
-   bounding box near a storefront with a description of "distinctive blue-tiled
-   building" and category "visually distinctive building" is consistent, even if
-   the box doesn't perfectly frame the building.
+2. **The category, description, and bounding box point to the same real-world object.**
+   Minor inaccuracies in the description are acceptable as long as the described object is clearly recognizable in the image. Only reject for a **fundamental mismatch** where the description refers to a completely different kind of object than what appears in the crop (e.g., "red torii gate" but the image shows a vending machine).
 
 3. **The object is permanent.** It should be a fixed, long-term feature of the
    environment — not a temporary sign, parked vehicle, pedestrian, seasonal
@@ -43,11 +40,25 @@ The detection is **invalid** if ANY of the following are true:
 
 - The crop is empty, blurry, or too dark to identify any object.
 - The described object is not visible anywhere in the image.
-- The category, description, and bounding box are contradictory (e.g., the description
-  says "red torii gate" but nothing resembling a gate appears near the highlighted area).
+- The category, description, and bounding box are **fundamentally contradictory** — the
+  description refers to a completely different kind of object than what is visible
+  (e.g., the description says "red torii gate" but nothing resembling a gate appears).
 - The object is transient (a vehicle, person, temporary sign, etc.).
-- The object is too generic or unremarkable to serve as a navigation aid.
-- (If the object is a sign), if it is a generic such as a stop sign, yield sign, or other generic traffic signs
+- The object is too generic or unremarkable to serve as a navigation aid. Judge
+  distinctiveness based on what you actually see in the image, not on how the
+  description characterizes it. A description calling something "distinct" or
+  "notable" does not make it so — evaluate the visual evidence independently.
+- The object is **generic street furniture**: street light poles, lamp posts, traffic
+  lights, utility poles, power poles, guardrails, bollards, metal fences, manhole
+  covers, drainage grates, convex traffic mirrors, or similar municipal infrastructure
+  that repeats on every block.
+- The object is a generic regulatory or public-order sign: stop signs, yield signs,
+  traffic signs, no-smoking signs, anti-littering signs, pedestrian manner signs,
+  fire hydrant markers, or similar municipal signs.
+- The object is a temporary banner, flag, or sign attached to a street pole or utility
+  pole (e.g., neighborhood event banners, shopping district flags, promotional pennants,
+  area guide banners). These are not permanently attached to buildings and are
+  regularly replaced or removed.
 - The crop captures only a small, unrecognizable fragment of the described object.
 
 ---

@@ -82,16 +82,20 @@ def rotate_and_encode(pano_path, frame_id, orientation_lookup, is_reverse,
     return buf.getvalue()
 
 
-def build_viewer_html(frame_ids, detections, image_dir):
+def build_viewer_html(frame_ids, detections, image_dir, frame_info_map=None):
     """Build the HTML/JS for the viewer. Image data is served via /image?id=frame_id."""
     frame_data = []
     for fid in frame_ids:
         dets = detections.get(fid, [])
         has_image = find_image(image_dir, fid) is not None
+        turn_angle = 0.0
+        if frame_info_map and fid in frame_info_map:
+            turn_angle = frame_info_map[fid][1]
         frame_data.append({
             "frame_id": fid,
             "detections": dets,
             "has_image": has_image,
+            "turn_angle": turn_angle,
         })
 
     return f"""<!DOCTYPE html>
@@ -227,16 +231,20 @@ function render() {{
     canvas.width = img.width;
     canvas.height = img.height;
     ctx.drawImage(img, 0, 0);
-    drawBoxes(frame.detections, img.width, img.height);
+    drawBoxes(frame.detections, img.width, img.height, frame.turn_angle || 0);
   }};
   img.src = '/image?id=' + encodeURIComponent(frame.frame_id);
 }}
 
-function drawBoxes(dets, w, h) {{
+function drawBoxes(dets, w, h, turnAngle) {{
+  const taShift = Math.round(turnAngle / 360.0 * 1000);
   dets.forEach((d, i) => {{
     const color = COLORS[i % COLORS.length];
-    // bbox is [y_min, x_min, y_max, x_max] in 0-1000 coords
-    const [yMin, xMin, yMax, xMax] = d.bbox;
+    // bbox is [y_min, x_min, y_max, x_max] in 0-1000 coords (yaw-only space)
+    // shift x by -turn_angle to align with the turn_angle-rotated displayed image
+    const [yMin, rawXMin, yMax, rawXMax] = d.bbox;
+    const xMin = ((rawXMin - taShift) % 1000 + 1000) % 1000;
+    const xMax = ((rawXMax - taShift) % 1000 + 1000) % 1000;
     const x1 = (xMin / 1000) * w;
     const y1 = (yMin / 1000) * h;
     const x2 = (xMax / 1000) * w;
@@ -284,9 +292,12 @@ canvas.addEventListener('mousemove', (e) => {{
   const mx = (e.clientX - rect.left) * scaleX;
   const my = (e.clientY - rect.top) * scaleY;
 
+  const taShiftHover = Math.round((frame.turn_angle || 0) / 360.0 * 1000);
   let hit = null;
   frame.detections.forEach((d, i) => {{
-    const [yMin, xMin, yMax, xMax] = d.bbox;
+    const [yMin, rawXMin, yMax, rawXMax] = d.bbox;
+    const xMin = ((rawXMin - taShiftHover) % 1000 + 1000) % 1000;
+    const xMax = ((rawXMax - taShiftHover) % 1000 + 1000) % 1000;
     const x1 = (xMin / 1000) * canvas.width;
     const y1 = (yMin / 1000) * canvas.height;
     const x2 = (xMax / 1000) * canvas.width;
@@ -393,7 +404,7 @@ def main():
     print(f"Loaded {len(frame_ids)} frames with detections")
 
     image_dir = os.path.abspath(args.image_dir)
-    html = build_viewer_html(frame_ids, detections, image_dir)
+    html = build_viewer_html(frame_ids, detections, image_dir, frame_info_map)
     handler_class = make_handler(html, image_dir, frame_info_map, orientation_lookup)
 
     server = HTTPServer(("localhost", args.port), handler_class)

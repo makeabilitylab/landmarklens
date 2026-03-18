@@ -297,9 +297,6 @@ def crop_all_detections(
         img = np.array(Image.open(det0.pano_path).convert("RGB"))
         is_reverse = det0.direction == "reverse"
         img = rotate_panorama(img, frame_id, orientation_lookup, is_reverse)
-        if det0.turn_angle:
-            shift_x = -round(det0.turn_angle / 360.0 * img.shape[1])
-            img = np.roll(img, shift_x, axis=1)
 
         for det in frame_dets:
             crop = crop_detection_buffered(img, det.bbox, buffer=buffer)
@@ -312,6 +309,25 @@ def crop_all_detections(
 # Phase 4: Compare Within Sliding Window
 # ---------------------------------------------------------------------------
 
+def _compare_detection_sets(
+    dets_a: list[Detection],
+    dets_b: list[Detection],
+    embeddings: np.ndarray,
+    similarity_threshold: float,
+) -> list[tuple[int, int]]:
+    """Compare all pairs between two detection sets and return matches."""
+    matches: list[tuple[int, int]] = []
+    for da in dets_a:
+        for db in dets_b:
+            sim = float(np.dot(
+                embeddings[da.global_index],
+                embeddings[db.global_index],
+            ))
+            if sim >= similarity_threshold:
+                matches.append((da.global_index, db.global_index))
+    return matches
+
+
 def find_matches(
     detections: list[Detection],
     embeddings: np.ndarray,
@@ -320,15 +336,12 @@ def find_matches(
 ) -> list[tuple[int, int]]:
     """Find matching detection pairs within a sliding window per segment."""
     matches: list[tuple[int, int]] = []
-    window_half = window_size // 2
 
-    # Group detections by segment
     by_segment: dict[str, list[Detection]] = defaultdict(list)
     for det in detections:
         by_segment[det.segment_id].append(det)
 
     for seg_id, seg_dets in by_segment.items():
-        # Build frame_order -> list of detections
         by_order: dict[int, list[Detection]] = defaultdict(list)
         for det in seg_dets:
             by_order[det.frame_order].append(det)
@@ -337,22 +350,55 @@ def find_matches(
 
         for p_idx, p_order in enumerate(sorted_orders):
             dets_p = by_order[p_order]
-            # Window: positions [p - window_half, p + window_half]
-            for q_idx in range(p_idx + 1, len(sorted_orders)):
-                q_order = sorted_orders[q_idx]
-                if q_order > p_order + window_half:
-                    break
-                dets_q = by_order[q_order]
+            for q_idx in range(p_idx + 1, min(p_idx + 1 + window_size, len(sorted_orders))):
+                dets_q = by_order[sorted_orders[q_idx]]
+                matches.extend(_compare_detection_sets(
+                    dets_p, dets_q, embeddings, similarity_threshold,
+                ))
 
-                for dp in dets_p:
-                    for dq in dets_q:
-                        # Cosine similarity = dot product (embeddings are L2-normalized)
-                        sim = float(np.dot(
-                            embeddings[dp.global_index],
-                            embeddings[dq.global_index],
-                        ))
-                        if sim >= similarity_threshold:
-                            matches.append((dp.global_index, dq.global_index))
+    return matches
+
+
+def find_boundary_matches(
+    detections: list[Detection],
+    embeddings: np.ndarray,
+    similarity_threshold: float,
+    boundary_overlap: int,
+) -> list[tuple[int, int]]:
+    """Find matching detection pairs across consecutive segment boundaries.
+
+    For each pair of consecutive segments (ordered by minimum frame_order),
+    compares detections in the last ``boundary_overlap`` frames of the first
+    segment against detections in the first ``boundary_overlap`` frames of the
+    second segment.
+    """
+    matches: list[tuple[int, int]] = []
+
+    by_segment: dict[str, list[Detection]] = defaultdict(list)
+    for det in detections:
+        by_segment[det.segment_id].append(det)
+
+    # Order segments by their earliest frame_order
+    seg_order = sorted(by_segment.keys(),
+                       key=lambda s: min(d.frame_order for d in by_segment[s]))
+
+    for i in range(len(seg_order) - 1):
+        seg_a = by_segment[seg_order[i]]
+        seg_b = by_segment[seg_order[i + 1]]
+
+        # Get unique frame_orders sorted, then pick tail/head frames
+        orders_a = sorted({d.frame_order for d in seg_a})
+        orders_b = sorted({d.frame_order for d in seg_b})
+
+        tail_orders = set(orders_a[-boundary_overlap:])
+        head_orders = set(orders_b[:boundary_overlap])
+
+        tail_dets = [d for d in seg_a if d.frame_order in tail_orders]
+        head_dets = [d for d in seg_b if d.frame_order in head_orders]
+
+        matches.extend(_compare_detection_sets(
+            tail_dets, head_dets, embeddings, similarity_threshold,
+        ))
 
     return matches
 
@@ -456,6 +502,9 @@ def main():
     parser.add_argument("--device", default=None, help="Device: mps/cuda/cpu (auto-detects)")
     parser.add_argument("--buffer", type=float, default=1.5,
                         help="Crop buffer multiplier (default: 1.5)")
+    parser.add_argument("--boundary-overlap", type=int, default=2,
+                        help="Number of frames on each side of a segment boundary "
+                             "to compare for cross-segment dedup (default: 2, 0 to disable)")
     args = parser.parse_args()
 
     device = args.device or auto_device()
@@ -485,7 +534,19 @@ def main():
     # Phase 4: Compare Within Sliding Window
     print("\n[Phase 4] Finding matches within sliding window...")
     matches = find_matches(detections, embeddings, args.window_size, args.similarity_threshold)
-    print(f"  Match pairs found: {len(matches)}")
+    print(f"  Within-segment match pairs: {len(matches)}")
+
+    # Phase 4b: Cross-segment boundary matching
+    if args.boundary_overlap > 0:
+        print(f"\n[Phase 4b] Finding matches across segment boundaries "
+              f"(overlap={args.boundary_overlap})...")
+        boundary_matches = find_boundary_matches(
+            detections, embeddings, args.similarity_threshold, args.boundary_overlap,
+        )
+        print(f"  Cross-segment match pairs: {len(boundary_matches)}")
+        matches.extend(boundary_matches)
+
+    print(f"  Total match pairs: {len(matches)}")
 
     # Phase 5: Union-Find & Select
     print("\n[Phase 5] Selecting detections to remove...")

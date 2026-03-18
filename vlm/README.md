@@ -16,6 +16,30 @@ Panoramas are captured by a 360 camera that has an arbitrary forward direction. 
 
 At junctions, an additional rotation is applied to center the **turn direction** in the image. This uses the `turn_angle` field from the route JSON and is only applied when the previous frame (by `frame_order` within the segment) had `is_turn_warning` set to `true`. The rotation is a second `np.roll` applied after the walking-direction rotation.
 
+### Crop and Guide Line Parameters
+
+The panorama is cropped horizontally and vertically before being sent to the VLM, and vertical red guide lines are drawn to focus detections. Parameter values were derived from eye-tracking gaze data collected during the VR navigation study (N=796,040 gaze samples from the "good" navigation group across all routes).
+
+**Standard frames:**
+
+| Parameter | Value | Gaze basis |
+|---|---|---|
+| `--crop-width` | 180° | 90% azimuth interval (~164°) + margin |
+| `--line-width` | 90° | 75% azimuth interval (~88°) |
+| `--crop-height` | 0.30 | 90% elevation interval (~41°) + margin |
+
+**Intersection frames** (automatically applied when `is_junction` is true):
+
+At junctions, gaze spreads wider horizontally as participants scan for turn cues. Intersection-specific values were derived from junction-only gaze data (N=140,286 samples).
+
+| Parameter | Value | Gaze basis |
+|---|---|---|
+| `--crop-width` | 270° | 90% azimuth interval (~190°) + margin |
+| `--line-width` | 120° | 75% azimuth interval (~116°) |
+| `--crop-height` | 0.30 | 90% elevation interval (~41°) + margin |
+
+The `--crop-width` and `--crop-height` values are set via CLI arguments. Intersection-specific widening of the crop and guide lines is handled automatically in `run_gemini.py` when a frame has `is_junction` set.
+
 ### Batching and Prompt Templating
 
 The input JSON is organized by segment (e.g., `{"segment1": [frames...], "segment2": [frames...]}`). Each segment is processed independently — batches never span segment boundaries. Within each segment, frames are sorted by `frame_order` and sent to Gemini in consecutive windows of `--window-size` (default 5). The last batch in a segment may be smaller than the window size.

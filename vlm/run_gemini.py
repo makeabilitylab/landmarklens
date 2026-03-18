@@ -192,6 +192,7 @@ def remap_bboxes_to_full(detections, crop_width, crop_height=None, turn_angle=0.
 
 def process_batch(client, batch, orientation_lookup, system_prompt_template,
                   crop_width=None, crop_height=None, line_width_deg=None,
+                  intersection_crop_width=None, intersection_line_width_deg=None,
                   processed_images=None, dry_run=False):
     """Send a batch of frames to Gemini and return parsed results.
 
@@ -199,6 +200,8 @@ def process_batch(client, batch, orientation_lookup, system_prompt_template,
         crop_width: if set, crop to middle fraction of width before sending
         crop_height: if set, crop to middle fraction of height before sending
         line_width_deg: if set, draw vertical guide lines at this degree span
+        intersection_crop_width: if set, override crop_width for junction frames (fraction)
+        intersection_line_width_deg: if set, override line_width_deg for junction frames
         processed_images: if provided, a list to append (frame_id, pil_img) tuples to
         dry_run: if True, skip the API call and return empty detections
     Returns:
@@ -216,16 +219,19 @@ def process_batch(client, batch, orientation_lookup, system_prompt_template,
         frame_stem = frame["frame_id"]
         turn_angle = (frame.get("turn_angle", 0.0) or 0.0) if frame.get("_apply_turn_angle") else 0.0
 
-        # Junction frames get a wider crop and more detections
+        # Junction frames get a wider crop, more detections, and wider guide lines
         is_intersection_frame = frame.get("is_junction")
         frame_crop_width = crop_width
-        if is_intersection_frame and crop_width is not None:
-            frame_crop_width = min(270.0 / 360.0, 1.0)
+        frame_line_width_deg = line_width_deg
+        if is_intersection_frame and intersection_crop_width is not None:
+            frame_crop_width = intersection_crop_width
+        if is_intersection_frame and intersection_line_width_deg is not None:
+            frame_line_width_deg = intersection_line_width_deg
 
         image_bytes, full_pil_img, cropped_pil_img = rotate_and_encode(
             frame["pano_path"], frame_stem, orientation_lookup, is_reverse,
             crop_width=frame_crop_width, crop_height=crop_height,
-            turn_angle=turn_angle, line_width_deg=line_width_deg,
+            turn_angle=turn_angle, line_width_deg=frame_line_width_deg,
         )
         if processed_images is not None:
             processed_images.append((frame_stem, cropped_pil_img))
@@ -269,8 +275,8 @@ def process_batch(client, batch, orientation_lookup, system_prompt_template,
         key = f"image{i + 1}"
         detections = raw.get(key, [])
         frame_crop_width = crop_width
-        if frame.get("is_junction") and crop_width is not None:
-            frame_crop_width = min(270.0 / 360.0, 1.0)
+        if frame.get("is_junction") and intersection_crop_width is not None:
+            frame_crop_width = intersection_crop_width
         frame_turn_angle = (frame.get("turn_angle", 0.0) or 0.0) if frame.get("_apply_turn_angle") else 0.0
         results[frame["frame_id"]] = remap_bboxes_to_full(
             detections, frame_crop_width, crop_height, turn_angle=frame_turn_angle
@@ -338,6 +344,12 @@ def main():
                         help="Draw two vertical red guide lines on each image spanning this many degrees "
                              "(centered). Used to indicate the region where detected object centers should lie. "
                              "Requires a prompt that references the lines.")
+    parser.add_argument("--intersection-crop-width", type=float, default=None,
+                        help="Override --crop-width for intersection/junction frames (degrees). "
+                             "If not set, intersection frames use the same --crop-width as other frames.")
+    parser.add_argument("--intersection-line-width", type=float, default=None,
+                        help="Override --line-width for intersection/junction frames (degrees). "
+                             "If not set, intersection frames use the same --line-width as other frames.")
     parser.add_argument("--dry-run", action="store_true",
                         help="Run the full pipeline (loading, batching, image processing) but skip "
                              "the Gemini API call. Returns empty detections for each frame.")
@@ -364,6 +376,20 @@ def main():
         if not (0.0 < args.line_width <= crop_deg):
             parser.error(f"--line-width must be between 0 (exclusive) and {crop_deg:.0f} degrees "
                          f"(the crop width)")
+
+    # Convert intersection-crop-width from degrees to fraction
+    if args.intersection_crop_width is not None:
+        if not (0.0 < args.intersection_crop_width <= 360.0):
+            parser.error("--intersection-crop-width must be between 0 (exclusive) and 360 (inclusive) degrees")
+        args.intersection_crop_width = args.intersection_crop_width / 360.0
+
+    # Validate intersection-line-width against the intersection crop
+    if args.intersection_line_width is not None:
+        int_crop_deg = (args.intersection_crop_width * 360.0) if args.intersection_crop_width is not None else \
+                       (args.crop_width * 360.0) if args.crop_width is not None else 360.0
+        if not (0.0 < args.intersection_line_width <= int_crop_deg):
+            parser.error(f"--intersection-line-width must be between 0 (exclusive) and "
+                         f"{int_crop_deg:.0f} degrees (the intersection crop width)")
 
     # Load segments and sort each by frame_order
     with open(args.input, "r") as f:
@@ -397,7 +423,9 @@ def main():
     crop_h_msg = f" (crop-height: {args.crop_height:.0%})" if args.crop_height else ""
     crop_msg = f" (crop: {args.crop_width * 360:.0f}°)" if args.crop_width else ""
     line_msg = f" (lines: ±{args.line_width / 2:.0f}°)" if args.line_width else ""
-    print(f"Processing {total_frames} frames across {len(segments)} segments{crop_msg}{crop_h_msg}{line_msg}")
+    int_crop_msg = f" (intersection crop: {args.intersection_crop_width * 360:.0f}°)" if args.intersection_crop_width else ""
+    int_line_msg = f" (intersection lines: ±{args.intersection_line_width / 2:.0f}°)" if args.intersection_line_width else ""
+    print(f"Processing {total_frames} frames across {len(segments)} segments{crop_msg}{crop_h_msg}{line_msg}{int_crop_msg}{int_line_msg}")
 
     # Load orientation lookup for panorama rotation
     orientation_lookup = load_orientation_lookup()
@@ -429,6 +457,8 @@ def main():
             "crop_width": args.crop_width,
             "crop_height": args.crop_height,
             "line_width": args.line_width,
+            "intersection_crop_width": args.intersection_crop_width,
+            "intersection_line_width": args.intersection_line_width,
         },
         "batches": dict(existing_output.get("batches", {})),
     }
@@ -467,6 +497,8 @@ def main():
                     crop_width=args.crop_width,
                     crop_height=args.crop_height,
                     line_width_deg=args.line_width,
+                    intersection_crop_width=args.intersection_crop_width,
+                    intersection_line_width_deg=args.intersection_line_width,
                     processed_images=processed_images,
                     dry_run=args.dry_run,
                 )

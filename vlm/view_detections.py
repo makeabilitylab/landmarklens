@@ -231,20 +231,16 @@ function render() {{
     canvas.width = img.width;
     canvas.height = img.height;
     ctx.drawImage(img, 0, 0);
-    drawBoxes(frame.detections, img.width, img.height, frame.turn_angle || 0);
+    drawBoxes(frame.detections, img.width, img.height);
   }};
   img.src = '/image?id=' + encodeURIComponent(frame.frame_id);
 }}
 
-function drawBoxes(dets, w, h, turnAngle) {{
-  const taShift = Math.round(turnAngle / 360.0 * 1000);
+function drawBoxes(dets, w, h) {{
   dets.forEach((d, i) => {{
     const color = COLORS[i % COLORS.length];
     // bbox is [y_min, x_min, y_max, x_max] in 0-1000 coords (yaw-only space)
-    // shift x by -turn_angle to align with the turn_angle-rotated displayed image
-    const [yMin, rawXMin, yMax, rawXMax] = d.bbox;
-    const xMin = ((rawXMin - taShift) % 1000 + 1000) % 1000;
-    const xMax = ((rawXMax - taShift) % 1000 + 1000) % 1000;
+    const [yMin, xMin, yMax, xMax] = d.bbox;
     const x1 = (xMin / 1000) * w;
     const y1 = (yMin / 1000) * h;
     const x2 = (xMax / 1000) * w;
@@ -292,12 +288,9 @@ canvas.addEventListener('mousemove', (e) => {{
   const mx = (e.clientX - rect.left) * scaleX;
   const my = (e.clientY - rect.top) * scaleY;
 
-  const taShiftHover = Math.round((frame.turn_angle || 0) / 360.0 * 1000);
   let hit = null;
   frame.detections.forEach((d, i) => {{
-    const [yMin, rawXMin, yMax, rawXMax] = d.bbox;
-    const xMin = ((rawXMin - taShiftHover) % 1000 + 1000) % 1000;
-    const xMax = ((rawXMax - taShiftHover) % 1000 + 1000) % 1000;
+    const [yMin, xMin, yMax, xMax] = d.bbox;
     const x1 = (xMin / 1000) * canvas.width;
     const y1 = (yMin / 1000) * canvas.height;
     const x2 = (xMax / 1000) * canvas.width;

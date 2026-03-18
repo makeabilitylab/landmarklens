@@ -16,6 +16,22 @@ Panoramas are captured by a 360 camera that has an arbitrary forward direction. 
 
 At junctions, an additional rotation is applied to center the **turn direction** in the image. This uses the `turn_angle` field from the route JSON and is only applied when the previous frame (by `frame_order` within the segment) had `is_turn_warning` set to `true`. The rotation is a second `np.roll` applied after the walking-direction rotation.
 
+### Bbox Coordinate Space and VR Export
+
+Bounding boxes are stored in **(yaw + turn_angle)-rotated** space — i.e., they correspond to the image exactly as Gemini saw it. This coordinate space is consistent across the entire pipeline: `run_gemini.py`, `dedup_detections.py`, `validate_detections.py`, `shrink_bboxes.py`, and `view_detections.py` all apply the same yaw + turn_angle rotation when processing or displaying images.
+
+**VR mismatch:** The Unity VR app rotates the panorama sphere by **yaw only** (it has no knowledge of `turn_angle`). This means junction-frame bboxes appear shifted by ~85–91° in VR if used directly.
+
+**Solution:** The `export_for_vr.py` script has a `--fix-turn-angle` flag that shifts junction bbox x-coordinates by `turn_angle / 360 × 1000` at export time, converting them from (yaw + turn_angle) space into yaw-only space for Unity. This correction is applied only to frames where the previous frame in the segment had `is_turn_warning` set, matching the same logic used during detection.
+
+```bash
+python vlm/export_for_vr.py ningyocho_r1 \
+    --detections vlm/output/ningyocho_r1_secondpass_deduped.json \
+    --valid-only \
+    --fix-turn-angle \
+    --no-copy
+```
+
 ### Crop and Guide Line Parameters
 
 The panorama is cropped horizontally and vertically before being sent to the VLM, and vertical red guide lines are drawn to focus detections. Parameter values were derived from eye-tracking gaze data collected during the VR navigation study (N=796,040 gaze samples from the "good" navigation group across all routes).
@@ -347,7 +363,7 @@ Output written to: vlm/output/ningyocho_r1_route_validated.json
 2. **Check Size** — For each detection, if the bbox is already within `--max-height` and `--max-width`, it passes through unchanged.
 3. **Vertical Shrink** — Oversized bboxes are shrunk vertically toward the horizon line (y=500 in normalized space). The center is pulled proportionally toward y=500 based on how much shrinking is needed — a barely-oversized bbox barely moves, while a very tall bbox shifts significantly toward the horizon.
 4. **Horizontal Shrink** — The width is reduced by sliding a window of the target size across the original bbox's x-range. Each candidate position is scored using a weighted combination of:
-   - **Color variance**: standard deviation of RGB pixel values (captures colorful/contrasting regions)
+   - **Color contrast**: Euclidean distance between the mean RGB of the candidate sub-region and the mean RGB of the full original bbox (favors regions that stand out from surrounding context)
    - **Edge density**: sum of gradient magnitudes on the grayscale image (captures shape/texture detail)
 
    Both scores are normalized to 0-1 across candidate positions before combining. The position with the highest combined score is selected.
@@ -372,8 +388,8 @@ python vlm/shrink_bboxes.py \
 | `--output`        | *(required)* | Output path for shrunk JSON                              |
 | `--max-height`    | `300`        | Max bbox height in 0-1000 normalized space               |
 | `--max-width`     | `200`        | Max bbox width in 0-1000 normalized space                |
-| `--color-weight`  | `0.5`        | Weight for color variance in combined score              |
-| `--edge-weight`   | `0.5`        | Weight for edge density in combined score                |
+| `--color-weight`  | `0.7`        | Weight for color contrast in combined score              |
+| `--edge-weight`   | `0.3`        | Weight for edge density in combined score                |
 | `--stride`        | `5`          | Sliding window step size in 0-1000 space                 |
 
 ### Shrink Prerequisites

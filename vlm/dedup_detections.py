@@ -297,6 +297,9 @@ def crop_all_detections(
         img = np.array(Image.open(det0.pano_path).convert("RGB"))
         is_reverse = det0.direction == "reverse"
         img = rotate_panorama(img, frame_id, orientation_lookup, is_reverse)
+        if det0.turn_angle:
+            shift_x = -round(det0.turn_angle / 360.0 * img.shape[1])
+            img = np.roll(img, shift_x, axis=1)
 
         for det in frame_dets:
             crop = crop_detection_buffered(img, det.bbox, buffer=buffer)

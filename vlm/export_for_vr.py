@@ -100,8 +100,49 @@ def load_detections(detections_path, valid_only=False):
     return result
 
 
+def compute_turn_angle_map(route):
+    """Build {frame_id: turn_angle} for junction frames preceded by a turn warning."""
+    frames = route["frames"]
+    by_seg = {}
+    for fr in frames:
+        by_seg.setdefault(fr["segment_number"], []).append(fr)
+    for seg_num in by_seg:
+        by_seg[seg_num].sort(key=lambda f: f["frame_order"])
+
+    ta_map = {}
+    for seg_frames in by_seg.values():
+        for i, fr in enumerate(seg_frames):
+            prev_warned = i > 0 and seg_frames[i - 1].get("is_turn_warning", False)
+            if prev_warned:
+                ta = fr.get("turn_angle", 0.0) or 0.0
+                if ta != 0.0:
+                    ta_map[fr["frame_id"]] = ta
+    return ta_map
+
+
+def apply_turn_angle_correction(det_map, ta_map):
+    """Shift bbox x-coordinates by turn_angle for junction frames.
+
+    Use this when bboxes were generated in (yaw+turn_angle)-rotated space
+    but need to be in yaw-only space for VR display.
+    """
+    corrected = 0
+    for frame_id, angle in ta_map.items():
+        if frame_id not in det_map:
+            continue
+        shift = round(angle / 360.0 * 1000)
+        for det in det_map[frame_id]:
+            bbox = det["bbox"]
+            bbox[1] = (bbox[1] + shift) % 1000
+            bbox[3] = (bbox[3] + shift) % 1000
+        corrected += 1
+    if corrected:
+        print(f"Applied turn_angle correction to {corrected} junction frame(s)")
+    return det_map
+
+
 def export_route(route_id, output_dir, frames_dir, detections_path=None,
-                 valid_only=False, no_copy=False):
+                 valid_only=False, fix_turn_angle=False, no_copy=False):
     route = load_route(route_id)
     pano_lookup = load_pano_lookup()
     frames = route["frames"]
@@ -276,6 +317,9 @@ def export_route(route_id, output_dir, frames_dir, detections_path=None,
     # Detections
     if detections_path:
         det_map = load_detections(detections_path, valid_only=valid_only)
+        if fix_turn_angle:
+            ta_map = compute_turn_angle_map(route)
+            det_map = apply_turn_angle_correction(det_map, ta_map)
         det_json_path = output_dir / "detections.json"
         with open(det_json_path, "w") as f:
             json.dump(det_map, f, indent=2)
@@ -329,6 +373,8 @@ def main():
                         help="Panorama frames directory")
     parser.add_argument("--valid-only", action="store_true",
                         help="Only include detections where is_valid == True (second-pass)")
+    parser.add_argument("--fix-turn-angle", action="store_true",
+                        help="Shift junction bbox x-coords by turn_angle (for old pipeline output)")
     parser.add_argument("--no-copy", action="store_true",
                         help="Skip image copy (metadata only)")
     args = parser.parse_args()
@@ -344,6 +390,7 @@ def main():
         Path(args.frames_dir),
         detections_path=args.detections,
         valid_only=args.valid_only,
+        fix_turn_angle=args.fix_turn_angle,
         no_copy=args.no_copy,
     )
 

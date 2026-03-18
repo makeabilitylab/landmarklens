@@ -149,25 +149,21 @@ def substitute_prompt(template, n_images):
     return template.replace("$NUM_IMAGES", str(n_images))
 
 
-def remap_bboxes_to_full(detections, crop_width, crop_height=None, turn_angle=0.0):
+def remap_bboxes_to_full(detections, crop_width, crop_height=None):
     """Remap bbox coordinates from cropped image space back to full panorama space.
 
     Both crops are centered, so offsets are (1 - crop_fraction) / 2.
     Coordinates in the cropped image (0-1000) are mapped back to the full panorama (0-1000).
-    turn_angle reverses the extra rotation applied to junction frames so that
-    the saved coordinates are in the yaw-only rotated space (what Unity expects).
     """
     do_x = crop_width is not None and crop_width < 1.0
     do_y = crop_height is not None and crop_height < 1.0
-    if not do_x and not do_y and turn_angle == 0.0:
+    if not do_x and not do_y:
         return detections
 
     x_offset = (1.0 - crop_width) / 2.0 if do_x else 0.0
     x_scale = crop_width if do_x else 1.0
     y_offset = (1.0 - crop_height) / 2.0 if do_y else 0.0
     y_scale = crop_height if do_y else 1.0
-
-    turn_shift = round(turn_angle / 360.0 * 1000)
 
     remapped = []
     for det in detections:
@@ -178,10 +174,6 @@ def remap_bboxes_to_full(detections, crop_width, crop_height=None, turn_angle=0.
         x_max_full = int(round(x_offset * 1000 + (x_max / 1000.0) * x_scale * 1000))
         y_min_full = int(round(y_offset * 1000 + (y_min / 1000.0) * y_scale * 1000))
         y_max_full = int(round(y_offset * 1000 + (y_max / 1000.0) * y_scale * 1000))
-
-        if turn_shift != 0:
-            x_min_full = (x_min_full + turn_shift) % 1000
-            x_max_full = (x_max_full + turn_shift) % 1000
 
         remapped.append({
             **det,
@@ -277,10 +269,7 @@ def process_batch(client, batch, orientation_lookup, system_prompt_template,
         frame_crop_width = crop_width
         if frame.get("is_junction") and intersection_crop_width is not None:
             frame_crop_width = intersection_crop_width
-        frame_turn_angle = (frame.get("turn_angle", 0.0) or 0.0) if frame.get("_apply_turn_angle") else 0.0
-        results[frame["frame_id"]] = remap_bboxes_to_full(
-            detections, frame_crop_width, crop_height, turn_angle=frame_turn_angle
-        )
+        results[frame["frame_id"]] = remap_bboxes_to_full(detections, frame_crop_width, crop_height)
 
     return results
 

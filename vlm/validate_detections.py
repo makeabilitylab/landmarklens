@@ -226,10 +226,13 @@ def main():
         frame_dets = by_frame[frame_id]
         det0 = frame_dets[0]
 
-        # Load and rotate panorama by yaw only (bboxes are stored in yaw-only space)
+        # Load and rotate panorama (same as crop_all_detections in dedup)
         img = np.array(Image.open(det0.pano_path).convert("RGB"))
         is_reverse = det0.direction == "reverse"
         img = rotate_panorama(img, frame_id, orientation_lookup, is_reverse)
+        if det0.turn_angle:
+            shift_x = -round(det0.turn_angle / 360.0 * img.shape[1])
+            img = np.roll(img, shift_x, axis=1)
 
         for det in frame_dets:
             key = (det.batch_id, det.frame_id, det.det_index)

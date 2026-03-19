@@ -317,11 +317,14 @@ def _compare_detection_sets(
     dets_b: list[Detection],
     embeddings: np.ndarray,
     similarity_threshold: float,
+    same_category_only: bool = True,
 ) -> list[tuple[int, int]]:
     """Compare all pairs between two detection sets and return matches."""
     matches: list[tuple[int, int]] = []
     for da in dets_a:
         for db in dets_b:
+            if same_category_only and da.category != db.category:
+                continue
             sim = float(np.dot(
                 embeddings[da.global_index],
                 embeddings[db.global_index],
@@ -428,9 +431,13 @@ def select_detections_to_remove(
     for root, members in groups.items():
         if len(members) <= max_duplicates:
             continue
-        # Sort by frame_order (earliest first)
-        members.sort(key=lambda idx: detections[idx].frame_order)
-        # Remove everything after max_duplicates
+        # Sort by bounding box area (largest first) so we keep the most
+        # visible detections and discard tiny/distant ones.
+        def _bbox_area(idx: int) -> float:
+            b = detections[idx].bbox
+            return (b[2] - b[0]) * (b[3] - b[1])
+
+        members.sort(key=lambda idx: _bbox_area(idx), reverse=True)
         for idx in members[max_duplicates:]:
             removed.add(idx)
 
@@ -446,7 +453,7 @@ def reconstruct_output(
     detections: list[Detection],
     removed: set[int],
 ) -> dict:
-    """Deep-copy original detections JSON and filter out removed detections."""
+    """Deep-copy original detections JSON, marking removed detections with dedup_removed=true."""
     with open(detections_path) as f:
         output = json.load(f)
 
@@ -466,10 +473,9 @@ def reconstruct_output(
             key = (batch_id, frame_id)
             if key in removal_lookup:
                 indices_to_remove = removal_lookup[key]
-                results[frame_id] = [
-                    det for i, det in enumerate(results[frame_id])
-                    if i not in indices_to_remove
-                ]
+                for i, det in enumerate(results[frame_id]):
+                    if i in indices_to_remove:
+                        det["dedup_removed"] = True
 
     return output
 
@@ -503,8 +509,8 @@ def main():
     parser.add_argument("--batch-size", type=int, default=32,
                         help="Batch size for DINOv3 inference (default: 32)")
     parser.add_argument("--device", default=None, help="Device: mps/cuda/cpu (auto-detects)")
-    parser.add_argument("--buffer", type=float, default=1.5,
-                        help="Crop buffer multiplier (default: 1.5)")
+    parser.add_argument("--buffer", type=float, default=1.2,
+                        help="Crop buffer multiplier (default: 1.2)")
     parser.add_argument("--boundary-overlap", type=int, default=2,
                         help="Number of frames on each side of a segment boundary "
                              "to compare for cross-segment dedup (default: 2, 0 to disable)")

@@ -211,7 +211,7 @@ def process_batch(client, batch, orientation_lookup, system_prompt_template,
         frame_stem = frame["frame_id"]
         turn_angle = (frame.get("turn_angle", 0.0) or 0.0) if frame.get("_apply_turn_angle") else 0.0
 
-        # Junction frames get a wider crop, more detections, and wider guide lines
+        # Junction frames get a wider crop and wider guide lines
         is_intersection_frame = frame.get("is_junction")
         frame_crop_width = crop_width
         frame_line_width_deg = line_width_deg
@@ -227,15 +227,6 @@ def process_batch(client, batch, orientation_lookup, system_prompt_template,
         )
         if processed_images is not None:
             processed_images.append((frame_stem, cropped_pil_img))
-
-        if is_intersection_frame:
-            turn_dir = frame.get("turn_direction") or frame.get("turn_warning_direction") or ""
-            label = "[INTERSECTION — this image is at or near a junction"
-            if turn_dir:
-                label += f", turn direction: {turn_dir}"
-            label += ". You MUST highlight 3–4 objects for this image.]"
-            content_parts.append(types.Part.from_text(text=label))
-            print(f"    → Intersection label for {frame_stem}: {label}")
 
         content_parts.append(
             types.Part.from_bytes(data=image_bytes, mime_type="image/jpeg")
@@ -459,13 +450,32 @@ def main():
     for seg_id, frames in segments.items():
         if not frames:
             continue
-        num_batches = (len(frames) + ws - 1) // ws
-        print(f"\nSegment '{seg_id}': {len(frames)} frames, {num_batches} batch(es)")
 
-        for batch_idx in range(num_batches):
-            start = batch_idx * ws
-            end = min(start + ws, len(frames))
-            batch = frames[start:end]
+        # Split frames into batches, isolating junction frames into their own
+        # single-frame batches so intersection-specific prompting doesn't bleed
+        # into normal frames.
+        batches = []
+        normal_buf = []
+        for fr in frames:
+            if fr.get("is_junction"):
+                if normal_buf:
+                    batches.append(normal_buf)
+                    normal_buf = []
+                batches.append([fr])
+            else:
+                normal_buf.append(fr)
+                if len(normal_buf) >= ws:
+                    batches.append(normal_buf)
+                    normal_buf = []
+        if normal_buf:
+            batches.append(normal_buf)
+
+        num_batches = len(batches)
+        n_junction_batches = sum(1 for b in batches if len(b) == 1 and b[0].get("is_junction"))
+        print(f"\nSegment '{seg_id}': {len(frames)} frames, {num_batches} batch(es) "
+              f"({n_junction_batches} junction)")
+
+        for batch_idx, batch in enumerate(batches):
             batch_num += 1
 
             batch_id = f"{seg_id}_b{batch_idx}"
@@ -477,7 +487,9 @@ def main():
                 print(f"  Batch {batch_idx + 1}/{num_batches} ({batch_id}): skipped ({reason})")
                 continue
 
-            print(f"  Batch {batch_idx + 1}/{num_batches} ({batch_id}): running ({reason})")
+            is_junction_batch = len(batch) == 1 and batch[0].get("is_junction")
+            junction_tag = " [JUNCTION]" if is_junction_batch else ""
+            print(f"  Batch {batch_idx + 1}/{num_batches} ({batch_id}): running ({reason}){junction_tag}")
             print(f"    Frames: {frame_ids}")
 
             try:

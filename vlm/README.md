@@ -42,7 +42,7 @@ The panorama is cropped horizontally and vertically before being sent to the VLM
 |---|---|---|
 | `--crop-width` | 180° | 90% azimuth interval (~164°) + margin |
 | `--line-width` | 90° | 75% azimuth interval (~88°) |
-| `--crop-height` | 0.30 | 90% elevation interval (~41°) + margin |
+| `--crop-height` | 0.50 | 95% elevation interval ([-33.17°, +27.43°], width: 60.61°) + margin |
 
 **Intersection frames** (automatically applied when `is_junction` is true):
 
@@ -52,7 +52,7 @@ At junctions, gaze spreads wider horizontally as participants scan for turn cues
 |---|---|---|
 | `--crop-width` | 270° | 90% azimuth interval (~190°) + margin |
 | `--line-width` | 120° | 75% azimuth interval (~116°) |
-| `--crop-height` | 0.30 | 90% elevation interval (~41°) + margin |
+| `--crop-height` | 0.50 | 95% elevation interval ([-33.17°, +27.43°], width: 60.61°) + margin |
 
 The `--crop-width` and `--crop-height` values are set via CLI arguments. Intersection-specific widening of the crop and guide lines is handled automatically in `run_gemini.py` when a frame has `is_junction` set.
 

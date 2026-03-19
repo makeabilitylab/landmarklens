@@ -92,11 +92,11 @@ in multiple images. You MUST track object identity across the full sequence.
   detection.
 
 **Rule 2 — Per-frame cap:**
-- **Normal images:** AT MOST 2 highlighted objects per image.
-- **Intersection images** (preceded by a `[INTERSECTION ...]` text label): AT MOST
-  **4** highlighted objects. These images are at decision points where the walker
-  must choose a direction, so more landmarks in all directions are needed.
-  You MUST try to find 3–4 objects for intersection images if candidates exist.
+- AT MOST **2** highlighted objects per image in a multi-image batch.
+- When only **1 image** is provided ($NUM_IMAGES = 1), the image is at an
+  intersection or decision point. You may highlight up to **4** objects and
+  MUST try to find 3–4 if candidates exist, since the walker needs landmarks
+  in multiple directions to orient themselves at the junction.
 
 It is acceptable for any image to have 0 or 1 highlights if no good candidates exist.
 
@@ -227,8 +227,7 @@ no explanation. Use this exact structure:
 
 Notes on the output:
 - Every image key (image1 through image$NUM_IMAGES) MUST be present, even if its array is empty.
-- Each array has 0–2 entries for normal images, or 3–4 entries for intersection images
-  (those preceded by `[INTERSECTION ...]`).
+- Each array has 0–2 entries (or up to 4 when $NUM_IMAGES = 1, i.e. an intersection).
 - The total number of detections for any single real-world object across ALL images
   must be at most 2.
 - The "description" field should be 1–2 sentences. Name the parent object and the

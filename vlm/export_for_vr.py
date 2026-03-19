@@ -93,6 +93,7 @@ def load_detections(detections_path, valid_only=False):
         for frame_id, dets in batch.get("results", {}).items():
             if not dets:
                 continue
+            dets = [d for d in dets if not d.get("dedup_removed", False)]
             if valid_only:
                 dets = [d for d in dets if d.get("is_valid", False)]
             if dets:

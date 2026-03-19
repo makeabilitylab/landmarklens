@@ -192,7 +192,9 @@ function render() {{
       const color = COLORS[i % COLORS.length];
       const cat = d.category_label || ('cat ' + d.category);
       let validTag = '';
-      if (d.is_valid === true) {{
+      if (d.dedup_removed === true) {{
+        validTag = '<span style="color:#f80;font-weight:600"> &#10007; dedup removed</span>';
+      }} else if (d.is_valid === true) {{
         validTag = '<span style="color:#4f4;font-weight:600"> &#10003; valid</span>';
       }} else if (d.is_valid === false) {{
         validTag = '<span style="color:#f44;font-weight:600"> &#10007; invalid</span>';
@@ -250,9 +252,9 @@ function drawBoxes(dets, w, h) {{
     ctx.lineWidth = 20;
     ctx.strokeRect(x1, y1, x2 - x1, y2 - y1);
 
-    // Diagonal strikethrough if marked invalid
-    if (d.is_valid === false) {{
-      ctx.strokeStyle = '#ff0000';
+    // Diagonal strikethrough if marked invalid or dedup-removed
+    if (d.is_valid === false || d.dedup_removed === true) {{
+      ctx.strokeStyle = d.dedup_removed ? '#ff8800' : '#ff0000';
       ctx.lineWidth = 6;
       ctx.beginPath();
       ctx.moveTo(x1, y1);

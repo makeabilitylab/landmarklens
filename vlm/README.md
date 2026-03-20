@@ -460,3 +460,64 @@ python vlm/view_detections.py \
 - Info panel below the image shows all detections for the current frame
 - Only frames with detections are shown (empty frames are filtered out)
 - Images are rotated on-the-fly using the same `rotate_panorama` function, so bboxes align correctly
+
+## VR Export
+
+`export_for_vr.py` exports a route and its detections into the folder structure expected by the Unity VR app. It reads from `geodata/routes.geojson` and `geodata/panos.geojson` and produces a `route.json`, `detections.json`, and copies panorama images.
+
+### Export Usage
+
+```bash
+python vlm/export_for_vr.py <route_id> \
+    --detections vlm/output/<route_id>_full_deduped_secondpass.json \
+    --valid-only \
+    --fix-turn-angle
+```
+
+Output goes to `study-materials/EvaluationSets/P00/Routes/<route_id>/` by default.
+
+Use `--no-copy` to skip copying panorama images (useful when images are already in place).
+
+### Full Pipeline (end to end)
+
+Run these steps in order for a new route. Replace `<ROUTE>` with the route ID (e.g. `ningyocho_r2`) and `<ROUTE_DIR>` with its folder (e.g. `vlm/ningyocho_r2`).
+
+```bash
+# 1. Run VLM detection
+python vlm/run_gemini.py \
+    --input <ROUTE_DIR>/<ROUTE>_route.json \
+    --output vlm/output/<ROUTE>_full.json \
+    --system-prompt vlm/prompt_engineering/system_prompt5.md \
+    --crop-width 180 --crop-height 0.5 --line-width 90 \
+    --intersection-crop-width 270 --intersection-line-width 120
+
+# 2. Deduplicate
+python vlm/dedup_detections.py \
+    --input <ROUTE_DIR>/<ROUTE>_route.json \
+    --detections vlm/output/<ROUTE>_full.json \
+    --output vlm/output/<ROUTE>_full_deduped.json \
+    --similarity-threshold 0.70 --max-duplicates 1 \
+    --window-size 5 --batch-size 16 --device mps
+
+# 3. Second-pass validation
+python vlm/validate_detections.py \
+    --input <ROUTE_DIR>/<ROUTE>_route.json \
+    --detections vlm/output/<ROUTE>_full_deduped.json \
+    --output vlm/output/<ROUTE>_full_deduped_secondpass.json \
+    --system-prompt vlm/prompt_engineering/second_pass/system_prompt1.md \
+    --buffer 1.5
+
+# 4. Export for VR
+python vlm/export_for_vr.py <ROUTE> \
+    --detections vlm/output/<ROUTE>_full_deduped_secondpass.json \
+    --valid-only --fix-turn-angle
+```
+
+You can inspect results after any step with the viewer:
+
+```bash
+python vlm/view_detections.py \
+    --input <ROUTE_DIR>/<ROUTE>_route.json \
+    --detections vlm/output/<ROUTE>_full_deduped.json \
+    --image-dir data/frames --port 8770
+```

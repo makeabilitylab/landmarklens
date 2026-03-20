@@ -12,7 +12,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010417/GS010417_0000.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010417/GS010417_0000.jpg"
     },
     {
       "frame_id": "GS010417_0002",
@@ -26,7 +26,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010417/GS010417_0002.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010417/GS010417_0002.jpg"
     },
     {
       "frame_id": "GS010417_0004",
@@ -40,7 +40,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010417/GS010417_0004.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010417/GS010417_0004.jpg"
     },
     {
       "frame_id": "GS010417_0007",
@@ -54,7 +54,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010417/GS010417_0007.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010417/GS010417_0007.jpg"
     },
     {
       "frame_id": "GS010417_0010",
@@ -68,7 +68,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010417/GS010417_0010.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010417/GS010417_0010.jpg"
     },
     {
       "frame_id": "GS010417_0012",
@@ -82,7 +82,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010417/GS010417_0012.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010417/GS010417_0012.jpg"
     },
     {
       "frame_id": "GS010417_0016",
@@ -96,7 +96,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010417/GS010417_0016.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010417/GS010417_0016.jpg"
     },
     {
       "frame_id": "GS010417_0018",
@@ -110,7 +110,7 @@
       "is_turn_warning": true,
       "turn_warning_direction": "right",
       "turn_warning_angle": 85.7,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010417/GS010417_0018.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010417/GS010417_0018.jpg"
     },
     {
       "frame_id": "GS010417_0020",
@@ -124,7 +124,7 @@
       "is_turn_warning": true,
       "turn_warning_direction": "right",
       "turn_warning_angle": 85.7,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010417/GS010417_0020.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010417/GS010417_0020.jpg"
     },
     {
       "frame_id": "GS010417_0025",
@@ -138,7 +138,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010417/GS010417_0025.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010417/GS010417_0025.jpg"
     }
   ],
   "segment2": [
@@ -154,7 +154,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010418/GS010418_0000.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010418/GS010418_0000.jpg"
     },
     {
       "frame_id": "GS010418_0002",
@@ -168,7 +168,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010418/GS010418_0002.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010418/GS010418_0002.jpg"
     },
     {
       "frame_id": "GS010418_0005",
@@ -182,7 +182,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010418/GS010418_0005.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010418/GS010418_0005.jpg"
     },
     {
       "frame_id": "GS010418_0008",
@@ -196,7 +196,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010418/GS010418_0008.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010418/GS010418_0008.jpg"
     },
     {
       "frame_id": "GS010418_0010",
@@ -210,7 +210,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010418/GS010418_0010.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010418/GS010418_0010.jpg"
     },
     {
       "frame_id": "GS010418_0013",
@@ -224,7 +224,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010418/GS010418_0013.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010418/GS010418_0013.jpg"
     },
     {
       "frame_id": "GS010418_0015",
@@ -238,7 +238,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010418/GS010418_0015.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010418/GS010418_0015.jpg"
     },
     {
       "frame_id": "GS010418_0019",
@@ -252,7 +252,7 @@
       "is_turn_warning": true,
       "turn_warning_direction": "left",
       "turn_warning_angle": -88,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010418/GS010418_0019.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010418/GS010418_0019.jpg"
     },
     {
       "frame_id": "GS010418_0023",
@@ -266,7 +266,7 @@
       "is_turn_warning": true,
       "turn_warning_direction": "left",
       "turn_warning_angle": -88,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010418/GS010418_0023.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010418/GS010418_0023.jpg"
     },
     {
       "frame_id": "GS010418_0027",
@@ -280,7 +280,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010418/GS010418_0027.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010418/GS010418_0027.jpg"
     }
   ],
   "segment3": [
@@ -296,7 +296,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010419/GS010419_0000.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010419/GS010419_0000.jpg"
     },
     {
       "frame_id": "GS010419_0002",
@@ -310,7 +310,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010419/GS010419_0002.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010419/GS010419_0002.jpg"
     },
     {
       "frame_id": "GS010419_0004",
@@ -324,7 +324,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010419/GS010419_0004.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010419/GS010419_0004.jpg"
     },
     {
       "frame_id": "GS010419_0006",
@@ -338,7 +338,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010419/GS010419_0006.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010419/GS010419_0006.jpg"
     },
     {
       "frame_id": "GS010419_0008",
@@ -352,7 +352,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010419/GS010419_0008.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010419/GS010419_0008.jpg"
     },
     {
       "frame_id": "GS010419_0012",
@@ -366,7 +366,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010419/GS010419_0012.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010419/GS010419_0012.jpg"
     },
     {
       "frame_id": "GS010419_0015",
@@ -380,7 +380,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010419/GS010419_0015.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010419/GS010419_0015.jpg"
     },
     {
       "frame_id": "GS010419_0018",
@@ -394,7 +394,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010419/GS010419_0018.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010419/GS010419_0018.jpg"
     },
     {
       "frame_id": "GS010419_0020",
@@ -408,7 +408,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010419/GS010419_0020.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010419/GS010419_0020.jpg"
     },
     {
       "frame_id": "GS010419_0022",
@@ -422,7 +422,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010419/GS010419_0022.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010419/GS010419_0022.jpg"
     },
     {
       "frame_id": "GS010419_0024",
@@ -436,7 +436,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010419/GS010419_0024.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010419/GS010419_0024.jpg"
     },
     {
       "frame_id": "GS010419_0026",
@@ -450,7 +450,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010419/GS010419_0026.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010419/GS010419_0026.jpg"
     },
     {
       "frame_id": "GS010419_0029",
@@ -464,7 +464,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010419/GS010419_0029.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010419/GS010419_0029.jpg"
     },
     {
       "frame_id": "GS010419_0031",
@@ -478,7 +478,7 @@
       "is_turn_warning": true,
       "turn_warning_direction": "left",
       "turn_warning_angle": -87.7,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010419/GS010419_0031.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010419/GS010419_0031.jpg"
     },
     {
       "frame_id": "GS010419_0035",
@@ -492,7 +492,7 @@
       "is_turn_warning": true,
       "turn_warning_direction": "left",
       "turn_warning_angle": -87.7,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010419/GS010419_0035.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010419/GS010419_0035.jpg"
     },
     {
       "frame_id": "GS010419_0039",
@@ -506,7 +506,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010419/GS010419_0039.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010419/GS010419_0039.jpg"
     }
   ],
   "segment4": [
@@ -522,7 +522,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010420/GS010420_0000.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010420/GS010420_0000.jpg"
     },
     {
       "frame_id": "GS010420_0002",
@@ -536,7 +536,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010420/GS010420_0002.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010420/GS010420_0002.jpg"
     },
     {
       "frame_id": "GS010420_0004",
@@ -550,7 +550,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010420/GS010420_0004.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010420/GS010420_0004.jpg"
     },
     {
       "frame_id": "GS010420_0006",
@@ -564,7 +564,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010420/GS010420_0006.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010420/GS010420_0006.jpg"
     },
     {
       "frame_id": "GS010420_0008",
@@ -578,7 +578,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010420/GS010420_0008.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010420/GS010420_0008.jpg"
     },
     {
       "frame_id": "GS010420_0010",
@@ -592,7 +592,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010420/GS010420_0010.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010420/GS010420_0010.jpg"
     },
     {
       "frame_id": "GS010420_0012",
@@ -606,7 +606,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010420/GS010420_0012.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010420/GS010420_0012.jpg"
     },
     {
       "frame_id": "GS010420_0014",
@@ -620,7 +620,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010420/GS010420_0014.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010420/GS010420_0014.jpg"
     },
     {
       "frame_id": "GS010420_0016",
@@ -634,7 +634,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010420/GS010420_0016.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010420/GS010420_0016.jpg"
     },
     {
       "frame_id": "GS010420_0018",
@@ -648,7 +648,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010420/GS010420_0018.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010420/GS010420_0018.jpg"
     },
     {
       "frame_id": "GS010420_0021",
@@ -662,7 +662,7 @@
       "is_turn_warning": true,
       "turn_warning_direction": "right",
       "turn_warning_angle": 88.8,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010420/GS010420_0021.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010420/GS010420_0021.jpg"
     },
     {
       "frame_id": "GS010420_0024",
@@ -676,7 +676,7 @@
       "is_turn_warning": true,
       "turn_warning_direction": "right",
       "turn_warning_angle": 88.8,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010420/GS010420_0024.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010420/GS010420_0024.jpg"
     },
     {
       "frame_id": "GS010420_0028",
@@ -690,7 +690,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010420/GS010420_0028.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010420/GS010420_0028.jpg"
     }
   ],
   "segment5": [
@@ -706,7 +706,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010421/GS010421_0000.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010421/GS010421_0000.jpg"
     },
     {
       "frame_id": "GS010421_0003",
@@ -720,7 +720,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010421/GS010421_0003.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010421/GS010421_0003.jpg"
     },
     {
       "frame_id": "GS010421_0005",
@@ -734,7 +734,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010421/GS010421_0005.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010421/GS010421_0005.jpg"
     },
     {
       "frame_id": "GS010421_0008",
@@ -748,7 +748,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010421/GS010421_0008.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010421/GS010421_0008.jpg"
     },
     {
       "frame_id": "GS010421_0011",
@@ -762,7 +762,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010421/GS010421_0011.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010421/GS010421_0011.jpg"
     },
     {
       "frame_id": "GS010421_0013",
@@ -776,7 +776,7 @@
       "is_turn_warning": true,
       "turn_warning_direction": "right",
       "turn_warning_angle": 90.6,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010421/GS010421_0013.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010421/GS010421_0013.jpg"
     },
     {
       "frame_id": "GS010421_0015",
@@ -790,7 +790,7 @@
       "is_turn_warning": true,
       "turn_warning_direction": "right",
       "turn_warning_angle": 90.6,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010421/GS010421_0015.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010421/GS010421_0015.jpg"
     },
     {
       "frame_id": "GS010421_0020",
@@ -804,7 +804,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010421/GS010421_0020.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010421/GS010421_0020.jpg"
     }
   ],
   "segment6": [
@@ -820,7 +820,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010422/GS010422_0000.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010422/GS010422_0000.jpg"
     },
     {
       "frame_id": "GS010422_0002",
@@ -834,7 +834,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010422/GS010422_0002.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010422/GS010422_0002.jpg"
     },
     {
       "frame_id": "GS010422_0004",
@@ -848,7 +848,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010422/GS010422_0004.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010422/GS010422_0004.jpg"
     },
     {
       "frame_id": "GS010422_0006",
@@ -862,7 +862,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010422/GS010422_0006.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010422/GS010422_0006.jpg"
     },
     {
       "frame_id": "GS010422_0008",
@@ -876,7 +876,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010422/GS010422_0008.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010422/GS010422_0008.jpg"
     },
     {
       "frame_id": "GS010422_0010",
@@ -890,7 +890,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010422/GS010422_0010.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010422/GS010422_0010.jpg"
     },
     {
       "frame_id": "GS010422_0012",
@@ -904,7 +904,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010422/GS010422_0012.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010422/GS010422_0012.jpg"
     },
     {
       "frame_id": "GS010422_0014",
@@ -918,7 +918,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010422/GS010422_0014.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010422/GS010422_0014.jpg"
     },
     {
       "frame_id": "GS010422_0017",
@@ -932,7 +932,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010422/GS010422_0017.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010422/GS010422_0017.jpg"
     },
     {
       "frame_id": "GS010422_0019",
@@ -946,7 +946,7 @@
       "is_turn_warning": false,
       "turn_warning_direction": null,
       "turn_warning_angle": null,
-      "pano_path": "/Users/jaredhwang/Desktop/UW/Research/tokyo-streetview/vlm/ningyocho_r1/GS010422/GS010422_0019.jpg"
+      "pano_path": "/Users/chuli/Github/tokyo-streetview/data/frames/GS010422/GS010422_0019.jpg"
     }
   ]
 }

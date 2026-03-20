@@ -1,0 +1,1639 @@
+{
+  "metadata": {
+    "window_size": 5,
+    "crop_width": 0.5,
+    "crop_height": 0.5,
+    "line_width": 90.0,
+    "intersection_crop_width": 0.75,
+    "intersection_line_width": 120.0
+  },
+  "batches": {
+    "segment1_b0": {
+      "segment_id": "segment1",
+      "batch_index": 0,
+      "frame_ids": [
+        "GS010417_0000",
+        "GS010417_0002",
+        "GS010417_0004",
+        "GS010417_0007",
+        "GS010417_0010"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010417_0000": [
+          {
+            "bbox": [
+              523,
+              546,
+              748,
+              600
+            ],
+            "description": "Bright blue Asahi vending machine on the corner \u2014 the vivid color stands out against the grey and beige buildings, marking the right side of the intersection.",
+            "category": 8,
+            "category_label": "vending machine",
+            "color_prominence": 0.85,
+            "shape_prominence": 0.4,
+            "semantic_familiarity": 0.9,
+            "navigational_context": "Located at the near right corner of the intersection, providing a strong visual anchor before crossing the street."
+          }
+        ],
+        "GS010417_0002": [
+          {
+            "bbox": [
+              342,
+              490,
+              405,
+              507
+            ],
+            "description": "Dark blue vertical sign for '\u4f50\u3005\u821f' (Sasabune) attached to the building facade \u2014 the dark sign contrasts with the light beige tiles of the building.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Visible ahead on the right side of the street, confirming the walker is on the correct path after the intersection."
+          }
+        ],
+        "GS010417_0004": [
+          {
+            "bbox": [
+              255,
+              522,
+              363,
+              542
+            ],
+            "description": "White vertical sign for '\u4f50\u3005\u821f' (Sasabune) with black calligraphy \u2014 the high-contrast sign is very prominent when passing directly underneath it.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.75,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.85,
+            "navigational_context": "Acts as a strong confirmation landmark as the walker passes right by the establishment."
+          }
+        ],
+        "GS010417_0007": [
+          {
+            "bbox": [
+              469,
+              330,
+              500,
+              347
+            ],
+            "description": "White illuminated sign for '\u9280\u5bff\u53f8' (Gin Sushi) under a curved awning \u2014 the sign and awning break the flat facade of the street.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.6,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Provides a clear landmark on the left side of the street as the walker continues down the block."
+          }
+        ],
+        "GS010417_0010": [
+          {
+            "bbox": [
+              395,
+              357,
+              498,
+              430
+            ],
+            "description": "Traditional Japanese-style wooden house with a tiled roof \u2014 its classic architecture stands out sharply against the surrounding modern concrete and tile buildings.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.5,
+            "shape_prominence": 0.85,
+            "semantic_familiarity": 0.9,
+            "navigational_context": "Located at the next intersection on the left, serving as a highly distinctive architectural anchor for the upcoming decision point."
+          }
+        ]
+      }
+    },
+    "segment1_b1": {
+      "segment_id": "segment1",
+      "batch_index": 1,
+      "frame_ids": [
+        "GS010417_0012",
+        "GS010417_0016",
+        "GS010417_0018",
+        "GS010417_0020"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010417_0012": [
+          {
+            "bbox": [
+              354,
+              272,
+              500,
+              375
+            ],
+            "description": "Traditional Japanese-style wooden building with a tiled roof awning on the left side of the street \u2014 its classic architecture stands out strongly against the modern concrete buildings, serving as an immediate anchor at the start of the block.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.65,
+            "shape_prominence": 0.8,
+            "semantic_familiarity": 0.85,
+            "navigational_context": "Located on the left side near the beginning of the sequence; provides a strong initial orientation cue due to its contrasting architectural style."
+          },
+          {
+            "bbox": [
+              460,
+              480,
+              499,
+              487
+            ],
+            "description": "Bright red building facade visible in the distance at the end of the street \u2014 the vivid color provides a clear focal point and target destination for the walker heading straight.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.9,
+            "shape_prominence": 0.4,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Visible from a distance straight ahead; acts as a distant beacon confirming the walker is heading toward the correct intersection."
+          }
+        ],
+        "GS010417_0016": [
+          {
+            "bbox": [
+              395,
+              508,
+              500,
+              600
+            ],
+            "description": "Dark, highly reflective polished stone facade on the right side of the street \u2014 the glossy black surface contrasts sharply with the surrounding matte concrete, marking progress along the block.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.75,
+            "shape_prominence": 0.3,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Located on the right side midway down the block; serves as a continuous visual guide and confirms progress toward the intersection."
+          }
+        ],
+        "GS010417_0018": [
+          {
+            "bbox": [
+              350,
+              508,
+              500,
+              604
+            ],
+            "description": "Dark, highly reflective polished stone facade on the right side of the street \u2014 the glossy black surface continues to serve as a prominent visual guide on the right side as the walker approaches the intersection.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.75,
+            "shape_prominence": 0.3,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Maintains a strong presence on the right side, helping to orient the walker as they get closer to the upcoming decision point."
+          }
+        ],
+        "GS010417_0020": [
+          {
+            "bbox": [
+              426,
+              481,
+              524,
+              518
+            ],
+            "description": "Bright red building facade on the corner of the intersection \u2014 the vivid color is highly recognizable and marks the intersection, serving as a strong anchor for decision-making at the end of the block.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.95,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.85,
+            "navigational_context": "Located directly at the intersection; serves as the primary landmark for the decision point, confirming the walker has reached the end of the street."
+          }
+        ]
+      }
+    },
+    "segment1_b2": {
+      "segment_id": "segment1",
+      "batch_index": 2,
+      "frame_ids": [
+        "GS010417_0025"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010417_0025": [
+          {
+            "bbox": [
+              392,
+              244,
+              548,
+              307
+            ],
+            "description": "Bright red building facade with a restaurant sign on the left side of the intersection \u2014 the vivid color stands out strongly against the surrounding neutral-toned buildings, making it a clear landmark for this corner.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.85,
+            "shape_prominence": 0.4,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Located on the corner of the intersection, providing a strong visual anchor to confirm the location and orientation."
+          },
+          {
+            "bbox": [
+              284,
+              564,
+              708,
+              665
+            ],
+            "description": "Prominent dark grey stone corner of the modern building on the right side of the intersection \u2014 its massive, sharp geometric form and dark color contrast with the lighter buildings, marking the edge of the street.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.8,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Forms a solid, unmistakable architectural boundary at the intersection, helping to define the corner."
+          }
+        ]
+      }
+    },
+    "segment2_b0": {
+      "segment_id": "segment2",
+      "batch_index": 0,
+      "frame_ids": [
+        "GS010418_0000"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010418_0000": [
+          {
+            "bbox": [
+              383,
+              240,
+              550,
+              306
+            ],
+            "description": "Bright red building facade with a wooden restaurant sign reading '\u3068\u308a\u3067\u3093' \u2014 the vivid red color strongly contrasts with the surrounding grey and beige buildings, making it a highly visible landmark on the left side of the street.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.85,
+            "shape_prominence": 0.4,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Located on the left side of the street just before a pedestrian crossing, serving as a clear visual anchor to confirm the route and mark the intersection."
+          }
+        ]
+      }
+    },
+    "segment2_b1": {
+      "segment_id": "segment2",
+      "batch_index": 1,
+      "frame_ids": [
+        "GS010418_0002",
+        "GS010418_0005",
+        "GS010418_0008",
+        "GS010418_0010",
+        "GS010418_0013"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010418_0002": [],
+        "GS010418_0005": [
+          {
+            "bbox": [
+              410,
+              535,
+              445,
+              552
+            ],
+            "description": "Silver 'ange' store sign mounted on the slatted facade above the clothing store entrance. The metallic lettering stands out against the grey background and marks a distinct retail location along the street.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.4,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Provides a clear commercial landmark on the right side of the street, helping to confirm progress along the block."
+          }
+        ],
+        "GS010418_0008": [
+          {
+            "bbox": [
+              450,
+              525,
+              480,
+              580
+            ],
+            "description": "Green awning with white text '\u304d\u306d\u3084' and a phone number. The bright green color contrasts strongly with the surrounding white tiled building.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "The vibrant green awning is visible from a distance and serves as a strong visual anchor on the right side of the path."
+          }
+        ],
+        "GS010418_0010": [
+          {
+            "bbox": [
+              500,
+              620,
+              530,
+              632
+            ],
+            "description": "Small yellow circular sign mounted on the dark grey storefront. The bright yellow color pops against the dark background.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.5,
+            "navigational_context": "Acts as a distinct, eye-catching marker on the right side of the street, useful for confirming the route."
+          },
+          {
+            "bbox": [
+              482,
+              312,
+              498,
+              335
+            ],
+            "description": "Yellow 'CAFE de CRI...' sign on the left side of the street. The illuminated sign marks a recognizable chain cafe.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.6,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.9,
+            "navigational_context": "Provides a recognizable commercial landmark on the left side, useful for orientation."
+          }
+        ],
+        "GS010418_0013": [
+          {
+            "bbox": [
+              390,
+              502,
+              442,
+              515
+            ],
+            "description": "White vertical sign with black Japanese text '\u304a\u304a\u3044\u3057' projecting from the building. The high-contrast sign is easily readable from down the street.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.5,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.7,
+            "navigational_context": "Serves as a clear, readable landmark on the right side of the street, helping to track progress."
+          },
+          {
+            "bbox": [
+              515,
+              358,
+              542,
+              370
+            ],
+            "description": "Red Japan Post mailbox located on the sidewalk near the intersection. Its standard bright red color makes it a highly recognizable piece of street furniture.",
+            "category": 7,
+            "category_label": "street furniture",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.7,
+            "semantic_familiarity": 0.95,
+            "navigational_context": "The bright red mailbox is a classic, permanent urban marker that helps confirm the approach to the intersection."
+          }
+        ]
+      }
+    },
+    "segment2_b2": {
+      "segment_id": "segment2",
+      "batch_index": 2,
+      "frame_ids": [
+        "GS010418_0015",
+        "GS010418_0019",
+        "GS010418_0023"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010418_0015": [
+          {
+            "bbox": [
+              356,
+              536,
+              468,
+              614
+            ],
+            "description": "Large white characters on black squares reading '\u304a\u3044\u3057' on a wooden storefront facade. The traditional styling and high contrast make it a very noticeable landmark along this street.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.7,
+            "semantic_familiarity": 0.85,
+            "navigational_context": "Serves as a strong visual anchor on the right side of the street while approaching the upcoming intersection."
+          }
+        ],
+        "GS010418_0019": [
+          {
+            "bbox": [
+              250,
+              616,
+              414,
+              650
+            ],
+            "description": "Dark green vertical sign with a white character on the building corner. Its position right at the intersection makes it a useful marker for the corner.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.6,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.7,
+            "navigational_context": "Marks the near right corner of the intersection, helping to confirm arrival at the decision point."
+          }
+        ],
+        "GS010418_0023": [
+          {
+            "bbox": [
+              330,
+              327,
+              532,
+              388
+            ],
+            "description": "Distinctive blue building on the far left corner of the intersection. The solid blue color stands out significantly from the surrounding grey and white buildings.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.85,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Acts as a highly visible anchor for the far left corner of the intersection, useful for orienting before crossing or turning."
+          }
+        ]
+      }
+    },
+    "segment2_b3": {
+      "segment_id": "segment2",
+      "batch_index": 3,
+      "frame_ids": [
+        "GS010418_0027"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010418_0027": [
+          {
+            "bbox": [
+              277,
+              500,
+              538,
+              572
+            ],
+            "description": "Distinctive teal-colored corner building. The unusual color and prominent corner position make it a strong visual anchor at this intersection.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.85,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Located directly at the intersection, providing a clear landmark for orientation and confirming the corner when deciding which way to turn."
+          },
+          {
+            "bbox": [
+              388,
+              125,
+              475,
+              226
+            ],
+            "description": "Traditional tiled roof and green '\u4eac\u6a3d' (Kyotaru) sign. The traditional architectural style stands out sharply against the surrounding modern buildings.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.6,
+            "shape_prominence": 0.85,
+            "semantic_familiarity": 0.75,
+            "navigational_context": "Marks the left side of the cross street, useful for confirming the intersection from a distance and orienting oneself to the left."
+          },
+          {
+            "bbox": [
+              270,
+              738,
+              397,
+              756
+            ],
+            "description": "Vertical white sign reading 'Xob' attached to the building on the right. The clear, high-contrast lettering provides a specific, easily nameable landmark.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.4,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.9,
+            "navigational_context": "Located on the right side of the street, helping to confirm the route when proceeding straight or turning right at the intersection."
+          }
+        ]
+      }
+    },
+    "segment3_b0": {
+      "segment_id": "segment3",
+      "batch_index": 0,
+      "frame_ids": [
+        "GS010419_0000"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010419_0000": [
+          {
+            "bbox": [
+              270,
+              476,
+              542,
+              547
+            ],
+            "description": "Distinctive tall, narrow blue building at the corner of the intersection. Its unique color and shape make it a strong visual anchor for orienting at this crossing.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.7,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Located directly across the intersection, serving as a clear focal point when approaching the crossing."
+          },
+          {
+            "bbox": [
+              493,
+              666,
+              573,
+              679
+            ],
+            "description": "Green vertical sign reading '\u7518\u9152\u6a2a\u4e01' (Amazake Yokocho) on the right side of the street. It clearly identifies the area/street name, providing strong confirmation of location.",
+            "category": 2,
+            "category_label": "wayfinding signage",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.9,
+            "navigational_context": "Marks the entrance to the specific street/area, useful for confirming the correct path after crossing."
+          }
+        ]
+      }
+    },
+    "segment3_b1": {
+      "segment_id": "segment3",
+      "batch_index": 1,
+      "frame_ids": [
+        "GS010419_0002",
+        "GS010419_0004",
+        "GS010419_0006",
+        "GS010419_0008",
+        "GS010419_0012"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010419_0002": [
+          {
+            "bbox": [
+              250,
+              484,
+              560,
+              594
+            ],
+            "description": "Distinctive blue corner building housing Walleteria YAMATOU \u2014 the unusual blue facade stands out strongly at this intersection, serving as a clear anchor point.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.7,
+            "navigational_context": "Located at a prominent intersection, its unique color makes it an easy-to-spot landmark for confirming the correct path."
+          }
+        ],
+        "GS010419_0004": [
+          {
+            "bbox": [
+              392,
+              562,
+              442,
+              660
+            ],
+            "description": "Black storefront with 'Walleteria YAMATOU 1899' sign \u2014 the elegant, permanent signage on the corner building provides a specific, nameable landmark.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Confirms the identity of the corner building as the walker passes it, ensuring they are on the right track."
+          }
+        ],
+        "GS010419_0006": [
+          {
+            "bbox": [
+              462,
+              353,
+              490,
+              408
+            ],
+            "description": "Bright pink and white sign for a large laundry (\u5927\u578b\u30e9\u30f3\u30c9\u30ea\u30fc) \u2014 the vivid pink color contrasts sharply with the surrounding grey and white buildings.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.85,
+            "shape_prominence": 0.4,
+            "semantic_familiarity": 0.9,
+            "navigational_context": "Visible from a distance down the street, it acts as a mid-block reassurance marker."
+          }
+        ],
+        "GS010419_0008": [
+          {
+            "bbox": [
+              422,
+              508,
+              625,
+              612
+            ],
+            "description": "Small structure with a traditional Japanese tiled roof and wooden slats \u2014 its historical architectural style breaks the pattern of modern concrete buildings.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.5,
+            "shape_prominence": 0.8,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Provides a highly distinctive visual anchor on the right side of the street, useful for tracking progress."
+          }
+        ],
+        "GS010419_0012": [
+          {
+            "bbox": [
+              255,
+              319,
+              520,
+              428
+            ],
+            "description": "Grey building with '\u6cd5\u83ef\u5b97' (Hokke-shu) written vertically in large characters \u2014 the prominent text on the facade serves as a clear, readable landmark.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.4,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.7,
+            "navigational_context": "Acts as a prominent marker on the left side of the street as the walker continues forward."
+          }
+        ]
+      }
+    },
+    "segment3_b2": {
+      "segment_id": "segment3",
+      "batch_index": 2,
+      "frame_ids": [
+        "GS010419_0015",
+        "GS010419_0018",
+        "GS010419_0020",
+        "GS010419_0022",
+        "GS010419_0024"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010419_0015": [],
+        "GS010419_0018": [],
+        "GS010419_0020": [],
+        "GS010419_0022": [
+          {
+            "bbox": [
+              468,
+              340,
+              492,
+              375
+            ],
+            "description": "Bright blue awning over the ground floor windows of a building on the left. The vivid color stands out against the neutral grey and beige facades of the surrounding streetscape, providing a clear visual marker.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.4,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Located on the left side of the street, this colorful awning helps confirm progress along the route and breaks up the monotonous building facades."
+          },
+          {
+            "bbox": [
+              430,
+              490,
+              500,
+              500
+            ],
+            "description": "Distinctive red building facade visible further down the street. The strong red color serves as a distant focal point to guide the walker forward.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Acts as a distant anchor, giving the pedestrian a clear target to walk toward along this straight stretch of road."
+          }
+        ],
+        "GS010419_0024": [
+          {
+            "bbox": [
+              525,
+              562,
+              582,
+              578
+            ],
+            "description": "Silver 'FORECAST' sign mounted on a black marble pillar at the building entrance. The contrasting text on the dark stone provides a clear, readable anchor along the right side of the street.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.5,
+            "shape_prominence": 0.4,
+            "semantic_familiarity": 0.85,
+            "navigational_context": "Provides a specific, readable landmark on the right side of the street, useful for confirming exact location along the block."
+          },
+          {
+            "bbox": [
+              425,
+              495,
+              500,
+              510
+            ],
+            "description": "Distinctive red building facade visible further down the street. The strong red color serves as a distant focal point to guide the walker forward.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Acts as a distant anchor, giving the pedestrian a clear target to walk toward along this straight stretch of road."
+          }
+        ]
+      }
+    },
+    "segment3_b3": {
+      "segment_id": "segment3",
+      "batch_index": 3,
+      "frame_ids": [
+        "GS010419_0026",
+        "GS010419_0029",
+        "GS010419_0031",
+        "GS010419_0035"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010419_0026": [
+          {
+            "bbox": [
+              420,
+              554,
+              736,
+              662
+            ],
+            "description": "Dark polished stone facade at the building entrance on the right \u2014 the sleek, dark material contrasts sharply with the surrounding concrete and brick buildings, serving as a clear marker at the start of this block.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Located on the right side of the street, providing an initial visual anchor to confirm the route direction."
+          }
+        ],
+        "GS010419_0029": [
+          {
+            "bbox": [
+              250,
+              523,
+              750,
+              699
+            ],
+            "description": "Bright orange tiled building facade on the right \u2014 the vivid color is highly unusual for the area and immediately catches the eye, making it an unmistakable landmark along the narrow street.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.9,
+            "shape_prominence": 0.3,
+            "semantic_familiarity": 0.7,
+            "navigational_context": "Acts as a strong mid-block confirmation point as the walker progresses down the street."
+          }
+        ],
+        "GS010419_0031": [
+          {
+            "bbox": [
+              250,
+              548,
+              387,
+              732
+            ],
+            "description": "Traditional wooden store sign with large gold characters on the right \u2014 the classic design and prominent lettering stand out against the modern buildings, marking the approach to the intersection.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.75,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.85,
+            "navigational_context": "Visible just before reaching the crosswalk, signaling that the walker is nearing a major decision point."
+          }
+        ],
+        "GS010419_0035": [
+          {
+            "bbox": [
+              504,
+              584,
+              578,
+              607
+            ],
+            "description": "Green public notice board standing at the corner of the intersection \u2014 its distinct green color and standalone structure make it a clear reference point right at the junction.",
+            "category": 7,
+            "category_label": "street furniture",
+            "color_prominence": 0.65,
+            "shape_prominence": 0.7,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Positioned exactly at the corner of the intersection, providing a precise anchor for turning or continuing straight."
+          }
+        ]
+      }
+    },
+    "segment3_b4": {
+      "segment_id": "segment3",
+      "batch_index": 4,
+      "frame_ids": [
+        "GS010419_0039"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010419_0039": [
+          {
+            "bbox": [
+              290,
+              342,
+              540,
+              366
+            ],
+            "description": "Curved glass block corner of the building on the left side of the intersection \u2014 the unique architectural shape and material stand out from the surrounding flat facades, marking the corner clearly.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.3,
+            "shape_prominence": 0.8,
+            "semantic_familiarity": 0.7,
+            "navigational_context": "Located directly on the left corner of the intersection, providing a strong visual anchor for identifying the cross street."
+          },
+          {
+            "bbox": [
+              468,
+              490,
+              558,
+              550
+            ],
+            "description": "Dark green tiled ground floor of the building on the right corner \u2014 the dark color contrasts sharply with the beige upper floors and surrounding buildings, making it a noticeable landmark.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.4,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Anchors the right side of the intersection, helping to frame the crossing and confirm the location."
+          }
+        ]
+      }
+    },
+    "segment4_b0": {
+      "segment_id": "segment4",
+      "batch_index": 0,
+      "frame_ids": [
+        "GS010420_0000"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010420_0000": [
+          {
+            "bbox": [
+              459,
+              469,
+              556,
+              562
+            ],
+            "description": "Dark green marble-like tiled base of the corner building. The stark contrast between the dark glossy base and the light beige upper floors makes this building a clear anchor point at the intersection.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.7,
+            "navigational_context": "Located directly at the intersection, this distinctive building facade serves as a primary visual anchor for walkers approaching or crossing the junction."
+          },
+          {
+            "bbox": [
+              530,
+              511,
+              582,
+              611
+            ],
+            "description": "Bright green pedestrian guardrail wrapping around the corner. The vivid color stands out against the grey pavement and marks the physical boundary of the intersection corner.",
+            "category": 10,
+            "category_label": "urban infrastructure",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Clearly defines the corner of the intersection, providing a low-level visual cue for the turning point."
+          },
+          {
+            "bbox": [
+              275,
+              309,
+              535,
+              391
+            ],
+            "description": "Curved beige brick facade of the building on the left corner. The rounded architectural shape distinguishes it from typical blocky buildings, marking the left side of the intersection.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.4,
+            "shape_prominence": 0.7,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Anchors the left side of the intersection; its curved shape helps differentiate this specific corner from others along the route."
+          }
+        ]
+      }
+    },
+    "segment4_b1": {
+      "segment_id": "segment4",
+      "batch_index": 1,
+      "frame_ids": [
+        "GS010420_0002",
+        "GS010420_0004",
+        "GS010420_0006",
+        "GS010420_0008",
+        "GS010420_0010"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010420_0002": [
+          {
+            "bbox": [
+              436,
+              484,
+              596,
+              605
+            ],
+            "description": "Building corner with a distinctive dark green marble facade and a light blue door \u2014 the contrasting materials make it stand out at the intersection.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Located at the intersection, marking the corner where the street narrows."
+          }
+        ],
+        "GS010420_0004": [
+          {
+            "bbox": [
+              484,
+              548,
+              611,
+              579
+            ],
+            "description": "Recessed entrance with a bright wooden door set into the dark green marble facade \u2014 the color contrast draws the eye along the right side of the street.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.6,
+            "shape_prominence": 0.4,
+            "semantic_familiarity": 0.7,
+            "navigational_context": "Provides a visual anchor on the right side as the walker proceeds down the narrow street."
+          }
+        ],
+        "GS010420_0006": [
+          {
+            "bbox": [
+              477,
+              329,
+              569,
+              399
+            ],
+            "description": "Ground-floor storefront with traditional dark wooden eaves and paneling \u2014 its classic architectural style contrasts sharply with the modern concrete buildings around it.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.5,
+            "shape_prominence": 0.7,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "A highly recognizable architectural feature on the left side of the street, confirming progress along the route."
+          }
+        ],
+        "GS010420_0008": [
+          {
+            "bbox": [
+              474,
+              250,
+              593,
+              348
+            ],
+            "description": "Traditional dark wooden storefront with a small white vertical sign \u2014 the classic design stands out prominently against the adjacent modern buildings.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.6,
+            "shape_prominence": 0.7,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Serves as a strong visual anchor on the left, marking the walker's progression down the block."
+          },
+          {
+            "bbox": [
+              553,
+              670,
+              701,
+              734
+            ],
+            "description": "Large, light green utility box situated on the sidewalk \u2014 its blocky shape and distinct color provide a clear ground-level marker.",
+            "category": 10,
+            "category_label": "urban infrastructure",
+            "color_prominence": 0.5,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.7,
+            "navigational_context": "A permanent infrastructure element on the right side, useful for confirming the path."
+          }
+        ],
+        "GS010420_0010": [
+          {
+            "bbox": [
+              414,
+              519,
+              459,
+              554
+            ],
+            "description": "Silver metallic sign reading '\u624b\u4f5c\u308a\u30af\u30ea\u30fc\u30cb\u30f3\u30b0\u5e97' (Handmade cleaning shop) attached to the building facade \u2014 the raised lettering provides a specific commercial landmark.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.3,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Identifies a specific business on the right side of the street, helping to track progress."
+          }
+        ]
+      }
+    },
+    "segment4_b2": {
+      "segment_id": "segment4",
+      "batch_index": 2,
+      "frame_ids": [
+        "GS010420_0012",
+        "GS010420_0014",
+        "GS010420_0016",
+        "GS010420_0018",
+        "GS010420_0021"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010420_0012": [
+          {
+            "bbox": [
+              342,
+              599,
+              405,
+              745
+            ],
+            "description": "Large blue Japanese characters reading '\u4f0a\u85e4\u30af\u30ea\u30fc\u30cb\u30f3\u30b0' (Ito Cleaning) attached directly to the building facade on the right. The prominent, raised lettering serves as a clear, permanent marker near the start of this street segment.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.6,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Located on the right side of the street, providing an early confirmation landmark when entering this block."
+          }
+        ],
+        "GS010420_0014": [
+          {
+            "bbox": [
+              548,
+              663,
+              674,
+              749
+            ],
+            "description": "Bright blue window signage with white text and phone numbers on the ground floor of the building on the right. The stark blue color contrasts heavily with the surrounding beige and grey tones.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.4,
+            "semantic_familiarity": 0.7,
+            "navigational_context": "Acts as a highly visible color anchor along the right side of the street as the walker progresses forward."
+          }
+        ],
+        "GS010420_0016": [
+          {
+            "bbox": [
+              409,
+              494,
+              456,
+              499
+            ],
+            "description": "Vertical sign with black characters on a white background reading '\u6771\u4eac\u8efd\u91d1\u5c5e\u5546\u5354\u4f1a' mounted on a building ahead on the right. Its vertical orientation and contrast make it noticeable from a distance.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.7,
+            "navigational_context": "Visible in the mid-distance, helping to draw the walker's eye forward along the intended path."
+          }
+        ],
+        "GS010420_0018": [
+          {
+            "bbox": [
+              502,
+              513,
+              598,
+              528
+            ],
+            "description": "A bright blue utility box or vending machine situated against the building on the right. Its vivid color stands out sharply against the muted tones of the street and buildings.",
+            "category": 10,
+            "category_label": "urban infrastructure",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Provides a strong, close-range visual cue on the right side of the street before reaching the upcoming intersection."
+          }
+        ],
+        "GS010420_0021": [
+          {
+            "bbox": [
+              390,
+              510,
+              414,
+              544
+            ],
+            "description": "A rectangular sign with a blue border and text for an ENT clinic on the building ahead. It serves as a distinct commercial marker near the intersection.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.6,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Located on the building across the intersection, providing a target landmark to aim for when crossing."
+          }
+        ]
+      }
+    },
+    "segment4_b3": {
+      "segment_id": "segment4",
+      "batch_index": 3,
+      "frame_ids": [
+        "GS010420_0024"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010420_0024": [
+          {
+            "bbox": [
+              295,
+              547,
+              359,
+              602
+            ],
+            "description": "Large rectangular sign for an ENT clinic with a cat logo on the upper facade of the corner building. The sign's blue and pink colors stand out against the beige tiles, marking the building at the intersection.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.4,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Located high on the corner building at the intersection, providing a clear visual anchor to confirm the location."
+          },
+          {
+            "bbox": [
+              424,
+              502,
+              464,
+              518
+            ],
+            "description": "Round convex traffic mirror mounted on the utility pole at the corner. Its distinct circular shape and reflective surface make it a noticeable piece of street furniture at the junction.",
+            "category": 7,
+            "category_label": "street furniture",
+            "color_prominence": 0.3,
+            "shape_prominence": 0.8,
+            "semantic_familiarity": 0.9,
+            "navigational_context": "Positioned exactly at the corner of the intersection, serving as a precise marker for the turning point."
+          }
+        ]
+      }
+    },
+    "segment4_b4": {
+      "segment_id": "segment4",
+      "batch_index": 4,
+      "frame_ids": [
+        "GS010420_0028"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010420_0028": [
+          {
+            "bbox": [
+              386,
+              494,
+              471,
+              514
+            ],
+            "description": "Tall, dark rectangular building in the distance \u2014 its dark facade contrasts sharply with the bright sky and surrounding lighter buildings, making it a prominent distant landmark.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.85,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.5,
+            "navigational_context": "Serves as a clear distant focal point to help maintain a straight heading down the street."
+          },
+          {
+            "bbox": [
+              488,
+              309,
+              578,
+              391
+            ],
+            "description": "Ground floor clinic window with green text and a small planter box \u2014 the distinct green lettering on the glass marks the commercial space on the corner.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.5,
+            "shape_prominence": 0.3,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Located on the corner building at the intersection, providing a close-range anchor to confirm the starting position or a turn."
+          }
+        ]
+      }
+    },
+    "segment5_b0": {
+      "segment_id": "segment5",
+      "batch_index": 0,
+      "frame_ids": [
+        "GS010421_0000"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010421_0000": [
+          {
+            "bbox": [
+              378,
+              469,
+              460,
+              491
+            ],
+            "description": "Tall, dark-colored building in the distance \u2014 its dark facade contrasts strongly with the surrounding lighter buildings and sky, serving as a clear distant landmark.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.5,
+            "navigational_context": "Acts as a distant focal point, helping to maintain orientation while walking straight down this street."
+          },
+          {
+            "bbox": [
+              487,
+              252,
+              598,
+              354
+            ],
+            "description": "Ground-floor clinic with large glass windows and signage reading '\u3044\u308f\u3060\u6574\u9aa8\u9662' \u2014 the prominent commercial frontage provides a clear anchor on the left side of the street.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.4,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.7,
+            "navigational_context": "Provides a recognizable commercial anchor on an otherwise mixed-use street, useful for confirming location along the block."
+          }
+        ]
+      }
+    },
+    "segment5_b1": {
+      "segment_id": "segment5",
+      "batch_index": 1,
+      "frame_ids": [
+        "GS010421_0003",
+        "GS010421_0005",
+        "GS010421_0008",
+        "GS010421_0011",
+        "GS010421_0013"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010421_0003": [],
+        "GS010421_0005": [
+          {
+            "bbox": [
+              432,
+              422,
+              475,
+              426
+            ],
+            "description": "Blue vertical sign reading '\u6771\u4eac\u6d0b\u7d19\u682a\u5f0f\u4f1a\u793e' attached to the white tiled building on the left \u2014 the blue color contrasts with the pale building, serving as a recognizable marker along the street.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.6,
+            "shape_prominence": 0.4,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Provides a clear visual anchor on the left side of the street while walking past the long construction site."
+          }
+        ],
+        "GS010421_0008": [
+          {
+            "bbox": [
+              389,
+              392,
+              456,
+              398
+            ],
+            "description": "Blue vertical sign reading '\u6771\u4eac\u6d0b\u7d19\u682a\u5f0f\u4f1a\u793e' attached to the white tiled building on the left \u2014 the blue color contrasts with the pale building, serving as a recognizable marker along the street.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.65,
+            "shape_prominence": 0.45,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Provides a clear visual anchor on the left side of the street while walking past the long construction site."
+          }
+        ],
+        "GS010421_0011": [
+          {
+            "bbox": [
+              459,
+              368,
+              470,
+              383
+            ],
+            "description": "Building name sign reading '\u30b9\u30c6\u30e9\u4eba\u5f62\u753a' above the entrance on the left \u2014 the clear lettering on the stone facade identifies the specific building.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.3,
+            "shape_prominence": 0.4,
+            "semantic_familiarity": 0.85,
+            "navigational_context": "Acts as a confirmation landmark on the left side of the street as the walker approaches the intersection ahead."
+          },
+          {
+            "bbox": [
+              311,
+              478,
+              481,
+              514
+            ],
+            "description": "Tall, dark building with prominent vertical slats in the distance \u2014 its dark color and textured facade stand out strongly against the sky and surrounding lighter buildings.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.75,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Serves as a distant focal point and directional anchor, confirming the walker is heading straight toward the main cross street."
+          }
+        ],
+        "GS010421_0013": [
+          {
+            "bbox": [
+              434,
+              250,
+              454,
+              288
+            ],
+            "description": "Building name sign reading '\u30b9\u30c6\u30e9\u4eba\u5f62\u753a' above the entrance on the left \u2014 the clear lettering on the stone facade identifies the specific building.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.35,
+            "shape_prominence": 0.45,
+            "semantic_familiarity": 0.85,
+            "navigational_context": "Acts as a confirmation landmark on the left side of the street as the walker approaches the intersection ahead."
+          },
+          {
+            "bbox": [
+              290,
+              481,
+              474,
+              522
+            ],
+            "description": "Tall, dark building with prominent vertical slats in the distance \u2014 its dark color and textured facade stand out strongly against the sky and surrounding lighter buildings.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.85,
+            "shape_prominence": 0.8,
+            "semantic_familiarity": 0.65,
+            "navigational_context": "Serves as a distant focal point and directional anchor, confirming the walker is heading straight toward the main cross street."
+          }
+        ]
+      }
+    },
+    "segment5_b2": {
+      "segment_id": "segment5",
+      "batch_index": 2,
+      "frame_ids": [
+        "GS010421_0015"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010421_0015": [
+          {
+            "bbox": [
+              266,
+              484,
+              509,
+              519
+            ],
+            "description": "Tall, narrow building with a distinctive dark, vertically slatted facade \u2014 its dark color and textured exterior stand out sharply against the surrounding lighter, flat-faced buildings, making it a strong visual anchor across the intersection.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.7,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Located directly across the intersection, this building serves as a clear focal point to orient the walker when looking straight ahead or deciding which way to cross."
+          }
+        ]
+      }
+    },
+    "segment5_b3": {
+      "segment_id": "segment5",
+      "batch_index": 3,
+      "frame_ids": [
+        "GS010421_0020"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010421_0020": [
+          {
+            "bbox": [
+              469,
+              410,
+              576,
+              425
+            ],
+            "description": "Bus stop shelter with a green roof and route map panel. It is a permanent piece of transit infrastructure that stands out along the sidewalk.",
+            "category": 6,
+            "category_label": "transit station",
+            "color_prominence": 0.4,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.9,
+            "navigational_context": "Located on the left side of the walking path, serving as a clear marker of progress along the street."
+          },
+          {
+            "bbox": [
+              250,
+              234,
+              514,
+              294
+            ],
+            "description": "Distinctive dark building with vertical slats or fins covering its facade. Its dark color and textured surface contrast sharply with the surrounding lighter buildings.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.7,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "A highly visible landmark across the street, useful for confirming location and orientation from a distance."
+          }
+        ]
+      }
+    },
+    "segment6_b0": {
+      "segment_id": "segment6",
+      "batch_index": 0,
+      "frame_ids": [
+        "GS010422_0000"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010422_0000": [
+          {
+            "bbox": [
+              458,
+              424,
+              532,
+              468
+            ],
+            "description": "Bus stop shelter with a roof and seating \u2014 the structure is a standard, recognizable piece of transit infrastructure that provides a clear landmark along the sidewalk.",
+            "category": 6,
+            "category_label": "transit station",
+            "color_prominence": 0.3,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.9,
+            "navigational_context": "Located directly on the walking path, this bus stop serves as a reliable marker of progress along the block, especially given the temporary construction hoarding on the right."
+          }
+        ]
+      }
+    },
+    "segment6_b1": {
+      "segment_id": "segment6",
+      "batch_index": 1,
+      "frame_ids": [
+        "GS010422_0002",
+        "GS010422_0004",
+        "GS010422_0006",
+        "GS010422_0008",
+        "GS010422_0010"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010422_0002": [
+          {
+            "bbox": [
+              362,
+              250,
+              705,
+              432
+            ],
+            "description": "Covered bus stop shelter on the left side of the street \u2014 the large metal structure provides a clear, permanent anchor at the start of this block.",
+            "category": 6,
+            "category_label": "transit station",
+            "color_prominence": 0.3,
+            "shape_prominence": 0.7,
+            "semantic_familiarity": 0.9,
+            "navigational_context": "Located at the beginning of the sequence, this transit infrastructure serves as a strong starting point reference."
+          }
+        ],
+        "GS010422_0004": [
+          {
+            "bbox": [
+              363,
+              393,
+              503,
+              434
+            ],
+            "description": "Tall brown brick building in the distance on the left \u2014 its distinct color and height make it a good distant landmark to walk towards.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.6,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.7,
+            "navigational_context": "Visible from a distance, it provides a forward-facing target to confirm the walking direction."
+          }
+        ],
+        "GS010422_0006": [
+          {
+            "bbox": [
+              422,
+              532,
+              625,
+              624
+            ],
+            "description": "Building with a prominent glass facade and wooden interior elements on the right \u2014 the modern design contrasts with the surrounding concrete buildings.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.4,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Acts as a mid-route marker on the right side, confirming progress along the street."
+          }
+        ],
+        "GS010422_0008": [
+          {
+            "bbox": [
+              436,
+              506,
+              474,
+              512
+            ],
+            "description": "Red Japan Post sign on a building facade on the right \u2014 the bright red color and recognizable 'T' symbol make it a strong, familiar landmark.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.95,
+            "navigational_context": "The highly recognizable post office sign serves as a reliable confirmation point as the walker approaches it."
+          }
+        ],
+        "GS010422_0010": [
+          {
+            "bbox": [
+              380,
+              528,
+              460,
+              546
+            ],
+            "description": "White sign with a red umbrella logo and Japanese text on the right \u2014 the distinct logo and contrasting colors make it an eye-catching marker along the route.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.7,
+            "navigational_context": "Provides a specific, close-up visual anchor on the right side of the street, useful for confirming location."
+          }
+        ]
+      }
+    },
+    "segment6_b2": {
+      "segment_id": "segment6",
+      "batch_index": 2,
+      "frame_ids": [
+        "GS010422_0012",
+        "GS010422_0014",
+        "GS010422_0017",
+        "GS010422_0019"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010422_0012": [
+          {
+            "bbox": [
+              345,
+              528,
+              432,
+              550
+            ],
+            "description": "Red Japan Post sign with the \u3012 symbol attached to the building facade. The bright red color and standard symbol make it a highly recognizable and permanent landmark along the street.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.9,
+            "navigational_context": "Provides a clear, recognizable anchor on the right side of the street while walking straight."
+          }
+        ],
+        "GS010422_0014": [
+          {
+            "bbox": [
+              350,
+              562,
+              445,
+              662
+            ],
+            "description": "Silver 'KYO DENTAL HOUSE' sign with a tooth logo on the building facade. The large, clear English text stands out against the grey building.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.3,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Acts as a confirmation landmark on the right side of the street before reaching the intersection."
+          }
+        ],
+        "GS010422_0017": [
+          {
+            "bbox": [
+              512,
+              678,
+              700,
+              738
+            ],
+            "description": "Bright white and red Kirin vending machine located at the corner of the building. Its vivid colors contrast with the grey stone facade.",
+            "category": 8,
+            "category_label": "vending machine",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.9,
+            "navigational_context": "Marks the corner of the building right at the intersection, serving as a close-range anchor before crossing."
+          }
+        ],
+        "GS010422_0019": [
+          {
+            "bbox": [
+              380,
+              515,
+              438,
+              528
+            ],
+            "description": "Bright pink vertical sign with white text on the side of a building ahead. The vivid pink color stands out strongly against the surrounding grey and glass buildings.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.85,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Serves as a distant focal point while crossing the intersection, confirming the forward path."
+          }
+        ]
+      }
+    }
+  }
+}

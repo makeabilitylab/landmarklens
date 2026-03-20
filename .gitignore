@@ -230,4 +230,9 @@ web/.DS_Store
 
 key.json
 web/.DS_Store
-vlm/output/*
+vlm/output/debug_shrink/
+vlm/output/crop_preview/
+vlm/output/jared/
+vlm/output/_archive/
+vlm/output/sample_images/
+vlm/output/secondpass_crops/

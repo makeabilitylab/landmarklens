@@ -1,0 +1,709 @@
+{
+  "metadata": {
+    "window_size": 5,
+    "crop_width": 0.5,
+    "crop_height": 0.5,
+    "line_width": 90.0,
+    "intersection_crop_width": 0.75,
+    "intersection_line_width": 120.0
+  },
+  "batches": {
+    "segment1_b0": {
+      "segment_id": "segment1",
+      "batch_index": 0,
+      "frame_ids": [
+        "GS010396_0004"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010396_0004": [
+          {
+            "bbox": [
+              346,
+              471,
+              477,
+              478
+            ],
+            "description": "Tokyo Skytree visible in the distance \u2014 the iconic tower provides a strong global orientation point.",
+            "category": 1,
+            "category_label": "famous landmark",
+            "color_prominence": 0.3,
+            "shape_prominence": 0.9,
+            "semantic_familiarity": 1.0,
+            "navigational_context": "Visible straight ahead, providing a strong global orientation cue indicating the direction of travel.",
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows the Tokyo Skytree, perfectly matching the description. It is a highly distinctive, permanent landmark that serves as an excellent navigation point."
+          },
+          {
+            "bbox": [
+              399,
+              524,
+              486,
+              586
+            ],
+            "description": "Red and white store sign reading '\u30c7\u30b6\u5370\u306e\u5e83\u5834' \u2014 the bright colors stand out against the brick building.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Prominent sign on the right side of the street, useful for confirming progress along this block.",
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows the described red and white store sign reading '\u30c7\u30b6\u5370\u306e\u5e83\u5834' attached to the brick building. It is a permanent and distinctive landmark."
+          }
+        ]
+      }
+    },
+    "segment1_b1": {
+      "segment_id": "segment1",
+      "batch_index": 1,
+      "frame_ids": [
+        "GS010396_0008",
+        "GS010396_0014"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010396_0008": [
+          {
+            "bbox": [
+              350,
+              471,
+              484,
+              478
+            ],
+            "description": "Tokyo Skytree visible in the distance straight ahead \u2014 this iconic tower serves as a powerful global orientation point, confirming the general heading.",
+            "category": 1,
+            "category_label": "famous landmark",
+            "color_prominence": 0.3,
+            "shape_prominence": 0.9,
+            "semantic_familiarity": 1.0,
+            "navigational_context": "Visible directly down the street, providing a constant distant anchor to maintain heading.",
+            "dedup_removed": true
+          },
+          {
+            "bbox": [
+              296,
+              485,
+              374,
+              492
+            ],
+            "description": "Blue vertical sign with white text attached to the building on the right \u2014 the bright blue color contrasts with the surrounding buildings, serving as a mid-distance marker.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Acts as a mid-distance target on the right side of the street before reaching the intersection.",
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows the described blue vertical sign with white text attached to the building. It is a permanent and distinctive store sign that can serve as a navigation landmark."
+          }
+        ],
+        "GS010396_0014": [
+          {
+            "bbox": [
+              352,
+              471,
+              486,
+              478
+            ],
+            "description": "Tokyo Skytree visible in the distance straight ahead \u2014 continues to serve as a primary distant landmark for orientation.",
+            "category": 1,
+            "category_label": "famous landmark",
+            "color_prominence": 0.3,
+            "shape_prominence": 0.9,
+            "semantic_familiarity": 1.0,
+            "navigational_context": "Remains visible directly ahead, confirming the walker is still on the correct path.",
+            "dedup_removed": true
+          },
+          {
+            "bbox": [
+              359,
+              508,
+              388,
+              518
+            ],
+            "description": "Black '\u3086' (hot water) symbol on a prominent wooden facade element attached to the orange building \u2014 the distinct symbol and contrasting wooden texture make this a highly recognizable local landmark.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.6,
+            "shape_prominence": 0.7,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Located right at the intersection, this distinctive sign marks a key decision point or confirmation of progress.",
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows the black '\u3086' symbol on a wooden background as described. This is a distinctive and permanent piece of store signage that serves as a recognizable landmark."
+          }
+        ]
+      }
+    },
+    "segment1_b2": {
+      "segment_id": "segment1",
+      "batch_index": 2,
+      "frame_ids": [
+        "GS010396_0018"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010396_0018": [
+          {
+            "bbox": [
+              350,
+              220,
+              485,
+              226
+            ],
+            "description": "Tokyo Skytree visible in the distance down the left cross street. As a famous, towering landmark, it provides excellent absolute orientation for the broader neighborhood.",
+            "category": 1,
+            "category_label": "famous landmark",
+            "color_prominence": 0.3,
+            "shape_prominence": 0.9,
+            "semantic_familiarity": 1.0,
+            "navigational_context": "Visible far down the intersecting street to the left, providing a strong global orientation cue to confirm cardinal directions.",
+            "dedup_removed": true
+          },
+          {
+            "bbox": [
+              448,
+              331,
+              529,
+              352
+            ],
+            "description": "Brightly illuminated digital sign for a sauna on the wooden facade of the corner building. Its brightness and contrast make it a highly visible anchor at this intersection.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.85,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Located right at the corner of the intersection, serving as a clear, immediate marker for the left turn or to confirm the walker's position at the junction.",
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows the brightly illuminated digital sign mounted on a wooden facade, exactly as described. It is a permanent fixture and visually distinctive enough to serve as a navigation landmark."
+          },
+          {
+            "bbox": [
+              416,
+              422,
+              442,
+              438
+            ],
+            "description": "Round, white projecting sign with a logo on the terracotta-colored building. It stands out against the building's facade and helps identify the left side of the street.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Provides a secondary visual anchor along the left side of the main path, confirming the route ahead.",
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows a round, white projecting sign with a logo attached to a building, which perfectly matches the category and description. It is a permanent and distinctive landmark."
+          }
+        ]
+      }
+    },
+    "segment2_b0": {
+      "segment_id": "segment2",
+      "batch_index": 0,
+      "frame_ids": [
+        "GS010388_0005"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010388_0005": [
+          {
+            "bbox": [
+              349,
+              239,
+              484,
+              246
+            ],
+            "description": "Tokyo Skytree visible in the distance on the left \u2014 this iconic tower serves as a powerful global orientation point, indicating the general direction of Oshiage/Sumida.",
+            "category": 1,
+            "category_label": "famous landmark",
+            "color_prominence": 0.3,
+            "shape_prominence": 0.9,
+            "semantic_familiarity": 1.0,
+            "navigational_context": "Visible down the cross street to the left, providing a strong absolute directional reference.",
+            "dedup_removed": true
+          },
+          {
+            "bbox": [
+              533,
+              358,
+              643,
+              386
+            ],
+            "description": "Bright blue and red 'REAL SAUNA' sign mounted on the wooden corner pillar \u2014 the vivid colors contrast sharply with the wood and red building, marking the corner clearly.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.9,
+            "shape_prominence": 0.4,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Located right at the corner of the intersection, serving as an immediate anchor for turning or confirming the current location.",
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows the bright red and blue 'REAL SAUNA' sign mounted on the wooden wall, matching the description perfectly. It is a permanent and visually distinctive landmark."
+          }
+        ]
+      }
+    },
+    "segment2_b1": {
+      "segment_id": "segment2",
+      "batch_index": 1,
+      "frame_ids": [
+        "GS010388_0011",
+        "GS010388_0014",
+        "GS010388_0017",
+        "GS010388_0019",
+        "GS010388_0023"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010388_0011": [
+          {
+            "bbox": [
+              449,
+              568,
+              476,
+              585
+            ],
+            "description": "Yellow and black Don Quijote store sign attached to the building facade on the right. The highly recognizable discount store branding serves as a strong commercial landmark along the street.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.9,
+            "navigational_context": "Visible down the street on the right, providing a clear target to walk towards.",
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows a Don Quijote store sign, matching the core of the description. Although the colors described (yellow and black) differ from the actual sign (brown and gold), it is still clearly recognizable as the described permanent commercial landmark."
+          }
+        ],
+        "GS010388_0014": [
+          {
+            "bbox": [
+              428,
+              608,
+              468,
+              642
+            ],
+            "description": "Yellow and black Don Quijote store sign on the right side of the street. The prominent chain store branding confirms the walker is passing a major commercial anchor.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.85,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.9,
+            "navigational_context": "The walker is now passing the store, confirming progress along the route.",
+            "dedup_removed": true
+          }
+        ],
+        "GS010388_0017": [
+          {
+            "bbox": [
+              430,
+              394,
+              688,
+              462
+            ],
+            "description": "Bright blue painted wooden framing around a storefront on the left. The vivid color contrasts sharply with the surrounding muted buildings, making it an easy-to-spot landmark.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.7,
+            "navigational_context": "Appears on the left as the walker progresses, serving as a distinct visual anchor on an otherwise plain street.",
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows the bright blue painted wooden framing around the storefront as described. This is a permanent and visually distinctive architectural feature that serves as a good landmark."
+          }
+        ],
+        "GS010388_0019": [
+          {
+            "bbox": [
+              418,
+              250,
+              748,
+              408
+            ],
+            "description": "Bright blue painted facade of a restaurant on the left. The distinctive color scheme makes it a memorable point of reference along the walking path.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.85,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.7,
+            "navigational_context": "The walker is passing immediately next to this brightly colored building, marking a specific point on the route.",
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows the bright blue painted facade of a restaurant as described. This is a permanent and visually distinctive architectural feature that serves as a good navigation landmark."
+          },
+          {
+            "bbox": [
+              319,
+              435,
+              498,
+              492
+            ],
+            "description": "Tall beige apartment or office building towering over the street ahead. Its height makes it a distant focal point to guide the walking direction.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.4,
+            "shape_prominence": 0.7,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Visible straight ahead in the distance, providing a long-range heading target.",
+            "is_valid": false,
+            "reason_is_valid": "The highlighted object is a generic, plain beige building facade without any specific, memorable architectural features. It is not visually distinctive enough to serve as a good navigation landmark."
+          }
+        ],
+        "GS010388_0023": [
+          {
+            "bbox": [
+              298,
+              424,
+              500,
+              494
+            ],
+            "description": "Tall beige building dominating the skyline straight ahead. It continues to serve as a reliable distant landmark to keep the walker oriented forward.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.4,
+            "shape_prominence": 0.7,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Remains centered in the view, confirming the walker is maintaining the correct heading.",
+            "dedup_removed": true
+          }
+        ]
+      }
+    },
+    "segment2_b2": {
+      "segment_id": "segment2",
+      "batch_index": 2,
+      "frame_ids": [
+        "GS010388_0027",
+        "GS010388_0031",
+        "GS010388_0035"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010388_0027": [
+          {
+            "bbox": [
+              504,
+              418,
+              643,
+              447
+            ],
+            "description": "Blue and white parking payment machine on the left side of the street. Its bright blue color stands out against the grey pavement, marking the start of the parking area.",
+            "category": 10,
+            "category_label": "urban infrastructure",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Located on the left side of the street, it serves as an immediate anchor point when starting this segment of the route.",
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows the bright blue parking payment machine described. It is a permanent and visually distinctive piece of urban infrastructure that can serve as a navigation landmark."
+          },
+          {
+            "bbox": [
+              443,
+              462,
+              482,
+              480
+            ],
+            "description": "Bright yellow illuminated parking sign elevated on a pole. The high-contrast yellow color makes it visible from a distance, serving as a mid-distance target.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.4,
+            "semantic_familiarity": 0.7,
+            "navigational_context": "Visible down the street on the left, it gives the walker a clear landmark to head towards.",
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows the bright yellow parking sign described. It is a permanent, visually distinctive commercial sign that serves as a good navigation landmark."
+          }
+        ],
+        "GS010388_0031": [
+          {
+            "bbox": [
+              476,
+              554,
+              530,
+              606
+            ],
+            "description": "Building on the right featuring a large, distinctive arched opening at street level. The unusual curved geometry breaks the pattern of rectangular storefronts.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.3,
+            "shape_prominence": 0.8,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Located on the right side just before the red-painted intersection, signaling the approach to a decision point.",
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows a building facade with a large, distinctive arched opening at street level, matching the description perfectly. This is a permanent and unique architectural feature that serves as a good navigation landmark."
+          },
+          {
+            "bbox": [
+              459,
+              348,
+              502,
+              380
+            ],
+            "description": "Bright yellow illuminated parking sign on the left. The yellow color remains a strong visual anchor as the walker approaches the intersection.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.4,
+            "semantic_familiarity": 0.7,
+            "navigational_context": "Now closer on the left, confirming the walker is on the correct path approaching the red intersection.",
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows a large, bright yellow and blue parking rate sign, which matches the description and serves as a distinct, permanent landmark."
+          }
+        ],
+        "GS010388_0035": [
+          {
+            "bbox": [
+              469,
+              600,
+              547,
+              682
+            ],
+            "description": "The large arched opening of the building on the right corner. The prominent archway is a strong architectural feature right at the intersection.",
+            "category": 9,
+            "category_label": "distinctive building",
+            "color_prominence": 0.3,
+            "shape_prominence": 0.8,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Situated directly at the red-painted intersection, it acts as a major anchor for orienting oneself at this junction.",
+            "dedup_removed": true
+          },
+          {
+            "bbox": [
+              516,
+              395,
+              564,
+              417
+            ],
+            "description": "Yellow parking rate board standing at ground level on the left corner. Its bright yellow color marks the left side of the intersection.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.4,
+            "semantic_familiarity": 0.7,
+            "navigational_context": "Located at the left corner of the red intersection, providing a clear marker for the left side of the junction.",
+            "is_valid": false,
+            "reason_is_valid": "The image shows a blank yellow board with graffiti on a freestanding metal frame. This appears to be a movable, temporary sign rather than a permanent, distinctive landmark."
+          }
+        ]
+      }
+    },
+    "segment2_b3": {
+      "segment_id": "segment2",
+      "batch_index": 3,
+      "frame_ids": [
+        "GS010388_0037"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010388_0037": [
+          {
+            "bbox": [
+              462,
+              421,
+              510,
+              456
+            ],
+            "description": "Large blue and yellow illuminated sign for a coin parking lot \u2014 the bright colors contrast strongly with the surrounding buildings, making it a highly visible landmark.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Located on the left corner of the intersection, serving as a clear anchor point for the turn.",
+            "dedup_removed": true
+          },
+          {
+            "bbox": [
+              509,
+              705,
+              579,
+              722
+            ],
+            "description": "Cluster of brightly lit vending machines at the base of the building on the right \u2014 the illumination and distinct shapes make them stand out, especially in lower light.",
+            "category": 8,
+            "category_label": "vending machine",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.9,
+            "navigational_context": "Situated on the right corner of the intersection, providing a secondary visual cue for orientation.",
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows a vending machine, which matches the category and description. It is a permanent, distinct object that can serve as a navigation landmark."
+          }
+        ]
+      }
+    },
+    "segment3_b0": {
+      "segment_id": "segment3",
+      "batch_index": 0,
+      "frame_ids": [
+        "GS010397_0070"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010397_0070": [
+          {
+            "bbox": [
+              458,
+              318,
+              504,
+              347
+            ],
+            "description": "Large, bright yellow and blue parking lot sign. Its vivid colors and size make it highly visible from a distance, marking the location of the parking area on the left.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.85,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Marks a large open parking area on the left, providing a strong visual reference point before continuing down the street.",
+            "dedup_removed": true
+          },
+          {
+            "bbox": [
+              518,
+              656,
+              614,
+              683
+            ],
+            "description": "Cluster of brightly colored vending machines next to a dark building facade. The red and white colors stand out against the dark background, providing a clear landmark on the right side of the street.",
+            "category": 8,
+            "category_label": "vending machine",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.9,
+            "navigational_context": "Located on the right side of the street, these vending machines serve as a distinct visual anchor along the walking path.",
+            "dedup_removed": true
+          }
+        ]
+      }
+    },
+    "segment3_b1": {
+      "segment_id": "segment3",
+      "batch_index": 1,
+      "frame_ids": [
+        "GS010397_0066",
+        "GS010397_0062",
+        "GS010397_0058"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010397_0066": [
+          {
+            "bbox": [
+              416,
+              617,
+              462,
+              648
+            ],
+            "description": "Blue illuminated sign for Ito Dental Clinic attached to the beige brick building on the right. The bright blue color contrasts with the building, serving as a clear marker along the street.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.3,
+            "semantic_familiarity": 0.8,
+            "navigational_context": "Visible on the right side of the street, confirming the route forward.",
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows the blue sign for Ito Dental Clinic attached to the brick building, matching the description perfectly. It is a permanent and distinctive landmark."
+          }
+        ],
+        "GS010397_0062": [
+          {
+            "bbox": [
+              447,
+              572,
+              478,
+              611
+            ],
+            "description": "White characters reading '\u6ad3 \u5bff \u53f8' (Yagura Sushi) mounted on a distinctive dark blue tiled building facade on the right. The contrast of the white text on the dark tiles makes it a noticeable landmark.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.6,
+            "shape_prominence": 0.4,
+            "semantic_familiarity": 0.7,
+            "navigational_context": "Located on the right side as the walker progresses, marking a specific building along the path.",
+            "is_valid": true,
+            "reason_is_valid": "The image clearly shows the permanent store signage reading '\u6ad3 \u5bff \u53f8' mounted on the building facade, matching the description and serving as a distinctive landmark."
+          }
+        ],
+        "GS010397_0058": [
+          {
+            "bbox": [
+              500,
+              576,
+              529,
+              598
+            ],
+            "description": "Bright yellow 'Times' parking sign on a pole on the right side of the street. The vivid yellow color stands out against the surrounding buildings and marks a parking area.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.9,
+            "navigational_context": "Prominent yellow sign on the right, indicating a parking lot and serving as a visual anchor near the intersection.",
+            "is_valid": true,
+            "reason_is_valid": "The crop clearly shows the bright yellow 'Times' parking sign described. It is a permanent, distinctive commercial sign that serves as a recognizable navigation landmark."
+          },
+          {
+            "bbox": [
+              460,
+              406,
+              525,
+              420
+            ],
+            "description": "Vertical green sign for '\u30b5\u30d0\u30fc\u30a4\u30e9\u30f3\u30c9' on the corner building on the left. The green color provides a distinct visual cue at the intersection.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.7,
+            "shape_prominence": 0.4,
+            "semantic_familiarity": 0.6,
+            "navigational_context": "Located on the left corner of an intersection, helping to identify the cross street.",
+            "is_valid": null,
+            "reason_is_valid": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}"
+          }
+        ]
+      }
+    },
+    "segment3_b2": {
+      "segment_id": "segment3",
+      "batch_index": 2,
+      "frame_ids": [
+        "GS010397_0056"
+      ],
+      "status": "completed",
+      "results": {
+        "GS010397_0056": [
+          {
+            "bbox": [
+              420,
+              357,
+              546,
+              377
+            ],
+            "description": "Green vertical store sign on the corner building. The bright green color stands out against the pale building facade.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.6,
+            "semantic_familiarity": 0.7,
+            "navigational_context": "Located on the immediate left corner, marking the start of the intersecting street.",
+            "dedup_removed": true
+          },
+          {
+            "bbox": [
+              439,
+              630,
+              478,
+              643
+            ],
+            "description": "Yellow Times parking sign on a pole. The bright yellow color is highly visible and indicates a parking area.",
+            "category": 3,
+            "category_label": "store signage",
+            "color_prominence": 0.8,
+            "shape_prominence": 0.5,
+            "semantic_familiarity": 0.9,
+            "navigational_context": "Located on the right side of the street, providing a clear landmark for the parking lot entrance.",
+            "is_valid": null,
+            "reason_is_valid": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -120,7 +120,7 @@ def build_validated_set(output_data: dict) -> set[tuple[str, str, int]]:
             continue
         for frame_id, dets in batch.get("results", {}).items():
             for det_idx, det in enumerate(dets):
-                if "is_valid" in det:
+                if det.get("is_valid") is not None:
                     validated.add((batch_id, frame_id, det_idx))
     return validated
 
@@ -260,6 +260,7 @@ def main():
                 try:
                     response = client.models.generate_content(
                         model="gemini-3.1-pro-preview",
+                        # model="gemini-2.5-flash",
                         contents=[types.Part.from_bytes(
                             data=jpeg_bytes, mime_type="image/jpeg"
                         )],
@@ -269,6 +270,9 @@ def main():
                             max_output_tokens=1024,
                             response_mime_type="application/json",
                             response_schema=validation_schema,
+                            thinking_config=types.ThinkingConfig(
+                                thinking_level=types.ThinkingLevel.MEDIUM
+                            ),
                         ),
                     )
                     result = json.loads(response.text)

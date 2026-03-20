@@ -246,6 +246,8 @@ def load_and_flatten(route_path: str, detections_path: str) -> list[Detection]:
             frame_info = frame_lookup[frame_id]
 
             for det_idx, det in enumerate(frame_dets):
+                if det.get("dedup_removed"):
+                    continue
                 detections.append(Detection(
                     segment_id=seg_id,
                     batch_id=batch_id,
@@ -417,8 +419,21 @@ def select_detections_to_remove(
     detections: list[Detection],
     matches: list[tuple[int, int]],
     max_duplicates: int,
+    area_threshold: float = 400.0,
+    w_area: float = 0.3,
+    w_horizon: float = 0.4,
+    w_order: float = 0.3,
 ) -> set[int]:
-    """Union matched pairs and mark excess detections for removal."""
+    """Union matched pairs and mark excess detections for removal.
+
+    Ranks detections within each duplicate group by a composite score:
+      - area_score:    min(area / area_threshold, 1.0) — once the bbox is
+                       big enough, extra size gives no additional benefit.
+      - horizon_score: 1.0 - |y_center - 500| / 500 — prefers objects at
+                       eye level over those requiring gazing up/down.
+      - order_score:   earlier frame_order is preferred so the walker is
+                       alerted when the landmark first becomes visible.
+    """
     n = len(detections)
     dsu = DSU(n)
 
@@ -431,13 +446,24 @@ def select_detections_to_remove(
     for root, members in groups.items():
         if len(members) <= max_duplicates:
             continue
-        # Sort by bounding box area (largest first) so we keep the most
-        # visible detections and discard tiny/distant ones.
-        def _bbox_area(idx: int) -> float:
-            b = detections[idx].bbox
-            return (b[2] - b[0]) * (b[3] - b[1])
 
-        members.sort(key=lambda idx: _bbox_area(idx), reverse=True)
+        orders = [detections[idx].frame_order for idx in members]
+        min_order, max_order = min(orders), max(orders)
+        order_range = max_order - min_order if max_order != min_order else 1
+
+        def _score(idx: int) -> float:
+            d = detections[idx]
+            b = d.bbox
+            area = (b[2] - b[0]) * (b[3] - b[1])
+            y_center = (b[0] + b[2]) / 2.0
+
+            area_s = min(area / area_threshold, 1.0)
+            horizon_s = 1.0 - abs(y_center - 500) / 500
+            order_s = 1.0 - (d.frame_order - min_order) / order_range
+
+            return w_area * area_s + w_horizon * horizon_s + w_order * order_s
+
+        members.sort(key=_score, reverse=True)
         for idx in members[max_duplicates:]:
             removed.add(idx)
 
@@ -514,6 +540,14 @@ def main():
     parser.add_argument("--boundary-overlap", type=int, default=2,
                         help="Number of frames on each side of a segment boundary "
                              "to compare for cross-segment dedup (default: 2, 0 to disable)")
+    parser.add_argument("--area-threshold", type=float, default=400.0,
+                        help="Bbox area at which size score is capped (default: 400)")
+    parser.add_argument("--w-area", type=float, default=0.3,
+                        help="Weight for bbox area in selection score (default: 0.3)")
+    parser.add_argument("--w-horizon", type=float, default=0.4,
+                        help="Weight for horizon proximity in selection score (default: 0.4)")
+    parser.add_argument("--w-order", type=float, default=0.3,
+                        help="Weight for earlier frame order in selection score (default: 0.3)")
     args = parser.parse_args()
 
     device = args.device or auto_device()
@@ -559,7 +593,11 @@ def main():
 
     # Phase 5: Union-Find & Select
     print("\n[Phase 5] Selecting detections to remove...")
-    removed = select_detections_to_remove(detections, matches, args.max_duplicates)
+    removed = select_detections_to_remove(
+        detections, matches, args.max_duplicates,
+        area_threshold=args.area_threshold,
+        w_area=args.w_area, w_horizon=args.w_horizon, w_order=args.w_order,
+    )
     print(f"  Detections marked for removal: {len(removed)}")
 
     # Phase 6: Reconstruct Output

@@ -1,29 +1,32 @@
 python vlm/run_gemini.py \
-    --input vlm/ningyocho_r1/ningyocho_r1_route.json \
-    --output vlm/output/ningyocho_r1_20_frames.json \
-    --system-prompt vlm/prompt_engineering/system_prompt5.md \
-    --window-size 3 \
+    --input vlm/practice_evaluation/practice_evaluation_route.json \
+    --output vlm/output/practice_evaluation_full.json \
+    --system-prompt vlm/prompt_engineering/system_prompt6.md \
     --crop-width 180 \
+    --crop-height 0.5 \
     --line-width 90 \
-    --crop-height 0.7
+    --intersection-crop-width 270 \
+    --intersection-line-width 120 \
+    --dry-run
 
 python vlm/dedup_detections.py \
-    --input vlm/ningyocho_r1/ningyocho_r1_route.json \
-    --detections vlm/output/ningyocho_r1_20_frames_secondpass.json \
-    --output vlm/output/ningyocho_r1_20_frames_secondpass_deduped.json \
-    --similarity-threshold 0.75 \
-    --max-duplicates 2 \
-    --window-size 5 \
+    --input vlm/practice_evaluation/practice_evaluation_route.json \
+    --detections vlm/output/practice_evaluation_full.json \
+    --output vlm/output/practice_evaluation_deduped.json \
+    --similarity-threshold 0.70 \
+    --max-duplicates 1 \
+    --window-size 3 \
+    --boundary-overlap 1 \
     --batch-size 16 \
-    --device mps
+    --device mps    
 
 python vlm/validate_detections.py \
-    --input vlm/ningyocho_r1/ningyocho_r1_route.json \
-    --detections vlm/output/ningyocho_r1_20_frames.json \
-    --output vlm/output/ningyocho_r1_20_frames_secondpass.json \
+    --input vlm/kinshicho_c/kinshicho_c_route.json \
+    --detections vlm/output/kinshicho_c_full_deduped.json \
+    --output vlm/output/kinshicho_c_full_deduped_secondpass.json \
     --system-prompt vlm/prompt_engineering/second_pass/system_prompt1.md \
-    --buffer 1.5 \
-    --save-samples-dir vlm/output/secondpass_crops
+    --buffer 1.5
+
 
 python vlm/shrink_bboxes.py \
     --input vlm/ningyocho_r1/ningyocho_r1_route.json \
@@ -33,11 +36,14 @@ python vlm/shrink_bboxes.py \
     --save-debug vlm/output/debug_shrink    
 
 python vlm/view_detections.py \
-    --input vlm/ningyocho_r1/ningyocho_r1_route\.json \
-    --detections vlm/output/ningyocho_r1_20_frames_secondpass_deduped.json \
+    --input vlm/practice_evaluation/practice_evaluation_route.json \
+    --detections vlm/output/practice_evaluation_deduped_secondpass_medium.json  \
     --image-dir data/frames \
-    --port 8769
+    --port 8771  
 
-python vlm/export_for_vr.py ningyocho_r1 \
-    --detections vlm/output/ningyocho_r1_20_frames_secondpass_deduped.json \
-    --valid-only
+python vlm/export_for_vr.py practice_evaluation \
+    --detections vlm/output/practice_evaluation_deduped_secondpass.json \
+    --valid-only \
+    --fix-turn-angle
+
+  

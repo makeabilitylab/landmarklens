@@ -399,6 +399,19 @@ def main():
                 segments[seg_id] = segments[seg_id][:remaining]
                 remaining -= len(segments[seg_id])
 
+    # Treat the very first and very last frames of the route as intersections
+    # so they get wider croppings and grid lines.
+    all_seg_ids = [sid for sid in segments if segments[sid]]
+    if all_seg_ids:
+        first_frame = segments[all_seg_ids[0]][0]
+        last_frame = segments[all_seg_ids[-1]][-1]
+        if not first_frame.get("is_junction"):
+            first_frame["is_junction"] = True
+            print(f"Marked first frame '{first_frame['frame_id']}' as junction (route start)")
+        if not last_frame.get("is_junction"):
+            last_frame["is_junction"] = True
+            print(f"Marked last frame '{last_frame['frame_id']}' as junction (route end)")
+
     total_frames = sum(len(frames) for frames in segments.values())
     crop_h_msg = f" (crop-height: {args.crop_height:.0%})" if args.crop_height else ""
     crop_msg = f" (crop: {args.crop_width * 360:.0f}°)" if args.crop_width else ""

@@ -60,6 +60,8 @@ The detection is **invalid** if ANY of the following are true:
   area guide banners). These are not permanently attached to buildings and are
   regularly replaced or removed.
 - The crop captures only a small, unrecognizable fragment of the described object.
+- The detection highlights a **generic building facade** — a large area of plain wall,
+  glass, stone, or concrete with no specific nameable feature. To be valid, the crop must show a specific, memorable architectural element that a pedestrian could describe to someone else.
 
 ---
 

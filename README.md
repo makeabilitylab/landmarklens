@@ -1,4 +1,35 @@
-# tokyo-streetview
+# LandmarkLens: Predicting and Presenting Effective Landmarks for Mixed-Reality Urban Exploration
+In our paper *LandmarkLens*, we study how people with a good versus poor sense of direction (SOD) attend to landmarks while navigating, and use those findings to build a mixed-reality (MR) navigation system that highlights navigation-relevant landmarks.
+Through a VR landmark attention study with 20 participants (ten good SOD, ten poor SOD) navigating four Tokyo neighborhoods, we found systematic group differences in both gaze behavior and the types of landmarks participants identify as effective.
+A follow-up study with eight poor-SOD participants showed improved scene recognition with LandmarkLens, suggesting that guided landmark attention can support landmark-level spatial knowledge acquisition.
+
+Check out our [paper](https://arxiv.org/abs/2608.30142) for more details.
+
+![LandmarkLens](/figures/figure-teaser.png)
+
+This repository contains the street view dataset tooling, VR study materials, eye-gaze data and analysis, and VLM landmark detection pipeline for *LandmarkLens: Predicting and Presenting Effective Landmarks for Mixed-Reality Urban Exploration* by Chu Li, Yotam Sechayk, Jared Hwang, Jon E. Froehlich, Takeo Igarashi. The paper will be published in Proceedings of the ACM Symposium on User Interface Software and Technology (UIST’26).
+
+## Tokyo Street View Dataset
+Our studies place participants in virtual environments built from 360° panoramic images captured while walking routes in four Tokyo neighborhoods: Ginza, Koenji, Nezu, and Kinshicho. We extracted panorama frames from the 360° video, snapped and cleaned their GPS positions against OpenStreetMap, and corrected each frame's camera heading so the walking direction is consistent across a route.
+
+We built a browser-based viewer and route builder to inspect frames, adjust headings, and assemble study routes with junctions and turns.
+
+See our [viewer](/web/), [processing scripts](/script/), and [geodata](/geodata/) for more details.
+
+## VR Landmark Attention Study
+To understand how navigation strategies differ by ability, 20 participants (ten good SOD, ten poor SOD) navigated routes in each neighborhood in VR on a Galaxy XR headset while we recorded their eye gaze. In each neighborhood, every participant walked a route shared by all participants (C) and a route specific to them (U1–U10), with neighborhood and route order varied across participants.
+
+See our [participant route sets](/study-materials/) and paper for more details.
+
+## Eye-Gaze Data and Analysis
+We logged per-frame gaze rays from the VR app and projected them back onto the original panoramas to generate gaze density heatmaps for each participant, route, and SOD group. These heatmaps reveal systematic differences in where good- and poor-SOD participants look while navigating.
+
+See our [eye-gaze dataset](/study-data/), [heatmap viewer](/heatmap-viewer/), and [heatmap dataloader](/models/) for more details.
+
+## LandmarkLens: VLM Landmark Detection
+Based on our study findings, we derived a ranked set of navigation-relevant landmark categories (e.g., famous landmarks, wayfinding signage, transit stations) and a set of objects to exclude (e.g., cars, pedestrians, temporary advertisements). LandmarkLens uses a vision-language model (Gemini) to identify and locate these landmarks in each panorama, followed by deduplication across frames, a second-pass validation, and bounding-box refinement. The resulting detections are exported to the MR app, which highlights them for the user during navigation.
+
+See our [VLM pipeline](/vlm/) and paper for more details.
 
 ## Getting Started
 1. In the route directory, create a `data` folder, drop in the `frames` folder from Google drive (https://drive.google.com/drive/folders/1WOiSnUeZP2YRl7grwVf1YkAWtIF1KkkH?usp=drive_link).
@@ -44,6 +75,9 @@ This produces a self-contained directory with `route.json` (metadata, nav links,
 #### Batch export for a participant
 
 Update the route file timestamps below to match the latest exports in `data/routes/`, then run:
+
+<details>
+<summary>Batch export commands for P01–P09</summary>
 
 ```bash
 # ── Route file mapping ──────────────────────────────────────
@@ -231,6 +265,8 @@ python script/export_route_vr.py --route "$R/$KINSHICHO_C"   --name "Kinshicho (
 python script/export_route_vr.py --route "$R/$KINSHICHO_U9"  --name "Kinshicho (U9)"  --output "$O/kinshicho_u9"
 ```
 
+</details>
+
 
 ### Step 3: Register the route in the participant config
 
@@ -312,3 +348,18 @@ The script corrects for two coordinate offsets between the VR app's recorded `hi
    cd web && python -m http.server 3000
    ```
 3. Open `http://localhost:3000/viewer.html`. A dropdown in the header lets you switch between "Original" and any participant's heatmap overlay.
+
+### Cite LandmarkLens
+```
+@inproceedings{li_landmarklens_2026,
+author = {Li, Chu and Sechayk, Yotam and Hwang, Jared and Froehlich, Jon E. and Igarashi, Takeo},
+title = {LandmarkLens: Predicting and Presenting Effective Landmarks for Mixed-Reality Urban Exploration},
+year = {2026},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+doi = {10.1145/3830398.3830505},
+booktitle = {Proceedings of the 39th Annual ACM Symposium on User Interface Software and Technology},
+pages = {1--22},
+series = {UIST '26}
+}
+```

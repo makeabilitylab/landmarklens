@@ -3,7 +3,7 @@ In our paper *LandmarkLens*, we study how people with a good versus poor sense o
 Through a VR landmark attention study with 20 participants (ten good SOD, ten poor SOD) navigating four Tokyo neighborhoods, we found systematic group differences in both gaze behavior and the types of landmarks participants identify as effective.
 A follow-up study with eight poor-SOD participants showed improved scene recognition with LandmarkLens, suggesting that guided landmark attention can support landmark-level spatial knowledge acquisition.
 
-Check out our [paper](https://arxiv.org/abs/2608.30142) for more details.
+Check out our [paper](https://doi.org/10.1145/3830398.3830505) for more details.
 
 ![LandmarkLens](/figures/figure-teaser.png)
 
